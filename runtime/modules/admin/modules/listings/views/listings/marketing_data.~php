@@ -1,0 +1,498 @@
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl ?>/js/chart/jscharts.js"></script>
+<script src="<?php echo Yii::app()->theme->baseUrl ?>/js/jvectormap/jquery-jvectormap-2.0.4.min.js"></script>
+<script src="<?php echo Yii::app()->theme->baseUrl ?>/js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl ?>/js/jvectormap/jquery-jvectormap-2.0.4.css"
+      type="text/css" media="screen"/>
+
+
+<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl ?>/css/marketlisting.css"
+      type="text/css" media="screen"/>
+<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl ?>/css/user_listing.css"
+      type="text/css" media="screen"/>
+
+
+
+<?php $this->renderPartial('application.modules.admin.views.layouts.listing_menu'); ?>
+<div class="clear">&nbsp;</div>
+
+<div class="content-container" style="width: 98.6%; padding: 5px;">
+
+    <?php if ($listingMarketing) { ?>
+        <div class="submit_listing_box" style="height: 720px;">
+            <div class="submit-listing_content">
+
+                <div class="slisting-head" style="width: 150px; float: left;">Marketing
+                    question <?php echo($offset + 1) ?>
+                    of <?php echo($totalRecords) ?></div>
+
+                <!-- Top navigation menu -->
+                <?php
+                $prevRecord = (($offset - 1) > 0) ? ($offset - 1) : $offset;
+                $nextRecord = (($offset + 1) < $totalRecords) ? ($offset + 1) : $offset;
+                ?>
+                <ul id="navlist" class="topNav" style="font-size: 1.2em; margin-top: 10px; float: right;">
+                    <?php if ($prevRecord) : ?>
+                        <!--<a href="<?php /*echo Yii::app()->createUrl('/listing/accessMarketingData/listid/' . $listid.'?offset='.$offset); */ ?>"> &#60;&#60; </a></li>-->
+                    <?php endif; ?>
+
+                    <?php if ($nextRecord) : ?>
+                        <li>
+                            <a href="<?php echo Yii::app()->createUrl('/admin/listings/listings/marketingdata?id=' . $listid . '&offset=' . $nextRecord); ?>">goto
+                                next marketing question &#062;&#062;</a></li>
+                    <?php endif; ?>
+
+                </ul>
+                <!-- /Top navigation menu -->
+                <textarea maxlength='100' name="drg_mktquestion" class="textarea-full"
+                          style="text-align:center; padding:10px; font-size: 1.6em;" id="drg_mktquestion" cols="120"
+                          rows="1"><?php echo $listingMarketing->user_default_listing_marketing_question; ?></textarea>
+
+                <div class="clear"></div>
+                <br/>
+
+                <div class="sl-financial">
+                    <label class="clearfix">Date Published
+                        <input class="drg_fyear" id="drg_fyear1"
+                               value="<?php echo SharedFunctions::convertDateAsDisplayFormat($listingMarketing->user_default_listing_marketing_question_submission_date, 'd/m/Y'); ?>"
+                               name="date_published" type="text"/>
+                    </label>
+                    <label class="clearfix">Number of days active
+                        <?php
+                        $date1 = $listingMarketing->user_default_listing_marketing_question_submission_date;
+                        $date2 = $listingMarketing->user_default_listing_marketing_question_end_date;
+                        $noOfDaysActive = SharedFunctions::getDateDiffAsDays($date1, $date2);
+                        ?>
+                        <input class="drg_fyear" id="drg_fyear2" value="<?php echo $noOfDaysActive; ?>"
+                               name="noOfActiveDays" type="text"/>
+                    </label>
+                    <label class="clearfix">Total votes received
+                        <input class="drg_fyear" id="drg_fyear3" value="24,122,452" name="totalVotes" type="text"/>
+                    </label>
+                    <label class="clearfix" style="color:#96bc33;"><b> Yes </b>votes received
+                        <input class="drg_fyear" id="drg_fyear4" value="20,123,100" name="yesVotes" type="text"/>
+                    </label>
+                    <label class="clearfix" style="color:#00acce;"><b> Maybe </b>votes received
+                        <input class="drg_fyear" id="drg_fyear5" value="9,995,123" name="maybeVotes" type="text"/>
+                    </label>
+                    <label class="clearfix" style="color:#BF1024;"><b> No </b>votes received
+                        <input class="drg_fyear" id="drg_fyear6" value="12,123" name="noVotes" type="text"/>
+                    </label>
+                </div>
+                <div class="clear"></div>
+                <div class="chartDuration">&nbsp;</div>
+                <div id="graph">Loading graph...</div>
+                <div class="world-map-container" style="display: none;">
+                    <div class="world-map-title"></div>
+                    <div class="world-map-duration"></div>
+                    <div style="margin: -5% 0% 0px 84%;">
+                        <label style="color: palevioletred;padding-left: 20px">Vote</label>
+
+                        <div><select id="vote-type" data-placeholder="Please select" class="chzn-select"
+                                     style="width:100px;">
+                                <option value="" title="All">All</option>
+                                <option value="Yes" title="Yes">Yes</option>
+                                <option value="Maybe" title="Maybe">Maybe</option>
+                                <option value="No" title="No">No</option>
+                            </select></div>
+                        <div style="margin: -30px 102px 5px 102px">
+                            <div style="background-color:#CF0;width: 11px;height: 11px;margin:3px;"><span
+                                    style="padding-left: 13px; color: #808080">&nbsp;Yes</span></div>
+
+                            <div style="background-color:#CFF;width: 11px;height: 11px;margin:3px;"><span
+                                    style="padding-left: 13px; color: #808080">&nbsp;Maybe</span></div>
+
+                            <div style="background-color:#F5A;width: 11px;height: 11px;margin:3px;"><span
+                                    style="padding-left: 13px; color: #808080">&nbsp;No</span></div>
+                        </div>
+
+                    </div>
+
+                    <div id="world-map">Loading map...</div>
+
+                </div>
+                <div class="nav-button">
+                    <a href="#" class="prev" data-value="prev">&nbsp;</a>
+                    <a href="#" class="next" data-value="next">&nbsp;</a>
+
+                    <?php
+
+                    // initial dates
+                    $curr_date = date('Y-m-d');
+                    $dayNumber = date('w', strtotime($curr_date));
+                    $incrementDays = (6 - $dayNumber);
+
+                    // to set start date
+                    $temp_datetime = strtotime(date('Y-m-d', strtotime("-$dayNumber day", strtotime($curr_date))));
+                    if ($temp_datetime > strtotime($listingMarketing->user_default_listing_marketing_question_submission_date)) {
+                        $start_date = date('Y-m-d', strtotime("-$dayNumber day", strtotime($curr_date)));
+                    } else {
+                        $start_date = $listingMarketing->user_default_listing_marketing_question_submission_date;
+                    }
+
+                    // to set end date
+                    $temp_datetime = strtotime("+$incrementDays day", strtotime($curr_date)); // tmp date added by 7 days
+                    if ($temp_datetime < strtotime($listingMarketing->user_default_listing_marketing_question_end_date)) {
+                        $end_date = date('Y-m-d', strtotime("+$incrementDays day", strtotime($curr_date)));
+                    } else {
+                        $end_date = $listingMarketing->user_default_listing_marketing_question_end_date;
+                    }
+                    ?>
+                    <input type="hidden" name="start_date" value="<?php echo $start_date; ?>"/>
+                    <input type="hidden" name="end_date" value="<?php echo $end_date; ?>"/>
+                </div>
+                <div class="clear"></div>
+                <div>&nbsp;</div>
+                <!--<div>&nbsp;</div>
+                <div>&nbsp;</div>-->
+
+                <div class="clear"></div>
+
+                <div class="sl-filters" style="width: 60%;">
+
+                    <div class="select-box">
+                        <select id="sl_period" name="drg_category" data-placeholder="Please select"
+                                class="chzn-select" style="width:200px;" tabindex="2">
+                            <option value="weekly" title="Get 12 hours access to your listing" selected="selected">Week
+                                view
+                            </option>
+                            <option value="monthly" title="Get 7 days access to your listing">Month view</option>
+                        </select>
+
+                        <div class="label">
+                            <label class="label" for="sl_period">Select period</label>
+                            <a href="#;" style="background:none;" class="tooltip"> <b> ? </b><span class="classic"
+                                                                                                   style="text-align: left;">View your voting data by week or by month</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="select-box">
+
+                        <?php
+                        $resultProfessions = Profession::model()->findAll(array('order' => 'profession_name'));
+                        ?>
+                        <select id="sl_user_profession" name="drg_category" data-placeholder=" "
+                                class="chzn-select"
+                                style="width:200px;" tabindex="2">
+                            <option value="">All</option>
+                            <?php if ($resultProfessions) : ?>
+                                <?php foreach ($resultProfessions as $profession) : ?>
+                                    <option
+                                        value="<?php echo $profession->profession_id; ?>"><?php echo $profession->profession_name; ?></option>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </select>
+
+                        <div class="label">
+                            <label class="label" for="sl_user_profession">Select user type</label>
+                            <a href="#;" style="background:none;" class="tooltip"> <b> ? </b><span class="classic"
+                                                                                                   style="text-align: left;">Select a user type to see how they voted on your business idea</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="select-box">
+                        <select id="sl_graph_type" name="sl_graph_type" data-placeholder="Please select"
+                                class="chzn-select" style="width:200px;" tabindex="2">
+                            <option value="bar" title="Bar graph" selected="selected">Bar Graph</option>
+                            <option value="line" title="Line graph">Line Graph</option>
+                            <option value="pie" title="Pie chart">Pie Chart</option>
+                            <option value="geolocation" title="View data by geolocation">View data by geolocation
+                            </option>
+                        </select>
+
+                        <div class="label">
+                            <label class="label" for="sl_graph_type">Select graph type</label>
+                            <a href="#;" style="background:none;" class="tooltip"> <b> ? </b><span class="classic"
+                                                                                                   style="text-align: left;">Select a graph format that best visualises your data</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+    <?php } else { ?>
+        <div>No questions for this listing.</div>
+    <?php } ?>
+
+</div><!--content-container-->
+<script>
+
+function drawBarChart(container, data) {
+
+    // JS Charts code
+    var myChart = new JSChart(container, 'bar', 'de2cdc4d63a735c6b2d4809112828444');
+    myChart.setSize(1014, 421);
+    myChart.setDataArray(data);
+    myChart.setTitle('Recorded Marketing Data for <?php echo $userListing->user_default_listing_title; ?>');
+    myChart.setTitleColor('#8E8E8E');
+    myChart.setAxisNameX('');
+    myChart.setAxisNameY('');
+    myChart.setAxisNameFontSize(16);
+    myChart.setAxisNameColor('#999');
+    myChart.setAxisValuesAngle(30);
+    myChart.setAxisValuesColor('#777');
+    myChart.setAxisColor('#B5B5B5');
+    myChart.setAxisWidth(1);
+    myChart.setBarValuesColor('#2F6D99');
+    myChart.setAxisPaddingTop(60);
+    myChart.setAxisPaddingBottom(60);
+    myChart.setAxisPaddingLeft(45);
+    myChart.setTitleFontSize(11);
+    myChart.setBarColor('#CF0', 1);
+    myChart.setBarColor('#CFF', 2);
+    myChart.setBarColor('#F5A', 3);
+    myChart.setBarBorderWidth(0);
+    myChart.setBarSpacingRatio(10);
+    myChart.setBarOpacity(0.9);
+    myChart.setFlagRadius(6);
+    myChart.setTooltipPosition('nw');
+    myChart.setTooltipOffset(3);
+    myChart.setLegendShow(true);
+    myChart.setLegendPosition('right top');
+    myChart.setLegendForBar(1, 'Yes');
+    myChart.setLegendForBar(2, 'Maybe');
+    myChart.setLegendForBar(3, 'No');
+    myChart.setGridColor('#C6C6C6');
+    myChart.draw();
+}
+
+function drawLineChart(container, data) {
+
+    // JS Charts code
+    var myChart = new JSChart(container, 'line');
+    myChart.setSize(1014, 421);
+    myChart.setTitle('Recorded Marketing Data for <?php echo $userListing->user_default_listing_title; ?>');
+    myChart.setTitleColor('#8E8E8E');
+    myChart.setDataArray(data.yesData, 'Yes');
+    myChart.setDataArray(data.maybeData, 'Maybe');
+    myChart.setDataArray(data.noData, 'No');
+    myChart.setLineWidth(2);
+    myChart.setTooltip([1, '']);
+    myChart.setTooltip([2, '']);
+    myChart.setTooltip([3, '']);
+    myChart.setTooltip([4, '']);
+    myChart.setTooltip([5, '']);
+    myChart.setTooltip([6, '']);
+    myChart.setTooltip([7, '']);
+    myChart.setTooltip([8, '']);
+    myChart.setTooltip([9, '']);
+    myChart.setTooltip([10, '']);
+    myChart.setTooltip([11, '']);
+    myChart.setTooltip([12, '']);
+    myChart.setTooltip([13, '']);
+    myChart.setTooltip([14, '']);
+    myChart.setTooltip([15, '']);
+    myChart.setTooltip([16, '']);
+    myChart.setTooltip([17, '']);
+    myChart.setTooltip([18, '']);
+    myChart.setTooltip([19, '']);
+    myChart.setTooltip([20, '']);
+    myChart.setTooltip([21, '']);
+    myChart.setTooltip([22, '']);
+    myChart.setTooltip([23, '']);
+    myChart.setTooltip([24, '']);
+    myChart.setAxisNameX('');
+    myChart.setAxisNameY('');
+    if (typeof(data.labelX) !== 'undefined') {
+        var labelX = data.labelX; //console.log(labelX);
+        $.each(labelX, function (index, value) {
+            myChart.setLabelX([value[0], value[1]]);
+        });
+    }
+    myChart.setShowXValues(false);
+    myChart.setAxisNameX('');
+    myChart.setAxisNameY('');
+    myChart.setAxisNameFontSize(16);
+    myChart.setAxisNameColor('#999');
+    myChart.setAxisValuesAngle(30);
+    myChart.setAxisValuesColor('#777');
+    myChart.setAxisColor('#B5B5B5');
+    myChart.setAxisWidth(1);
+    myChart.setBarValuesColor('#2F6D99');
+    myChart.setAxisPaddingTop(60);
+    myChart.setAxisPaddingBottom(60);
+    myChart.setTitleFontSize(11);
+    myChart.setLineColor('#CF0', 'Yes');
+    myChart.setLineColor('#CFF', 'Maybe');
+    myChart.setLineColor('#F5A', 'No');
+    myChart.setLegendShow(true);
+    myChart.setLegendPosition('right top');
+    myChart.draw();
+}
+
+function drawPieChart(container, data) {
+
+    // JS Charts code
+    var myData = new Array(['Yes', data.yesVotes], ['Maybe', data.maybeVotes], ['No', data.noVotes]);
+    var colors = ['#CF0', '#CFF', '#F5A'];
+    var myChart = new JSChart(container, 'pie');
+    myChart.setSize(1014, 421);
+    myChart.setTitle('Recorded Marketing Data for <?php echo $userListing->user_default_listing_title; ?>');
+    myChart.setDataArray(myData);
+    myChart.colorizePie(colors);
+    myChart.setTitleColor('#857D7D');
+    myChart.setPieUnitsColor('#9B9B9B');
+    myChart.setPieValuesColor('#6A0000');
+    myChart.setLegendShow(true);
+    myChart.setLegendPosition('right');
+    myChart.setLegend('#CF0', 'Yes');
+    myChart.setLegend('#CFF', 'Maybe');
+    myChart.setLegend('#F5A', 'No');
+    myChart.draw();
+}
+
+function drawMarkersGeoLocation(data) {
+
+    jQuery('#world-map').empty();
+    jQuery('#world-map').vectorMap({
+        map: 'world_mill_en',
+        scaleColors: ['#C8EEFF', '#0071A4'],
+        normalizeFunction: 'polynomial',
+        hoverOpacity: 0.7,
+        hoverColor: false,
+        markerStyle: {
+            initial: {
+                fill: '#F8E23B',
+                stroke: '#383f47',
+                r: 2
+            }
+        },
+        backgroundColor: '#B5D5F3',
+        markers: data
+    });
+}
+
+/* limits text in textarea with maxlength attribute */
+var $ = jQuery.noConflict();
+$(document).ready(function () {
+
+    window.onload = function () {
+
+        var questionExist = "<?php echo $listingMarketing !=''? true : false;?>";
+        if (questionExist == false)
+            return false;
+
+        // Requests/Responses of chart data
+        var responseData = $.parseJSON($.ajax({
+            type: 'GET',
+            url: '<?php echo Yii::app()->createUrl('/admin/listings/listings/marketingDataChart'); ?>',
+            dataType: "json",
+            async: false,
+            data: {
+                chartType: "bar",
+                questionId: "<?php echo $listingMarketing->user_default_listing_marketing_id;?>",
+                period: "weekly",
+                start_date: $('input[name="start_date"]').val(),
+                end_date: $('input[name="end_date"]').val(),
+                userType: ""
+            },
+            beforeSend: function () {
+                jQuery('#graph, #world-map').html('<img src="<?php echo Yii::app()->theme->baseUrl ?>/images/loader.gif" alt="Loading.." />');
+            }
+
+        }).responseText); // This will wait until you get a response from the ajax request.
+
+        $('input[name="totalVotes"]').val(responseData.marketingData.totalVotes);
+        $('input[name="yesVotes"]').val(responseData.marketingData.yesVotes);
+        $('input[name="maybeVotes"]').val(responseData.marketingData.maybeVotes);
+        $('input[name="noVotes"]').val(responseData.marketingData.noVotes);
+
+        $('.chartDuration').text(responseData.chartDuration);
+
+
+        drawBarChart('graph', responseData.marketingDataChart);
+    };
+
+    // On change event for chart data
+    $('#sl_period, #sl_user_profession, #sl_graph_type, #vote-type').on('change', function (e, data) {
+
+        var sl_period = $('#sl_period option:selected').val();
+        var sl_user_profession = $('#sl_user_profession option:selected').val();
+        var sl_graph_type = $('#sl_graph_type option:selected').val();
+        var sl_vote_type = $('#vote-type option:selected').val();
+
+        if (sl_graph_type == 'geolocation') {
+            jQuery('#graph').hide();
+            jQuery('.world-map-container')
+                .show()
+                .css({'margin-top': '10px'});
+        } else {
+            jQuery('#graph').show();
+            jQuery('.world-map-container')
+                .hide()
+                .css({'margin-top': '0px'});
+
+            jQuery('.world-map-title, .world-map-duration').empty();
+            jQuery('#world-map').css({'height': '0px'}).empty();
+        }
+
+        // Requests/Responses of chart data
+        var responseData = $.parseJSON($.ajax({
+            type: 'GET',
+            url: '<?php echo Yii::app()->createUrl('/admin/listings/listings/marketingDataChart'); ?>',
+            dataType: "json",
+            async: false,
+            data: {
+                chartType: sl_graph_type,
+                questionId: "<?php echo $listingMarketing->user_default_listing_marketing_id;?>",
+                period: sl_period,
+                start_date: $('input[name="start_date"]').val(),
+                end_date: $('input[name="end_date"]').val(),
+                userType: sl_user_profession,
+                navButton: data.navButton,
+                voteType: sl_vote_type
+            },
+            beforeSend: function () {
+                jQuery('#graph, #world-map').html('<img src="<?php echo Yii::app()->theme->baseUrl ?>/images/loader.gif" alt="Loading.." />');
+            }
+
+        }).responseText); // This will wait until you get a response from the ajax request.
+
+        $('input[name="totalVotes"]').val(responseData.marketingData.totalVotes);
+        $('input[name="yesVotes"]').val(responseData.marketingData.yesVotes);
+        $('input[name="maybeVotes"]').val(responseData.marketingData.maybeVotes);
+        $('input[name="noVotes"]').val(responseData.marketingData.noVotes);
+        $('.chartDuration').text(responseData.chartDuration);
+
+        if (typeof(responseData.start_date) !== 'undefined')
+            $('input[name="start_date"]').val(responseData.start_date);
+
+        if (typeof(responseData.end_date) !== 'undefined')
+            $('input[name="end_date"]').val(responseData.end_date);
+
+        if (sl_graph_type == 'bar')
+            drawBarChart('graph', responseData.marketingDataChart);
+
+        if (sl_graph_type == 'line')
+            drawLineChart('graph', responseData.marketingDataChart);
+
+        if (sl_graph_type == 'pie')
+            drawPieChart('graph', responseData.marketingDataChart);
+
+        if (sl_graph_type == 'geolocation') {
+
+            jQuery('.chartDuration, #graph').empty();
+
+            jQuery('.world-map-title').text('Recorded Marketing Data for <?php echo $userListing->user_default_listing_title; ?>');
+            jQuery('.world-map-duration').text(responseData.chartDuration);
+            jQuery('#world-map').css({height: '400px'});
+
+            drawMarkersGeoLocation(responseData.marketingDataMap);
+        }
+
+
+    });
+
+    $('.nav-button .prev, .nav-button .next').on('click', function () {
+
+        var btnValue = $(this).data('value');
+        $('#sl_period').trigger("change", [{navButton: btnValue}]);
+        return false;
+    });
+
+});
+</script>
+
+<!-- Styles the dropdown menu listbox This must be at the bottom to work -->
+<script type="text/javascript"> $(".chzn-select").chosen();</script>

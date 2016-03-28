@@ -1,0 +1,1117 @@
+<?php
+
+class ListingsController extends Controller
+{
+
+    public function filters()
+    {
+        return array(
+            'accessControl', // perform access control for CRUD operations
+            'postOnly + delete', // we only allow deletion via POST request
+        );
+    }
+
+    public function accessRules()
+    {
+        return array(
+            array('allow',  // allow all users to perform 'index' and 'view' actions
+                'actions' => array(),
+                'users' => array('*'),
+            ),
+            array('allow', // allow authenticated user to perform 'create' and 'update' actions
+                'actions' => array('index,update,create,delete,rdelete,publish,rejection,suspension,restore,downloadvideo,marketingdata,portfolio,samples,forum,exportDefaultListings,sampleview,marketingDataChart,statistics,defaultUserListing,exportbListings,downloadListingAsStandAlone,downloadListingAsZip'),
+                'users' => array('@'),
+            ),
+            array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('admin', 'delete'),
+                'users' => array('admin'),
+            ),
+            array('deny',  // deny all users
+                'users' => array('*'),
+            ),
+        );
+    }
+
+    public function actionCreate()
+    {
+        $model = new Listings;
+
+        // Uncomment the following line if AJAX validation is needed
+        //$this->performAjaxValidation($model);
+
+        if (isset($_POST['Listings'])) {
+            $model->attributes = $_POST['Listings'];
+            if ($model->save()) {
+                Yii::app()->user->setFlash('success', 'User Profile Updated Successfully.');
+                $this->redirect(array('view', 'id' => $model->user_default_listing_id));
+            }
+        }
+
+        $this->render('create', array('model' => $model,));
+    }
+
+    public function actionUpdate($id)
+    {
+
+        $model = $this->loadModel($id);
+        if (isset($_POST['Listings'])) {
+            $data = $_REQUEST['drg_fprojections1'] . "," . $_REQUEST['drg_fprojections2'] . "," . $_REQUEST['drg_fprojections3'] . "," . $_REQUEST['drg_fprojections4'] . "," . $_REQUEST['drg_fprojections5'] . "," . $_REQUEST['drg_fprojections6'];
+            $model->user_default_listing_financial_table_status = $_REQUEST['user_default_listing_financial_table_status'];
+            $model->user_default_listing_table_currency_code = $_REQUEST['user_default_listing_table_currency_code'];
+            $model->user_default_listing_notification_frequency = $_REQUEST['user_default_listing_notification_frequency'];
+            $model->user_default_listing_fprojections = $data;
+            $model->attributes = $_POST['Listings'];
+
+            $address = Userlistingmarketing::model()->find("user_default_listing_id = '" . $id . "' ");
+
+            if ($address == NULL) {
+                $address = new Userlistingmarketing;
+
+                $address->user_default_listing_marketing_question_submission_date = date('Y-m-d');
+
+                $address->user_default_listing_id = $id;
+            }
+
+            $address->user_default_listing_marketing_question = $_POST['Userlistingmarketing']['user_default_listing_marketing_question'];
+
+            $address->save();
+
+            if ($id != "") {
+
+                Userlistingimages::model()->deleteAll("user_default_listing_id  ='" . $id . "'");
+
+            }
+
+            $i = 0;
+
+            for ($i = 0; $i < 6; $i++) {
+
+                if ($_POST['img_name'][$i] != "") {
+
+                    $Userlistingimages = new Userlistingimages;
+
+                    $Userlistingimages->user_default_listing_image = $_POST['img_name'][$i];
+
+                    $Userlistingimages->user_default_listing_image_text = $_POST['user_default_listing_image_text'][$i];
+
+                    $Userlistingimages->user_default_listing_image_link1 = $_POST['user_default_listing_image_link1'][$i];
+
+                    $Userlistingimages->user_default_listing_image_link2 = $_POST['user_default_listing_image_link2'][$i];
+
+                    $Userlistingimages->user_default_listing_id = $id;
+
+                    $Userlistingimages->save();
+
+                }
+
+            }
+
+            $user_details = User::model()->findAllByAttributes(array("user_default_id" => $model->user_default_profiles_id));
+
+            $userid = $model->user_default_profiles_id;
+
+            $username = $user_details[0]['user_default_username'];
+
+            $upath = $username . "_" . $userid;
+
+            $path = $_SERVER['DOCUMENT_ROOT'] . '/';
+
+            $j = 0;
+
+            for ($j = 0; $j < 3; $j++) {
+
+                if ($_POST['drg_video'][$j] != "") {
+
+                    $oldvid = $_POST['drg_oldvideo'][$j];
+
+                    $cvidpath1 = $path . "upload/users/" . $upath . "/videos/" . $oldvid;
+
+                    unlink($cvidpath1);
+
+                    Userlistingvideos::model()->deleteAll("user_default_listing_video_link ='" . $oldvid . "'");
+
+                    $Userlistingvideos = new Userlistingvideos;
+
+                    $Userlistingvideos->user_default_listing_video_link = $_POST['drg_video'][$j];
+
+                    $Userlistingvideos->user_default_listing_video_type = "1";
+
+                    $Userlistingvideos->user_default_listing_id = $id;
+
+                    $Userlistingvideos->save();
+
+                }
+
+            }
+
+
+            if ($model->save()) {
+
+                if ($_POST['update']) {
+
+
+                    $to = $user_details[0]['user_default_email'];
+                    $subject = "User listing update notification";
+                    $controller = Yii::app()->controller->action->id;
+
+                    $yii_user_request_id1 = Yii::app()->getBaseUrl(true) . "/" . "listing" . "/" . "fupdate" . "/listid/" . $model->user_default_listing_id;
+                    $yii_user_request_id = '<a href="' . Yii::app()->getBaseUrl(true) . "/" . "listing" . "/" . "fupdate" . "/listid/" . $model->user_default_listing_id . '" target="_blank" >here >> </a>';
+
+
+                    $template = MailTemplate::getTemplate('Listing_update');
+                    $subjectcc = $model['user_default_listing_title'] . " update notification";
+                    $sitelink = '<a href="' . Yii::app()->getBaseUrl(true) . '" target="_blank" >here >> </a>';
+                    $adminmsg = "<p style='background: #C2C3C4;color:#ED7932;border: 1px dashed #000;min-height: 90px;padding: 6px;'>" . $_POST['changes'] . "</p>";
+                    $contactlink = '<a href="' . Yii::app()->getBaseUrl(true) . '/contact" target="_blank" >listing support team</a>';
+
+                    $string = array(
+                        '{{#LISTINGTITLE#}}' => ucwords($model['user_default_listing_title']),
+                        '{{#USERNAME#}}' => ucwords($user_details[0]['user_default_first_name'] . ' ' . $user_details[0]['user_default_surname']),
+                        '{{#MESSAGE#}}' => ucwords($adminmsg), '{{#LSLINK#}}' => $contactlink,
+                        '{{#LISTINGLINK#}}' => ucwords($yii_user_request_id)
+                    );
+
+                    $body = SharedFunctions::app()->mailStringReplace($template->template_body, $string);
+
+                    $result = SharedFunctions::app()->sendmail($to, $subjectcc, $body);
+
+
+                }
+                Yii::app()->user->setFlash('success', 'User Profile Updated Successfully.');
+                $this->redirect(array('index'));
+            }
+        }
+
+
+        $this->render('update', array(
+            'model' => $model,
+        ));
+    }
+
+    public function loadModel($id)
+    {
+        $model = Listings::model()->findByPk($id);
+        if ($model === null)
+            throw new CHttpException(404, 'The requested page does not exist.');
+        return $model;
+    }
+    // Uncomment the following methods and override them if needed
+    /*
+    public function filters()
+    {
+        // return the filter configuration for this controller, e.g.:
+        return array(
+            'inlineFilterName',
+            array(
+                'class'=>'path.to.FilterClass',
+                'propertyName'=>'propertyValue',
+            ),
+        );
+    }
+
+    public function actions()
+    {
+        // return external action classes, e.g.:
+        return array(
+            'action1'=>'path.to.ActionClass',
+            'action2'=>array(
+                'class'=>'path.to.AnotherActionClass',
+                'propertyName'=>'propertyValue',
+            ),
+        );
+    }
+    */
+    public function actionIndex()
+    {
+        /*if (!empty($_REQUEST['username']) || !empty($_REQUEST['user_default_listing_title']) || !empty($_REQUEST['user_default_listing_category_id']) || !empty($_REQUEST['user_default_listing_lookingfor_id']) ||
+            !empty($_REQUEST['user_default_listing_limit_viewing_id']) || !empty($_REQUEST['Keyword'])
+        ) {
+            $model = new Listings('search');
+            $criteria = new CDbCriteria;
+
+            if (isset($_REQUEST['username']) && $_REQUEST['username'] != "") {
+
+                $Data = User::model()->findAll("LOWER(user_default_username) like '%" . addslashes(strtolower($_REQUEST['username'])) . "%'");
+
+                if ($Data) {
+
+                    foreach ($Data as $rsData) {
+
+                        $ids[] = $rsData->user_default_id;
+
+                    }
+                    //$ids1 = array(rtrim($ids,','));
+                    $criteria->addInCondition('user_default_profiles_id', $ids);
+                }
+            }
+            if (isset($_REQUEST['user_default_listing_category_id']) && $_REQUEST['user_default_listing_category_id'] != "") {
+
+                $criteria->compare('user_default_listing_category_id', addslashes($_REQUEST['user_default_listing_category_id']), true);
+            }
+
+            if (isset($_REQUEST['user_default_listing_lookingfor_id']) && $_REQUEST['user_default_listing_lookingfor_id'] != "") {
+
+                $criteria->compare('user_default_listing_lookingfor_id', addslashes($_REQUEST['user_default_listing_lookingfor_id']), true);
+            }
+
+
+            if (isset($_REQUEST['user_default_listing_limit_viewing_id']) && $_REQUEST['user_default_listing_limit_viewing_id'] != "") {
+
+                $criteria->compare('user_default_listing_limit_viewing_id', addslashes($_REQUEST['user_default_listing_limit_viewing_id']), true);
+            }
+
+
+            if (isset($_REQUEST['user_default_listing_title']) && $_REQUEST['user_default_listing_title'] != "") {
+                $criteria->compare('user_default_listing_title', addslashes($_REQUEST['user_default_listing_title']), true);
+
+            }
+
+
+            if (isset($_REQUEST['Keyword']) && $_REQUEST['Keyword'] != "") {
+                $criteria->compare('user_default_listing_keywords', addslashes($_REQUEST['Keyword']), true);
+
+            }
+
+            $criteria->order = 'user_default_listing_id desc';
+            // print_r($criteria);
+
+
+            $total = Listings::model()->count($criteria);
+
+            if (isset($_REQUEST['rows'])) {
+                $count = $_REQUEST['rows'];
+            } else {
+                $count = 5;
+            }
+
+            $pages = new CPagination($total);
+            $pages->setPageSize($count);
+            $pages->applyLimit($criteria);  // the trick is here!
+
+            $posts = Listings::model()->findAll($criteria);
+
+            $this->render('index', array('model' => $model,
+                'list' => $posts,
+                'pages' => $pages,
+                'item_count' => $total,
+                'page_size' => Yii::app()->params['listPerPage']
+            ));
+        } elseif (!empty($_REQUEST['btnsubmit'])) {
+            $model = new Listings();
+
+            $total = Listings::model()->count($criteria);
+
+            if (isset($_REQUEST['rows'])) {
+                $count = $_REQUEST['rows'];
+            } else {
+                $count = 5;
+            }
+
+            $pages = new CPagination($total);
+            $pages->setPageSize($count);
+            $pages->applyLimit($criteria);  // the trick is here!
+
+            $posts = Listings::model()->findAll($criteria);
+            $this->render('index', array('model' => $model,
+                'list' => $posts,
+                'pages' => $pages,
+                'item_count' => $total,
+                'page_size' => Yii::app()->params['listPerPage']
+            ));
+        } else {
+
+            $model = new Listings();
+            $posts = array();
+            $this->render('index', array('model' => $model, 'list' => $posts));
+        }*/
+
+        $model = new Listings();
+        $posts = array();
+        $this->render('index', array('model' => $model, 'list' => $posts));
+
+    }
+
+    public function actionDelete($id)
+    {
+
+        $model = $this->loadModel($id);
+
+        $user_details = User::model()->findAllByAttributes(array("user_default_id" => $model->user_default_profiles_id));
+
+        $user_id = $user_details[0]['user_default_id'];
+
+        $user_name = $user_details[0]['user_default_username'];
+
+        $folder = $user_name . '_' . $user_id;
+
+        $path = $_SERVER['DOCUMENT_ROOT'] . '/';
+
+        $temp_folder = $path . 'temp/';
+
+        $userfolder = $path . 'upload/users/' . $folder . '/';
+
+        $logo = $model->user_default_listing_thumbnail;
+
+        $bigimgpath = $userfolder . 'listing/big/' . $logo;
+
+        $thumbimgpath = $userfolder . 'listing/thumb/' . $logo;
+
+        unlink($bigimgpath);
+
+        unlink($thumbimgpath);
+
+        $attribs = array('user_default_listing_id' => $id);
+
+        $criteria = new CDbCriteria(array('order' => 'iuser_default_listing_video_id ASC'));
+
+        $vids = Userlistingvideos::model()->findAllByAttributes($attribs, $criteria);
+
+        foreach ($vids as $videos) {
+
+            $vid = $videos->user_default_listing_video_link;
+
+            $mp4vid = str_replace("flv", "mp4", $vid);
+
+            $videopath = $userfolder . "videos/" . $vid;
+
+            $tempvideopath = $temp_folder . $mp4vid;
+
+            unlink($videopath);
+        }
+
+        $attribs1 = array('user_default_listing_id' => $id);
+
+        $criteria1 = new CDbCriteria(array('order' => 'user_default_listing_image_id ASC'));
+
+        $imgs = Userlistingimages::model()->findAllByAttributes($attribs1, $criteria1);
+
+        foreach ($imgs as $images) {
+
+            $img = $images->user_default_listing_image;
+
+            $bigimgpath1 = $userfolder . 'listing/big/' . $img;
+
+            $thumbimgpath1 = $userfolder . 'listing/thumb/' . $img;
+
+            unlink($bigimgpath1);
+
+            unlink($thumbimgpath1);
+        }
+
+        $query = "delete from `user_default_listing_images` where `user_default_listing_id` = :date";
+
+        $command = Yii::app()->db->createCommand($query);
+
+        $command->execute(array('date' => $id));
+
+        $query1 = "delete from `user_default_listing_videos` where `user_default_listing_id` = :date1";
+
+        $command1 = Yii::app()->db->createCommand($query1);
+
+        $command1->execute(array('date1' => $id));
+
+        $query2 = "delete from `user_default_listing_addresses` where `user_default_listing_id` = :date2";
+
+        $command2 = Yii::app()->db->createCommand($query2);
+
+        $command2->execute(array('date2' => $id));
+
+        $query3 = "delete from `user_default_prize_points` where `user_default_listing_id` = :date3";
+
+        $command3 = Yii::app()->db->createCommand($query3);
+
+        $command3->execute(array('date3' => $id));
+
+        $query4 = Interactions::model()->findAllByAttributes(array("user_default_listing_id" => $id));
+
+        foreach ($query4 as $data) {
+
+            $interactionid = $data->user_default_interaction_id;
+
+            $query5 = "delete from `user_default_interactions_messages` where `user_default_interaction_id` = :date5";
+
+            $command5 = Yii::app()->db->createCommand($query5);
+
+            $command5->execute(array('date5' => $interactionid));
+
+        }
+
+        $query6 = "delete from `user_default_interactions` where `user_default_listing_id` = :date6";
+
+        $command6 = Yii::app()->db->createCommand($query6);
+
+        $command6->execute(array('date6' => $id));
+
+        //Interactions::model()->deleteAll("user_default_listing_id ='" . $id . "'");
+
+        Banner::model()->deleteAll("user_default_listing_id ='" . $id . "'");
+
+        $model->delete();
+
+        $this->redirect($this->createUrl('/admin/listings/listings/defaultUserListing'));
+    }
+
+    public function actionRdelete($id)
+    {
+        $model = $this->loadModel($id);
+
+
+        if (isset($model)) {
+            $model->user_default_listing_submission_status = 0;
+            //$model->drg_deletedate = date('Y-m-d H:i:s');
+            if ($model->save()) {
+
+                if ($_POST['delete']) {
+
+                    $user_details = User::model()->findAllByAttributes(array("user_default_id" => $model->user_default_profiles_id));
+
+                    $yii_user_request_id = '<a href="' . Yii::app()->getBaseUrl(true) . "/" . "listing" . "/" . "rdelete" . "/listid/" . $model->user_default_listing_id . '" target="_blank" >here >> </a>';
+
+                    $to = $user_details[0]['user_default_email'];
+                    $subject = "User listing deletion notification";
+
+                    $template = MailTemplate::getTemplate('Listing_mark_delete');
+                    $subjectcc = "Listing " . $model['user_default_listing_title'] . " has been marked for deletion ";
+                    $adminmsg = "<p style='background: #C2C3C4;color:#ED7932;border: 1px dashed #000;min-height: 90px;padding: 6px;'>" . $_POST['deletionval'] . "</p>";
+                    $sitelink = '<a href="' . Yii::app()->getBaseUrl(true) . "/page/faq" . '" target="_blank" >here >> </a>';
+                    $contactlink = '<a href="' . Yii::app()->getBaseUrl(true) . '/contact" target="_blank" >customer listing support team</a>';
+                    $string = array(
+                        '{{#LISTINGTITLE#}}' => ucwords($model['user_default_listing_title']),
+                        '{{#USERNAME#}}' => ucwords($user_details[0]['user_default_first_name'] . ' ' . $user_details[0]['user_default_surname']),
+                        '{{#MESSAGE#}}' => ucwords($adminmsg), '{{#CSLINK#}}' => $contactlink,
+                        '{{#LISTINGLINK#}}' => ucwords($yii_user_request_id),
+                        '{{#SITELINK#}}' => ucwords($sitelink),
+                    );
+
+                    $body = SharedFunctions::app()->mailStringReplace($template->template_body, $string);
+
+                    $result = SharedFunctions::app()->sendmail($to, $subjectcc, $body);
+
+
+                }
+                $this->redirect(array('index'));
+                //$this->render('update',array('model'=>$model,));
+            } else {
+                $this->render('update', array('model' => $model,));
+            }
+
+        }
+
+
+    }
+
+    public function actionPublish($id)
+    {
+        $model = $this->loadModel($id);
+        $user_details = User::model()->findAllByAttributes(array("user_default_id" => $model->user_default_profiles_id));
+        $to = $user_details[0]['user_default_email'];
+
+        $controller = Yii::app()->controller->action->id;
+        $status = "Published";
+        $yii_user_request_id = '<a href="' . Yii::app()->getBaseUrl(true) . "/" . "listing" . "/" . "view?id=" . $model->user_default_listing_id . '" target="_blank" >here >> </a>';
+
+        $template = MailTemplate::getTemplate('user_listing_publish');
+
+        $sitelink = '<a href="' . Yii::app()->getBaseUrl(true) . '/video_tutorials?autoplay" target="_blank" >here >> </a>';
+        $llink = '<a href="' . Yii::app()->getBaseUrl(true) . "/" . "listing" . "/" . "selectlisting" . "/" . "listid" . "/" . $model->user_default_listing_id . '" target="_blank" >here >> </a>';
+        $ltitle = "<i>" . $model['user_default_listing_title'] . "</i>";
+        $ldate = "<i>" . $model['user_default_listing_date'] . "</i>";
+        $lstatus = "<i>" . $status . "</i>";
+
+        $string = array(
+            '{{#LISTINGTITLE#}}' => ucwords($ltitle),
+            '{{#USERNAME#}}' => ucwords($user_details[0]['user_default_first_name'] . ' ' . $user_details[0]['user_default_surname']),
+            '{{#LISTINGDATE#}}' => ucwords($ldate),
+            '{{#LISTINGSTATUS#}}' => ucwords($lstatus),
+            '{{#LISTINGLINK#}}' => ucwords($yii_user_request_id),
+            '{{#SITELINK#}}' => ucwords($sitelink),
+            '{{#LLINK#}}' => ucwords($llink)
+        );
+
+        $body = SharedFunctions::app()->mailStringReplace($template->template_body, $string);
+
+        $result = SharedFunctions::app()->sendmail($to, $template->template_subject, $body);
+
+
+        if (isset($model)) {
+            $model->user_default_listing_submission_status = 1;
+            $model->user_default_listing_approvedate = date('Y-m-d');
+            /*
+             $attribs = array('user_default_listing_id'=>$model->user_default_listing_id);
+            $criteria = new CDbCriteria(array('order'=>'iuser_default_listing_video_id ASC'));
+            $vids = Userlistingvideos::model()->findAllByAttributes($attribs, $criteria);
+            foreach ($vids as $videos)
+            {
+
+            $cvid1=$videos->drg_listing_video;
+            $tvid1=str_replace('flv','mp4',$cvid1);
+            $path =  $_SERVER['DOCUMENT_ROOT'].'/';
+            $temp_dir=$path."temp/";
+            $tvidpath1=$path."temp/".$tvid1;
+            unlink($tvidpath1);
+            }
+            */
+
+            if ($model->save()) {
+                $this->render('update', array('model' => $model,));
+            } else {
+                $this->render('update', array('model' => $model,));
+            }
+        }
+        $this->redirect(array('index'));
+
+
+    }
+
+    public function actionRejection($id)
+    {
+        $model = $this->loadModel($id);
+
+
+        if ($_POST['rejection']) {
+            $user_details = User::model()->findAllByAttributes(array("user_default_id" => $model->user_default_profiles_id));
+            $to = $user_details[0]['user_default_email'];
+            $subject = "User listing rejection notification";
+            $controller = Yii::app()->controller->action->id;
+            $yii_user_request_id = Yii::app()->getBaseUrl(true) . "/" . "listing" . "/" . "rejection" . "/listid/" . $model->user_default_listing_id;
+
+            $template = MailTemplate::getTemplate('Listing_rejection');
+            $subjectcc = $model['user_default_listing_title'] . " rejection notification";
+            $sitelink = '<a href="' . Yii::app()->getBaseUrl(true) . '" target="_blank" >here >> </a>';
+            $rmessage = "<p style='background: #C2C3C4;color:#ED7932;border: 1px dashed #000;min-height: 90px;padding: 6px;'>" . $_POST['rejectval'] . "</p>";
+
+            $string = array(
+                '{{#LISTINGTITLE#}}' => ucwords($model['user_default_listing_title']),
+                '{{#USERNAME#}}' => ucwords($user_details[0]['user_default_first_name'] . ' ' . $user_details[0]['user_default_surname']),
+                '{{#MESSAGE#}}' => ucwords($rmessage),
+                '{{#SITELINK#}}' => ucwords($sitelink)
+            );
+
+            $body = SharedFunctions::app()->mailStringReplace($template->template_body, $string);
+
+            $result = SharedFunctions::app()->sendmail($to, $subjectcc, $body);
+        }
+        if (isset($model)) {
+            $model->user_default_listing_submission_status = 2;
+
+            if ($model->save()) {
+                $this->render('update', array('model' => $model,));
+            } else {
+                $this->render('update', array('model' => $model,));
+            }
+        }
+    }
+
+    public function actionSuspension($id)
+    {
+
+        $model = $this->loadModel($id);
+
+        if ($_POST['suspension']) {
+
+            $user_details = User::model()->findAllByAttributes(array("user_default_id" => $model->user_default_profiles_id));
+            $to = $user_details[0]['user_default_email'];
+
+            $controller = Yii::app()->controller->action->id;
+            $yii_user_request_id = '<a href="' . Yii::app()->getBaseUrl(true) . "/" . "listing" . "/" . "suspensed" . "/listid/" . $model->user_default_listing_id . '" target="_blank" >here >> </a>';
+
+            $template = MailTemplate::getTemplate('Listing_suspension');
+
+            $adminmsg = $_POST['suspensionval'];
+
+            $string = array(
+                '{{#LISTINGTITLE#}}' => ucwords($data['user_default_listing_title']),
+                '{{#USERNAME#}}' => ucwords($user_details[0]['user_default_first_name'] . ' ' . $user_details[0]['user_default_surname']),
+                '{{#MESSAGE#}}' => ucwords($adminmsg),
+                '{{#LISTINGLINK#}}' => ucwords($yii_user_request_id)
+            );
+            $body = SharedFunctions::app()->mailStringReplace($template->template_body, $string);
+            $result = SharedFunctions::app()->sendmail($to, $template->template_subject, $body);
+
+        }
+
+        if (isset($model)) {
+            $model->user_default_listing_submission_status = 0;
+            $model->user_default_listing_approvedate = date('Y-m-d');
+            if ($model->save()) {
+                $this->render('update', array('model' => $model,));
+            } else {
+                $this->render('update', array('model' => $model,));
+            }
+        }
+
+    }
+
+    public function actionRestore($id)
+    {
+        $model = $this->loadModel($id);
+        if (isset($model)) {
+            $model->user_default_listing_submission_status = 4;
+            if ($model->save()) {
+                $user_details = User::model()->findAllByAttributes(array("user_default_id" => $model->user_default_profiles_id));
+                $to = $user_details[0]['user_default_email'];
+                $controller = Yii::app()->controller->action->id;
+                $site = Yii::app()->getBaseUrl(true);
+                $sitelink = '<a href="' . Yii::app()->getBaseUrl(true) . '" target="_blank" >' . $site . '</a>';
+                $template = MailTemplate::getTemplate('Listing_restore');
+                $subjectcc = " Listing " . $model->user_default_listing_title . " has been restored";
+                $string = array('{{#LISTINGTITLE#}}' => ucwords($model->user_default_listing_title), '{{#USERNAME#}}' => ucwords($user_details[0]['user_default_first_name'] . ' ' . $user_details[0]['user_default_surname']), '{{#SITELINK#}}' => ucwords($sitelink));
+                $body = SharedFunctions::app()->mailStringReplace($template->template_body, $string);
+                $result = SharedFunctions::app()->sendmail($to, $subjectcc, $body);
+                //$this->render('update',array('model'=>$model,));
+            } else {
+                $this->render('update', array('model' => $model,));
+            }
+            $this->redirect(array('index'));
+        }
+    }
+
+    public function userToString()
+    {
+        $targets = $this->drg_user;
+
+
+        if ($targets) {
+            $string = '';
+            foreach ($targets as $target) {
+                $string .= $targets->user_default_first_name . ', ';
+            }
+            return substr($string, 0, strlen($string) - 1);
+        }
+        return null;
+    }
+
+    public function actionDownloadvideo()
+    {
+
+        $filename = Yii::app()->request->getParam('file');
+
+
+        $fileData = Userlistingvideos::model()->find("user_default_listing_video_link = '" . $filename . "'");
+
+
+        $ListingData = Listings::model()->find("user_default_listing_id= '" . $fileData->user_default_listing_id . "'");
+
+        $userData = User::model()->find("user_default_id = '" . $ListingData->user_default_profiles_id . "'");
+
+
+        /*  echo Yii::getPathOfAlias('webroot.upload.users.'.$userData->drg_username.'_'.$userData->drg_id).'/videos/'.$filename;
+          die; */
+
+        @EDownloadHelper::download(Yii::getPathOfAlias('webroot.upload.users.' . $userData->user_default_username . '_' . $userData->user_default_id) . '/videos/' . $filename);
+        return;
+    }
+
+    public function actionPortfolio()
+    {
+        $this->render('portfolio');
+    }
+
+    public function actionMarketingdata()
+    {
+        $listid = isset($_REQUEST['id']) ? $_REQUEST['id'] : '';
+
+        // find total records
+        $totalRecords = Userlistingmarketing::Model()->count("user_default_listing_id=:user_default_listing_id", array("user_default_listing_id" => $listid));
+        if ($totalRecords) {
+
+            // get listing marketing data
+            $criteria = new CDbCriteria();
+            $criteria->condition = 'user_default_listing_id = ' . $listid;
+            $criteria->offset = isset($_REQUEST['offset']) ? $_REQUEST['offset'] : 0;
+            $criteria->limit = 1;
+            $listingMarketing = Userlistingmarketing::Model()->find($criteria);
+        } else
+            $listingMarketing = '';
+
+        $this->render('marketing_data', array(
+            'listid' => $listid,
+            'userListing' => Userlisting::model()->findByPk($listid),
+            'totalRecords' => $totalRecords,
+            'listingMarketing' => $listingMarketing,
+            'offset' => isset($_REQUEST['offset']) ? $_REQUEST['offset'] : 0,
+        ));
+    }
+
+    public function actionMarketingDataChart()
+    {
+        // User Listing Marketing Data
+        $listingMarketing = Userlistingmarketing::model()->findByPk($_REQUEST['questionId']);
+
+        // initial dates
+        $question_submission_date = $listingMarketing->user_default_listing_marketing_question_submission_date;
+        $question_end_date = $listingMarketing->user_default_listing_marketing_question_end_date;
+
+        // Ajax Requestion Data
+        $chartType = $_REQUEST['chartType'];
+        $questionId = $_REQUEST['questionId'];
+        $period = $_REQUEST['period'];
+        $start_date = $_REQUEST['start_date'];
+        $end_date = $_REQUEST['end_date'];
+        $userType = isset($_REQUEST['userType']) ? $_REQUEST['userType'] : '';
+        $navButton = isset($_REQUEST['navButton']) ? $_REQUEST['navButton'] : '';
+        $voteType = isset($_REQUEST['voteType']) ? $_REQUEST['voteType'] : '';
+
+        // switch case[period]
+        switch ($period) {
+            case 'weekly':
+
+                // if previous
+                if ($navButton == 'prev') {
+
+                    $temp_start_datetime = strtotime("-7 day", strtotime($start_date)); // tmp date reduced by 7 days
+                    if ($temp_start_datetime > strtotime($question_submission_date)) {
+                        $start_date = date('Y-m-d', $temp_start_datetime);
+                        $end_date = date('Y-m-d', strtotime("+6 day", strtotime($start_date)));
+                    } else {
+                        $start_date = $question_submission_date;
+
+                        $dayNumber = date('w', strtotime($start_date));
+                        $incrementDays = (6 - $dayNumber);
+                        $end_date = date('Y-m-d', strtotime("+$incrementDays day", strtotime($start_date)));
+                    }
+                }
+
+                // if next
+                if ($navButton == 'next') {
+
+                    $temp_start_datetime = strtotime("+7 day", strtotime($start_date)); // tmp date added by 7 days
+                    if ($temp_start_datetime < strtotime($question_end_date)) {
+                        $start_date = date('Y-m-d', strtotime("+1 day", strtotime($end_date)));
+
+                        $temp_end_datetime = strtotime("+6 day", strtotime($start_date)); // tmp date added by 6 days
+                        if ($temp_end_datetime < strtotime($question_end_date))
+                            $end_date = date('Y-m-d', strtotime("+6 day", strtotime($start_date)));
+                        else
+                            $end_date = $question_end_date;
+                    } else {
+                        $end_date = $question_end_date;
+                    }
+
+                }
+
+                // Load Chart Data
+                if ($chartType == 'bar')
+                    SharedFunctions::loadMarketingDataBarChartWeekly($questionId, $start_date, $end_date, $userType);
+                else if ($chartType == 'line')
+                    SharedFunctions::loadMarketingDataLineChartWeekly($questionId, $start_date, $end_date, $userType);
+                else if ($chartType == 'pie')
+                    SharedFunctions::loadMarketingDataPieChartWeekly($questionId, $start_date, $end_date, $userType);
+                else if ($chartType == 'geolocation')
+                    SharedFunctions::loadMarketingDataGeoLocationChartWeekly($questionId, $start_date, $end_date, $userType, $voteType);
+
+                break;
+
+            case 'monthly':
+
+                $durationYears = array_unique(array(
+                    date('Y', strtotime($question_submission_date)),
+                    date('Y', strtotime($question_end_date)),
+                ));
+
+                if (count($durationYears) > 1) {
+                    $yearsAll = range($durationYears[0], date('Y', strtotime($question_end_date)));
+                } else {
+                    $yearsAll[] = $durationYears[0];
+                }
+
+                $yearIndex = 0;
+
+                // if previous
+                if ($navButton == 'prev') {
+                    $tmpIndex = $yearIndex - 1;
+                    $yearIndex = $tmpIndex > 0 ? $tmpIndex : 0;
+                }
+
+                // if next
+                if ($navButton == 'next') {
+                    $tmpIndex = $yearIndex + 1;
+                    $yearIndex = $tmpIndex < count($durationYears) ? $tmpIndex : $yearIndex;
+                }
+
+                $activeYear = $yearsAll[$yearIndex];
+                $tmp_start_date = strtotime($activeYear . '-01-01');
+                if ($tmp_start_date < strtotime($question_submission_date))
+                    $start_date = $question_submission_date;
+                else
+                    $start_date = date('Y-m-d', $tmp_start_date);
+
+                $tmp_end_date = strtotime($activeYear . '-12-31');
+                if ($tmp_end_date > strtotime($question_end_date))
+                    $end_date = $question_end_date;
+                else
+                    $end_date = date('Y-m-d', $tmp_end_date);
+
+                if ($chartType == 'bar')
+                    SharedFunctions::loadMarketingDataBarChartMonthly($questionId, $question_submission_date, $question_end_date, $activeYear, $start_date, $end_date, $userType);
+                else if ($chartType == 'line')
+                    SharedFunctions::loadMarketingDataLineChartMonthly($questionId, $question_submission_date, $question_end_date, $activeYear, $start_date, $end_date, $userType);
+                else if ($chartType == 'pie')
+                    SharedFunctions::loadMarketingDataPieChartMonthly($questionId, $question_submission_date, $question_end_date, $activeYear, $start_date, $end_date, $userType);
+                else if ($chartType == 'geolocation')
+                    SharedFunctions::loadMarketingDataGeoLocationChartMonthly($questionId, $question_submission_date, $question_end_date, $activeYear, $start_date, $end_date, $userType, $voteType);
+
+                break;
+        }
+    }
+
+    public function actionSamples()
+    {
+        $this->render('samples');
+    }
+
+    public function actionForum()
+    {
+        $listingModel = new Listings();
+        $listingModel = Listings::model()->findByPk($_REQUEST['id']);
+
+        $this->render('forum', array('model' => $listingModel));
+    }
+
+    public function actionexportDefaultListings()
+    {
+        $fp = fopen('php://output', 'w');
+
+        /*
+         * save as csv content
+         */
+        $filename = 'DefaultUserListing.csv';
+        header('Content-type: application/csv');
+        header('Content-Disposition: attachment; filename=' . $filename);
+
+        /*
+         * Write a header of csv file
+         */
+        $months = array('01' => 'Jan', '02' => 'Feb', '03' => 'Mar', '04' => 'Apr', '05' => 'May', '06' => 'Jun', '07' => 'Jul', '08' => 'Aug', '09' => 'Sep', '10' => 'Oct', '11' => 'Num', '12' => 'Dec');
+
+        $row = array();
+        $row[] = '';
+        foreach ($months as $index => $month) {
+            $row[] = $month;
+        }
+        $row[] = 'Total for year';
+        $row[] = 'Total to date';
+        $row[] = 'Users online';
+
+        fputcsv($fp, $row);
+        unset($row);
+
+        // Default User Professions
+        $resultProfessions = Profession::model()->findAll(array('order' => 'profession_name'));
+        $totalProfessionsForMonth = array();
+        $totalProfessionsForYearAll = 0;
+        $totalToDatesAll = 0;
+        $totalOnlineAll = 0;
+        if ($resultProfessions) {
+            foreach ($resultProfessions as $key => $profession) {
+
+                $professionId = $profession->profession_id;
+                $totalProfessions = 0;
+                $totalToDates = 0;
+                $professionUsersCountOnline = 0;
+                $row[] = $profession->profession_name;
+                foreach ($months as $index => $month) {
+
+                    $monthIndex = $index;
+                    $professionUsersCount = Listings::getProfessionUserListingCount($professionId, $monthIndex);
+                    $totalProfessions += $professionUsersCount;
+                    $totalProfessionsForMonth[$index] += $professionUsersCount;
+
+                    $row[] = $professionUsersCount ? $professionUsersCount : '';
+                }
+
+                $totalProfessionsForYearAll += $totalProfessions;
+
+                $toDateProfessions = Listings::getToDateProfessionUsersListingCount($professionId);
+                $totalToDates = $totalProfessions + $toDateProfessions;
+                $totalToDatesAll += $totalToDates;
+
+                $professionUsersCountOnline = Listings::getProfessionUserListingCountOnline($professionId);
+                $totalOnlineAll += $professionUsersCountOnline;
+
+                $row[] = $totalProfessions ? $totalProfessions : '';
+                $row[] = $totalToDates ? $totalToDates : '';
+                $row[] = $professionUsersCountOnline ? $professionUsersCountOnline : '';
+
+                fputcsv($fp, $row);
+                unset($row);
+            }
+        }
+
+        $row[] = 'Total for month';
+        foreach ($months as $index => $month) {
+            $row[] = $totalProfessionsForMonth[$index] ? $totalProfessionsForMonth[$index] : '';
+        }
+        $row[] = $totalProfessionsForYearAll ? $totalProfessionsForYearAll : '';
+        $row[] = $totalToDatesAll ? $totalToDatesAll : '';
+        $row[] = $totalOnlineAll ? $totalOnlineAll : '';
+
+        fputcsv($fp, $row);
+        unset($row);
+        exit;
+    }
+
+    public function actionSampleview()
+    {
+        $this->render('sampleview');
+    }
+
+    public function actionStatistics()
+    {
+        $this->render('statistics');
+    }
+
+    public function actiondefaultUserListing()
+    {
+        $model = new Listings('search');
+        $criteria = new CDbCriteria;
+
+        if (isset($_REQUEST['username']) && $_REQUEST['username'] != "") {
+
+            $Data = User::model()->findAll("LOWER(user_default_username) like '%" . addslashes(strtolower($_REQUEST['username'])) . "%'");
+
+            if ($Data) {
+
+                foreach ($Data as $rsData) {
+
+                    $ids[] = $rsData->user_default_id;
+
+                }
+                //$ids1 = array(rtrim($ids,','));
+                $criteria->addInCondition('user_default_profiles_id', $ids);
+            }
+        }
+        if (isset($_REQUEST['user_default_listing_category_id']) && $_REQUEST['user_default_listing_category_id'] != "") {
+
+            $criteria->compare('user_default_listing_category_id', addslashes($_REQUEST['user_default_listing_category_id']), true);
+        }
+
+        if (isset($_REQUEST['user_default_listing_lookingfor_id']) && $_REQUEST['user_default_listing_lookingfor_id'] != "") {
+
+            $criteria->compare('user_default_listing_lookingfor_id', addslashes($_REQUEST['user_default_listing_lookingfor_id']), true);
+        }
+
+
+        if (isset($_REQUEST['user_default_listing_limit_viewing_id']) && $_REQUEST['user_default_listing_limit_viewing_id'] != "") {
+
+            $criteria->compare('user_default_listing_limit_viewing_id', addslashes($_REQUEST['user_default_listing_limit_viewing_id']), true);
+        }
+
+
+        if (isset($_REQUEST['user_default_listing_title']) && $_REQUEST['user_default_listing_title'] != "") {
+            $criteria->compare('user_default_listing_title', addslashes($_REQUEST['user_default_listing_title']), true);
+
+        }
+
+
+        if (isset($_REQUEST['Keyword']) && $_REQUEST['Keyword'] != "") {
+            $criteria->compare('user_default_listing_keywords', addslashes($_REQUEST['Keyword']), true);
+
+        }
+
+        $criteria->order = 'user_default_listing_id desc';
+        $total = Listings::model()->count($criteria);
+
+        if (isset($_REQUEST['rows'])) {
+            $count = $_REQUEST['rows'];
+        } else {
+            $count = 5;
+        }
+
+        $pages = new CPagination($total);
+        $pages->setPageSize($count);
+        $pages->applyLimit($criteria);  // the trick is here!
+
+        $posts = Listings::model()->findAll($criteria);
+
+        $this->render('defaultUserListing', array('model' => $model,
+            'list' => $posts,
+            'pages' => $pages,
+            'item_count' => $total,
+            'page_size' => Yii::app()->params['listPerPage']
+        ));
+    }
+
+    public function actionExportbListings()
+    {
+        $fp = fopen('php://output', 'w');
+
+        /*
+         * save as csv content
+         */
+        $filename = 'BusinessListing.csv';
+        header('Content-type: application/csv');
+        header('Content-Disposition: attachment; filename=' . $filename);
+
+        /*
+         * Write a header of csv file
+         */
+        $months = array('01' => 'Jan', '02' => 'Feb', '03' => 'Mar', '04' => 'Apr', '05' => 'May', '06' => 'Jun', '07' => 'Jul', '08' => 'Aug', '09' => 'Sep', '10' => 'Oct', '11' => 'Num', '12' => 'Dec');
+
+        $row = array();
+        $row[] = '';
+        foreach ($months as $index => $month) {
+            $row[] = $month;
+        }
+        $row[] = 'Total for year';
+        $row[] = 'Total to date';
+        $row[] = 'Users online';
+
+        fputcsv($fp, $row);
+        unset($row);
+
+        // Default User Professions
+        $resultProfessions = ListingProfession::model()->findAll(array('order' => 'list_profession_name'));
+        $totalProfessionsForMonth = array();
+        $totalProfessionsForYearAll = 0;
+        $totalToDatesAll = 0;
+        $totalOnlineAll = 0;
+        if ($resultProfessions) {
+            foreach ($resultProfessions as $key => $profession) {
+
+                $professionId = $profession->list_profession_id;
+                $totalProfessions = 0;
+                $totalToDates = 0;
+                $professionUsersCountOnline = 0;
+                $row[] = $profession->list_profession_name;
+                foreach ($months as $index => $month) {
+
+                    $monthIndex = $index;
+                    $professionUsersCount = Blisting::getSectorBlistingCount($professionId, $monthIndex);
+                    $totalProfessions += $professionUsersCount;
+                    $totalProfessionsForMonth[$index] += $professionUsersCount;
+
+                    $row[] = $professionUsersCount ? $professionUsersCount : '';
+                }
+
+                $totalProfessionsForYearAll += $totalProfessions;
+
+                $toDateProfessions = Blisting::getSectorBlistingToDateCount($professionId);
+                $totalToDates = $totalProfessions + $toDateProfessions;
+                $totalToDatesAll += $totalToDates;
+
+                $professionUsersCountOnline = Blisting::getSectorBlistingCountOnline($professionId);
+                $totalOnlineAll += $professionUsersCountOnline;
+
+                $row[] = $totalProfessions ? $totalProfessions : '';
+                $row[] = $totalToDates ? $totalToDates : '';
+                $row[] = $professionUsersCountOnline ? $professionUsersCountOnline : '';
+
+                fputcsv($fp, $row);
+                unset($row);
+            }
+        }
+
+        $row[] = 'Total for month';
+        foreach ($months as $index => $month) {
+            $row[] = $totalProfessionsForMonth[$index] ? $totalProfessionsForMonth[$index] : '';
+        }
+        $row[] = $totalProfessionsForYearAll ? $totalProfessionsForYearAll : '';
+        $row[] = $totalToDatesAll ? $totalToDatesAll : '';
+        $row[] = $totalOnlineAll ? $totalOnlineAll : '';
+
+        fputcsv($fp, $row);
+        unset($row);
+        exit;
+    }
+}
