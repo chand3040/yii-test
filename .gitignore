@@ -68,3 +68,4 @@ www/cache/*
 www/log/*
 www/temp/*
 www/upload/*
+phpmyadmin/
