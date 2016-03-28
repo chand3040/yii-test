@@ -1,0 +1,70 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+=========================================================
+# If you want to ignore the whole content of a directory except one file inside it, 
+# you could write a pair of rules for each directory in the file path. 
+# Eg .gitignore to ignore the pippo folder except from pippo/pluto/paperino.xml
+
+# pippo/*
+# !pippo/pluto
+# pippo/pluto/*
+# !pippo/pluto/paperino.xml
+
+=========================================================
+
+# Ignore all files that end with .DS_Store
+**/.DS_Store
+
+
+################### Blacklist Folders #################
+nbproject/
+error/
+stats/
+Maildir/
+squirrelmail/
+www/assets/*
+www/cache/*
+www/log/*
+www/temp/*
+www/upload/*
