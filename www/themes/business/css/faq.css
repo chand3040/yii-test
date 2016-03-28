@@ -1,0 +1,79 @@
+/*  Theme Name: BusinessSupermarketTheme 
+    URI: http://www.business-supermarket.com 
+	Additional banner advert slider styles
+    Module name:
+    Module revision:
+    Author: 
+    Author email: 
+    Date: 
+    Version No:
+*/
+
+/* -----------------------------------------------------------------------------
+Support and FAQ's Module Styles
+------------------------------------------------------------------------------*/
+
+.table{
+    width:100%;
+}
+.table th{
+    font-size: 18px;
+    font-weight: bold;
+    color:#333333;
+}
+.table th, .table td{
+    padding: 5px;
+    text-align: left!important;
+}
+.table td{
+    font-size: 14px;
+}
+.table tr:nth-child(2n+2){
+    background: #f4f4f4;
+}
+#section-form{
+    text-align: center;
+}
+#section-form .errorSummary{
+    color:#ff0000;
+}
+.remit{
+    margin-left:0px!important;
+    padding-left: 0px!important;
+}
+.linkclass{
+    color: rgb(165, 70, 134);  text-align: left; margin-top: 20px!important; margin-bottom: 0px; white-space: nowrap;
+}
+.infolink{
+    text-align: left;  margin-top: 0px; margin-bottom: 0px; white-space: nowrap;
+}
+.faq-page-data{
+    position:relative;
+    padding-bottom: 10px;
+}
+.faq-videos{
+    width: 200px;
+    position: absolute;
+    right: 20px;
+    top: -20px;
+}
+.faq-sections {
+    padding-right: 230px;
+}
+.close_caform_faq_single {
+    position: relative;
+    float:right;
+    margin: -5px 24px 0 0;
+    z-index: 100;
+}
+
+.close_caform_faq {
+    position: relative;
+    float:right;
+    margin: -17px 24px 0 0;
+    z-index: 100;
+}
+
+.row-fluid-single {
+    margin-top: 45px;
+}
