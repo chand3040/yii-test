@@ -67,5 +67,6 @@ www/assets/*
 www/cache/*
 www/log/*
 www/temp/*
-www/upload/*
+# www/upload/*
 phpmyadmin/
+.idea
