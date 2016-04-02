@@ -28,7 +28,7 @@
             </p>
             <div style="float:right; width:624px;" align="center">
                 <form action="#" method="post">
-                    <ul id="sl-front-page" class="period-select" style="height:383px; margin:-18px 0 0 12px;">
+                    <ul id="sl-front-page" class="period-select" >
                         <li style="width:323px;">
                             <span>Access :</span>
                             <select name="payment" id="payment" class="chzn-select" data-placeholder="Please select" >

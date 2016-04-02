@@ -27,7 +27,7 @@ $userData =Business::model()->findByPk(Yii::app()->user->getId());
             <h1 style="text-align:center;"><?php echo $userData->user_default_business_name; ?> </h1>
             <p Style="text-align:center; color:#808080;"><em>Listing edit menu</em></p>
             <div style="float:right; width:624px;">
-                <ul id="sl-front-page" style="height:383px; margin:-18px 0 0 12px;">
+                <ul id="sl-front-page">
 				<?php
 				
 				 $blistCount = Businesslisting::model()->count("user_default_business_id ='".Yii::app()->user->getState('uid')."'"); 
