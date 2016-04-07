@@ -365,7 +365,7 @@ $this->render('permanent_delete_user');
 	{
 	      if(!Yii::app()->user->isGuest) { 
 	         $log = new Logtransaction(); 
-	         $log->user_default_id = Yii::app()->user->Id;
+	         //$log->user_default_id = Yii::app()->user->Id;
 	         $log->log_id = 3;
 	         $log->transaction_description =  Yii::app()->user->name.' has been logout successfully';
 	         $log->transaction_date = date('Y-m-d h:i:s'); 

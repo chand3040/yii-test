@@ -692,7 +692,7 @@ $count_val33=count($command3);
         $this->pageTitle = 'Preview listing - Business Supermarket';
         $model = Userlisting::model()->find("user_default_profiles_id = '" . Yii::app()->user->getState('uid') . "' and  user_default_listing_id ='" . $id . "'");
 
-        $this->render('preview_user_listing', array('model' => $model,));
+        $this->render('preview_user_listing', array('model' => $model,'preview_'=>1));
     }
 	
 	public function actionListingvideo1(){  

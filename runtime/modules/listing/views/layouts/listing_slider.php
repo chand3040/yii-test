@@ -676,7 +676,7 @@ else
 <div class="registration-box contact_cont" style="display:none; margin-left: 10px;">
    <form action="<?php echo Yii::app()->createUrl('forum/forum/sendMailListOwmer');?>" method="post">
       <input type="hidden" name="url" id="urll" value="<?php echo Yii::app()->getBaseUrl(true); echo Yii::app()->request->getUrl();?>" />            	
-      <div class="contact_inner" style="height: auto;">
+      <div class="contact_inner" style="height:410px;">
          <div class="closebutton_pop" style="position: relative; top: -13px; z-index: 100;left: 379px; text-align: center;">    
 		 <a title="Close" href="#" id="close3" ><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/close.png" alt="business supermarket close button" width="24"></a>      
 		 </div>
@@ -685,8 +685,7 @@ else
             <p>Your message will be private and only viewable by you and the listing owner.</p>
             <p style="width: 500px; margin: auto;"><em>If your question may be of interest to other users, then consider posting the message in the <b style="color: #A84793;">	
 
-			<?php if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/view") {
-				?>	
+			<?php if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/view") { ?>	
 
 				<a href="#" id="voiceopen"  style="color: #A84793;">Voice your Opinion</a>	
 				<?php 
@@ -727,11 +726,14 @@ $cuname=$myresult['user_default_username'];
 $cemail=$myresult['user_default_email'];
 ?>
 
-<div class="feed_heading" style="padding-left: 30px !important;">
+        <div class="feed_heading" style="padding-left: 30px !important;">
             <span class="span">Send to: &nbsp; &nbsp;&nbsp;<?php echo $uname; ?> </span>
-         </div>
- 		<span class="span">Listing title: <?php echo $title ?></span>
-            </div>
+        </div>
+        <div class="feed_heading" style="padding-left: 30px !important;">
+            <span class="span">Listing title: <?php echo $title ?></span>
+        </div>
+        <?php if(!isset($preview_)){echo "</div>";} //layout fix ?>
+
             <div class="feed_heading" style="padding-left: 30px !important;">
                
          <div class="feed_heading" style="padding-left: 30px !important;">
@@ -766,6 +768,7 @@ $cemail=$myresult['user_default_email'];
 			
          </div>
       </div>
+      <?php if(isset($preview_)){echo "</div>";} //layout fix ?>
    </form>
    <?php }
    else

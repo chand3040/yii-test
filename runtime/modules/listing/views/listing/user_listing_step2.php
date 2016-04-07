@@ -114,7 +114,7 @@ margin-bottom: 8px;
 					<i style="font-size:7pt; color:#999999; margin-left:12px;">Upload a small thumbnail or your logo</i>
 					<div class="clear"></div>
 					<br />
-					<div class="photo-upload-box1 listing-upload" style="margin-top:-150px; height: 94%;">
+					<div class="photo-upload-box1 listing-upload" style="margin-top: -170px; padding-top: 20px; height: 94%;">
 						<img class="side-robot-upload1" src="<?php echo Yii::app()->theme->baseUrl;?>/images/robot/robot-upload.png" alt="Upload your Business Supermarket user profile picture"/>
 						<div class="my-account-popup-box" id="upload-frame"> 
 							<a class="pu-close" onclick=jQuery(".photo-upload-box1").hide(); href="javaScript:void(0)" title="Close">X</a>

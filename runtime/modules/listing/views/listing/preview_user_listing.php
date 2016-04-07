@@ -9,7 +9,7 @@
     <div>
         <?php
         $listId = isset($_REQUEST['listid']) ? $_REQUEST['listid'] : '';
-        $this->renderPartial('//../modules/listing/views/layouts/listing_slider',array('listid' =>$listId));
+        $this->renderPartial('//../modules/listing/views/layouts/listing_slider',array('listid' =>$listId,"preview_"=>1));
         ?>
 </div>
     <div style="clear:both;"></div>        
@@ -246,4 +246,6 @@ echo $test2=str_replace("\n","</p><p>",$test1);
             }
         });*/
     </script>
- 
+    <?php if(isset($preview_)){ ?>
+    </div>
+    <?php } //layout fix ?>
