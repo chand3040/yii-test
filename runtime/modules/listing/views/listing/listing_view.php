@@ -667,7 +667,7 @@ height: 50px;"></textarea>
 
     if (($model instanceof Userlisting)) {
 
-        $this->renderPartial('//../modules/forum/views/forum/page', array('listing' => $model, 'adminKey' => $adminKey, 'admin' => false));
+        //$this->renderPartial('//../modules/forum/views/forum/page', array('listing' => $model, 'adminKey' => $adminKey, 'admin' => false));
     }
 
     ?>
