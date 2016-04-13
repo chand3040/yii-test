@@ -41,7 +41,8 @@ Temporary Items
 .apdisk
 
 
-=========================================================
+# =========================================================
+
 # If you want to ignore the whole content of a directory except one file inside it, 
 # you could write a pair of rules for each directory in the file path. 
 # Eg .gitignore to ignore the pippo folder except from pippo/pluto/paperino.xml
@@ -51,11 +52,10 @@ Temporary Items
 # pippo/pluto/*
 # !pippo/pluto/paperino.xml
 
-=========================================================
-
 # Ignore all files that end with .DS_Store
 **/.DS_Store
 
+# ========================================================
 
 ################### Blacklist Folders #################
 nbproject/
@@ -70,3 +70,8 @@ www/temp/*
 # www/upload/*
 phpmyadmin/
 .idea
+
+################### Blacklist Files #################
+
+# Do not update the BaseURL on the live site.
+runtime/config/main.php
