@@ -67,6 +67,14 @@ $result =  SharedFunctions::app()->sendmail($femail,$subject,$body);
 }
 */
 ?>
+<style>
+    .button.green.send{
+        background: #6b9d28;
+        /*background:rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #6b9d28, #436b0c) repeat scroll 0 0;*/
+        color:#ffffff;
+        margin-left: 80px;
+    }
+</style>
 <script type="text/javascript">
 	function show_video(video)
 	{
@@ -761,7 +769,6 @@ $cemail=$myresult['user_default_email'];
             margin-top: 96px;
             text-align: center;margin-left:0px'>
             Send a copy to my email address for my records <input type="checkbox" name="memail" value="yes" />		 		 <br/>		 <br/>	
-
 			<?php if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/view") { ?>
 
 			<input type="submit" name="sendmaillist" tabindex="12" id="sendmaillist" class="button black" value="Send" />
@@ -771,9 +778,15 @@ $cemail=$myresult['user_default_email'];
       <?php if(isset($preview_)){echo "</div>";} //layout fix ?>
    </form>
    <?php }
-   else
+   elseif(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/preview_user_listing"){
+        ?><input type="button"  id="close1" class="button black close" value="Close" />
+       <input type="submit" name="sendmaillist" tabindex="12" id="sendmaillist" class="button green send" value="Send" />
+        </div>
+        </div></form>
+        <?php
+   }else
    {
-	   ?><input type="button"  id="close1" class="button black close" value="Close" />     
+	   ?><input type="button"  id="close1" class="button black close" value="Close" />
 </div>
 </div></form>
 <?php

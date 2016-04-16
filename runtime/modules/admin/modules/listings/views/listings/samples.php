@@ -1,3 +1,15 @@
+
+<style>
+    .buttons > .button.blue,
+    .buttons > .button.green,
+    .buttons > .button.black{
+        margin: 0 70px;
+    }
+    .chzn-container .chzn-results li{
+        width: 100%;
+    }
+</style>
+<?php $this->renderPartial("/layouts/sub_menu"); ?>
 <center><h2 class="Blue">User sample search</h2></center>
 
 <div class="samples-search-container">
@@ -112,125 +124,33 @@
 
             <td>&nbsp;</td>
         </tr>
-        <tr>
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-
-            <td>&nbsp;</td>
-        </tr>
 
         </tbody>
     </table>
 </div>
 <div style="width:100%;">
     <div class="view" style="float:left">
-        View <select name="drg_category" data-placeholder="12" class="chzn-select" style="width:60px;" tabindex="2">
-
-            <option value="5">5</option>
-
-            <option value="10">10</option>
-
-            <option value="20">20</option>
-
-            <option value="50">50</option>
-
-            <option value="100">100</option>
-
-        </select>
-
+        <span style="position: relative; display: block; float: left; margin-top:6px; margin-right:10px;">View</span>
         <form action="" id="paging" method="post">
-
+        <select name="drg_category" data-placeholder="12" class="chzn-select" style="width:60px;" tabindex="2">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
             <?php
-
             if (isset($_REQUEST)) {
-
                 foreach ($_REQUEST as $key => $val) {
-
                     echo '<input type="hidden" name="' . $key . '" value="' . $val . '" />';
-
                 }
             }
-
             ?>
-
             <input type="hidden" name="rows" id="rows"/>
-
         </form>
     </div>
 
-    <div style="float:right;">
+    <!-- <div style="float:right;">
         <ul id="navlist" class="pager">
             <li class="first hidden"><a href="#">&lt;</a></li>
             <li class="previous hidden"><a href="#">previous</a></li>
@@ -239,7 +159,7 @@
             <li class="next"><a href="#">next</a></li>
             <li class="last"><a href="#">&gt;</a></li>
         </ul>
-    </div>
+    </div> -->
 </div>
 
 </div>
@@ -251,5 +171,15 @@
 </div>
 </div>
 <script type="text/javascript">
+jQuery(document).ready(function($){
     jQuery(".chzn-select").chosen();
+    $(".chzn-select").on("change",function(){
+        var val=$(this).val();
+        $(".gernal_table tbody").html("");
+        $(".gernal_table tbody").append('<tr><th>User</th><th>Date</th><th>Listing Title</th><th>Details</th><th>Email</th><th>Amount</th></tr><tr onclick="window.location=<?php echo Yii::app()->createUrl("/admin/listings/listings/sampleview"); ?>"><td>jsingh99</td><td>21/10/1961</td><td>Drivestop</td><td>Sample face cream</td><td>dsp7@blueyonder.co.uk</td><td>$250</td></tr>');
+        for(i=1;i<val;i++){
+            $(".gernal_table tbody").append("<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
+        }
+    });
+});
 </script>

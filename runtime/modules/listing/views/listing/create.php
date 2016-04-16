@@ -11,8 +11,6 @@ $this->breadcrumbs=array(
 margin-bottom: 8px;
 }
 </style>
-	<?php
- 
- echo $this->renderPartial('_form', array(    'model' => $model));
- 
+	<?php 
+ 		echo $this->renderPartial('_form', array('model' => $model, 'listing'=>@$listing));
  ?> 

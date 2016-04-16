@@ -11,7 +11,7 @@ $js->registerCssFile($baseUrl . '/css/chosen.css');
     });
 </script>
 
-<?php $this->renderPartial('application.modules.admin.views.layouts.listing_submenu'); ?>
+<?php $this->renderPartial('application.modules.admin.modules.listings.views.layouts.sub_menu'); ?>
 <div class="heading">
     <h3>Business user listing</h3>
 </div>

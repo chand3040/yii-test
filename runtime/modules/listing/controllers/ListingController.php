@@ -26,11 +26,11 @@ class ListingController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('suspensed', 'publish', 'rejection', 'rdelete', 'fupdate', 'business_ideas', 'retail', 'industrial', 'science_and_technology', 'business_services', 'view', 'cron_day', 'cron_week', 'cron_month','vote', 'registerforvote', 'registerforvotelink', 'externallogin', 'CheckEmailUnique'),
+                'actions' => array('suspensed', 'publish', 'rejection', 'rdelete', 'fupdate', 'business_ideas', 'retail', 'industrial', "cronreport",'science_and_technology', 'business_services', 'view', 'cron_day', 'cron_week', 'cron_month','vote', 'registerforvote', 'registerforvotelink', 'externallogin', 'CheckEmailUnique'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'purchaseaccess', 'update','selectlisting', 'index', 'delete', 'user_listing_step2', 'imageupload', 'user_listing_step3', 'user_listing_step4', 'listingimage', 'listingvideo', 'preview_user_listing', 'add_favourite', 'remove_favourite', 'my_messages', 'ldelete', 'convertingVideo', 'getProgress', 'listingvideo1', 'listingvideo2','marketingdata', 'marketingdatachart'),
+                'actions' => array('create', 'mailtoowner', 'purchaseaccess', 'update','selectlisting', 'index', 'delete', 'user_listing_step2', 'imageupload', 'user_listing_step3', 'user_listing_step4', 'listingimage', 'listingvideo', 'preview_user_listing', 'add_favourite', 'remove_favourite', 'my_messages', 'ldelete', 'convertingVideo', 'getProgress', 'listingvideo1', 'listingvideo2','marketingdata', 'marketingdatachart'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -116,6 +116,10 @@ class ListingController extends Controller {
         } else {
             $model = new Createuserlisting;
 			$model->user_default_listing_step = "1";
+            if(!isset($_POST['Listingaddress'])){
+                $this->render('create', array('model' => $model,"listing"=>"new"));
+                die();
+            }
             //$model->attributes=$_POST['Createuserlisting'];
         }
 
@@ -138,6 +142,7 @@ class ListingController extends Controller {
                     $address->save();
                 }
                 if ($_POST['btnsaveforlater'] == 1) {
+                    $userlisting = Userlisting::model()->find("user_default_profiles_id = '" . Yii::app()->user->getId() . "' and  user_default_listing_id ='" . $id . "'");
                     $this->redirect(Yii::app()->createUrl('user/myaccount/update'));
                 } else {
                     $this->redirect(Yii::app()->createUrl('listing/user_listing_step2/listid/' . $model->user_default_listing_id));
@@ -197,15 +202,14 @@ class ListingController extends Controller {
 				//$model->user_default_listing_step = "2";
 				if( $model->user_default_listing_step =="1" )
 				{ 
-			
-					$model->user_default_listing_step = "2";
-					
+					$model->user_default_listing_step = "2";	
 				}
 				
                 if ($model->save()) {
 
                     //$this->redirect(Yii::app()->createUrl('listing/user_listing_step3/listid/'.$model->user_default_listing_id));
                     if ($_POST['btnsaveforlater'] == 1) {
+                        $this->sendstatusemail($id,"has been successfully saved for later.","Saved for later");
                         $this->redirect(Yii::app()->createUrl('user/myaccount/update'));
                     } else {
                         $this->redirect(Yii::app()->createUrl('listing/user_listing_step3/listid/' . $model->user_default_listing_id));
@@ -215,6 +219,58 @@ class ListingController extends Controller {
         }
 
         $this->render('user_listing_step2', array('model' => $model,));
+    }
+
+    public function actionSendstatusemail($id,$subject,$status){
+        $model = Userlisting::model()->find("user_default_profiles_id = '" . Yii::app()->user->getId() . "' and  user_default_listing_id ='" . $id . "'");
+        $user = User::model()->find("user_default_id = $model->user_default_profiles_id");
+        $femail="no-reply@business-supermarket.com";
+        $subject=$model->user_default_listing_title." $subject";
+        $body="<h2>Business Supermarket</h2>";
+        $body.="Dear ".$user->user_default_first_name." ".$user->user_default_surname."<br /><br /><br />";
+        $body.="Listing Title : ".@$model->user_default_listing_title."<br />";
+        $body.="Listing Date : ".@$model->user_default_listing_date."<br />";
+        $body.="Listing Status : $status<br /><br />";
+        $body.="You may access your listing at anytime to complete it and submit it for publication <a href='".Yii::app()->createUrl('listing/user_listing_step2/listid/'.$model->user_default_listing_id)."'>here >></a><br /><br />";
+        $body.="Sincerely<br />Business Supermarket Listing Submission Team<br /><br />";
+        $body.="<i>Note: This email address cannot accept replies.<br />
+                Should you wish to contact us, then you may do so via the support@business-supermarket.com</i>";
+        SharedFunctions::app()->sendmail($femail,$subject,$body);
+    }
+    public function actionSendsubmitemail($id){
+        $model = Userlisting::model()->find("user_default_profiles_id = '" . Yii::app()->user->getId() . "' and  user_default_listing_id ='" . $id . "'");
+        $user = User::model()->find("user_default_id = $model->user_default_profiles_id");
+        $femail="no-reply@business-supermarket.com";
+        $subject=$model->user_default_listing_title." submission notification";
+        $body="<h2>Business Supermarket</h2>";
+        $body.="Dear ".$user->user_default_first_name." ".$user->user_default_surname."<br /><br /><br />";
+        $body.="you have successfully submitted your listing.<br /><br />";
+        $body.="Listing Title : ".@$model->user_default_listing_title."<br />";
+        $body.="Listing Date : ".@$model->user_default_listing_date."<br />";
+        $body.="Listing Status : Waiting admin approval and publication<br /><br />";
+        $body.="You will be notified when your listing is published.<br /><br />";
+        $body.="Sincerely<br />Business Supermarket Listing Submission Team<br /><br />";
+        $body.="<i>Note: This email address cannot accept replies.<br />
+                Should you wish to contact us, then you may do so via the support@business-supermarket.com</i>";
+        SharedFunctions::app()->sendmail($femail,$subject,$body);
+    }
+    public function actionCronreport($id){
+        $model = Listings::model()->find("user_default_profiles_id = '" . Yii::app()->user->getId() . "' and  user_default_listing_id ='" . $id . "'");
+        
+        // $user = User::model()->find("user_default_id = $model->user_default_profiles_id");
+        // $femail="no-reply@business-supermarket.com";
+        // $subject=$model->user_default_listing_title." submission notification";
+        // $body="<h2>Business Supermarket</h2>";
+        // $body.="Dear ".$user->user_default_first_name." ".$user->user_default_surname."<br /><br /><br />";
+        // $body.="you have successfully submitted your listing.<br /><br />";
+        // $body.="Listing Title : ".@$model->user_default_listing_title."<br />";
+        // $body.="Listing Date : ".@$model->user_default_listing_date."<br />";
+        // $body.="Listing Status : Waiting admin approval and publication<br /><br />";
+        // $body.="You will be notified when your listing is published.<br /><br />";
+        // $body.="Sincerely<br />Business Supermarket Listing Submission Team<br /><br />";
+        // $body.="<i>Note: This email address cannot accept replies.<br />
+        //         Should you wish to contact us, then you may do so via the support@business-supermarket.com</i>";
+        // SharedFunctions::app()->sendmail($femail,$subject,$body);
     }
 
     /**
@@ -370,6 +426,7 @@ class ListingController extends Controller {
 			$model->save(); }
 			
 			if ($_POST['btnsaveforlater'] == 1) {
+                $this->sendstatusemail($id,"has been successfully saved for later.","Saved for later");
                 $this->redirect(Yii::app()->createUrl('user/myaccount/update'));
             } else {
                 $this->redirect(Yii::app()->createUrl('listing/user_listing_step4/listid/' . $model->user_default_listing_id));
@@ -474,51 +531,15 @@ class ListingController extends Controller {
 			            if($model->save()){   
                 
                      if($_POST['btnsaveforlater']==1)
-						 
 					 {
-					 	$this->redirect(Yii::app()->createUrl('user/myaccount/update'));
-						
+					   $this->sendstatusemail($id,"has been successfully saved for later.","Saved for later");
+                     	$this->redirect(Yii::app()->createUrl('user/myaccount/update'));
 					 } 
                 
                 if($_POST['saveforlater']){ 
-					
-					$model_user = User::model()->find("user_default_id='".Yii::app()->user->getState('uid')."'");
-					
-			    	$sstatus="Saved for later";
-					
-					$curdate = date('d/m/Y',strtotime($model['user_default_listing_date']));
-					
-                    $to = $model_user['user_default_email'];
-					
-					$yii_user_request_id = '<a href="'.Yii::app()->getBaseUrl(true)."/"."listing/fupdate/listid/".$model->user_default_listing_id.'" target="_blank" >here >> </a>';
-					
-					$template =  MailTemplate::getTemplate('Listing_save_for_later');
-					
-					$subjectcc=$model['user_default_listing_title']." has been successfully saved for later";
-					
-                    $ltitle="<i>".$model['user_default_listing_title']."</i>";
-					
-	   		        $ldate="<i>".$curdate."</i>";
-					
-			        $lstatus="<i>".$sstatus."</i>";
-					
-			        $string = array(
-                        '{{#LISTINGTITLE#}}'=>ucwords($ltitle),
-						'{{#USERNAME#}}'=>ucwords($model_user['user_default_first_name'] .' '. $model_user['user_default_surname']),
-                        '{{#LISTINGDATE#}}'=>ucwords($ldate),
-						'{{#LISTINGSTATUS#}}'=>ucwords($lstatus),
-						'{{#LISTINGLINK#}}'=>ucwords($yii_user_request_id)                        
-                    );
-					
-					$body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);
-					
-                    $result =  SharedFunctions::app()->sendmail($to,$subjectcc,$body); 
-                            
-						
-                            $this->redirect(Yii::app()->createUrl('user/myaccount/update'));
-							
-                            die;                            
-                   
+				    $this->sendstatusemail($id,"has been successfully saved for later.","Saved for later"); 
+                    $this->redirect(Yii::app()->createUrl('user/myaccount/update'));		
+                    die;
                 }
 				
 				else if($_POST['save']){
@@ -546,50 +567,43 @@ class ListingController extends Controller {
 							$diff=date_diff($to1,$from1);
 
 							$da = $diff->format('%R%a days');
-/*
-$command1 = $connection->createCommand("select * from `drg_comments` where `listing_id`='$lid'");
-$count_val2=count($command1);
+                            /*
+                            $command1 = $connection->createCommand("select * from `drg_comments` where `listing_id`='$lid'");
+                            $count_val2=count($command1);
 
-$uid=Yii::app()->user->getState('uid');
-$command2 = $connection->createCommand("select * from `drg_banner_ads` where `drg_user_id`='$uid'");
-$count_val22=count($command2);
+                            $uid=Yii::app()->user->getState('uid');
+                            $command2 = $connection->createCommand("select * from `drg_banner_ads` where `drg_user_id`='$uid'");
+                            $count_val22=count($command2);
 
-$command3 = $connection->createCommand("select * from `drg_like_comment` where `user_id`='$uid'");
-$count_val33=count($command3);
-*/
+                            $command3 = $connection->createCommand("select * from `drg_like_comment` where `user_id`='$uid'");
+                            $count_val33=count($command3);
+                            */
 
 
 							$yii_user_request_id = '<a href="'.Yii::app()->getBaseUrl(true)."/"."listing"."/"."view?id=".$model->user_default_listing_id.'" target="_blank" >here >> </a>';
 
-							$template =  MailTemplate::getTemplate('user_listing_report');
-							
+							/*$template =  MailTemplate::getTemplate('user_listing_report');
 							$curdate = date('d/m/Y',strtotime($myresult1['user_default_listing_date']));
-
 							$subjectcc=" Listing ".$myresult1['user_default_listing_title']." ".$rp." update report ";
-
-
 							$string = array('{{#LISTINGTITLE#}}'=>ucwords($myresult1['user_default_listing_title']),
-                        '{{#USERNAME#}}'=>ucwords($model_user['user_default_first_name'].' '.$model_user['user_default_surname']),
-                        '{{#LISTINGDATE#}}'=>ucwords($curdate),
-						'{{#LISTINGSTATUS#}}'=>ucwords($stat),
-						'{{#LISTINGLINK#}}'=>ucwords($yii_user_request_id),
-						 '{{#DA#}}'=>ucwords($da),
-                        '{{#PV#}}'=>ucwords($count_val2),
-						'{{#VOTES#}}'=>ucwords($count_val33),
-						'{{#COMMENTS#}}'=>ucwords($count_val2),
-						'{{#MESSAGES#}}'=>ucwords($count_val22),
-						'{{#STATUS#}}'=>ucwords($rp)
-			 
+                                '{{#USERNAME#}}'=>ucwords($model_user['user_default_first_name'].' '.$model_user['user_default_surname']),
+                                '{{#LISTINGDATE#}}'=>ucwords($curdate),
+        						'{{#LISTINGSTATUS#}}'=>ucwords($stat),
+        						'{{#LISTINGLINK#}}'=>ucwords($yii_user_request_id),
+        						 '{{#DA#}}'=>ucwords($da),
+                                '{{#PV#}}'=>ucwords($count_val2),
+        						'{{#VOTES#}}'=>ucwords($count_val33),
+        						'{{#COMMENTS#}}'=>ucwords($count_val2),
+        						'{{#MESSAGES#}}'=>ucwords($count_val22),
+        						'{{#STATUS#}}'=>ucwords($rp)			 
 							);
-
 							$body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);
+                            $result =  SharedFunctions::app()->sendmail($to,$subjectcc,$body);
+                            */
 
-							$result =  SharedFunctions::app()->sendmail($to,$subjectcc,$body);  
-
+                            $this->sendsubmitemail($id);  
 							}
-
 							else
-
 							{
 
 
@@ -683,6 +697,83 @@ $count_val33=count($command3);
               
         $this->render('user_listing_step4',array('model'=>$model,));
        
+    }
+
+    public function actionMailtoowner(){
+        $listingId = ( isset($_POST['listid']) ) ? $_POST['listid'] : NULL;
+        $message = $_POST['msg'];
+        $commentReference = $_POST['commentReference'];
+        $attachementUploadFile = $_POST['attachementUploadFile'];
+        $subject = $_POST['subject'];
+
+        $listing = Listings::model()->findByPk($listingId);
+        $user=User::model()->findByAttributes(array('user_default_id'=>$listing['user_default_profiles_id']));
+        $firstMessage = '1';
+
+        /*$userMessage = new UserMessages();
+        $userMessage->message = $message;
+        $userMessage->subject = $subject;
+        $userMessage->user_default_profiles_id = Yii::app()->user->Id;
+        $userMessage->user_default_listing_id = $listingId;
+        $userMessage->created_date = date('Y-m-d H:i:s');
+        $userMessage->first_message = $firstMessage;*/
+
+        //if($userMessage->save()){
+            $email=$_POST['toemail'];
+            $tname=$_POST['toname'];
+            $fname=$_POST['fromname'];
+            $fromuname=$_POST['fromuname'];
+            $femail=$_POST['fromemail'];
+            $title=$_POST['title'];
+            $subject11=$_POST['subject'];
+            $msg=$_POST['msg'];
+            $listid=$_POST['listid'];
+            $userid=$_POST['userid'];
+            $furl=$_POST['furl'];
+            $sitelink='<a href="'.Yii::app()->getBaseUrl(true).'" target="_blank" >here >> </a>';   
+            $yii_user_request_id = '<a href="'.Yii::app()->getBaseUrl(true)."/"."listing/fupdate/listid/".$listid.'" target="_blank" >here >> </a>';    
+            
+            $template =  MailTemplate::getTemplate('listing_via_contact_user');        
+            $string = array(
+                '{{#LISTINGTITLE#}}'=>ucwords($title),
+               '{{#USERNAME#}}'=>ucwords($tname),
+                '{{#SITELINK#}}'=>ucwords($sitelink)
+            );
+            $subject="Listing ".$listing['user_default_listing_title']." requires your input";
+            $body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);
+            $result =  SharedFunctions::app()->sendmail($email,$subject,$body);
+            
+            $newmsg=str_replace("\n","</p><p>",$msg);
+            $msgg="<span style='color:black;margin:0px;text-transform:capitalize;'>".$newmsg."</span>";
+            $template1 =  MailTemplate::getTemplate('listing_via_contact_user2');
+            
+            $string1 = array('{{#LISTINGTITLE#}}'=>ucwords($title),
+               '{{#USERNAME#}}'=>ucwords($tname),
+               '{{#SNAME#}}'=>ucwords($fname),
+               '{{#SUNAME#}}'=>ucwords($fromuname),
+                '{{#SITELINK#}}'=>ucwords($yii_user_request_id),
+                '{{#MESSAGE#}}'=>ucwords($msgg)
+            );
+            $subject1="You have received a private message re: ".$subject11;
+            $body1 = SharedFunctions::app()->mailStringReplace($template1->template_body,$string1);
+            $result1 =  SharedFunctions::app()->sendmail($email,$subject1,$body1);                   
+            $memail=$_POST['memail'];
+            if($memail!=""){
+                $template =  MailTemplate::getTemplate('listing_via_contact_user3');
+                $string = array(
+                        '{{#LISTINGTITLE#}}'=>ucwords($title),
+                       '{{#USERNAME#}}'=>ucwords($fname),
+                       '{{#USER#}}'=>ucwords($tname),
+                        '{{#MESSAGE#}}'=>ucwords($msgg)
+                );
+                $subject="You have sent the following message to ".$listing['user_default_listing_title'];
+                $body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);
+                $result =  SharedFunctions::app()->sendmail($femail,$subject,$body);
+            }
+            $furl="/".$furl;
+        //}
+        $this->redirect(Yii::app()->createUrl($furl));
+        die;
     }
 
     public function actionPreview_user_listing() {

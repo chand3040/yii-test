@@ -32,7 +32,7 @@ $totalOnline = 0;
 
 ?>
 <div style="width:100%">
-
+<?php $this->renderPartial("/layouts/sub_menu"); ?>
 <div class="user_statistics">
 <div style="margin: 15px 250px;">
     <h2>Default User Listing submissions</h2>
@@ -722,24 +722,22 @@ $totalOnline = 0;
 
 
 </div>
-<div class="right_verticalmenu">
+<!-- <div class="right_verticalmenu">
     <ul class="">
         <li class="active">
-            <a href="<?php echo $this->createUrl('index') ?>">Default User Listings</a>
+            <a href="<?php //echo $this->createUrl('index') ?>">Default User Listings</a>
         </li>
         <li class="">
-            <a href="<?php echo Yii::app()->createUrl('admin/blisting/blisting/index') ?>">Business User Listings</a>
+            <a href="<?php //echo Yii::app()->createUrl('admin/blisting/blisting/index') ?>">Business User Listings</a>
         </li>
         <li class=""><a href="#" class="textalign">Samples</a></li>
     </ul>
-
-
-</div>
-<div class="right_verticalmenu"  style="margin-top: 25%">
+</div> -->
+<!-- <div class="right_verticalmenu"  style="margin-top: 25%">
     <ul class="">
-        <li><a href="<?php echo Yii::app()->createUrl('admin/member') ?>" class="textalign">Return</a></li>
+        <li><a href="<?php //echo Yii::app()->createUrl('admin/member') ?>" class="textalign">Return</a></li>
         </ul>
-    </div>
+</div> -->
 <!--right_verticalmenu-->
 </div>
 <div style="clear: both">&nbsp;</div>

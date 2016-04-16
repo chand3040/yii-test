@@ -232,6 +232,13 @@ echo $test2=str_replace("\n","</p><p>",$test1);
       <div class="clear"></div>
     </div>
     <script type="text/javascript">
+        jQuery(function($){
+          $("#close1").on("click",function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            $("#close3").trigger("click");
+          })
+        });
         /* jQuery('.readmore').click(function(){
             if(jQuery(this).hasClass('less')){
                 jQuery(this).siblings('.prevew_text').css({'height':'auto'});

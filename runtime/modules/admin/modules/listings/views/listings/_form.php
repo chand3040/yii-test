@@ -10,7 +10,7 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
 ?>
 <script type="text/javascript">
     jQuery(document).ready(function () {
-        //jQuery(".chzn-select").chosen();
+        jQuery(".chzn-select").chosen();
     });
 </script>
 <?php
@@ -50,6 +50,9 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
 .user_info_container {
     right: 0px !important;
 }
+.content-container{
+    margin-bottom:10px;
+}
 </style>
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/tooltips.css"/>
@@ -74,6 +77,9 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
     .user_listing_search {
         margin-top: 6px;
         border-radius: 0px;
+    }
+    .sl-image-description .img_desc_text textarea{
+        font-family: auraboldregular;
     }
 </style>
 <div class="clear"></div>

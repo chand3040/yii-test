@@ -20,11 +20,11 @@ class ListingsController extends Controller
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('index,update,create,delete,rdelete,publish,rejection,suspension,restore,downloadvideo,marketingdata,portfolio,samples,forum,exportDefaultListings,sampleview,uploadyoutube,Videopath'),
+                'actions' => array('index,update,create,delete,listingytd,rdelete,publish,rejection,suspension,restore,downloadvideo,marketingdata,portfolio,samples,forum,exportDefaultListings,sampleview,uploadyoutube,Videopath,newlistings'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
+                'actions' => array('admin', 'delete', 'newlistings'),
                 'users' => array('admin'),
             ),
             array('deny',  // deny all users
@@ -49,6 +49,166 @@ class ListingsController extends Controller
         }
 
         $this->render('create', array('model' => $model,));
+    }
+
+    public function actionListingytd(){
+        if(!empty($_REQUEST['username']) || !empty($_REQUEST['user_default_listing_title']) || !empty($_REQUEST['user_default_listing_category_id']) || !empty($_REQUEST['user_default_listing_lookingfor_id']) ||
+                    !empty($_REQUEST['user_default_listing_limit_viewing_id']) || !empty($_REQUEST['Keyword']))
+        {
+            $model = new Listings('search');
+            $criteria = new CDbCriteria;
+            $criteria->compare('user_default_listing_submission_status', 0, true);
+            if (isset($_REQUEST['username']) && $_REQUEST['username'] != "") {
+                $Data = User::model()->findAll("LOWER(user_default_username) like '%" . addslashes(strtolower($_REQUEST['username'])) . "%'");
+                if ($Data) {
+                    foreach ($Data as $rsData) {
+                        $ids[] = $rsData->user_default_id;
+                    }
+                    //$ids1 = array(rtrim($ids,','));
+                    $criteria->addInCondition('user_default_profiles_id', $ids);
+                }
+            }
+            if (isset($_REQUEST['user_default_listing_category_id']) && $_REQUEST['user_default_listing_category_id'] != "") {
+                $criteria->compare('user_default_listing_category_id', addslashes($_REQUEST['user_default_listing_category_id']), true);
+            }
+            if (isset($_REQUEST['user_default_listing_lookingfor_id']) && $_REQUEST['user_default_listing_lookingfor_id'] != "") {
+                $criteria->compare('user_default_listing_lookingfor_id', addslashes($_REQUEST['user_default_listing_lookingfor_id']), true);
+            }
+            if (isset($_REQUEST['user_default_listing_limit_viewing_id']) && $_REQUEST['user_default_listing_limit_viewing_id'] != "") {
+                $criteria->compare('user_default_listing_limit_viewing_id', addslashes($_REQUEST['user_default_listing_limit_viewing_id']), true);
+            }
+            if (isset($_REQUEST['user_default_listing_title']) && $_REQUEST['user_default_listing_title'] != "") {
+                $criteria->compare('user_default_listing_title', addslashes($_REQUEST['user_default_listing_title']), true);
+            }
+            if (isset($_REQUEST['Keyword']) && $_REQUEST['Keyword'] != "") {
+                $criteria->compare('user_default_listing_keywords', addslashes($_REQUEST['Keyword']), true);
+            }
+
+            $criteria->order = 'user_default_listing_id desc';
+            $posts = Listings::model()->findAll($criteria);
+
+            $this->render("listingytd",array(
+                'model' => $model,
+                'list' => $posts,
+                'pages' => $pages,
+                'item_count' => $total,
+                'page_size' => Yii::app()->params['listPerPage']
+            ));
+        }else{
+            $model = new Listings('search');
+            $criteria = new CDbCriteria;
+            $criteria->order = 'user_default_listing_id desc';
+            $posts = Listings::model()->findAll($criteria);
+
+            $this->render("listingytd",array(
+                'model' => $model,
+                'list' => $posts,
+                'pages' => $pages,
+                'item_count' => $total,
+                'page_size' => Yii::app()->params['listPerPage']
+            )); 
+        }
+    }
+
+    public function actionNewlistings(){
+
+        if(!empty($_REQUEST['username']) || !empty($_REQUEST['user_default_listing_title']) || !empty($_REQUEST['user_default_listing_category_id']) || !empty($_REQUEST['user_default_listing_lookingfor_id']) ||
+                    !empty($_REQUEST['user_default_listing_limit_viewing_id']) || !empty($_REQUEST['Keyword']))
+        {
+        $model = new Listings('search');
+        $criteria = new CDbCriteria;
+        $criteria->compare('user_default_listing_submission_status', 0, true);
+        if (isset($_REQUEST['username']) && $_REQUEST['username'] != "") {
+            $Data = User::model()->findAll("LOWER(user_default_username) like '%" . addslashes(strtolower($_REQUEST['username'])) . "%'");
+            if ($Data) {
+                foreach ($Data as $rsData) {
+                    $ids[] = $rsData->user_default_id;
+                }
+                //$ids1 = array(rtrim($ids,','));
+                $criteria->addInCondition('user_default_profiles_id', $ids);
+            }
+        }
+        if (isset($_REQUEST['user_default_listing_category_id']) && $_REQUEST['user_default_listing_category_id'] != "") {
+            $criteria->compare('user_default_listing_category_id', addslashes($_REQUEST['user_default_listing_category_id']), true);
+        }
+        if (isset($_REQUEST['user_default_listing_lookingfor_id']) && $_REQUEST['user_default_listing_lookingfor_id'] != "") {
+            $criteria->compare('user_default_listing_lookingfor_id', addslashes($_REQUEST['user_default_listing_lookingfor_id']), true);
+        }
+        if (isset($_REQUEST['user_default_listing_limit_viewing_id']) && $_REQUEST['user_default_listing_limit_viewing_id'] != "") {
+            $criteria->compare('user_default_listing_limit_viewing_id', addslashes($_REQUEST['user_default_listing_limit_viewing_id']), true);
+        }
+        if (isset($_REQUEST['user_default_listing_title']) && $_REQUEST['user_default_listing_title'] != "") {
+            $criteria->compare('user_default_listing_title', addslashes($_REQUEST['user_default_listing_title']), true);
+        }
+        if (isset($_REQUEST['Keyword']) && $_REQUEST['Keyword'] != "") {
+            $criteria->compare('user_default_listing_keywords', addslashes($_REQUEST['Keyword']), true);
+        }
+
+        $criteria->order = 'user_default_listing_id desc';
+        // print_r($criteria);
+
+
+        $total = Listings::model()->count($criteria);
+
+        if (isset($_REQUEST['rows'])) {
+            $count = $_REQUEST['rows'];
+        } else {
+            $count = 5;
+        }
+
+        $pages = new CPagination($total);
+        $pages->setPageSize($count);
+        $pages->applyLimit($criteria);  // the trick is here!
+
+        $posts = Listings::model()->findAll($criteria);
+        $this->render('newlistings', array(
+            'model' => $model,
+            'list' => $posts,
+            'pages' => $pages,
+            'item_count' => $total,
+            'page_size' => Yii::app()->params['listPerPage']
+        ));
+        }else{
+            /*$this->render('index', array('model' => $model,
+                'list' => $posts,
+                'pages' => $pages,
+                'item_count' => $total,
+                'page_size' => Yii::app()->params['listPerPage']
+            ));*/
+
+
+            //$arr["user_default_listing_submission_status"]=1;
+            /*if($_POST){
+                if($_POST["username"]){
+                    $user_details = User::model()->findAllByAttributes(array("user_default_id" => $_POST["username"]));
+                    print_r($user_details);
+                }
+                //$arr["user_default_listing_category_id"]=
+                print_r($_POST);
+            }*/
+            $criteria = new CDbCriteria;
+            $criteria->compare('user_default_listing_submission_status', 0, true);
+            $criteria->order = 'user_default_listing_id desc';
+            $model = Listings::model()->findAll($criteria);
+            $total = Listings::model()->count($criteria);
+            if (isset($_REQUEST['rows'])) {
+                $count = $_REQUEST['rows'];
+            } else {
+                $count = 5;
+            }
+            $pages = new CPagination($total);
+            $pages->setPageSize($count);
+            $pages->applyLimit($criteria);  // the trick is here!
+
+            $posts = Listings::model()->findAll($criteria);
+            $this->render('newlistings', array(
+                'model' => $model,
+                'list' => $posts,
+                'pages' => $pages,
+                'item_count' => $total,
+                'page_size' => Yii::app()->params['listPerPage']
+            ));
+        }
     }
 
       public function actionVideopath($id,$uid){

@@ -24,7 +24,7 @@
             ));
             $this->widget('zii.widgets.CMenu', array(
                 'items' => array(
-                    array('label' => 'Samples', 'url' => array('/site/contact')),
+                    array('label' => 'Samples', 'url' => array('/admin/listings/listings/samples')),
                 ),
             ));
             $this->widget('zii.widgets.CMenu', array(

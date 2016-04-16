@@ -87,7 +87,11 @@ $this->renderPartial('//../modules/listing/views/layouts/listing_slider',array('
                                  }
                                 else {
 	                           	    $address = new Listingaddress; 
-                                 }   
+                                 }
+                                 
+                                 if(isset($listing) && $listing=="new"){
+                                    $address = new Listingaddress;
+                                 }
 ?>								 
                                                    	
                 			<tr>

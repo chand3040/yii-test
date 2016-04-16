@@ -36,9 +36,13 @@ class ForumController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('addcomment','sendmaillistowmer','mymessages'),
+				'actions'=>array('addcomment','mymessages'),
 				'users'=>array('*'),
 			),
+            array('allow',  // allow all users to perform 'index' and 'view' actions
+                'actions'=>array('sendmaillistowmer'),
+                'users'=>array('@'),
+            ),
 			/*array('deny',  // deny all users
 				'users'=>array('*'),
 			),*/
@@ -125,8 +129,8 @@ class ForumController extends Controller
 
         // Return 302 code if the user isn't logged in
 
-        $adminEmail = ForumClass::$adminMail;
-       // $userData =Adminuser::model()->findByAttributes(array('email'=>$adminEmail));
+        //$adminEmail = ForumClass::$adminMail;
+        //$userData =Adminuser::model()->findByAttributes(array('email'=>$adminEmail));
 
         $listingId = ( isset($_POST['listid']) ) ? $_POST['listid'] : NULL;
         $message = $_POST['msg'];
