@@ -56,7 +56,7 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
 </style>
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/tooltips.css"/>
-<link rel="stylesheet" href="/themes/business/js/jy/upload_video.css">
+<link rel="stylesheet" href="<?php  echo $this->createUrl("/themes/business/js/jy/upload_video.css"); ?>">
 <?php $this->renderPartial('application.modules.admin.views.layouts.listing_menu'); ?>
 <style type="text/css">
     #registration-tabs a {
@@ -435,7 +435,7 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
 
                                 flashplayer: "<?php echo Yii::app()->theme->baseUrl; ?>/js/jwplayer1/jwplayer.flash.swf",
 
-                                file: '<?php echo $uservideoname; ?>',
+                                file: '<?php echo "//www.youtube.com/v/".$uservideoname; ?>',
 
                                 height: 260,
 
@@ -1467,5 +1467,5 @@ JQ1(document).ready(function () {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://apis.google.com/js/client:plusone.js"></script>
-<script src="/themes/business/js/jy/cors_upload.js"></script>
-<script src="/themes/business/js/jy/upload_video.js"></script>
+<script src="<?php echo $this->createUrl("/themes/business/js/jy/cors_upload.js"); ?>"></script>
+<script src="<?php echo $this->createUrl("/themes/business/js/jy/upload_video.js"); ?>"></script>

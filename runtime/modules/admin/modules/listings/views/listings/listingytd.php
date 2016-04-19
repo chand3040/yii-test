@@ -92,7 +92,7 @@ function user_status($var){
                 <?php for($i=1;$i<=12;$i++){ ?>
                     <td>
                         <?php
-                            $sql  = "SELECT user_default_listing_category_id FROM user_default_listing WHERE DATE_FORMAT(user_default_listing_date,'%m') = '$i' && user_default_listing_category_id='".$type["user_default_listing_category_id"]."'";
+                            $sql  = "SELECT user_default_listing_category_id FROM user_default_listing WHERE DATE_FORMAT(user_default_listing_date,'%m') = '$i' && DATE_FORMAT(user_default_listing_date,'%Y') = '".date("Y")."' && user_default_listing_category_id='".$type["user_default_listing_category_id"]."'";
                             $data = Yii::app()->db->createCommand($sql)->queryAll();
                             echo $count=count($data);
                             $totalforyear+=$count;
@@ -104,7 +104,13 @@ function user_status($var){
                 <?php } ?>
                 <td><?php echo $totalforyear;$totalforyeartotal+=$totalforyear; ?></td>
                 <td><?php echo $row1; ?></td>
-                <td></td>
+                <td>
+                    <?php
+                        $sql1  = "SELECT user_default_listing_category_id FROM user_default_listing WHERE  DATE_FORMAT(user_default_listing_date,'%Y') = '".date("Y")."' && user_default_listing_category_id='".$type["user_default_listing_category_id"]."' && user_default_listing_submission_status=1";
+                        $data1 = Yii::app()->db->createCommand($sql)->queryAll();
+                        echo $count=count($data1);
+                    ?>
+                </td>
             </tr>
 
             <?php //print_r($type["user_default_listing_category_id"]." ".$type["user_default_listing_category_name"]); echo "<br />"; ?>

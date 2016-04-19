@@ -28073,3 +28073,1828 @@ Stack trace:
 REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
 HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/samples
 ---
+2016/04/16 09:28:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/images/favicon.ico
+---
+2016/04/16 09:28:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/images/favicon.ico
+---
+2016/04/16 09:28:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/member
+---
+2016/04/16 09:28:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/04/16 09:28:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/newlistings
+---
+2016/04/16 09:29:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/16 09:29:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/04/16 09:29:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/blisting/blisting/index
+---
+2016/04/16 09:29:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/samples
+---
+2016/04/16 09:29:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/member
+---
+2016/04/16 09:29:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/04/16 09:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/newlistings
+---
+2016/04/16 09:29:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:29:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:29:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:29:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:29:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:29:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:29:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:29:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:29:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:29:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "photo-upload".' in C:\xampp\htdocs\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CController.php(270): CController->missingAction('photo-upload')
+#1 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(282): CController->run('photo-upload')
+#2 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:29:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+---
+2016/04/16 09:29:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/04/16 09:32:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/04/16 09:32:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/newlistings
+---
+2016/04/16 09:32:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "photo-upload".' in C:\xampp\htdocs\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CController.php(270): CController->missingAction('photo-upload')
+#1 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(282): CController->run('photo-upload')
+#2 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:32:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+---
+2016/04/16 09:32:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/04/16 09:33:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/04/16 09:33:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/16 09:33:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/newlistings
+---
+2016/04/16 09:34:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/member
+---
+2016/04/16 09:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/04/16 09:34:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/newlistings
+---
+2016/04/16 09:34:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "photo-upload".' in C:\xampp\htdocs\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CController.php(270): CController->missingAction('photo-upload')
+#1 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(282): CController->run('photo-upload')
+#2 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:34:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+---
+2016/04/16 09:35:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/04/16 09:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "photo-upload".' in C:\xampp\htdocs\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CController.php(270): CController->missingAction('photo-upload')
+#1 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(282): CController->run('photo-upload')
+#2 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:40:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+---
+2016/04/16 09:40:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/04/16 09:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "photo-upload".' in C:\xampp\htdocs\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CController.php(270): CController->missingAction('photo-upload')
+#1 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(282): CController->run('photo-upload')
+#2 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:42:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+---
+2016/04/16 09:42:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/04/16 09:49:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "photo-upload".' in C:\xampp\htdocs\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CController.php(270): CController->missingAction('photo-upload')
+#1 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(282): CController->run('photo-upload')
+#2 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:49:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+---
+2016/04/16 09:49:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/04/16 09:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/member
+---
+2016/04/16 09:51:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/04/16 09:51:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/newlistings
+---
+2016/04/16 09:51:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "photo-upload".' in C:\xampp\htdocs\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CController.php(270): CController->missingAction('photo-upload')
+#1 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(282): CController->run('photo-upload')
+#2 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/04/16 09:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+---
+2016/04/16 09:52:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/04/16 09:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/04/19 18:52:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/04/19 18:52:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:52:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/business-ideas
+---
+2016/04/19 18:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=64
+---
+2016/04/19 18:53:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=64
+---
+2016/04/19 18:53:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "listing/images/samples.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('listing/images/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/listing/images/samples.png
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=64
+---
+2016/04/19 18:53:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jats_86/listing/big/Business_supermarket_1442332251.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jats_86/listing/big/Business_supermarket_1442332251.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=64
+---
+2016/04/19 18:53:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jats_86/listing/big/Business_supermarket_1442332199.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jats_86/listing/big/Business_supermarket_1442332199.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=64
+---
+2016/04/19 18:53:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/business-ideas
+---
+2016/04/19 18:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/04/19 18:53:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/retail
+---
+2016/04/19 18:53:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/industrial
+---
+2016/04/19 18:53:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=62
+---
+2016/04/19 18:53:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=62
+---
+2016/04/19 18:53:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jats_86/listing/big/Business_supermarket_1441857853.jpg".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jats_86/listing/big/Business_supermarket_1441857853.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=62
+---
+2016/04/19 18:53:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/banner-images/banners_users/jats_86/imageedit_1_6688546441-2015-11-23-10-55-42.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/banner-i...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/banner-images/banners_users/jats_86/imageedit_1_6688546441-2015-11-23-10-55-42.png
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=62
+---
+2016/04/19 18:53:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jats_86/listing/big/Business_supermarket_1441857821.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jats_86/listing/big/Business_supermarket_1441857821.png
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=62
+---
+2016/04/19 18:53:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "listing/images/samples.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('listing/images/...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/listing/images/samples.png
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=62
+---
+2016/04/19 18:53:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:53:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:54:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/banner-images/banners_users/jats_86/imageedit_1_6688546441-2015-11-23-10-55-42.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/banner-i...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/banner-images/banners_users/jats_86/imageedit_1_6688546441-2015-11-23-10-55-42.png
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/view?id=62
+---
+2016/04/19 18:54:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/retail
+---
+2016/04/19 18:54:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:54:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:54:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/business-ideas
+---
+2016/04/19 18:54:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:54:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 18:54:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/images/favicon.ico
+---
+2016/04/19 18:54:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/images/favicon.ico
+---
+2016/04/19 18:54:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/member
+---
+2016/04/19 18:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/04/19 18:54:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 18:59:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 18:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:04:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:05:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:05:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:06:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:07:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:11:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:12:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:12:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:14:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:14:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:15:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/listingytd
+---
+2016/04/19 19:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/newlistings
+---
+2016/04/19 20:03:15 [error] [php] Undefined variable: user_details (C:\xampp\htdocs\bsupermarket\runtime\commands\CronCommand.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\console\CConsoleCommandRunner.php(71): CronCommand->run()
+#1 C:\xampp\htdocs\bsupermarket\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#3 C:\xampp\htdocs\bsupermarket\framework\yiic.php(33): CConsoleApplication->run()
+#4 C:\xampp\htdocs\bsupermarket\runtime\yiic.php(7): require_once()
+
+2016/04/19 20:03:37 [error] [php] Undefined variable: user_details (C:\xampp\htdocs\bsupermarket\runtime\commands\CronCommand.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\console\CConsoleCommandRunner.php(71): CronCommand->run()
+#1 C:\xampp\htdocs\bsupermarket\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#3 C:\xampp\htdocs\bsupermarket\framework\yiic.php(33): CConsoleApplication->run()
+#4 C:\xampp\htdocs\bsupermarket\runtime\yiic.php(7): require_once()
+
+2016/04/19 20:03:48 [error] [php] Undefined variable: user_details (C:\xampp\htdocs\bsupermarket\runtime\commands\CronCommand.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\console\CConsoleCommandRunner.php(71): CronCommand->run()
+#1 C:\xampp\htdocs\bsupermarket\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#3 C:\xampp\htdocs\bsupermarket\framework\yiic.php(33): CConsoleApplication->run()
+#4 C:\xampp\htdocs\bsupermarket\runtime\yiic.php(7): require_once()
+
+2016/04/19 20:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/04/19 20:10:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 20:10:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 20:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/cron_day
+---
+2016/04/19 20:10:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/04/19 20:10:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
