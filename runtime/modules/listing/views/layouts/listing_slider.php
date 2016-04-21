@@ -558,7 +558,7 @@ if($data['btn_videolink']!="")
 else
 {
 ?>
-<a href="<?php echo $data['btn_sitelink']; ?>" class="clearfix"> 
+<a href="<?php echo $this->createUrl("/page/faq");//$data['btn_sitelink']; ?>" class="clearfix"> 
 <?php
 }
 ?>

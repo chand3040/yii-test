@@ -67,9 +67,9 @@ margin-bottom: 8px;
                      //echo $form->errorSummary($model);
                 ?>    		    
 				<!--<form action="" method="post" enctype="multipart/form-data" id="user_listing_step2"  onsubmit="return form_validation();">-->
-                 <?php echo $form->hiddenField($model,'user_default_listing_id',array('size'=>60,'maxlength'=>100)) ?>
-				 <?php echo $form->hiddenField($model,'user_default_listing_thumbnail',array('size'=>60,'maxlength'=>100)) ?>
-                 <input type="hidden" name="btnsaveforlater" value="0" id="btnsaveforlater" />				 
+                <?php echo $form->hiddenField($model,'user_default_listing_id',array('size'=>60,'maxlength'=>100)) ?>
+				        <?php echo $form->hiddenField($model,'user_default_listing_thumbnail',array('size'=>60,'maxlength'=>100)) ?>
+                <input type="hidden" name="btnsaveforlater" value="0" id="btnsaveforlater" />				 
                 <div>
                       <label style="color:#A84793;">Listing type <a class="sl-tip tooltip" href="#;">?<span class="classic">Please select a listing type from each drop down menu to continue</span></a></label>                                    
 				</div>

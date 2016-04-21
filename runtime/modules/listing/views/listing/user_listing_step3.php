@@ -336,7 +336,7 @@ margin-bottom: 8px;
                             <script language="javascript">
                                 jwplayer("ova-player-instance_<?php echo $j; ?>").setup({
                                     flashplayer: "<?php echo Yii::app()->theme->baseUrl; ?>/js/jwplayer1/jwplayer.flash.swf",
-                                    file: '<?php echo $uservideoname; ?>',
+                                    file: '//www.youtube.com/v/<?php echo $uservideoname; ?>',
                                     height: 260,
                                     width: 338,
                                 });
@@ -358,7 +358,7 @@ margin-bottom: 8px;
 
                 <div id="progressstatus_<?php echo $j; ?>" class="progressstatus" style="display:none;"></div>
 
-                <p class="slisting-head">Video <?php echo $j; ?> (Get to know the business idea) <a class="sl-tip tooltip" href="#;">?<span class="classic">Potential investors want to know the person behind the business; your skills, how you present yourself, your experience and credibility, all play a vital role if you wish to see your business idea succeed.<br><br /></span></a></p>
+                <p class="slisting-head">Video <?php echo $j; ?> (Get to know the entrepreneur) <a class="sl-tip tooltip" href="#;">?<span class="classic">Potential investors want to know the person behind the business; your skills, how you present yourself, your experience and credibility, all play a vital role if you wish to see your business idea succeed.<br><br /></span></a></p>
 
                 <?php
                 if (file_exists($apath)) {

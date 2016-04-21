@@ -196,6 +196,7 @@
     margin: 6px 0 10px 0;
     padding: 5px;
     resize: none;
+    font: 1.1em Verdana,Helvetica,Arial;
     overflow: hidden; /* required for IE */
 }
 
