@@ -484,6 +484,7 @@ class ForumClass extends CComponent
 
 }
 
+
 new ForumClass();
 ?>
 
