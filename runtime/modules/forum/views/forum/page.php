@@ -357,13 +357,13 @@ $totalComments = sizeof($comments);
                                 <li><a href="https://www.linkedin.com" class="tooltip linked"><span class="classic">Send to my linkedin account</span></a></li>
                             </ul>
                             <div class='postBlock'>
-                                <form class="submit-comment sub-text-field hiddenForm replyToPostCommentForm-<?=$commentDetails['comment']->user_default_interaction_id;?>" data-commentreference="<?=$commentDetails['comment']->user_default_interaction_id;?>">
+                                <form class="submit-comment sub-text-field hiddenForm replyToPostCommentForm-<?=$commentDetails['comment']->user_default_interaction_id;?>" data-commentreference="<?=$commentDetails['comment']->user_default_interaction_id;?>" enctype = "multipart/form-data">
                                         <br/><br/>
                                         <textarea class="message" placeholder="<?=$notLogguedInText;?>"></textarea>
                                        <!-- <div class="submitBtn">--><a class="dd_post_button" title="Submit comment" >Post</a><!--</div>-->
                                  <br/><br/><br/>
                                <div class='attachement-div'>
-                                   <input type="file" class='attachement-file' id="attachement<?=$commentDetails['comment']->user_default_interaction_id;?>" name="attachement<?=$commentDetails['comment']->user_default_interaction_id;?>" data-uploadsuccess="0" data-uploadfile="null" multiple />
+                                   <input type="file" class='attachement-file' id="attachement<?=$commentDetails['comment']->user_default_interaction_id;?>" name="attachement" data-uploadsuccess="0" data-uploadfile="null" />
                                    <span class="user-attach-icon attachement-icon" style="width: 25%; margin-top: 8px;padding-left: 18px;" data-content_title="Click to add an attachment Please note attachment must be an image or in a  PDF file format. zip & rar file can only be downloaded">
                                        Add attachment
                                        <span class="attachement-text" style="padding-left: 17px !important;"></span>
@@ -379,13 +379,13 @@ $totalComments = sizeof($comments);
                                     </div>
                                </form>
 
-                                <form class="submit-comment sub-text-field hiddenForm sendMailListOwnerForm-<?=$commentDetails['comment']->user_default_interaction_id;?>" data-commentreference="<?=$commentDetails['comment']->user_default_interaction_id;?>">
+                                <form class="submit-comment sub-text-field hiddenForm sendMailListOwnerForm-<?=$commentDetails['comment']->user_default_interaction_id;?>" data-commentreference="<?=$commentDetails['comment']->user_default_interaction_id;?>" enctype = "multipart/form-data">
                                     <br />
                                     <textarea class="message"></textarea>
                                     <!--<div class="submitBtn">--><a class="dd_sendmail_button" title="Submit comment" >Post</a><!--</div>-->
                                     <br/><br/><br/>
                                     <div class='attachement-div'>
-                                        <input type="file" class='attachement-file' id="attachement<?=$postsComments['user_default_interaction_id'];?>" name="attachement<?=$postsComments['user_default_interaction_id'];?>" data-uploadsuccess="0" data-uploadfile="null" multiple />
+                                        <input type="file" class='attachement-file' id="attachement<?=$postsComments['user_default_interaction_id'];?>" name="attachement" data-uploadsuccess="0" data-uploadfile="null"  />
                                                 <span class="user-attach-icon attachement-icon" style="width: 25%; margin-top: 4px;padding-left: 18px;" data-content_title="Click to add an attachment Please note attachment must be an image or in a  PDF file format. zip & rar file can only be downloaded">
                                                     Add attachment
                                                     <span class="attachement-text" style="padding-left: 17px !important;"></span>
@@ -583,13 +583,13 @@ $totalComments = sizeof($comments);
                                         <li><a href="https://www.linkedin.com" class="tooltip linked"><span class="classic">Send to my linkedin account</span></a></li>
                                     </ul>
                                     <div class='postBlock'>
-                                        <form class="submit-comment sub-text-field hiddenForm replyToPostCommentForm-<?=$postsComments['user_default_interaction_id'];?>" data-commentreference="<?=$commentDetails['comment']->user_default_interaction_id;?>">
+                                        <form class="submit-comment sub-text-field hiddenForm replyToPostCommentForm-<?=$postsComments['user_default_interaction_id'];?>" data-commentreference="<?=$commentDetails['comment']->user_default_interaction_id;?>" enctype = "multipart/form-data">
                                             <br />
                                             <textarea class="message" placeholder="<?=$notLogguedInText;?>"></textarea>
                                             <!--<div class="submitBtn">--><a class="dd_post_button" title="Submit comment" >Post</a><!--</div>-->
                                             <br/><br/><br/>
                                             <div class='attachement-div'>
-                                                <input type="file" class='attachement-file' id="attachement<?=$postsComments['user_default_interaction_id'];?>" name="attachement<?=$postsComments['user_default_interaction_id'];?>" data-uploadsuccess="0" data-uploadfile="null" multiple />
+                                                <input type="file" class='attachement-file' id="attachement<?=$postsComments['user_default_interaction_id'];?>" name="attachement" data-uploadsuccess="0" data-uploadfile="null" />
                                                 <span class="user-attach-icon attachement-icon" data-content_title="Click to add an attachment Please note attachment must be an image or in a  PDF file format. zip & rar file can only be downloaded" style="width: 25%; margin-top: 4px;padding-left: 18px;">
                                                     Add attachment
                                                     <span class="attachement-text" style="padding-left: 17px !important;"></span>
@@ -605,13 +605,13 @@ $totalComments = sizeof($comments);
                                                 </span>
                                             </div>
                                         </form>
-                                        <form class="submit-comment sub-text-field hiddenForm sendMailListOwnerForm-<?=$postsComments['user_default_interaction_id'];?>" data-commentreference="<?=$commentDetails['comment']->user_default_interaction_id;?>">
+                                        <form class="submit-comment sub-text-field hiddenForm sendMailListOwnerForm-<?=$postsComments['user_default_interaction_id'];?>" data-commentreference="<?=$commentDetails['comment']->user_default_interaction_id;?>" enctype = "multipart/form-data">
                                             <br />
                                             <textarea class="message"></textarea>
                                            <!-- <div class="submitBtn">--><a class="dd_sendmail_button" title="Submit comment" >Post</a><!--</div>-->
                                             <br/><br/><br/>
                                             <div class='attachement-div'>
-                                                <input type="file" class='attachement-file' id="attachement<?=$postsComments['user_default_interaction_id'];?>" name="attachement<?=$postsComments['user_default_interaction_id'];?>" data-uploadsuccess="0" data-uploadfile="null" multiple />
+                                                <input type="file" class='attachement-file' id="attachement<?=$postsComments['user_default_interaction_id'];?>" name="attachement" data-uploadsuccess="0" data-uploadfile="null" />
                                                 <span class="user-attach-icon attachement-icon" data-content_title="Click to add an attachment Please note attachment must be an image or in a  PDF file format. zip & rar file can only be downloaded" style="width: 25%; margin-top: 4px;padding-left: 18px;">
                                                     Add attachment
                                                     <span class="attachement-text" style="padding-left: 17px !important;"></span>
