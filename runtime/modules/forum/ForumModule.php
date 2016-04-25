@@ -14,7 +14,8 @@ class ForumModule extends CWebModule
         
 		$this->setImport(array(
 			'forum.models.*',
-                        'forum.components.*'
+                        'forum.components.*',
+						'application.modules.admin.components.*'
 		));
                 
                 Yii::import('listing.models.*');
