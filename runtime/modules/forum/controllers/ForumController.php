@@ -36,13 +36,9 @@ class ForumController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('addcomment','mymessages'),
+				'actions'=>array('addcomment','uploadAttachement','UpdateViewLimit','navigate','sendmaillistowmer','mymessages'),
 				'users'=>array('*'),
 			),
-            array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('sendmaillistowmer'),
-                'users'=>array('@'),
-            ),
 			/*array('deny',  // deny all users
 				'users'=>array('*'),
 			),*/
@@ -129,8 +125,8 @@ class ForumController extends Controller
 
         // Return 302 code if the user isn't logged in
 
-        //$adminEmail = ForumClass::$adminMail;
-        //$userData =Adminuser::model()->findByAttributes(array('email'=>$adminEmail));
+        $adminEmail = ForumClass::$adminMail;
+       // $userData =Adminuser::model()->findByAttributes(array('email'=>$adminEmail));
 
         $listingId = ( isset($_POST['listid']) ) ? $_POST['listid'] : NULL;
         $message = $_POST['msg'];
@@ -409,13 +405,13 @@ class ForumController extends Controller
     
     
     public function actionNavigate(){        
-                       
+                    
             $listingId = ( isset($_POST['listingId']) ) ? $_POST['listingId'] : NULL;
-            $viewLimitValue = ( isset($_POST['viewLimitValue']) ) ? $_POST['viewLimitValue'] : ForumClass::$commentViewLimit;
+            $viewLimitValue = ( isset($_POST['viewLimitValue']) ) ? $_POST['viewLimitValue'] : 6;
             $pageSelected = ( isset($_POST['pageSelected']) ) ? $_POST['pageSelected'] : 1;
-            $viewOffsetValue = ( isset($_POST['viewOffsetValue']) ) ? $_POST['viewOffsetValue'] : ForumClass::$commentViewOffset;
-            $commentOrderBy = ( isset($_POST['commentOrderBy']) ) ? $_POST['commentOrderBy'] : ForumClass::$commentOrderBy;            
-            $userProfession = ( isset($_POST['userProfession']) ) ? $_POST['userProfession'] : ForumClass::$userProfession;
+            $viewOffsetValue = ( isset($_POST['viewOffsetValue']) ) ? $_POST['viewOffsetValue'] : 0;
+            $commentOrderBy = ( isset($_POST['commentOrderBy']) ) ? $_POST['commentOrderBy'] : 'user_default_date_create DESC';            
+            $userProfession = ( isset($_POST['userProfession']) ) ? $_POST['userProfession'] : 0;
             
             if( $listingId == NULL ){
                 
@@ -423,9 +419,8 @@ class ForumController extends Controller
                 return false;
                 
             }
-            
             $listing = Userlisting::model()->findByPk($listingId);
-            
+            // print_r($listing);
             $listingView = $this->renderPartial('/forum/page', array(
                     'listing' => $listing,
                     'commentViewLimit' => $viewLimitValue,
@@ -537,7 +532,7 @@ class ForumController extends Controller
     }
     
     
-    public function actionUploadAttachement(){
+    public function actionuploadAttachement(){
         
         
             if( (Yii::app()->user->isGuest) && (empty(Yii::app()->user->Id)) ){
@@ -549,7 +544,7 @@ class ForumController extends Controller
             $error = FALSE;
             $message = "Upload attachment success";
             $fileName = "error";
-
+			
             if( empty($_FILES) || ($_FILES['attachement']['error'] != 0)  ){
 
                 $error = TRUE;
@@ -562,7 +557,7 @@ class ForumController extends Controller
                 $attachement = $_FILES['attachement'];
 
                 if( (!$error) && ( !in_array($attachement['type'], ForumClass::$allowedUploadType)) ){
-
+				
                     $error = TRUE;
                     $message = "You may not upload an illegal file.".'<br/>';
                     $message .= '<span style="color: #6b6d6e;">File types allowed:- pdf, rar, zip, and image files only.</span>';
@@ -578,18 +573,23 @@ class ForumController extends Controller
             }
 
             if( !$error ){
-
+				if(!file_exists(ForumClass::$uploadDirectoryPath)) {
+					mkdir(ForumClass::$uploadDirectoryPath, 0777, true);
+				}
                 $fileToUploadPath = ForumClass::$uploadDirectoryPath.time().".".$attachement['name'];
-                
+				
                 // Add time in file name to avoid conflict beetween files names
                 $fileName = time().".".$attachement['name'];
-
+			
                 if( ! (move_uploaded_file($attachement['tmp_name'], $fileToUploadPath)) ){
 
                     $error = TRUE;
                     $message = "Upload attachement failed.";
                     $fileName = "error";
-                }
+                } else {
+					$error = FALSE;
+					$message = "Attachement Uploaded Successfully.";
+				}
             }
                 
             $actionStatus = (!$error) ? "1" : "0";
@@ -640,9 +640,11 @@ class ForumController extends Controller
         }
 
         if( !$error ){
-
+			if(!file_exists(ForumClass::$uploadThumbDirectoryPath)) {
+					mkdir(ForumClass::$uploadThumbDirectoryPath, 0777, true);
+			}
             $fileToUploadPath = ForumClass::$uploadThumbDirectoryPath.time().".".$attachement['name'];
-
+			
             // Add time in file name to avoid conflict beetween files names
             $fileName = time().".".$attachement['name'];
 
