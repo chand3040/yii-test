@@ -26,11 +26,11 @@ class ListingController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('suspensed', 'publish', 'rejection', 'rdelete', 'fupdate', 'business_ideas','retail', 'industrial', "cronreport",'science_and_technology', 'business_services', 'view', 'cron_day', 'cron_week', 'cron_month','vote', 'registerforvote', 'registerforvotelink', 'externallogin', 'CheckEmailUnique'),
+                'actions' => array('suspensed', 'publish', 'rejection', 'sendsubmitemail','sendstatusemail','rdelete', 'fupdate', 'business_ideas','retail', 'industrial', "cronreport",'science_and_technology', 'business_services', 'view', 'cron_day', 'cron_week', 'cron_month','vote', 'registerforvote', 'registerforvotelink', 'externallogin', 'CheckEmailUnique'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'mailtoowner', 'purchaseaccess', 'update','selectlisting', 'sendstatusemail', 'index', 'delete', 'user_listing_step2', 'imageupload', 'user_listing_step3', 'user_listing_step4', 'listingimage', 'listingvideo', 'preview_user_listing', 'add_favourite', 'remove_favourite', 'my_messages', 'ldelete', 'convertingVideo', 'getProgress', 'listingvideo1', 'listingvideo2','marketingdata', 'marketingdatachart'),
+                'actions' => array('create', 'mailtoowner', 'purchaseaccess', 'update','sendsubmitemail','selectlisting', 'sendstatusemail', 'index', 'delete', 'user_listing_step2', 'imageupload', 'user_listing_step3', 'user_listing_step4', 'listingimage', 'listingvideo', 'preview_user_listing', 'add_favourite', 'remove_favourite', 'my_messages', 'ldelete', 'convertingVideo', 'getProgress', 'listingvideo1', 'listingvideo2','marketingdata', 'marketingdatachart'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -209,7 +209,7 @@ class ListingController extends Controller {
 
                     //$this->redirect(Yii::app()->createUrl('listing/user_listing_step3/listid/'.$model->user_default_listing_id));
                     if ($_POST['btnsaveforlater'] == 1) {
-                        $this->sendstatusemail($id,"has been successfully saved for later.","Saved for later");
+                        $this->actionSendstatusemail($id,"has been successfully saved for later.","Saved for later");
                         $this->redirect(Yii::app()->createUrl('user/myaccount/update'));
                     } else {
                         $this->redirect(Yii::app()->createUrl('listing/user_listing_step3/listid/' . $model->user_default_listing_id));
@@ -222,6 +222,8 @@ class ListingController extends Controller {
     }
 
     public function actionSendstatusemail($id,$subject,$status){
+        // eh ve query string wich send karna pen aa  $id,subject ,$status   
+
         $model = Userlisting::model()->find("user_default_profiles_id = '" . Yii::app()->user->getId() . "' and  user_default_listing_id ='" . $id . "'");
         $user = User::model()->find("user_default_id = $model->user_default_profiles_id");
         $femail="no-reply@business-supermarket.com";
@@ -254,25 +256,7 @@ class ListingController extends Controller {
                 Should you wish to contact us, then you may do so via the support@business-supermarket.com</i>";
         SharedFunctions::app()->sendmail($femail,$subject,$body);
     }
-    public function actionCronreport($id){
-        $model = Listings::model()->find("user_default_profiles_id = '" . Yii::app()->user->getId() . "' and  user_default_listing_id ='" . $id . "'");
-        
-        // $user = User::model()->find("user_default_id = $model->user_default_profiles_id");
-        // $femail="no-reply@business-supermarket.com";
-        // $subject=$model->user_default_listing_title." submission notification";
-        // $body="<h2>Business Supermarket</h2>";
-        // $body.="Dear ".$user->user_default_first_name." ".$user->user_default_surname."<br /><br /><br />";
-        // $body.="you have successfully submitted your listing.<br /><br />";
-        // $body.="Listing Title : ".@$model->user_default_listing_title."<br />";
-        // $body.="Listing Date : ".@$model->user_default_listing_date."<br />";
-        // $body.="Listing Status : Waiting admin approval and publication<br /><br />";
-        // $body.="You will be notified when your listing is published.<br /><br />";
-        // $body.="Sincerely<br />Business Supermarket Listing Submission Team<br /><br />";
-        // $body.="<i>Note: This email address cannot accept replies.<br />
-        //         Should you wish to contact us, then you may do so via the support@business-supermarket.com</i>";
-        // SharedFunctions::app()->sendmail($femail,$subject,$body);
-    }
-
+    
     /**
      * Image upload from userlist step 2
      * 
@@ -365,11 +349,16 @@ class ListingController extends Controller {
                 if ($_POST['img_name'][$i] != "") {
 
                     $Userlistingimages = new Userlistingimages;
-                    $Userlistingimages->user_default_listing_image = $_POST['img_name'][$i];
-                    $Userlistingimages->user_default_listing_image_text = $_POST['user_default_listing_image_text'][$i];
-                    $Userlistingimages->user_default_listing_image_link2 = $_POST['user_default_listing_image_link2'][$i];
-                    $Userlistingimages->user_default_listing_id = $id;
-                    $Userlistingimages->save();
+                    $crit = new CDbCriteria();
+                    $crit->condition = " user_default_listing_image='".$_POST['img_name'][$i]."'";
+                    $d=$Userlistingimages->findAll($crit);
+                    if(!$d){
+                        $Userlistingimages->user_default_listing_image = $_POST['img_name'][$i];
+                        $Userlistingimages->user_default_listing_image_text = $_POST['user_default_listing_image_text'][$i];
+                        $Userlistingimages->user_default_listing_image_link2 = $_POST['user_default_listing_image_link2'][$i];
+                        $Userlistingimages->user_default_listing_id = $id;
+                        $Userlistingimages->save();
+                    }
                 }
             }
 
@@ -381,7 +370,9 @@ class ListingController extends Controller {
 
                     if ($_POST['drg_old_videos'][$i] != "") {
                         $whosloggedin = Userlistingvideos::model()->find('user_default_listing_video_link=:videoname', array(':videoname' => $_POST['drg_old_videos'][$i]));
-                        $whosloggedin->delete();
+                        if($whosloggedin){
+                            $whosloggedin->delete();
+                        }
                     }
                 }
             }
@@ -426,7 +417,7 @@ class ListingController extends Controller {
 			$model->save(); }
 			
 			if ($_POST['btnsaveforlater'] == 1) {
-                $this->sendstatusemail($id,"has been successfully saved for later.","Saved for later");
+                $this->actionSendstatusemail($id,"has been successfully saved for later.","Saved for later");
                 $this->redirect(Yii::app()->createUrl('user/myaccount/update'));
             } else {
                 $this->redirect(Yii::app()->createUrl('listing/user_listing_step4/listid/' . $model->user_default_listing_id));
@@ -532,12 +523,11 @@ class ListingController extends Controller {
                 
                      if($_POST['btnsaveforlater']==1)
 					 {
-					   $this->sendstatusemail($id,"has been successfully saved for later.","Saved for later");
+					   $this->actionSendstatusemail($id,"has been successfully saved for later.","Saved for later");
                      	$this->redirect(Yii::app()->createUrl('user/myaccount/update'));
 					 } 
-                
                 if($_POST['saveforlater']){ 
-				    $this->sendstatusemail($id,"has been successfully saved for later.","Saved for later"); 
+				    $this->actionSendstatusemail($id,"has been successfully saved for later.","Saved for later"); 
                     $this->redirect(Yii::app()->createUrl('user/myaccount/update'));		
                     die;
                 }
@@ -601,7 +591,7 @@ class ListingController extends Controller {
                             $result =  SharedFunctions::app()->sendmail($to,$subjectcc,$body);
                             */
 
-                            $this->sendsubmitemail($id);  
+                            $this->actionSendsubmitemail($id);  
 							}
 							else
 							{
