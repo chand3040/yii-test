@@ -236,7 +236,7 @@ $this->renderPartial('//../modules/listing/views/layouts/listing_slider',array('
                                     <?php 
                                     if($model->isNewRecord){
                                     ?>
-                                       <input type="submit" name="submit_user_listing_step1" id="submit" class="button button1 black" value="Insert" /> 	
+                                       <input type="submit" name="submit_user_listing_step1" id="submit" class="button button1 black" value="Insert" style="margin-top:10px;" /> 	
                                        
                                     <?php    
                                     }else {

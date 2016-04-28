@@ -67,12 +67,14 @@ copy portfolio delivered to the registered address in your profile.
 </i></span><br/>
  
 		<div class="confirmbtn">
-		<button class="button black" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box').fadeIn('slow'); return false;">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<button class="button blue" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box').fadeIn('slow'); return false;">Download</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button black" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box.box1').fadeIn('slow'); return false;">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button blue" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box.box1').fadeIn('slow'); return false;">Download</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<!-- <button class="button black" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box').fadeIn('slow'); return false;">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button class="button blue" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box').fadeIn('slow'); return false;">Download</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 		<button  type="submit" name="deletelisting" class="button red">Delete</button></form>
 		</div></div></div></div>
 		
-        <div class="registration-box">
+        <div class="registration-box box1">
 			
             <!-- registration box start-->
             <!-- <div class="close_caform"><a class="button white smallrounded" href="index.php" title="Close" >X</a></div>-->
