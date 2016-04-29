@@ -1,6 +1,6 @@
 <div class='home-slider-wrap'><div id='carousel-wrapper'><div id='dragongallery' class='stepcarousel'><div class='belt'><div class='panel'><div class='paneloverlay-wrapper'><div class='paneloverlay-top'>&nbsp;</div><div class='paneloverlay'><p class='speech-bubble'>hi<br /></p><p class='speech-bubble-sig'></p></div><!-- /paneloverlay --><div class='paneloverlay-bottom'>&nbsp;</div></div><!-- paneloverlay-wrapper -->
  <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/themes/business/images/blank.png'>
- <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1426615714.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; margin-top: -295px;margin-right: 24px;'/>
+ <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1426615714.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; top: -295px;margin-right: 24px;'/>
                                 </div><!-- /panel -->
 
                             <!-- End of carousel content -->

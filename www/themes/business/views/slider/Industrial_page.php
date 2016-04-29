@@ -1,30 +1,30 @@
 <div class='home-slider-wrap'><div id='carousel-wrapper'><div id='dragongallery' class='stepcarousel'><div class='belt'><div class='panel'><div class='paneloverlay-wrapper'><div class='paneloverlay-top'>&nbsp;</div><div class='paneloverlay'><p class='speech-bubble'>What do we do? A website designed to help you change your financial future.<br /><a href='javascript:void(0)' onclick="show_video('http://youtu.be/TURWdiUPLzE');" title='' >Find out more ></a></p><p class='speech-bubble-sig'></p></div><!-- /paneloverlay --><div class='paneloverlay-bottom'>&nbsp;</div></div><!-- paneloverlay-wrapper -->
 
- <img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/blank.png' alt=''/> <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1458557824.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; margin-top: -295px;margin-right: 24px;' />
+ <img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/blank.png' alt=''/> <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1458557824.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; top: -295px;margin-right: 24px;' />
 
 </div>
 
 <div class='panel'><div class='paneloverlay-wrapper'><div class='paneloverlay-top'>&nbsp;</div><div class='paneloverlay'><p class='speech-bubble'>Get free entry to our cash prize draw for your efforts every month.<br /><a href='javascript:void(0)' onclick="show_video('http://youtu.be/YlIhWEhFyE4');" title='' >Find out more ></a></p><p class='speech-bubble-sig'></p></div><!-- /paneloverlay --><div class='paneloverlay-bottom'>&nbsp;</div></div><!-- paneloverlay-wrapper -->
 
- <img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/blank.png' alt=''/> <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1458557830.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; margin-top: -295px;margin-right: 24px;' />
+ <img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/blank.png' alt=''/> <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1458557830.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; top: -295px;margin-right: 24px;' />
 
 </div>
 
 <div class='panel'><div class='paneloverlay-wrapper'><div class='paneloverlay-top'>&nbsp;</div><div class='paneloverlay'><p class='speech-bubble'>If your idea is good enough; we will get you the funding you need<br /><a href='javascript:void(0)' onclick="show_video('http://youtu.be/9NsbbFyXF4A');" title='' >Find out more ></a></p><p class='speech-bubble-sig'></p></div><!-- /paneloverlay --><div class='paneloverlay-bottom'>&nbsp;</div></div><!-- paneloverlay-wrapper -->
 
- <img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/blank.png' alt=''/> <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1458557837.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; margin-top: -295px;margin-right: 24px;' />
+ <img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/blank.png' alt=''/> <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1458557837.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; top: -295px;margin-right: 24px;' />
 
 </div>
 
 <div class='panel'><div class='paneloverlay-wrapper'><div class='paneloverlay-top'>&nbsp;</div><div class='paneloverlay'><p class='speech-bubble'>Check out the quick links to our tutorial videos to help you get started<br /><a href='javascript:void(0)' onclick="show_video('http://youtu.be/zvSSHQcM4gg');" title='' >Find out more ></a></p><p class='speech-bubble-sig'></p></div><!-- /paneloverlay --><div class='paneloverlay-bottom'>&nbsp;</div></div><!-- paneloverlay-wrapper -->
 
- <img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/blank.png' alt=''/> <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1458557846.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; margin-top: -295px;margin-right: 24px;' />
+ <img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/blank.png' alt=''/> <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1458557846.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; top: -295px;margin-right: 24px;' />
 
 </div>
 
 <div class='panel'><div class='paneloverlay-wrapper'><div class='paneloverlay-top'>&nbsp;</div><div class='paneloverlay'><p class='speech-bubble'>Voice your opinion and be part of the next big thing.<br /><a href='javascript:void(0)' onclick="show_video('http://youtu.be/pel1IW1kqjo');" title='' >Find out more ></a></p><p class='speech-bubble-sig'></p></div><!-- /paneloverlay --><div class='paneloverlay-bottom'>&nbsp;</div></div><!-- paneloverlay-wrapper -->
 
- <img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/blank.png' alt=''/> <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1458557855.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; margin-top: -295px;margin-right: 24px;' />
+ <img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/blank.png' alt=''/> <img src='<?php echo Yii::app()->getBaseUrl(true); ?>/upload/sliders/big/Business_supermarket_1458557855.png' alt='' style='float: right;position: relative;overflow: hidden;height: 287px; top: -295px;margin-right: 24px;' />
 
 </div>
 

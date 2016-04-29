@@ -6,7 +6,7 @@ position: relative;
 
 overflow: hidden;height: 287px;
 
-  margin-top: -295px;
+  top: -295px;
 
 margin-right: 24px;
 
@@ -19,7 +19,7 @@ position: relative;
 
 overflow: hidden;height: 287px;
 
-  margin-top: -295px;
+  top: -295px;
 
 margin-right: 24px;
 
@@ -32,7 +32,7 @@ position: relative;
 
 overflow: hidden;height: 287px;
 
-  margin-top: -295px;
+  top: -295px;
 
 margin-right: 24px;
 
@@ -45,7 +45,7 @@ position: relative;
 
 overflow: hidden;height: 287px;
 
-  margin-top: -295px;
+  top: -295px;
 
 margin-right: 24px;
 
@@ -58,7 +58,7 @@ position: relative;
 
 overflow: hidden;height: 287px;
 
-  margin-top: -295px;
+  top: -295px;
 
 margin-right: 24px;
 

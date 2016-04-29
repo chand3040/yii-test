@@ -72,7 +72,7 @@ echo "<br/><a href='javascript:void(0)' onclick=\"show_video('$videolink');\" ti
                            style="float: right;
                                   position: relative;
                                   overflow: hidden;
-                                  margin-top: -298px;width: 470px;
+                                  top: -298px;width: 470px;
                                   height: 290px;
                                   margin-right: 24px;
                         }"/> 
