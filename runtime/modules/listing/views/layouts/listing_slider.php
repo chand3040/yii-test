@@ -575,15 +575,13 @@ else if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/
 {
 	
 	$lid=$_GET['id'];
-	
-	if($lid=="")
+    if($lid=="")
 
 {
 	
 	$lid = Yii::app()->request->getParam('listid');
 	
 	}
-	
 	$connection = Yii::app()->db;
 	
 	$command1 = $connection->createCommand("select * from `user_default_listing` where `user_default_listing_id`='$lid'");
@@ -681,14 +679,15 @@ else
 ?>
 
 <!-- popup for contact-->
-<div class="registration-box contact_cont" style="display:none; margin-left: 10px;">
-   <form action="<?php echo Yii::app()->createUrl('forum/forum/sendMailListOwmer');?>" method="post">
+<div class="registration-box contact_cont" style="display:none; margin-left: 10px; min-height:330px; background:#D1E3F7; border:1px solid #7D5682; border-radius:5px;">
+    <h2 style="text-align:center; margin-top:20px;">Submit Listing Download Request</h2>
+    <form action="<?php echo Yii::app()->createUrl('/listing/listing/mailtoowner');?>" method="post">
       <input type="hidden" name="url" id="urll" value="<?php echo Yii::app()->getBaseUrl(true); echo Yii::app()->request->getUrl();?>" />            	
       <div class="contact_inner" style="height:410px;">
          <div class="closebutton_pop" style="position: relative; top: -13px; z-index: 100;left: 379px; text-align: center;">    
 		 <a title="Close" href="#" id="close3" ><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/close.png" alt="business supermarket close button" width="24"></a>      
 		 </div>
-         <div style="text-align: center; ">
+         <div style="text-align: center;">
             <h2 style="color:#00acce; margin-top: -15px;">You are about to send a private message to the owner of this listing</h2>
             <p>Your message will be private and only viewable by you and the listing owner.</p>
             <p style="width: 500px; margin: auto;"><em>If your question may be of interest to other users, then consider posting the message in the <b style="color: #A84793;">	
@@ -746,22 +745,17 @@ $cemail=$myresult['user_default_email'];
                
          <div class="feed_heading" style="padding-left: 30px !important;">
             <span class="span">Subject:&nbsp;&nbsp;</span>
-            <input type="text" name="subject" id="subject" class="feedbackinput" placeholder="Please Enter subject" style="margin-top: -9px;margin-left: 5px;width: 573px;height: 25px;" required="" />                
+            <input type="text" name="subject" id="subject" class="feedbackinput" placeholder="Please Enter subject" value="Listing Download Request" style="margin-top: -9px;margin-left: 5px;width: 80%;height: 25px;" required="" />                
          </div>
-         <input type="hidden" name="listid" value="<?php echo $lid; ?>" />
-         <input type="hidden" name="fromuname" value="<?php echo $cuname; ?>" />
-         <input type="hidden" name="userid" value="<?php echo $id; ?>" />
-         <input type="hidden" name="fromemail" value="<?php echo $cemail; ?>" />
-         <input type="hidden" name="toemail" value="<?php echo $uemail; ?>" />
-         <input type="hidden" name="toname" value="<?php echo $uname; ?>" />
-         <input type="hidden" name="fromname" value="<?php echo $cname; ?>" />
-         <input type="hidden" name="title" value="<?php echo $title; ?>" />       
+         <input type="hidden" name="listid" value="<?php echo Yii::app()->request->getParam('listid'); ?>" />
+         <input type="hidden" name="subj" value="Listing Download Request" />
          <?php $surll= $_SERVER["REQUEST_URI"];
-            $surll1 = ltrim($surll, '/'); ?>         
-         <input type="hidden" name="furl" value="<?php echo $surll1; ?>" />            
+            $url=explode("/listing", $surll);
+            //$surll1 = ltrim($surll, '/'); ?>         
+         <input type="hidden" name="furl" value="<?php echo "listing".$url[1]; ?>" />            
          <div class="feed_heading"  style="padding-left: 30px !important;">
             <span class="span">Message:</span>
-            <textarea  required="" class="feedbacktextarea" placeholder="Describe your message" name="msg" id="msgd" style="width: 577px; height: 115px; padding: 4px;"> </textarea>
+            <textarea  required="" class="feedbacktextarea" placeholder="Describe your message" name="msg" id="msgd" style="margin-left:9px; width: 80%; height: 115px; padding: 4px;"> </textarea>
          </div>
          <br /> 
          <div class="button_feed" style='width: 100%;
@@ -787,6 +781,7 @@ $cemail=$myresult['user_default_email'];
    }else
    {
 	   ?><input type="button"  id="close1" class="button black close" value="Close" />
+       <input type="submit" name="sendmaillist" tabindex="12" id="sendmaillist" class="button black send" value="Send" />
 </div>
 </div></form>
 <?php

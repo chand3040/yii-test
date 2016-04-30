@@ -68,7 +68,7 @@ copy portfolio delivered to the registered address in your profile.
  
 		<div class="confirmbtn">
         <button class="button black" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box.box1').fadeIn('slow'); return false;">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="button blue" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box.box1').fadeIn('slow'); return false;">Download</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button blue" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box.contact_cont').fadeIn('slow'); return false;">Download</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<!-- <button class="button black" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box').fadeIn('slow'); return false;">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<button class="button blue" type="button" onClick="jQuery('.delete_listing').hide();jQuery('.registration-box').fadeIn('slow'); return false;">Download</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 		<button  type="submit" name="deletelisting" class="button red">Delete</button></form>

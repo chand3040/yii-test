@@ -700,6 +700,10 @@ class ListingController extends Controller {
         $user=User::model()->findByAttributes(array('user_default_id'=>$listing['user_default_profiles_id']));
         $firstMessage = '1';
 
+        $connection=$connection = Yii::app()->db;
+        $cmd = $connection->createCommand("select * from `user_default_profiles` where `user_default_id`='".$listing['user_default_profiles_id']."'");
+		$profile = $cmd->queryRow();
+
         /*$userMessage = new UserMessages();
         $userMessage->message = $message;
         $userMessage->subject = $subject;
@@ -711,14 +715,14 @@ class ListingController extends Controller {
         //if($userMessage->save()){
             $email=$_POST['toemail'];
             $tname=$_POST['toname'];
-            $fname=$_POST['fromname'];
-            $fromuname=$_POST['fromuname'];
-            $femail=$_POST['fromemail'];
-            $title=$_POST['title'];
+            $fname=$profile['user_default_first_name']." ".$profile['user_default_surname'];
+            $fromuname=$profile["user_default_username"];
+            $femail=$profile['user_default_email'];
+            $title=$listing['user_default_listing_title'];
             $subject11=$_POST['subject'];
-            $msg=$_POST['msg'];
-            $listid=$_POST['listid'];
-            $userid=$_POST['userid'];
+            $msg=Yii::app()->request->getParam('msg');
+            $listid=$listingId;
+            $userid=$listing['user_default_profiles_id'];
             $furl=$_POST['furl'];
             $sitelink='<a href="'.Yii::app()->getBaseUrl(true).'" target="_blank" >here >> </a>';   
             $yii_user_request_id = '<a href="'.Yii::app()->getBaseUrl(true)."/"."listing/fupdate/listid/".$listid.'" target="_blank" >here >> </a>';    
