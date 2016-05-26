@@ -24269,14 +24269,17 @@ CREATE TABLE `user_default_interactions` (
   `user_default_interaction_id` int(11) NOT NULL,
   `user_default_interaction_message` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `user_default_reputation` int(11) NOT NULL DEFAULT '0',
-  `user_default_favourites` enum('0','1') NOT NULL DEFAULT '0'COMMENT
+  `user_default_profile_id` int(11) NOT NULL DEFAULT '0',
+  `user_default_listing_id` int(11) NOT NULL DEFAULT '0',
+  
+  `user_default_favourites` enum('0','1') NOT NULL DEFAULT '0'
 ) ;
 
 --
 -- Dumping data for table `user_default_interactions`
 --
 
-INSERT INTO `user_default_interactions` (`user_default_interaction_id`, `user_default_interaction_message`, `user_default_reputation`, `user_default_favourites`, `user_default_profile_id`, `user_default_listing_id`, `user_default_attachment`, `user_default_thumb_attachment`, `user_default_interactions_message`, `user_default_likes_total`, `user_default_dislikes_total`, `user_default_is_spam`, `user_default_date_create`, `user_default_first_interations`) VALUES
+/*INSERT INTO `user_default_interactions` (`user_default_interaction_id`, `user_default_interaction_message`, `user_default_reputation`, `user_default_favourites`, `user_default_profile_id`, `user_default_listing_id`, `user_default_attachment`, `user_default_thumb_attachment`, `user_default_interactions_message`, `user_default_likes_total`, `user_default_dislikes_total`, `user_default_is_spam`, `user_default_date_create`, `user_default_first_interations`) VALUES
 (1, 'hi', 0, '0', 86, 62, NULL, NULL, '', 1, 0, '0', '2015-09-15 17:46:19', '1'),
 (2, 'test', 0, '0', 86, 62, NULL, NULL, '', 1, 0, '0', '2015-09-15 17:48:42', '1'),
 (3, 'gfd', 0, '0', 86, 62, NULL, NULL, '', 1, 0, '0', '2015-09-15 17:48:57', '1'),
@@ -24300,7 +24303,7 @@ INSERT INTO `user_default_interactions` (`user_default_interaction_id`, `user_de
 (21, 'this part works', 0, '0', 86, 67, NULL, NULL, '', 0, 0, '0', '2015-10-12 10:34:29', '1'),
 (22, '', 0, '0', 88, 63, NULL, NULL, 'test', 0, 0, '0', '2015-10-13 08:49:10', '1'),
 (23, 'hi', 0, '0', 86, 62, NULL, NULL, '', 0, 0, '0', '2015-11-24 04:07:08', '1'),
-(24, 'hi ', 0, '0', 86, 62, 'y', NULL, '', 0, 0, '0', '2015-11-24 04:31:25', '1');
+(24, 'hi ', 0, '0', 86, 62, 'y', NULL, '', 0, 0, '0', '2015-11-24 04:31:25', '1');*/
 
 -- --------------------------------------------------------
 
@@ -24783,8 +24786,8 @@ INSERT INTO `user_default_listing_marketing` (`user_default_listing_marketing_id
 CREATE TABLE `user_default_listing_marketing_connection` (
   `user_default_listing_marketing_connection_id` int(11) NOT NULL,
   `user_default_listing_marketing_question_id` int(11) NOT NULL,
-  `user_default_listing_marketing_vote_status` enum('1','0') NOT NULL DEFAULT '1' COMMENT '1=not voted  ,     0=voted ie cannot vote again',
-  `user_default_listing_marketing_question_vote_value` enum('y','m','n') DEFAULT NULL COMMENT AS `y- yes, m- maybe , n - no`,
+  `user_default_listing_marketing_vote_status` enum('1','0') NOT NULL DEFAULT '1',
+  `user_default_listing_marketing_question_vote_value` enum('y','m','n') DEFAULT NULL ,
   `user_default_listing_marketing_question_access_days` tinyint(4) NOT NULL,
   `user_default_listing_marketing_question_access_date` date DEFAULT NULL,
   `user_default_listing_marketing_user_id` int(11) NOT NULL

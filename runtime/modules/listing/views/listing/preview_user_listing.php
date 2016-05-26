@@ -69,7 +69,7 @@
                                         <?php echo $expaln; ?><!--&nbsp;&nbsp;<a onclick="jQuery('.explainfull').show();jQuery('.explain').hide();" class="more readmore">Read more &gt;&gt;</a>-->                                                                            
                                         </div>
                                         <div class="explainfull" style="display:none;">
-                                            <?php echo $model->user_default_listing_summary; ?> &nbsp;&nbsp; <a  onclick="jQuery('.explain').show();jQuery('.explainfull').hide();" class="more readmore">Read less &gt;&gt;</a>                                          
+                                            <?php echo $model->user_default_listing_summary; ?> &nbsp;&nbsp; <a  onclick="jQuery('.explain').show();jQuery('.explainfull').hide();" class="more readmore">Read less &lt;&lt;</a>                                          
                                         </div>
                                               </div>
                                         </div>
@@ -101,7 +101,7 @@ $test1=$model->user_default_listing_details;
 echo $test2=str_replace("\n","</p><p>",$test1);
 
 
- ?> &nbsp;&nbsp; <a  onclick="jQuery('.less1').show();jQuery('.full').hide();" class="more readmore">Read less &gt;&gt;</a>                                          
+ ?> &nbsp;&nbsp; <a  onclick="jQuery('.less1').show();jQuery('.full').hide();" class="more readmore">Read less &lt;&lt;</a>                                          
                                         </div>
                                     
                                     </div>
@@ -174,7 +174,7 @@ echo $test2=str_replace("\n","</p><p>",$test1);
                                         <?php echo $test; ?>&nbsp;&nbsp;<?php if($count>25) { ?><a onclick="jQuery('.full1').show();jQuery('.less2').hide();" class="more readmore">Read more &gt;&gt;</a><?php } ?>                                                                            
                                         </div>
                                         <div class="full1" style="display:none;">
-                                            <?php $user_default_listing_want=$model->user_default_listing_want; echo $test4=str_replace("\n","</p><p>",$user_default_listing_want); ?> &nbsp;&nbsp; <a  onclick="jQuery('.less2').show();jQuery('.full1').hide();" class="more readmore">Read less &gt;&gt;</a>                                          
+                                            <?php $user_default_listing_want=$model->user_default_listing_want; echo $test4=str_replace("\n","</p><p>",$user_default_listing_want); ?> &nbsp;&nbsp; <a  onclick="jQuery('.less2').show();jQuery('.full1').hide();" class="more readmore">Read less &lt;&lt;</a>                                          
                                         </div>
                                   
                                   </div>

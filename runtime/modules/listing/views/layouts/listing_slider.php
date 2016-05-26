@@ -173,10 +173,10 @@ $result =  SharedFunctions::app()->sendmail($femail,$subject,$body);
 
 			 })
 			 
-        jQuery("#contactpopup").click(function(){
+        jQuery("#contactpopup").click(function(ev){
 			
-			
-             jQuery(".sign-up-tabss").fadeOut();
+			    ev.preventDefault();
+            /* jQuery(".sign-up-tabss").fadeOut();
 
 			 jQuery(".contact_cont").fadeIn('slow');	
 
@@ -186,7 +186,8 @@ $result =  SharedFunctions::app()->sendmail($femail,$subject,$body);
 
 			 jQuery(".home-video-wrap").fadeOut('fast');	
 
-			 jQuery("#ncol").fadeOut('fast');
+			 jQuery("#ncol").fadeOut('fast');*/
+             return false;
 			 
         })
         
