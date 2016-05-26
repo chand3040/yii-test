@@ -39303,3 +39303,164 @@ Stack trace:
 REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
 HTTP_REFERER=http://localhost/bsupermarket/www/
 ---
+2016/05/26 03:40:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/05/26 04:52:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/05/26 04:52:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/05/26 04:52:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/05/26 04:52:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/member
+---
+2016/05/26 05:00:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "business-ideas".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('business-ideas')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/business-ideas
+---
+2016/05/26 05:00:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/business-ideas
+---
+2016/05/26 05:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/05/26 05:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/05/26 05:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/05/26 05:00:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/05/26 05:00:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/05/26 05:00:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/business-ideas
+---
+2016/05/26 05:00:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/05/26 05:00:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/05/26 05:01:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/index
+---
+2016/05/26 05:01:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/newlistings
+---
+2016/05/26 05:03:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/newlistings
+---

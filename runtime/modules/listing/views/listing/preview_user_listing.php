@@ -62,8 +62,8 @@
                                         <div class="content">
                                                  <label class="heading">Listing number: <?php echo $model->user_default_listing_id;?></label>
                                               <div style="height:auto;"><!--<span class="width_20">&nbsp;</span>--><?php 
-											  $count = str_word_count($model->user_default_listing_summary); 
-											   $expaln =  implode(' ', array_slice(explode(' ', $model->user_default_listing_summary), 0, 150)); 							  
+                          											  $count = str_word_count($model->user_default_listing_summary); 
+                          											   $expaln =  implode(' ', array_slice(explode(' ', $model->user_default_listing_summary), 0, 150)); 							  
 											  ?>
                                               <div class="explain" style="overflow: hidden;">
                                         <?php echo $expaln; ?><!--&nbsp;&nbsp;<a onclick="jQuery('.explainfull').show();jQuery('.explain').hide();" class="more readmore">Read more &gt;&gt;</a>-->                                                                            

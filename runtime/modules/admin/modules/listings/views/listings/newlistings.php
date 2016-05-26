@@ -15,6 +15,9 @@
         background: #00ACCD;
         color: #ffffff;
     }
+    #newlistingtable a{
+           color:inherit;
+    }
 </style>
 <?php
 $baseUrl = Yii::app()->theme->baseUrl;
@@ -59,7 +62,7 @@ function user_status($var){
 <?php  if(count($list) > 0){?>
 <div class="content-container">
     <div style="text-align:center;"><h2>Search result</h2></div>
-        <table cellpadding="5" width="100%" style="text-align:center;">
+        <table cellpadding="5" width="100%" style="text-align:center;" id="newlistingtable">
             <thead style="background:#00ACCD; color:#ffffff;">
             <!-- <tr class="tableHeading"> -->
             <tr style="background:#00ACCD; color:#ffffff;">
