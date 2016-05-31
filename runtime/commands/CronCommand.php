@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Created by ITMAN.
+ * Date: 12/04.2016
+ * Description: This command makes sure to clear log files and the past db entries
+ */
 class CronCommand extends CConsoleCommand
 {
     private $webroot;
@@ -167,6 +171,17 @@ class CronCommand extends CConsoleCommand
             
             $body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);                                
             $result =  SharedFunctions::app()->sendmail($to,$subjectcc,$body); 
+        }
+    }
+
+    /**
+     *@author: ITMAN
+     *@since: May 05, 2016
+     */
+    public function actionClearLogs($clear = 0) {
+        if($clear == 1) {
+            Cron::clearLogs();
+            echo "Clear logs successful";
         }
     }
 }

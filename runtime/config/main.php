@@ -201,7 +201,16 @@ return array(
 				array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
+					'logFile'=>'application-'.date('Y-m-d').'.log',
 				),
+				array(
+                    'class'=>'CFileLogRoute',
+                    'levels'=>'error, info',
+                    'categories'=>'cron',
+                    'logFile'=>'cron.log',
+                    'maxFileSize' => 1024*1024,
+                    'maxLogFiles' => 10,
+                ),
 				// uncomment the following to show log messages on web pages
 				/*
 				array(
