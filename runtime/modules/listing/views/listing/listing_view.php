@@ -8,6 +8,7 @@ $years = explode(',', $model->user_default_listing_fprojections);
 /* @var $model Userlisting */
 $type = $model->getType();
 ?>
+
 <div class="breadcrumb" style="padding-bottom: 7px;">
     <a href="/">Home</a> » <a href="<?php echo $type['slug']; ?>"><?php echo strtolower($type['name']); ?></a> »
     <span><?php echo $model->user_default_listing_title; ?>  </span>
@@ -31,6 +32,7 @@ if ($type['slug'] == "business-ideas") {
 }
 
 ?>
+
 
 <script>
     $(function () {
@@ -660,14 +662,14 @@ height: 50px;"></textarea>
 </div>
 </div>
 
-<div id="tab2" class="sign-up-tab_content forumPage">
+<div id="tab2" class="sign-up-tab_content">
 
 
     <?php
 
     if (($model instanceof Userlisting)) {
 
-        //$this->renderPartial('//../modules/forum/views/forum/page', array('listing' => $model, 'adminKey' => $adminKey, 'admin' => false));
+        $this->renderPartial('//../modules/forum/views/forum/page', array('listing' => $model, 'adminKey' => $adminKey, 'admin' => false));
     }
 
     ?>
@@ -678,7 +680,8 @@ height: 50px;"></textarea>
 
 <div id="tab3" class="sign-up-tab_content">
 
-    <div><img src="images/samples.png" alt=""/></div>
+   <!-- <div><img src="images/samples.png" alt=""/></div> -->
+   <div>Will be Coming Soon..</div>
 
 </div>
 
@@ -802,23 +805,21 @@ height: 50px;"></textarea>
         <?php
        /* if($_SESSION['protectUsername'] == 'jag'
         && $_SESSION['protectPassword'] == hash('sha256','123'))
-        {
-            if (($model instanceof Userlisting)) {
+        {*/
+            /*if (($model instanceof Userlisting)) {
 
                 $this->renderPartial('//../modules/investor/views/investorFinancial/index', array('listing' => $model, 'investorFinancilDataProvider' => $investorFinancilDataProvider));
             }
-        }else{
+        /*}else{
             include_once(dirname(Yii::app()->basePath).'/password-protected.php');
         }*/
 ?>
         </div>
 </div>
 <!-- /End of tab6 Open for investment tab -->
-<div class="clear"></div>
 </div>
 
-<div class="clear"></div>
-</div>
+
 <div id="screen"></div>
 <script type="text/javascript">
 $(".chzn-select").chosen();
