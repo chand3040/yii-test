@@ -403,7 +403,7 @@ top: 36px;"><span class="classic"><?=$originaleFileName;?></span></a>
         <div class="page_numbers messagePageNumbers">
             <?php
 
-            echo MessageClass::renderPagination($messageViewLimit, $pageSelected, $listingId);
+            // echo MessageClass::renderPagination($messageViewLimit, $pageSelected, $listingId);
 
             ?>
 
