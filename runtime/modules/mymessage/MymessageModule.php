@@ -11,6 +11,7 @@ class MymessageModule extends CWebModule
 		$this->setImport(array(
 			'mymessage.models.*',
 			'mymessage.components.*',
+			'application.modules.admin.components.*'
 		));
 	}
 
