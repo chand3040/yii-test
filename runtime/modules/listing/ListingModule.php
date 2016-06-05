@@ -13,6 +13,7 @@ class ListingModule extends CWebModule
 		$this->setImport(array(
 			'listing.models.*',
 			'listing.components.*',
+			'application.modules.admin.components.*'
 		));
 
 		// Import Forum models
