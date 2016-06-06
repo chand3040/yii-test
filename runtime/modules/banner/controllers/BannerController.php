@@ -76,38 +76,46 @@ class BannerController extends Controller
 
     public function actionIndex()
     {
+
+
         $listid = $_REQUEST['listid'];
         $payment = isset($_REQUEST['paymentSuccess']) ? $_REQUEST['paymentSuccess'] : '';
 
-        $page = (isset($_GET['page']) ? $_GET['page'] : 1); // to get the current page
-        $offset = ($page - 1) * Yii::app()->params['pageSize'];
+        if(isset($_REQUEST['displayDialog']) AND $_REQUEST['displayDialog']==1 AND isset($_REQUEST['purchasePoints']) AND $_REQUEST['purchasePoints']>0){
+            $this->render('thankyou', array(
+                'purchasePoints'=>$_REQUEST['purchasePoints']
+            ));
+        }else{
 
-        // generate sql query for geting purchased details
-        $sql = "SELECT * FROM user_default_prize_points
-          WHERE user_default_listing_points_user_id = " . Yii::app()->user->id . " and user_default_listing_id ='" .$listid. "' ";
+                $page = (isset($_GET['page']) ? $_GET['page'] : 1); // to get the current page
+                $offset = ($page - 1) * Yii::app()->params['pageSize'];
 
-        $sql .= " ORDER BY 	user_default_prize_points_id DESC "; // to set ordr by
+                // generate sql query for geting purchased details
+                $sql = "SELECT * FROM user_default_prize_points
+                  WHERE user_default_listing_points_user_id = " . Yii::app()->user->id . " and user_default_listing_id ='" .$listid. "' ";
 
-        $dataProvider1 = PrizePoints::model()->findAllBySql($sql); // this query get the total number of items
+                $sql .= " ORDER BY  user_default_prize_points_id DESC "; // to set ordr by
 
-        // set the limit for the pagination
-        $sql .= " LIMIT " . $offset . "," . Yii::app()->params['pageSize']; //this query contains all the data
+                $dataProvider1 = PrizePoints::model()->findAllBySql($sql); // this query get the total number of items
 
-        $dataProvider = PrizePoints::model()->findAllBySql($sql);
+                // set the limit for the pagination
+                $sql .= " LIMIT " . $offset . "," . Yii::app()->params['pageSize']; //this query contains all the data
 
-        $itemCount = count($dataProvider1); // total records
-        $pages = new CPagination($itemCount);
-        $pages->setPageSize(Yii::app()->params['pageSize']);
+                $dataProvider = PrizePoints::model()->findAllBySql($sql);
 
-        $this->render('index', array(
-            'listid' => $listid,
-            'payment' => $payment,
-            'dataProvider' => $dataProvider,
-            'itemCount' => $itemCount,
-            'pageSize' => Yii::app()->params['pageSize'],
-            'pages' => $pages
-        ));
+                $itemCount = count($dataProvider1); // total records
+                $pages = new CPagination($itemCount);
+                $pages->setPageSize(Yii::app()->params['pageSize']);
 
+                $this->render('index', array(
+                    'listid' => $listid,
+                    'payment' => $payment,
+                    'dataProvider' => $dataProvider,
+                    'itemCount' => $itemCount,
+                    'pageSize' => Yii::app()->params['pageSize'],
+                    'pages' => $pages
+                ));
+            }
     }
 
     public function actionMakepayment()
@@ -510,6 +518,7 @@ class BannerController extends Controller
 
     public function actionPaypalReturn()
     {
+
         $listData = SharedFunctions::decodeStringAsArray($_REQUEST['listdata']);
         $listid = $listData['listid'];
         $purchasePoints = $listData['purchasePoints'];
@@ -520,6 +529,7 @@ class BannerController extends Controller
 
         if ($paymentDetails['ACK'] == "Success") {
             $ack = $e->doPayment($paymentDetails);  //2.Do payment
+            
             SharedFunctions::processFinancialTransaction($ack);
             if (Yii::app()->user->_user_Type == 'user') {
                 $modelprizepoints = new PrizePoints();
@@ -544,9 +554,9 @@ class BannerController extends Controller
                 $modelbusinessprizepoints->save();
             }
 
-        }
-
-        $this->redirect("banner/index/listid/$listid", array('displayDialog' => 1, 'purchasePoints' => $purchasePoints));
+        }/*
+echo Yii::app()->createAbsoluteUrl("banner/index/listid/$listid", array('displayDialog' => 1, 'purchasePoints' => $purchasePoints));die;*/
+        $this->redirect(Yii::app()->createAbsoluteUrl("banner/index/listid/$listid", array('displayDialog' => 1, 'purchasePoints' => $purchasePoints)));
     }
 
     public function actionPaypalCancel()

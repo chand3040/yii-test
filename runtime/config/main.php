@@ -9,7 +9,6 @@ if($_SERVER['HTTP_HOST'] == "localhost"){
 	$user = 'root';
 	$pass = '';
 	$giiPass = '[c6"jjqF}:UaRn[';
-	$ASD = "GFH";
 }else{
 	$con_string = 'mysql:host=localhost;dbname=businessdb';
 	$user = 'business01';
@@ -115,6 +114,7 @@ return array(
                  
 			    'banner/<action:\w+>'=>'banner/banner/<action>',
                 'banner/<action:\w+>/listid/<listid:\d+>'=>'banner/banner/<action>',
+                'banner/<action:\w+>/listid/<listid:\d+>/displayDialog/<displayDialog:\d+>/purchasePoints/<purchasePoints:\d+>'=>'banner/banner/<action>',
                 'banner/reject/<code:\d+>' =>'banner/banner/<action>',
                  
                  'admin/listings/<controller:\w+>'=>'admin/listings/<controller>/',

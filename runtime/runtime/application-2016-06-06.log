@@ -1,0 +1,343 @@
+2016/06/06 19:47:45 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "banner/index/listid/63/displayDialog/1/purchasePoints/50". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('banner/index/li...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/banner/index/listid/63/displayDialog/1/purchasePoints/50
+---
+2016/06/06 19:47:45 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/banner/index/listid/63/displayDialog/1/purchasePoints/50
+---
+2016/06/06 19:47:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-background.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:47:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-top.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:47:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/06/06 19:47:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-background.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:47:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-top.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:50:36 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/06/06 19:50:36 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-top.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:50:36 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-background.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:51:08 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/06/06 19:51:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-background.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:51:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-top.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:51:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/06/06 19:51:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-background.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:51:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-top.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:51:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `user_default_log_transaction` (`user_default_id`, `log_id`, `transaction_description`, `transaction_date`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\bsupermarket\runtime\controllers\SiteController.php (299)
+in C:\xampp\htdocs\bsupermarket\www\index.php (14)
+2016/06/06 19:51:15 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `user_default_log_transaction` (`user_default_id`, `log_id`, `transaction_description`, `transaction_date`) VALUES (:yp0, :yp1, :yp2, :yp3) in C:\xampp\htdocs\bsupermarket\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\bsupermarket\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\bsupermarket\runtime\controllers\SiteController.php(299): CActiveRecord->save()
+#3 C:\xampp\htdocs\bsupermarket\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\xampp\htdocs\bsupermarket\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\bsupermarket\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\bsupermarket\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(282): CController->run('login')
+#8 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/bsupermarket/www/login
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/06/06 19:51:16 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/
+---
+2016/06/06 19:51:16 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-top.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:51:16 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-background.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:51:35 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/banner/index/listid/63/displayDialog/1/purchasePoints/50
+---
+2016/06/06 19:51:35 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-top.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:51:35 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-background.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:51:56 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing
+---
+2016/06/06 19:51:56 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-top.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:51:56 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-background.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:52:55 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/listing/selectlisting/listid/63
+---
+2016/06/06 19:52:56 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-top.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:52:56 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-background.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:52:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/style.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('css/style.css')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/css/style.css
+HTTP_REFERER=http://localhost/bsupermarket/www/banner/index/listid/63
+---
+2016/06/06 19:52:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/banner/index/listid/63
+---
+2016/06/06 19:52:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "upload/banner-images/banners_users/jats_86/imageedit_1_6688546441-2015-11-23-10-55-42.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/banner-i...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/banner-images/banners_users/jats_86/imageedit_1_6688546441-2015-11-23-10-55-42.png
+HTTP_REFERER=http://localhost/bsupermarket/www/banner/index/listid/63
+---
+2016/06/06 19:52:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "upload/banner-images/banners_users/jats_86/imageedit_1_6688546441-2015-11-23-10-55-42.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/banner-i...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/banner-images/banners_users/jats_86/imageedit_1_6688546441-2015-11-23-10-55-42.png
+HTTP_REFERER=http://localhost/bsupermarket/www/banner/index/listid/63
+---
+2016/06/06 19:54:30 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/banner/index/listid/63/displayDialog/1/purchasePoints/75
+---
+2016/06/06 19:54:31 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-background.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:54:31 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/images/pink-bubble-top.png". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bsupermarket/www/themes/business/css/style.css
+---
+2016/06/06 19:54:36 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "themes/business/css/investor_area.css". in C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\xampp\htdocs\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/businesslisting/business-services?tab=promotions
+---
