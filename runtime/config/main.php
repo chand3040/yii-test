@@ -9,6 +9,7 @@ if($_SERVER['HTTP_HOST'] == "localhost"){
 	$user = 'root';
 	$pass = '';
 	$giiPass = '[c6"jjqF}:UaRn[';
+	$ASD = "GFH";
 }else{
 	$con_string = 'mysql:host=localhost;dbname=businessdb';
 	$user = 'business01';
