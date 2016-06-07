@@ -43,6 +43,9 @@
 
 
  */
+
+Yii::import('application.modules.listing.models.Listings');
+
 class PrizePoints extends CActiveRecord
 
 {
@@ -87,7 +90,7 @@ class PrizePoints extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 
-			'userDefaultListing' => array(self::BELONGS_TO, 'Listing', 'user_default_listing_id'),
+			'userDefaultListing' => array(self::BELONGS_TO, 'Listings', 'user_default_listing_id'),
 
 
 			'userDefaultListingPointsUser' => array(self::BELONGS_TO, 'Profiles', 'user_default_listing_points_user_id'),

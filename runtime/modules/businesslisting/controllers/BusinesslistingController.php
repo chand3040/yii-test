@@ -142,7 +142,14 @@ class BusinesslistingController extends Controller
 	        $criteria1->compare('fl.user_default_business_id',$user_default_business_id);
 	        $fav_posts = Businesslisting::model()->findAll($criteria1);
 	    }
-	    $this->render('business_services',array('model'=>$model,'posts'=>$posts1,'pages'=>$pages1,'total_posts'=>$total1,'fav_posts'=>$fav_posts));
+
+
+	    /*
+			Code For get Promaotion Tab Data
+	    */
+		$prizepointdata = PrizePoints::model()->findAll();	
+
+	    $this->render('business_services',array('model'=>$model,'posts'=>$posts1,'pages'=>$pages1,'total_posts'=>$total1,'fav_posts'=>$fav_posts,'prizepointdata'=>$prizepointdata));
 	    }
 	}
 

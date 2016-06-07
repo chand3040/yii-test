@@ -20,7 +20,7 @@ $this->breadcrumbs = array(
     <ul id="sign-up-tabs">
         <li class="active"><a href="#taba" title="Full list of ALL businesses">Business
                 services<br/>( <?php echo $total_posts; ?> )</a></li>
-        <li><a href="#tab2" title="Businesses offering Prize Points">Promotions<br/>( <?php echo (isset($prizepointtotal)?$prizepointtotal:'0');?> )</a></li>
+        <li><a href="#tab2" title="Businesses offering Prize Points">Promotions<br/>( <?php echo (isset($prizepointdata)?count($prizepointdata):'0');?> )</a></li>
         <li><a href="#tab3" title="Product samples">Product samples<br/>( <?php echo count($fav_posts); ?> )</a></li>
         <li><a href="#tab4" title="My favourite businesses">My Favourites<br/>( <?php echo count($fav_posts); ?> )</a>
         </li>
@@ -217,12 +217,12 @@ $this->breadcrumbs = array(
 <!-- Start of Tab 2 contents -->
 
 <div id="tab2" class="sign-up-tab_content">
-    <?php if($prizepointtotal > 0){ ?>
+    <?php if(count($prizepointdata) > 0){ ?>
     <table border="0" bordercolor="#fff" style="background-color:#fff; cursor:pointer" width="100%" cellpadding="1"
            cellspacing="2">
         <tr class="tableHeading">
             <!-- Select profession drop down menu -->
-            <td title="Select profession">
+            <!--<td title="Select profession">
                 <select class="chzn-select" style="width:112px;" data-placeholder="Looking for">
                     <option value=""></option>
                     <option value="accountant" title="Accountants & Financial advisors">Accountant</option>
@@ -239,7 +239,7 @@ $this->breadcrumbs = array(
                     <option value="website" title="Website creation & Support">Website</option>
                     <option value="workshop" title="Merchanical & Electrical workshops">Workshop</option>
                 </select>
-            </td>
+            </td>-->
 
 
             <td title="Sort in alphabetical order">
@@ -266,13 +266,13 @@ $this->breadcrumbs = array(
                         text-decoration: none;
                         white-space: nowrap;">Description
             </td>
-            <td title="Sort by country">
+            <!--<td title="Sort by country">
                 <select class="chzn-select" style="width:80px;" data-placeholder="Origin">
                     <option value=""></option>
                     <option value="a_z" title="Sort list in descending order">a &#062; z</option>
                     <option value="z_a" title="Sort list in ascending order">z &#062; a</option>
                 </select>
-            </td>
+            </td>-->
             <td title="Sort by star rating">
                 <select class="chzn-select" style="width:80px;" data-placeholder="Points">
                     <option value=""></option>
@@ -285,7 +285,7 @@ $this->breadcrumbs = array(
         <?php  if($prizepointdata):
             foreach($prizepointdata as $index=>$prizeData):
 
-                $listingData = Listings::model()->findByAttributes(array('user_default_listing_id'=>$prizeData->user_default_listing_id));
+                $listingData = $prizeData->userDefaultListing; //Listings::model()->findByAttributes(array('user_default_listing_id'=>$prizeData->user_default_listing_id));
                 if($index % 2 ==0){
                     $color = 'Grey';
                 } else {
