@@ -20,7 +20,7 @@ ini_set('memory_limit', '969M');
 ini_set('post_max_size', '9999M');
 ini_set('upload_max_filesize', '9999M');
 
-$siteBaseUrl = 'http://www.business-supermarket.co.uk';
+$siteBaseUrl = 'http://business-supermarket.co.uk';
 //$siteBaseUrl = 'http://localhost/bsupermarket/www';
 $baseUrl = trim($siteBaseUrl, '/');
 
