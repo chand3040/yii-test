@@ -894,7 +894,7 @@ $count_val33=count($command3);
         
         
         // define a folders to store converted temp and converted vids
-       $path = $_SERVER['DOCUMENT_ROOT'].'/';  
+         echo $path = $_SERVER['DOCUMENT_ROOT'].'/';  
         $temp_dir=$path."temp/";
         $log=$path."log/";
         //$converted_vids=$path."converted_vids/";
