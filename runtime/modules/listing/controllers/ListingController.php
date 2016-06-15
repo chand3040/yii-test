@@ -894,12 +894,12 @@ $count_val33=count($command3);
         
         
         // define a folders to store converted temp and converted vids
-         echo $path = $_SERVER['DOCUMENT_ROOT'].'/';  
-         die;
+          $path = $_SERVER['DOCUMENT_ROOT'].'/';  
+
         $temp_dir=$path."temp/";
         $log=$path."log/";
         //$converted_vids=$path."converted_vids/";
-        $converted_vids = $path."upload/users/".Yii::app()->user->getState('ufolder')."/videos/";
+        echo $converted_vids = $path."upload/users/".Yii::app()->user->getState('ufolder')."/videos/";
         
         $_SESSION['converted_vids']=$converted_vids;
         $_SESSION['temp_dir']=$temp_dir;
