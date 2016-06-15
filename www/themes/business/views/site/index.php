@@ -6,7 +6,7 @@ $this->breadcrumbs = array('');
 
 <div id="main-content">
   <div id="main-title">
-    <h1>Where business meets invention Jag_123</h1>
+    <h1>Where business meets invention Jag_1234</h1>
   </div> <!-- /main-title -->
   
   <div id="main-copy">
