@@ -293,7 +293,6 @@ class ListingController extends Controller {
     public function actionUser_listing_step3() {
 		
         $id = Yii::app()->request->getParam('listid');
-          echo "Working";
         $this->pageTitle = 'User listing step 3 - Business Supermarket';
         $model = Userlisting::model()->find("user_default_profiles_id = '" . Yii::app()->user->getId() . "' and  user_default_listing_id ='" . $id . "'");
 
@@ -895,7 +894,7 @@ $count_val33=count($command3);
         
         
         // define a folders to store converted temp and converted vids
-         echo $path = $_SERVER['DOCUMENT_ROOT'].'/';  
+       $path = $_SERVER['DOCUMENT_ROOT'].'/';  
         $temp_dir=$path."temp/";
         $log=$path."log/";
         //$converted_vids=$path."converted_vids/";
