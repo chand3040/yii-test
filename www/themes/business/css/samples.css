@@ -1,0 +1,342 @@
+/*  Theme Name: BusinessTheme
+    URI: http://www.business-supermarket.com
+	Description: These are additional styles created for listing modules
+    Title       : Samples module CSS
+    Author      : Jag
+    Author email: dsp7@blueyonder.co.uk
+    Version     : 0.1
+*/
+
+/* -----------------------------------------------------------------------------
+    Samples module styles
+------------------------------------------------------------------------------*/
+
+
+
+/* -----------------------------------------------------------------------------
+    Sample View page
+------------------------------------------------------------------------------*/
+
+.sample_view {
+    /*font: 10px Verdana, Helvetica, Arial*/
+}
+
+.sample_view .headertitle {
+
+    font: 30px/1.2 AuraBoldRegular, Helvetica, Arial;
+    color:#824682;
+
+}
+
+.sample_view p.listing_no {
+
+    font: 14px/1.2 AuraBoldRegular, Helvetica, Arial;
+
+}
+.sample_view p.summary {
+
+    color: grey;
+
+}
+
+.sample_view h4 {
+
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.sample_view .gray_box {
+
+    background: #ecdeed;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:3px;
+    padding-right:3px;
+    text-align: justify;
+
+}
+
+.sample_view input , .sample_view textarea {
+
+    background: #e2beda;
+    border: 1px solid #e2beda;
+    color: white;
+
+}
+
+.sample_view .rightbox {
+
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.sample_view .rightbox .link {
+
+    font: 14px AuraBoldRegular, Helvetica, Arial;
+    color: #824682;
+    text-decoration: underline;
+
+}
+
+.sample_view .gray-text {
+
+    color: black;
+
+}
+
+.sample_view .addressdata {
+
+    background:white;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.sample_view .gray_box.white_box{
+
+    margin-top: 10px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid grey;
+    text-align: center;
+
+}
+
+.requestbox .titles {
+
+    font-size: 10px;
+    color: #824682;
+
+
+}
+
+.chk1 {
+    font-size:10px;
+}
+
+.sample_submit {
+
+    border: none;
+    vertical-align: bottom;
+    padding-left: 5px;
+}
+
+.stext
+{
+    vertical-align: super;
+}
+
+.sample-buttons-box {
+
+    color: #824682;text-align:center;
+
+}
+
+p.voicetext
+{
+    font-style: italic;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+   Add Sample Listing page
+------------------------------------------------------------------------------*/
+
+
+#addsamplelisting {
+
+    float: right;
+    width: 625px;
+
+}
+
+#addsamplelisting  .headings {
+
+    position:relative;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+#addsamplelisting .image_preview {
+    font-size: 9px;
+    height: 95px;
+    width: 115px;
+    background: #ecdeed;
+}
+
+#addsamplelisting .txtarea {
+    margin: 0;
+    width: 125px;
+}
+
+#addsamplelisting .txtarea textarea {
+    font-size: 16px;
+    height: 90px;
+    width: 104px;
+}
+
+
+#addsamplelisting .ylinks {
+    margin: 0;
+    width: 125px;
+}
+
+#addsamplelisting .ylinks .ibox{
+    background: none repeat scroll 0 0 #ecdeed;
+    border: 1px solid #ecdeed;
+    margin: 6px 0 10px;
+    width: 108px;
+    overflow: hidden;
+    padding: 5px 4.5px;
+    resize: none;
+}
+
+#addsamplelisting  input , #addsamplelisting  textarea {
+
+    background: #ecdeed;
+    border: 1px solid #ecdeed;
+
+}
+
+#addsamplelisting .threeareas {
+
+    background: #ecdeed;
+    border: 1px solid #ecdeed;
+    margin: 6px 0 10px 0;
+    padding: 5px;
+    resize: none;
+    font: 1.1em Verdana,Helvetica,Arial;
+    overflow: hidden;
+    width: 608px;
+    display: block;
+}
+
+#addsamplelisting .onearea {
+
+    background: #ecdeed;
+    border: 1px solid #ecdeed;
+    margin: 6px 0 10px 0;
+    padding: 5px;
+    resize: none;
+    font: 1.1em Verdana,Helvetica,Arial;
+    overflow: hidden;
+    width: 380px;
+    display: block;
+}
+
+#addsamplelisting .drg_imgdesc {
+    background: #A2D5E0 !important;
+}
+
+#addsamplelisting .sample_listing_left {
+
+    float:left;
+    width: 400px;
+
+}
+#addsamplelisting .sample_listing_right {
+    float: right;
+    width: 210px;
+    margin-right: 5px;
+}
+
+#addsamplelisting .sample_rightbar {
+
+    background: #ecdeed;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+
+}
+
+#addsamplelisting  .Blue  , #addsamplelisting  .Blue label{
+    font: 14px AuraBoldRegular, Helvetica, Arial;
+    color: #1dbfd8;
+}
+
+#addsamplelisting #reg-table {
+
+    margin-left: 0;
+    width: 255px;
+}
+
+#addsamplelisting .my-account-left {
+    float: left;
+    width: 250px;
+    min-height: auto;
+}
+
+#addsamplelisting #reg-table input[type=text], #addsamplelisting #reg-table input[type=password], #addsamplelisting #reg-table select {
+    width: 172px;
+}
+
+#addsamplelisting .main-my-account  , #addsamplelisting .bottom-div{
+    background: #ecdeed;
+    display: table;
+    padding: 5px;
+
+}
+
+#addsamplelisting  .darkGrey-text {
+
+    color: #808080;
+    background:none !important;
+    border:none!important;
+}
+
+#addsamplelisting  #reg-table tr td {
+    background: white;
+    vertical-align: middle;
+    margin: 5px!important;
+    text-align: left;
+}
+
+#addsamplelisting  .inputfield {
+
+    font-size: 11px;
+}
+
+#addsamplelisting  .sample_inner_textbox {
+
+    background : #e2beda;
+
+}
+
+#addsamplelisting  .sample_inner_left {
+    width: 150px;
+    float: left;
+    padding-top: 5px;
+}
+
+#addsamplelisting  .sample_inner_left input {
+
+    width: 155px;
+
+}
+#addsamplelisting  .sample_inner_right {
+    float: right;
+    width: 33px;
+}
+
+#addsamplelisting .symboltext {
+
+    font-style: italic;
+    font-size: 10px;
+}
+
+#addsamplelisting  .sample_inner_title {
+
+    color: #a84793;
+
+}
+
+
+#addsamplelisting .sample_preview_text {
+
+    font-style: italic;
+    text-align:center
+}
