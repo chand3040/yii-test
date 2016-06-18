@@ -5,7 +5,7 @@ define("IMG_LOGO_PATH",'/upload/logo/');
 define("MAX_VIDEO_UPLOAD_LIMIT",'61'); //in mb
 
 if($_SERVER['HTTP_HOST'] == "localhost"){
-	$con_string = 'mysql:host=localhost;dbname=businessdb';
+	$con_string = 'mysql:host=localhost;dbname=business';
 	$user = 'root';
 	$pass = '';
 	$giiPass = '[c6"jjqF}:UaRn[';
