@@ -56,6 +56,10 @@ Yii::app()->clientScript->registerCssFile($themepath . '/css/search.css');
 Yii::app()->clientScript->registerCssFile($themepath.'/css/my_messages.css');
 
 Yii::app()->clientScript->registerCssFile($themepath.'/css/investor_area.css');
+
+Yii::app()->clientScript->registerCssFile($themepath.'/css/samples.css');
+
+
 /* Included CSS Files by Anand
 
 
