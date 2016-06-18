@@ -2443,7 +2443,7 @@ $count_val33=count($command3);
         }
         //print_r($samplemodel);
 
-        $this->render('sample_listing', array('model' => $samplemodel));
+        $this->render('sample_listing', array('model' => $model, 'adminKey' => $adminKey));
 
     }
 }
