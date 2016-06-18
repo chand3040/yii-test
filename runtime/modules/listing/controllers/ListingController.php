@@ -30,7 +30,7 @@ class ListingController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'purchaseaccess', 'update','selectlisting', 'index', 'delete', 'user_listing_step2', 'imageupload', 'user_listing_step3', 'user_listing_step4', 'listingimage', 'listingvideo', 'preview_user_listing', 'add_favourite', 'remove_favourite', 'my_messages', 'ldelete', 'convertingVideo', 'getProgress', 'listingvideo1', 'listingvideo2','marketingdata', 'marketingdatachart'),
+                'actions' => array('create', 'purchaseaccess', 'update','selectlisting', 'index', 'delete', 'user_listing_step2', 'imageupload', 'user_listing_step3', 'user_listing_step4', 'listingimage', 'listingvideo', 'preview_user_listing', 'add_favourite', 'remove_favourite', 'my_messages', 'ldelete', 'convertingVideo', 'getProgress', 'listingvideo1', 'listingvideo2','marketingdata', 'marketingdatachart','sample_listing','sampleslider','listingsslider'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -2287,4 +2287,163 @@ $count_val33=count($command3);
 
     }
 
+    public function actionSampleslider()
+    {
+        $listid = $_REQUEST['listid'];
+        $samplemodel = Samplelistingimages::model()->find("user_default_listing_id ='" . $listid . "'");
+        $this->renderPartial('sampleslider', array('samplesmodel' => $samplemodel, 'adminKey' => $adminKey));
+    }
+    public function actionListingsslider()
+    {
+        $listid = $_REQUEST['listid'];
+        $images = Userlistingimages::model()->find("user_default_listing_id ='" . $listid . "'");
+        $this->renderPartial('listingsslider', array('model' => $Userlistingimages, 'adminKey' => $adminKey));
+    }
+    public function actionSample_listing()
+    {
+        $listid = $_REQUEST['listid'];
+        $model = $this->loadModel($listid);
+        $this->pageTitle = $model->user_default_listing_title . ' - Business Supermarket';
+        //$this->metaDesc=$model->drg_desc;
+        // $this->metaKeys=$model->meta_keywords;
+        $adminKey = isset($_REQUEST['h']) ? $_REQUEST['h'] : "";
+
+        $samplemodel = Samplelisting::model()->find("user_default_listing_id ='" . $listid . "'");
+        $count = count ( $samplemodel );
+
+        if ($_POST['user_default_listing_image_text']) {
+
+            $i = 0;
+            for ($i = 0; $i < 6; $i++) {
+
+                if ($_POST['img_name'][$i] != "") {
+
+                    if($_POST['current_ids'][$i] != "")
+                    {
+                        $imgid = $_POST['current_ids'][$i];
+                        $Userlistingimages = Samplelistingimages::model()->find("user_default_listing_image_id ='" . $imgid . "'");
+                        $Userlistingimages->user_default_listing_image = $_POST['img_name'][$i];
+                        $Userlistingimages->user_default_listing_image_text = $_POST['user_default_listing_image_text'][$i];
+                        $Userlistingimages->user_default_listing_image_link2 = $_POST['user_default_listing_image_link2'][$i];
+                        $Userlistingimages->user_default_listing_id = $listid;
+                        $Userlistingimages->save();
+                    }
+                    else
+                    {
+                        $Userlistingimages = new Samplelistingimages;
+                        $Userlistingimages->user_default_listing_image = $_POST['img_name'][$i];
+                        $Userlistingimages->user_default_listing_image_text = $_POST['user_default_listing_image_text'][$i];
+                        $Userlistingimages->user_default_listing_image_link2 = $_POST['user_default_listing_image_link2'][$i];
+                        $Userlistingimages->user_default_listing_id = $listid;
+                        $Userlistingimages->save();
+                    }
+
+
+                }
+            }
+
+
+        }
+        if($_POST['user_default_sample_listing_currency']!="")
+        {
+            if($_POST['attach1']!="" || $_POST['attach2']!="" || $_POST['attach3']!="" || $_POST['attach4']!="")
+            {
+                $folder = YiiBase::getPathOfAlias('webroot').'/upload/attachments/';
+                if (!file_exists($folder)) {
+                    mkdir($folder, 0777, true);
+                }
+            }
+
+
+
+
+            if($_FILES['file1']['name']!="")
+            {
+                $target_path = $folder . basename( $_FILES['file1']['name']);
+                move_uploaded_file($_FILES['file1']['tmp_name'], $target_path);
+                $attach1 = $_FILES['file1']['name'];
+            }
+
+            if($_FILES['file2']['name']!="")
+            {
+                $target_path = $folder . basename( $_FILES['file2']['name']);
+                move_uploaded_file($_FILES['file2']['tmp_name'], $target_path);
+                $attach2 = $_FILES['file2']['name'];
+            }
+
+            if($_FILES['file3']['name']!="")
+            {
+                $target_path = $folder . basename( $_FILES['file3']['name']);
+                move_uploaded_file($_FILES['file3']['tmp_name'], $target_path);
+                $attach3 = $_FILES['file3']['name'];
+            }
+
+            if($_FILES['file4']['name']!="")
+            {
+                $target_path = $folder . basename( $_FILES['file4']['name']);
+                move_uploaded_file($_FILES['file4']['tmp_name'], $target_path);
+                $attach4 = $_FILES['file4']['name'];
+            }
+
+
+
+            if($count == "1")
+            {
+                $samplemodel->attributes = $_POST['Samplelisting'];
+                $samplemodel->user_default_sample_listing_currency = $_POST['user_default_sample_listing_currency'];
+                $samplemodel->user_default_sample_listing_terms = $_POST['rule'];
+                if($attach1 !="")
+                {
+                    $samplemodel->user_default_sample_listing_att_specs = $attach1;
+                }
+                if($attach2 !="")
+                {
+                    $samplemodel->	user_default_sample_listing_att_instruction = $attach2;
+                }
+                if($attach3 !="")
+                {
+                    $samplemodel->	user_default_sample_listing_att_safety = $attach3;
+                }
+                if($attach4 !="")
+                {
+                    $samplemodel->user_default_sample_listing_image = $attach4;
+                }
+
+                $samplemodel->user_default_sample_listing_date = date('Y-m-d');
+
+                $samplemodel->save();
+            }
+            else
+            {
+                $newsample = new Samplelisting;
+                $newsample->user_default_listing_id = $listid;
+                $newsample->attributes = $_POST['Samplelisting'];
+                $newsample->user_default_sample_listing_currency = $_POST['user_default_sample_listing_currency'];
+                $newsample->user_default_sample_listing_terms = $_POST['rule'];
+                if($attach1 !="")
+                {
+                    $newsample->user_default_sample_listing_att_specs = $attach1;
+                }
+                if($attach2 !="")
+                {
+                    $newsample->	user_default_sample_listing_att_instruction = $attach2;
+                }
+                if($attach3 !="")
+                {
+                    $newsample->	user_default_sample_listing_att_safety = $attach3;
+                }
+                if($attach4 !="")
+                {
+                    $newsample->user_default_sample_listing_image = $attach4;
+                }
+                $newsample->user_default_sample_listing_date = date('Y-m-d');
+
+                $newsample->save();
+            }
+        }
+        //print_r($samplemodel);
+
+        $this->render('sample_listing', array('model' => $model, 'adminKey' => $adminKey));
+
+    }
 }
