@@ -20,7 +20,7 @@ $this->breadcrumbs=array(
             $this->renderPartial('//../modules/listing/views/layouts/my-account-links');                 
           ?>
         </div>        
-        <div style="float:right; width:625px;" class="userlistings pl-logo-box">
+        <div  class="userlistings pl-logo-box " id="addsamplelisting">
 		
 		 <!--- update profile picture pop up---->
         <div class="photo-upload-box" style="height:955px;">
@@ -85,20 +85,187 @@ $this->breadcrumbs=array(
                 <div class="headings">
                                         <h2><?php echo $model->user_default_listing_title;?></h2>
                                         <div class="content">
-                                                 <label class="heading">Listing number: <?php echo $model->user_default_listing_id;?></label>
-                                              <div style="height:auto;"><!--<span class="width_20">&nbsp;</span>--><?php 
+                                                 <label class="heading">Listing number: <?php echo $model->user_default_listing_id;?></label><br>
+                                              <!--<span class="width_20">&nbsp;</span>--><?php 
 											  $count = str_word_count($model->user_default_listing_summary); 
 											   $expaln =  implode(' ', array_slice(explode(' ', $model->user_default_listing_summary), 0, 150)); 							  
 											  ?>
-                                              <div class="explain" style="overflow: hidden;">
+                                             
                                         <?php echo $expaln; ?><!--&nbsp;&nbsp;<a onclick="jQuery('.explainfull').show();jQuery('.explain').hide();" class="more readmore">Read more &gt;&gt;</a>-->                                                                            
-                                        </div>
+                                       
                                         <div class="explainfull" style="display:none;">
                                             <?php echo $model->user_default_listing_summary; ?> &nbsp;&nbsp; <a  onclick="jQuery('.explain').show();jQuery('.explainfull').hide();" class="more readmore">Read less &gt;&gt;</a>                                          
                                         </div>
-                                              </div>
                                         </div>
                                 </div>
+								
+								 <br class="clear" />
+        <br class="clear" />
+		<div style="margin-bottom: 3px;">
+            <label style="color:#a84793;">Upload photographs <a class="sl-tip tooltip" href="#;">?<span class="classic">Select and upload five images in one of the following formats:- BMP, JPEG, PNG, GIF<br> Please NOTE image size MUST NOT exceed 6"x4" (400px x 300px) otherwise cropping will occur.</span></a></label>
+        </div>  
+		
+								 <?php
+				 
+        $userimage = Samplelistingimages::model()->findAllByAttributes(array("user_default_listing_id" => $model->user_default_listing_id));
+        
+        $f = 0;
+        $old = 0;
+        for ($i = 1; $i <= 5; $i++) {
+            ?>
+            <div class=" listing-upload photo-upload-box<?php echo $i; ?>" id="photo-upload-box-tab" style="height:94%;">
+                <img class="side-robot-upload1" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/robot/robot-upload.png" alt="Upload your Business Supermarket user profile picture"/>
+                <div class="my-account-popup-box" id="upload-frame"> 
+                    <a class="pu-close" onclick='jQuery(".photo-upload-box<?php echo $i; ?>").hide();' href="javaScript:void(0)" title="Close">X</a>
+                    <h2>Upload user listing picture</h2>
+                    Click <b>Upload Picture...</b> to choose an image from your computer<br />
+                    Select an image that is 120px by 120px for best fit <br />
+                    Your image will be automatically uploaded.<br />
+                    <br />
+                    <?php
+                    $imagename = "";
+                    if ($userimage[$f]->user_default_listing_image != "") {
+                        $imagename = $userimage[$f]->user_default_listing_image;
+                    }
+                    ?> 
+                    <input type="hidden" id="logo_<?php echo $i; ?>" value="<?php echo $imagename; ?>" name="img_name[]" /> 
+					<input type="hidden" value="<?php echo $userimage[$f]->user_default_listing_image_id; ?>" name="current_ids[]" />  
+                    <input type="hidden" value="<?php echo $imagename; ?>" name="old_img_name[]" />                                  
+                    <div id="wrap">    
+                        <div id="uploader">
+                            <div id="big_uploader">
+                                <div id="notice"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ajax-loader.gif" /></div>
+                                <i>Upload image maximum of 2MB.</i>
+                                <br/><br/>
+                                <div id="div_upload_big" class="listing_logo" style="height: auto !important;">			
+                                    <p  style="padding: 42px 10px;">&nbsp;</p>
+                                </div>
+                                <div id="div_upload_big_new"></div> 
+                                Browse for a picture on your computer
+                                <br /> <br />
+                                <?php
+                                $this->widget('ext.EAjaxUpload.EAjaxUpload', array(
+                                    'id' => 'uploadFile' . $i,
+                                    'config' => array(
+                                        'action' => Yii::app()->createUrl('listing/listingimage'),
+                                        'allowedExtensions' => array("jpg", 'png', 'gif'), //array("jpg","jpeg","gif","exe","mov" and etc...
+                                        'sizeLimit' => 30 * 1024 * 1024, // maximum file size in bytes
+                                        'minSizeLimit' => 10, // minimum file size in bytes 
+                                        'onComplete' => "js:function(id, fileName, responseJSON){getUploadfilename(responseJSON," . $i . ");}",
+                                    )
+                                ));
+                                ?>
+                            </div><!-- big_uploader -->                                                
+                        </div><!-- uploader --> 
+                    </div>
+                </div>
+            </div>
+            <div class="sl-photo-box" style="margin:0px; text-align:center">
+                <div class="clear"></div>
+                <br />
+                <div class="sl-photograph image_preview" id="image_preview<?php echo $i; ?>">   
+                    <?php
+                    if ($imagename != "") {
+                        ?>
+                        <img title="<?php echo $userimage[$f]->user_default_listing_image_text; ?>" alt="<?php echo $userimage[$f]->user_default_listing_image_text; ?>" src="<?php echo Yii::app()->baseUrl; ?>/upload/users/<?php echo Yii::app()->user->getState('ufolder'); ?>/listing/thumb/<?php echo $userimage[$f]->user_default_listing_image; ?>" height="104" />
+                        <?php
+                        $old++;
+                    } else {
+                        ?><p class="listing_imagesize_text">
+                            image size 6" x 4"
+
+                            (400px x 300px)
+
+                            for best fit
+                        </p>
+                        <?php
+                    }
+                    ?>
+                </div>
+                <!-- File Upload for Company Logo -->
+                <div style="margin:10px 0 0 7px;"> 
+                    <a class="button gray" title="Upload logo" onClick="show_picture_formnew('photo-upload-box<?php echo $i; ?>')" href="javaScript:void(0)" id="uplaod-logo-<?php echo $i; ?>" > &nbsp; Select Image &nbsp;</a>
+                </div>
+            </div>
+            <?php
+            $f++;
+        }
+        ?>
+        <input type="hidden" value="<?php echo $old ?>" name="oldimage" id="oldimage" />
+        <br class="clear" />
+        <br class="clear" />
+        <!-- Image text starts here -->
+        <div class="slisting-head">
+            <p>Enter a short description for each image <a class="sl-tip tooltip" href="#;">?<span class="classic">Enter a short description explaining each image. Please note text is limited to 4 lines.</span></a></p>
+        </div>
+        <!-- Title -->
+        <div class="sl-image-description">
+            <?php
+            $userimage = Samplelistingimages::model()->findAllByAttributes(array("user_default_listing_id" => $model->user_default_listing_id));
+            $g = 0;
+            for ($i = 1; $i <= 5; $i++) {
+                $imagedesc = $userimage[$g]->user_default_listing_image_text;
+                ?>
+                <div class="img_desc img_desc_text txtarea">
+                    <textarea rows="2" cols="9" class="drg_imgdesc" name="user_default_listing_image_text[]" id="image-description-<?php echo $i; ?>" maxlength="80"><?php echo $imagedesc; ?></textarea>
+                    <br>
+                    Image <?php echo $i; ?> text
+                </div> 
+                <?php
+                $g++;
+            }
+            ?>  
+        </div>
+        <br class="clear" />                    
+        <br class="clear" />
+        <div class="slisting-head">
+            <p>Enter a link for each slider <a class="sl-tip tooltip" href="#;">?
+                    <span class="classic">Enter video link for each slider image.</span>
+                </a>
+            </p>					 
+        </div>  					 
+        <div class="sl-image-description admin-description">      					
+            <?php $userimage = Samplelistingimages::model()->findAllByAttributes(array("user_default_listing_id" => $model->user_default_listing_id));
+            ?>    					 
+            <?php
+            $h = 0;
+            for ($i = 1; $i <= 5; $i++) {
+                $sitelink = $userimage[$h]->user_default_listing_image_link1;
+                $videolink = $userimage[$h]->user_default_listing_image_link2;
+                ?>               					 
+                <div class="img_desc img_desc_text ylinks">      					 
+                    <!--<input type="text" class="inp width" name="user_default_listing_image_link1[]" id="slider-sitelink-<?php echo $i; ?>" value="<?php echo $sitelink; ?>" 
+                           style="background: none repeat scroll 0 0 #F1E5E2;  border: 1px solid #F1E5E2;  margin: 6px 0 10px;width: 126px;  overflow: hidden;  padding: 5px 4.5px;  resize: none" />  		
+
+                                                       <br>              
+
+                                                       Site link<?php echo $i; ?>    	
+
+                                                       <h3 style="  color: #1dbfd8;">OR</h3>-->	
+
+                    <input type="text" class="inp width ibox" name="user_default_listing_image_link2[]" id="slider-videolink-<?php echo $i; ?>" maxlength="80" value="<?php echo $videolink; ?>" style="" />      	
+
+                    <br>                	
+
+                    Video link<?php echo $i; ?>   
+
+                </div>             		
+
+                                                                                                                               <!-- <?php echo $i; ?>Image text -->     	
+
+                <?php
+                $h++;
+            }
+            ?>        				
+
+            <br class="clear" />     		
+
+        </div>   					
+
+        <br class="clear" />		     
+
+        <br class="clear" />
+		
 									   <?php   
 								   $model_new = Samplelisting::model()->find("user_default_listing_id ='".$model->user_default_listing_id."' ");
 							    if($model_new){                      
@@ -112,52 +279,56 @@ $this->breadcrumbs=array(
 								 
 								 <div class="clear">&nbsp;</div>
            <div class="sl-basic-info">
-					<label><?php echo $form->labelEx($address,'user_default_sample_listing_details'); ?></label>
+					<label class="Blue"><?php echo $form->labelEx($address,'user_default_sample_listing_details'); ?></label>
 				    <?php  
                         
-                         echo $form->textArea($address,'user_default_sample_listing_details',array('id'=>'user_default_sample_listing_details','tabindex'=>'1' ,'style'=>'height:60px;' ,'class'=>'textarea-full','onfocus'=>"getNormal('#drg_list_businessidea');",)); 
+                         echo $form->textArea($address,'user_default_sample_listing_details',array('id'=>'user_default_sample_listing_details','tabindex'=>'1' ,'style'=>'height:60px;' ,'class'=>'threeareas','onfocus'=>"getNormal('#drg_list_businessidea');",)); 
                          echo $form->error($address,'user_default_sample_listing_details'); 
                      ?> 
                 
                 </div>
 				
 				           <div class="sl-basic-info">
-					<label><?php echo $form->labelEx($address,'user_default_sample_listing_feedback'); ?></label>
+					<label class="Blue"><?php echo $form->labelEx($address,'user_default_sample_listing_feedback'); ?></label>
 				    <?php  
                         
-                         echo $form->textArea($address,'user_default_sample_listing_feedback',array('id'=>'user_default_sample_listing_feedback','tabindex'=>'2' ,'style'=>'height:60px;' ,'class'=>'textarea-full','onfocus'=>"getNormal('#drg_list_businessidea');",)); 
+                         echo $form->textArea($address,'user_default_sample_listing_feedback',array('id'=>'user_default_sample_listing_feedback','tabindex'=>'2' ,'style'=>'height:60px;' ,'class'=>'threeareas','onfocus'=>"getNormal('#drg_list_businessidea');",)); 
                          echo $form->error($address,'user_default_sample_listing_feedback'); 
                      ?> 
                 
                 </div>
 				
 				           <div class="sl-basic-info">
-					<label><?php echo $form->labelEx($address,'user_default_sample_listing_obtain'); ?></label>
+					<label class="Blue"><?php echo $form->labelEx($address,'user_default_sample_listing_obtain'); ?></label>
 				    <?php  
                         
-                         echo $form->textArea($address,'user_default_sample_listing_obtain',array('id'=>'user_default_sample_listing_obtain','tabindex'=>'3' ,'style'=>'height:60px;' ,'class'=>'textarea-full','onfocus'=>"getNormal('#drg_list_businessidea');",)); 
+                         echo $form->textArea($address,'user_default_sample_listing_obtain',array('id'=>'user_default_sample_listing_obtain','tabindex'=>'3' ,'style'=>'height:60px;' ,'class'=>'threeareas','onfocus'=>"getNormal('#drg_list_businessidea');",)); 
                          echo $form->error($address,'user_default_sample_listing_obtain'); 
                      ?> 
                 
                 </div>
 				
-				<div class="sample_listing_left">
-				           <div class="sl-basic-info-left">
-					<label><?php echo $form->labelEx($address,'user_default_sample_listing_instructions'); ?>s</label>
+				
+		     
+         	 <div class="sample_listing_left">
+		 
+		 <div class="sl-basic-info">
+					<label class="Blue"><?php echo $form->labelEx($address,'user_default_sample_listing_instructions'); ?></label>
 				    <?php  
                         
-                         echo $form->textArea($address,'user_default_sample_listing_instructions',array('id'=>'user_default_sample_listing_instructions','tabindex'=>'4' ,'style'=>'height:60px;' ,'class'=>'textarea-full','onfocus'=>"getNormal('#drg_list_businessidea');",)); 
+                         echo $form->textArea($address,'user_default_sample_listing_instructions',array('id'=>'user_default_sample_listing_instructions','tabindex'=>'4' ,'style'=>'height:60px;' ,'class'=>'onearea','onfocus'=>"getNormal('#drg_list_businessidea');",)); 
                          echo $form->error($address,'user_default_sample_listing_instructions'); 
                      ?> 
                 
                 </div>
 				
- <div class="clear">&nbsp;</div>
-		     <div class="sl-basic-info">
-					<label>Company Details</label>
+				
+ <div class="sl-basic-info">
+					<label  class="Blue">Company Details</label>
 					</div>
-         <div class="my-account-left" style="width: 270px;">
-		 
+ <div  class="main-my-account">
+	<div class="my-account-left">
+				           
 		    <table id="reg-table" class="sample-table">
 			<tr>
         		<td class="darkGrey-text"><?php echo $form->labelEx($address,'user_default_sample_listing_company_address1'); ?></td>
@@ -220,25 +391,70 @@ $this->breadcrumbs=array(
         	</tr><?php */ ?>
         
         </table>	
+		</div>
+		 <div class="my-account-right" style="width: 140px;">
+          <table id="reg-table2">
+            <tr>
+              <td class="darkGrey-text"><span>Sample picture</span></td>
+            </tr>
+            <tr>
+              <td class="Boarder" id="showImg">
+			  
+              <?php  
+                if($address->user_default_sample_listing_company_image){
+                    $img = $address->user_default_sample_listing_company_image;
+					
+                     $img_src = Yii::app()->baseUrl.'/upload/users/'.Yii::app()->user->getState('ufolder').'/listing/big/'.$img;
+                    ?>
+                    <img src="<?php echo $img_src;?>"  style="width:105px;height:100px" />
+
+                <?php }else {
+                                    $img = 'avatar.jpg';
+
+                ?>
+                <img src="<?php echo Yii::app()->createUrl('/upload/logo/'.$img);?>" alt="Profile picture" height="99" />
+
+                <?php }
+                ?>
+
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="javaScript:void(0)" onclick="show_picture_form()" title="Change Profile Picture" class="button black">Update picture</a>  
+                <?php   
+                
+                    //echo $form->fileField($model,'user_default_profile_image',array('id'=>'user_default_profile_image','style'=>'display:none !important'));  
+                    //echo $form->error($model,'user_default_profile_image'); 
+                ?>                
+                </td>
+            </tr>
+          </table>
+        </div>
+		</div>
+		
 		 <div class="clear">&nbsp;</div>
 		     <div class="sl-basic-info-left">
-					<label>Request a sample</label>
+					<label  class="Blue" >Request a sample</label>
 					<div class="bottom-div">
-					Enter the value without the currency symbol & then select the currency
-					<div class="clear">&nbsp;</div>
+					<p class="symboltext">Enter the value without the currency symbol & then select the currency</p>
+					
 					<table>
 					<tr>
-					<td width="24%">Cost of sample :
+					<td width="29%">Cost of sample :
 					</td>
-					<td width="20%"><?php echo $form->textField($address,'user_default_sample_listing_cost',array('maxlength'=>50,'class'=>'sample_inner_textbox','id'=>'user_default_sample_listing_cost','style'=>'width:65px')); ?>
+					<td width="18%"><?php echo $form->textField($address,'user_default_sample_listing_cost',array('maxlength'=>50,'class'=>'sample_inner_textbox','id'=>'user_default_sample_listing_cost','style'=>'width:65px')); ?>
 					</td>
-					<td width="30%">Postage & packing : 
+					<td width="35%">Postage & packing : 
 					</td>
-					<td width="20%"><?php echo $form->textField($address,'user_default_sample_listing_packaging',array('maxlength'=>50,'class'=>'sample_inner_textbox','id'=>'user_default_sample_listing_packaging','style'=>'width:65px')); ?>
+					<td width="18%"><?php echo $form->textField($address,'user_default_sample_listing_packaging',array('maxlength'=>50,'class'=>'sample_inner_textbox','id'=>'user_default_sample_listing_packaging','style'=>'width:65px')); ?>
 					</td>
 					</tr>
 					</table>
-					<table class="no_financeData" >
+					<table class="no_financeData"  style="    width: 100%;" >
 					 
 				    <!--
 					<tr>
@@ -286,61 +502,23 @@ $this->breadcrumbs=array(
 					  <table>
             <tr>
               <td class="darkGrey-text" valign="top"><input type="checkbox" name="rule" id="rule" value="Yes" <?php if($address->user_default_sample_listing_terms =="Yes") { echo "checked"; } ?> ></td>
-			  <td valign="top">I Agree to the terms and conditions of the business-supermarket.com I Agree to the terms and conditions of the business-supermarket.com I Agree to the terms and conditions of the business-supermarket.com</td>
+			  <td valign="top" class="symboltext">I have taken every reasonable precaution to ensure that the sample is safe and designed to function as stated in the accompanying supporting literature on the right . I/we taken ful responsibility for any issues that may arise in the safe use and functionality of the product; and confirm I/we that the accompanying literature is true and accurate and we are able to prove its authencity.</td>
             </tr>
 			</table>
-			<div class="sample-buttons-box"><span>Submit</span><button class="sample_submit" name="login_sbmt" type="submit" title="Log into your account"><img style="border-radius:5px;" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/user.png" width="25"></button>
+			<div class="sample-buttons-box"><span class="stext">Submit</span><button class="sample_submit" name="login_sbmt" type="submit" title="Log into your account"><img style="border-radius:5px;" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/user.png" width="25"></button>
 					</div></div>
               
                 </div>
-				</div>
-				 <div class="my-account-right" style="width: 140px;">
-          <table id="reg-table2">
-            <tr>
-              <td class="darkGrey-text"><span>Sample picture</span></td>
-            </tr>
-            <tr>
-              <td class="Boarder" id="showImg">
-			  
-              <?php  
-                if($address->user_default_sample_listing_company_image){
-                    $img = $address->user_default_sample_listing_company_image;
-                     $img_src = '/upload/users/'.Yii::app()->user->getState('ufolder').'/listing/big/'.$img;
-                    ?>
-                    <img src="<?php echo $img_src;?>"  height="99" />
-
-                <?php }else {
-                                    $img = 'avatar.jpg';
-
-                ?>
-                <img src="<?php echo Yii::app()->createUrl('/upload/logo/'.$img);?>" alt="Profile picture" height="99" />
-
-                <?php }
-                ?>
-
-              </td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>
-                <a href="javaScript:void(0)" onclick="show_picture_form()" title="Change Profile Picture" class="button black">Update picture</a>  
-                <?php   
-                
-                    //echo $form->fileField($model,'user_default_profile_image',array('id'=>'user_default_profile_image','style'=>'display:none !important'));  
-                    //echo $form->error($model,'user_default_profile_image'); 
-                ?>                
-                </td>
-            </tr>
-          </table>
-        </div>
+				
+				
 		
 				
 				</div>
 				
 				<div class="sample_listing_right">
-				<div style="text-align:center"><label>Sample Supporting files</label></div>
+				
+		
+				<div style="text-align:center"><label class="Blue">Sample Supporting files</label></div>
 				<div class="sample_rightbar">
 				For safety reasons you must supply sample supporting files that lists any health or safety issues or known hazards.
 <div class="clear">&nbsp;</div>
@@ -392,7 +570,7 @@ Click the icon next to the input field to upload your file.
 <div class="clear">&nbsp;</div>
 <div class="sample_preview_text">
 Preview and test your listing before you submit
-<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div><div class="clear">&nbsp;</div>
 <a onclick="preview()" class="button blue" value="Preview" name="preview" id="sl-pl">Preview</a>
 </div>
 <div class="clear">&nbsp;</div>
@@ -411,9 +589,11 @@ Preview and test your listing before you submit
 </div></div>
 
 
-<div class="sample-preview" style="display:none;">
+<div class="sample-preview sample_view" style="display:none;">
     <div class="close_caform_sample"><a class="button white smallrounded" onclick="closesample();" title="Close" >X</a></div>
-
+<?php
+$this->renderPartial('sample_view', array('model' => $model));
+ /*
 <div align="center">
     	<h1 style="color:#824682"><?php echo $model->user_default_listing_title;?></h1>
         Listing number:<br>
@@ -568,14 +748,32 @@ Preview and test your listing before you submit
             </td>
         </tr>
     </table>  
-
+<?php */ ?>
 </div>
+<style>
+#photo-upload-box-tab {
+	    height: 97% !important;
+		margin-top: -95px !important;
+		width: 622px !important;
+}
+.photo-upload-box{
+	    height: 98% !important;
+}
+.side-robot-upload1 {
+    position: absolute;
+    top: 150px;
+    left: 6px;
+}#upload-frame {
+    width: 380px;
+    margin-left: 140px;
+}
+</style>
 	<script type="text/javascript">	  
 	
 	 function givealert(result){
     if(result.success){ 
         jQuery("#showImg").html('');
-        var img = '<img style="width:115px;height:107px" src="<?php echo Yii::app()->getBaseUrl(true).'/upload/users/'.Yii::app()->user->getState('ufolder').'/listing/thumb/'; ?>' + result.filename + '"  />'
+        var img = '<img style="width:105px;height:100px" src="<?php echo Yii::app()->getBaseUrl(true).'/upload/users/'.Yii::app()->user->getState('ufolder').'/listing/thumb/'; ?>' + result.filename + '"  />'
         jQuery("#Samplelisting_user_default_sample_listing_company_image").val(result.filename);
 		jQuery("#showImg").html(img);
 		jQuery("#sample_image").html(img);
@@ -588,6 +786,21 @@ Preview and test your listing before you submit
    }
  }
  
+ function show_picture_formnew(openTabId) {
+        jQuery("." + openTabId).show();
+        openTabId = openTabId.replace('video-upload-box', '');
+        jQuery('#pic_frame_' + openTabId).attr({'src': 'video-upload/step_1.php?id=' + openTabId});
+    }
+	
+ function getUploadfilename(result, id) {
+        if (result.success) {
+            jQuery("#image_preview" + id).html('');
+            var img = '<img src="<?php echo Yii::app()->baseUrl . '/upload/users/' . Yii::app()->user->getState('ufolder') . '/listing/thumb/'; ?>' + result.filename + '" />'
+            jQuery("#logo_" + id).val(result.filename);
+            jQuery("#image_preview" + id).html(img);
+            jQuery(".photo-upload-box" + id).hide();
+        }
+    }
  
 	function updateFileName1() {
         var img1 = document.getElementById('upload1');
@@ -699,11 +912,12 @@ jQuery("#upload").val('');
 	$(".chzn-select").chosen();
 	
 	function show_picture_form(){
-   jQuery(".my-account-links,#update-table,.fBtn").css({
+   /*jQuery(".my-account-links,#update-table,.fBtn").css({
      'opacity': 0,
      '-ms-filter':"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)",
      'filter': 'alpha(opacity=0)'
    });
+   */
     jQuery(".photo-upload-box").show();
 	jQuery('html, body').animate({scrollTop: $(".photo-upload-box").offset().top}, 350);
  }
@@ -770,23 +984,7 @@ jQuery("#upload").val('');
 
 	}		
 
-	function getUploadfilename(result){  
-
-	if(result.success){ 	   
-
-	jQuery("#contact_attachment").val(result.filename);	
-
-	jQuery(".photo-upload-box1").hide();
-
-	jQuery(".registration-box").show();		
 	
-	jQuery("#addatt").hide();	
-
-	jQuery("#delatt").show();
-
-	}
-
-	}  
 
     $("#delatt").click(function(event){   
 

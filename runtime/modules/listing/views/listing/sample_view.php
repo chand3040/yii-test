@@ -1,8 +1,8 @@
  <?php   
  
       $model_new = Samplelisting::model()->find("user_default_listing_id ='".$model->user_default_listing_id."' ");
-	  
-	  if($model_new){  
+	  $count = count ( $model_new );
+	  if($count == 1){  
 
 	                  $address = Samplelisting::model()->find("user_default_listing_id ='".$model->user_default_listing_id."' ");
           
@@ -19,11 +19,12 @@ if( Yii::app()->user->isGuest ){
 }
 						   
 								 ?>
-								 <div class="sample-previews" >
+								 <div class="sample-previews sample_view" >
 <div align="center">
-    	<h1 style="color:#824682"><?php echo $model->user_default_listing_title;?></h1>
-        Listing number:<br>
-		<?php echo $model->user_default_listing_id;?>
+    	<h1 class="headertitle"><?php echo $model->user_default_listing_title;?></h1>
+		<p class="listing_no">Listing no<br>
+		#<?php echo $model->user_default_listing_id;?></p>
+		<p class="summary"><?php echo $model->user_default_listing_summary; ?></p>
     </div>
     <table>
     	<tr>
@@ -45,88 +46,88 @@ if( Yii::app()->user->isGuest ){
                 	
                     <table width="100%">
                     	<tr>
-                       	  <td class="gray-text">Address 1</td>
-                          <td id="address1"><?php echo $address->user_default_sample_listing_company_address1; ?></td>
-                          <td class="gray-text">Town</td>
-                          <td id="address2"><?php echo $address->user_default_sample_listing_company_town; ?></td>
+                       	  <td class="gray-text" width="20%">Address 1</td>
+                          <td id="address1" class="addressdata" width="30%"><?php echo $address->user_default_sample_listing_company_address1; ?></td>
+                          <td class="gray-text" width="20%">Town</td>
+                          <td id="address2" class="addressdata" width="30%"><?php echo $address->user_default_sample_listing_company_town; ?></td>
                         </tr>
                         <tr>
                        	  <td class="gray-text">Address 2</td>
-                          <td id="address3"><?php echo $address->user_default_sample_listing_company_address2; ?></td>
+                          <td id="address3" class="addressdata"><?php echo $address->user_default_sample_listing_company_address2; ?></td>
                           <td class="gray-text">County</td>
-                          <td id="address4"><?php echo $address->user_default_sample_listing_company_county; ?></td>
+                          <td id="address4" class="addressdata"><?php echo $address->user_default_sample_listing_company_county; ?></td>
                         </tr>
                         <tr>
                        	  <td class="gray-text">Address 3</td>
-                          <td id="address5"><?php echo $address->user_default_sample_listing_company_address3; ?></td>
+                          <td id="address5" class="addressdata"><?php echo $address->user_default_sample_listing_company_address3; ?></td>
                           <td class="gray-text">Zip Code</td>
-                          <td id="address6"><?php echo $address->user_default_sample_listing_company_postal; ?></td>
+                          <td id="address6" class="addressdata"><?php echo $address->user_default_sample_listing_company_postal; ?></td>
                         </tr>
-						<tr>
-                       	  <td class="gray-text">Tel no</td>
-                          <td id="address7"><?php echo $address->user_default_sample_listing_company_tel; ?></td>
-                          <td class="gray-text">&nbsp;</td>
-                          <td id="">&nbsp;</td>
-                        </tr>
+						
                     </table>
                 
     </div>
                 <form  action="<?php echo Yii::app()->createUrl('listing/addorder/listid/'.$address->user_default_sample_listing_id);?>"  method="post">
                 <h4 class="Blue">Request a sample</h4>
-				<div class="gray_box">
+				<div class="gray_box requestbox">
                 <table width="100%">
                 	<tr>
-                    	<td width="21%" class="right">Username :</td>
-                        <td width="34%"><input type="text" name="in1" value="<?php echo Yii::app()->user->getState('username'); ?>"/></td>
-                        <td width="45%" rowspan="5" valign="top">Instruction to supplier<br>
+                    	<td width="30%" class="right titles">Username </td>
+                        <td width="30%"><input type="text" name="in1" value="<?php echo Yii::app()->user->getState('username'); ?>"/></td>
+                        <td width="40%" rowspan="5" valign="top" class="titles">Instruction to supplier<br><br>
                         <textarea  rows="5" name="instructions"></textarea>
 						</td>
                   </tr>
-                	<tr>
-					
-                    	<td class="right">Cost of sample : <input type="hidden" name="lid" value="<?php echo $_REQUEST['id']; ?>"></td>
-                        <td id="cost"><?php echo $address->user_default_sample_listing_cost; ?></td>
+                	<tr><?php 
+					if($address->user_default_sample_listing_currency == "1")
+					{
+						$currency = "$";
+					}
+					if($address->user_default_sample_listing_currency == "2")
+					{
+						$currency = "&pound;";
+					}
+					if($address->user_default_sample_listing_currency == "3")
+					{
+						$currency = "&euro;";
+					}
+					?>
+                    	<td class="right titles">Cost of sample  <input type="hidden" name="lid" value="<?php echo $_REQUEST['id']; ?>"><input type="hidden" name="currency" value="<?php echo $address->user_default_sample_listing_currency; ?>"></td>
+                        <td id="cost"><?=$currency;?><?php echo $address->user_default_sample_listing_cost; ?></td>
                   </tr>
                 	<tr>
-                    	<td class="right">Cost of packing :</td>
-                        <td id="packing"><?php echo $address->user_default_sample_listing_packaging; ?></td>
+                    	<td class="right titles">Cost of packing </td>
+                        <td id="packing"><?=$currency;?><?php echo $address->user_default_sample_listing_packaging; ?></td>
                   </tr>
                 	<tr>
-                    	<td class="right">Quantity required :</td>
+                    	<td class="right titles">Quantity required </td>
                         <td><input type="text" name="quantity" id="quantity" /></td>
                   </tr>
                 	<tr>
-                    	<td  class="right">Total cost: </td>
+                    	<td  class="right titles">Total cost </td>
                         <td><input type="text" name="total" id="total"/></td>
                   </tr>
                 	</table>
-                    <input type="checkbox" name="chk1" id="chk1"/> <label for="chk1">By ticking the checkbox on the left I hereby confirm that I have read and understood the literature accompanying the sample. I agree to use the sample in a safe and responsible manner. I shall also agree to give any</label>
-			
-               <div class="sample-buttons-box"><span>Submit</span><button class="sample_submit" name="login_sbmt" type="submit" title="order sample"><img style="border-radius:5px;" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/user.png" width="25"></button>
+					<br>
+                    <input type="checkbox" name="chk1" id="chk1" style="    vertical-align: bottom;"/> <label for="chk1" class="chk1">By ticking the checkbox on the left I hereby confirm that I have read and understood the literature accompanying the sample. I agree to use the sample in a safe and responsible manner. I shall also agree to give any</label>
+			<br><br>
+               <div class="sample-buttons-box"><span class="stext">Submit</span><button class="sample_submit" name="login_sbmt" type="submit" title="order sample"><img style="border-radius:5px;" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/user.png" width="25"></button>
 					</div> 
             </div>
             </td>
             
             <td width="30%" valign="top">
-            	<h3 class="Blue" align="center">Health &amp; Safety Compliance</h3>
-                <div class="gray_box">
-                	<p>
-                    Please note any products that are consumed, applied or otherwise
-                    used must carry a certificate of conformity or safe use by an
-                    independent testing and approving body.</p>
+            	<h4 class="Blue" align="center">Request a sample</h4>
+                <div class="gray_box rightbox">
+                	<p>Lorem ipsum dolor sit amet, eos at tritani ullamcorper, vim ei vitae oporteat volutpat, vel et atqui tibique.</p>
                     
-                    <p>Any member wishing to order samples for testing must read and
-                    or download any literature as well as satisfy themselves that they
-                    are confident in testing the product for the lister.</p>
+                    <p>Lorem ipsum dolor sit amet, eos at tritani ullamcorper, vim ei vitae oporteat volutpat, vel et atqui tibique.</p>
                     
-                    <p>If you are unsure then you may request further proof of safety
-                    from the lister by requesting as such via the voice your opinion
-                    forum or by direct contact with the lister via the Contact the
-                    entrepreneur.</p>
+                    <p>Lorem ipsum dolor sit amet, eos at tritani ullamcorper, vim ei vitae oporteat volutpat, vel et atqui tibique. Lobortis inciderint ad has, has an illum alterum consulatu. Inani option ex cum, est in illum dissentias, labore impetus legimus sed ne.</p>
                     <a href="#" class="link">Sample information / specifications</a>
                     <table width="100%">
                     	<tr>
-                        	<td valign="middle" style="text-align:center !important"><a href='<?php if($address->user_default_sample_listing_att_specs){  echo Yii::app()->createUrl('/upload/attachments/'.$address->user_default_sample_listing_att_specs);} ?>' target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png"/><br>View Online</a></td>
+                        	<td valign="middle" style="text-align:center !important"><a href='<?php if($address->user_default_sample_listing_att_specs){  echo Yii::app()->createUrl('/upload/attachments/'.$address->user_default_sample_listing_att_specs);} ?>' target="_blank"><br><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png"/><br>View Online</a></td>
                         	<td valign="middle" style="text-align:center !important"><a href='<?php if($address->user_default_sample_listing_att_specs){  echo Yii::app()->createUrl('/upload/attachments/'.$address->user_default_sample_listing_att_specs);} ?>' target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/pdf_icon.png"/><br>Download PDF</a></td>
                          </tr>
                     </table>
@@ -135,7 +136,7 @@ if( Yii::app()->user->isGuest ){
                     <a href="#" class="link">How to use the sample</a>
                     <table width="100%">
                     	<tr>
-                        	<td valign="middle" style="text-align:center !important"><a href='<?php if($address->user_default_sample_listing_att_instruction){  echo Yii::app()->createUrl('/upload/attachments/'.$address->user_default_sample_listing_att_instruction);} ?>' target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png"/><br>View Online</a></td>
+                        	<td valign="middle" style="text-align:center !important"><a href='<?php if($address->user_default_sample_listing_att_instruction){  echo Yii::app()->createUrl('/upload/attachments/'.$address->user_default_sample_listing_att_instruction);} ?>' target="_blank"><br><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png"/><br>View Online</a></td>
                         	<td valign="middle" style="text-align:center !important"><a href='<?php if($address->user_default_sample_listing_att_instruction){  echo Yii::app()->createUrl('/upload/attachments/'.$address->user_default_sample_listing_att_instruction);} ?>' target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/pdf_icon.png"/><br>Download PDF</a></td>
                          </tr>
                     </table>
@@ -144,15 +145,14 @@ if( Yii::app()->user->isGuest ){
                     <a href="#" class="link">Any known Health & Saftey issues</a>
                    <table width="100%">
                     	<tr>
-                        	<td valign="middle" style="text-align:center !important"><a href='<?php if($address->user_default_sample_listing_att_safety){  echo Yii::app()->createUrl('/upload/attachments/'.$address->user_default_sample_listing_att_safety);} ?>' target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png"/><br>View Online</a></td>
+                        	<td valign="middle" style="text-align:center !important"><a href='<?php if($address->user_default_sample_listing_att_safety){  echo Yii::app()->createUrl('/upload/attachments/'.$address->user_default_sample_listing_att_safety);} ?>' target="_blank"><br><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png"/><br>View Online</a></td>
                         	<td valign="middle" style="text-align:center !important"><a href='<?php if($address->user_default_sample_listing_att_safety){  echo Yii::app()->createUrl('/upload/attachments/'.$address->user_default_sample_listing_att_safety);} ?>' target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/pdf_icon.png"/><br>Download PDF</a></td>
                          </tr>
                     </table>
                     
                     
                     <br>
-                    Check the forum at Voice your opinion for discussions regarding
-                    the sample, before you order.
+					<p class="voicetext">Check the forum at <a href="#" onclick="jQuery('#tabshow2').click();">Voice your opinion</a> for discussions regarding the sample, before you order.</p>
                 </div>
                 
                 <div class="gray_box white_box" align="center" id="sample_image">
@@ -160,13 +160,13 @@ if( Yii::app()->user->isGuest ){
 					 <?php  
                 if($address->user_default_sample_listing_company_image){
                     $img = $address->user_default_sample_listing_company_image;
-                     $img_src = '/upload/users/'.Yii::app()->user->getState('ufolder').'/listing/big/'.$img;
+                     $img_src = Yii::app()->baseUrl.'/upload/users/'.Yii::app()->user->getState('ufolder').'/listing/big/'.$img;
                     ?>
-                    <img src="<?php echo $img_src;?>" width="70%" align="middle"/>
+                    <img src="<?php echo $img_src;?>" width="50%" align="middle" style="    height: 101px;"/>
 
                 <?php }else {
                 ?>
-                <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/serverid.jpg" width="70%" align="middle"/>
+                <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/serverid.jpg" style="    height: 101px;" width="50%" align="middle"/>
 
                 <?php }
                 ?>
@@ -177,7 +177,7 @@ if( Yii::app()->user->isGuest ){
     </table> 
  </form>
 
-</div>
+
 
         <div style="display: none;" class="white_content confirm-email" id="light1">
           <div class="u-email-box" style="width: 615px !important;">
@@ -195,7 +195,11 @@ if( Yii::app()->user->isGuest ){
           </div>
         </div>
 		<div class="clear"></div>
+		<hr>
 		<div class="clear"></div>
+		
+		</div>
+		<?php /* ?>
 		<div id="voice-your-opinion" class="feedback_box" data-listingid="<?=$address->user_default_sample_listing_id;?>" >
 		    <div class="headings" style="text-align: center;">
             <h2>Customer Feedback</h2>
@@ -210,7 +214,15 @@ if( Yii::app()->user->isGuest ){
 						<?php
 						$this->widget('ext.DzRaty.DzRaty', array(
     'name' => 'your_rating',
+	
 	'options' => array(
+		'path' => Yii::app()->request->baseUrl. '/assets/50c19f9d/img',
+	  	'half' => TRUE,
+		'starOff' => 'star-off.png',
+		'starOn' => 'star-on.png',
+		'starHalf' => 'star-half.png',
+	  	'cancelOff' => 'cancel-off.png',
+	  	'cancelOn' => 'cancel-on.png',
 		'click' => "js:function(score, evt){ $('#rating').val(score); }"
 	),
 	));
@@ -229,14 +241,20 @@ if( Yii::app()->user->isGuest ){
 <div id="current_rating" style="    margin-left: 320px;">
 <?php
 
-$countcomments = Samplefeedback::getTotalFeedbacksbyid($address->user_default_sample_listing_id);
-$countrating = Samplefeedback::getTotalFeedbacks();
+//$countcomments = Samplefeedback::getTotalFeedbacksbyid($address->user_default_sample_listing_id);
+//$countrating = Samplefeedback::getTotalFeedbacks();
 $listingrating = $countcomments[0]['ratings'] / $countrating[0]['total_comments'];
 
 						$this->widget('ext.DzRaty.DzRaty', array(
     'name' => 'total_rating','value' =>$listingrating,
 	'options' => array(
-		'readOnly' => TRUE,
+		'path' => Yii::app()->request->baseUrl. '/assets/50c19f9d/img',
+	  	'half' => TRUE,
+		'starOff' => 'star-off.png',
+		'starOn' => 'star-on.png',
+		'starHalf' => 'star-half.png',
+	  	'cancelOff' => 'cancel-off.png',
+	  	'cancelOn' => 'cancel-on.png',
 	),
 	));
 	?>
@@ -257,13 +275,13 @@ $listingrating = $countcomments[0]['ratings'] / $countrating[0]['total_comments'
 <div class="feedbackpage" id="feedbackpage">
 
 <?php 
-$this->renderPartial('/listing/sample_fetch', array('address' => $address));
+//$this->renderPartial('/listing/sample_fetch', array('address' => $address));
 ?>
 			
 			</div>
 
 <?php  
-
+*/
 
 	  }
 	  
