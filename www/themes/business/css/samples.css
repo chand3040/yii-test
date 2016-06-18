@@ -267,7 +267,7 @@ p.voicetext
 #addsamplelisting .my-account-left {
     float: left;
     width: 250px;
-    min-height: auto;
+    min-height: inherit;
 }
 
 #addsamplelisting #reg-table input[type=text], #addsamplelisting #reg-table input[type=password], #addsamplelisting #reg-table select {
