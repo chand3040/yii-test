@@ -88,28 +88,65 @@ $(function() {
 <div id="tabs_container">
     <ul id="sign-up-tabs">
 
-        <li class="active" id="tabhide1"><a href="#taba">Details<br/>
+        <?php
+        $address = Samplelisting::model()->find("user_default_listing_id ='".$model->user_default_listing_id."' ");
 
-                18/03/2012</a></li>
+        if($address->user_default_sample_listing_status=='1')
 
-        <li id="tabshow2"><a href="#tab2">Voice your Opinion<br/>
+        {
+            ?>
+            <li class="active" id="tabhide1"><a href="#taba"  onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/listingsslider/listid/' . $model->user_default_listing_id) ?>')">Details<br/>
 
-                <span id="totalComment">(No of comments)</span></a></li>
+                    18/03/2012</a></li>
 
-        <li><a href="#tab3">Request a Sample<br/>
+            <li id="tabshow2"><a href="#tab2" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/listingsslider/listid/' . $model->user_default_listing_id) ?>')">Voice your Opinion<br/>
 
-                (0)</a></li>
+                    <span id="totalComment">(No of comments)</span></a></li>
 
-        <li><a href="#tab4">Open for Bidding<br/>
+            <li><a href="#tab3" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/sampleslider/listid/' . $model->user_default_listing_id) ?>')">Request a Sample<br/>
 
-                (0)</a>
-        </li>
+                    (0)</a></li>
 
-        <li><a href="#tab5">Open for Investment<br/>
+            <li><a href="#tab4" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/listingsslider/listid/' . $model->user_default_listing_id) ?>')">Open for Bidding<br/>
 
-                (0)</a></li>
+                    (0)</a>
+            </li>
 
-        <li><a href="#tab6">Investor Area</a></li>
+            <li><a href="#tab5" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/listingsslider/listid/' . $model->user_default_listing_id) ?>')">Open for Investment<br/>
+
+                    (0)</a></li>
+
+            <li><a href="#tab6" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/listingsslider/listid/' . $model->user_default_listing_id) ?>')">Investor Area</a></li>
+            <?php
+        }
+        else
+        {
+            ?>
+            <li class="active" id="tabhide1"><a href="#taba">Details<br/>
+
+                    18/03/2012</a></li>
+
+            <li id="tabshow2"><a href="#tab2">Voice your Opinion<br/>
+
+                    <span id="totalComment">(No of comments)</span></a></li>
+
+            <li><a href="#tab3">Request a Sample<br/>
+
+                    (0)</a></li>
+
+            <li><a href="#tab4">Open for Bidding<br/>
+
+                    (0)</a>
+            </li>
+
+            <li><a href="#tab5">Open for Investment<br/>
+
+                    (0)</a></li>
+
+            <li><a href="#tab6">Investor Area</a></li>
+            <?php
+        }
+        ?>
 
         <div class="clear"></div>
 
@@ -680,8 +717,10 @@ height: 50px;"></textarea>
 
 <div id="tab3" class="sign-up-tab_content">
 
-   <!-- <div><img src="images/samples.png" alt=""/></div> -->
-   <div>Will be Coming Soon..</div>
+    <?php
+    $this->renderPartial('sample_view', array('model' => $model));
+
+    ?>
 
 </div>
 
