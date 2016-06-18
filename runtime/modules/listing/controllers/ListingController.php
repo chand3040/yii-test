@@ -899,7 +899,7 @@ $count_val33=count($command3);
         $temp_dir=$path."temp/";
         $log=$path."log/";
         //$converted_vids=$path."converted_vids/";
-        echo $converted_vids = $path."upload/users/".Yii::app()->user->getState('ufolder')."/videos/";
+         $converted_vids = $path."upload/users/".Yii::app()->user->getState('ufolder')."/videos/";
         
         $_SESSION['converted_vids']=$converted_vids;
         $_SESSION['temp_dir']=$temp_dir;
