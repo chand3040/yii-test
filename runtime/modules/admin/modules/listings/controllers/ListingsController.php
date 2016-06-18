@@ -20,7 +20,7 @@ class ListingsController extends Controller
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('index,update,create,delete,listingytd,rdelete,publish,rejection,suspension,restore,downloadvideo,marketingdata,portfolio,samples,forum,exportDefaultListings,sampleview,uploadyoutube,Videopath,newlistings'),
+                'actions' => array('index,update,create,delete,listingytd,rdelete,publish,rejection,suspension,restore,downloadvideo,marketingdata,portfolio,samples,forum,exportDefaultListings,sampleview,uploadyoutube,Videopath,newlistings,samplescsv,sampledelete'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -813,7 +813,190 @@ class ListingsController extends Controller
 
     public function actionSamples()
     {
-        $this->render('samples');
+
+        if(isset($_REQUEST['username']) || isset($_REQUEST['date']) || isset($_REQUEST['details']) || isset($_REQUEST['email']) ||  isset($_REQUEST['amount']))
+        {
+            $model = new Listings('search');
+            $criteria = new CDbCriteria;
+
+            if (isset($_REQUEST['username']) && $_REQUEST['username'] != "") {
+
+                $userdata = User::model()->find("LOWER(user_default_username) = '" . addslashes(strtolower($_REQUEST['username'])) . "'");
+
+                $Data = Listings::model()->findAll("user_default_profiles_id = '" . addslashes(strtolower($userdata->user_default_id)) . "'");
+                if ($Data) {
+
+                    foreach ($Data as $rsData) {
+
+                        $ids[] = $rsData->user_default_listing_id;
+
+                    }
+                    //$ids1 = array(rtrim($ids,','));
+                    $criteria->addInCondition('user_default_listing_id', $ids);
+                }
+            }
+
+            if (isset($_REQUEST['email']) && $_REQUEST['email'] != "") {
+
+
+                $userdata = User::model()->find("LOWER(user_default_email) = '" . addslashes(strtolower($_REQUEST['email'])) . "'");
+
+                $Data = Listings::model()->findAll("user_default_profiles_id = '" . addslashes(strtolower($userdata->user_default_id)) . "'");
+                if ($Data) {
+
+                    foreach ($Data as $rsData) {
+
+                        $ids[] = $rsData->user_default_listing_id;
+
+                    }
+                    //$ids1 = array(rtrim($ids,','));
+                    $criteria->addInCondition('user_default_listing_id', $ids);
+                }
+            }
+
+
+            if (isset($_REQUEST['date']) && $_REQUEST['date'] != "") {
+                $date = date('Y-m-d',strtotime($_REQUEST['date']));
+                $criteria->compare('user_default_sample_listing_date', addslashes($date), true);
+            }
+
+
+
+            if (isset($_REQUEST['details']) && $_REQUEST['details'] != "") {
+
+                $criteria->compare('user_default_sample_listing_details', addslashes($_REQUEST['details']), true);
+            }
+
+
+            if (isset($_REQUEST['amount']) && $_REQUEST['amount'] != "") {
+
+                $criteria->compare('user_default_sample_listing_cost', addslashes($_REQUEST['amount']), true);
+            }
+
+
+
+
+            $criteria->order = 'user_default_sample_listing_id desc';
+            //print_r($criteria);
+
+
+            $total = Samplelisting::model()->count($criteria);
+
+            if (isset($_REQUEST['rows'])) {
+                $count = $_REQUEST['rows'];
+            } else {
+                $count = 5;
+            }
+
+            $pages = new CPagination($total);
+            $pages->setPageSize($count);
+            $pages->applyLimit($criteria);  // the trick is here!
+
+            $posts = Samplelisting::model()->findAll($criteria);
+
+            $this->render('samples', array('model' => $model,
+                'list' => $posts,
+                'pages' => $pages,
+                'item_count' => $total,
+                'page_size' => Yii::app()->params['listPerPage']
+            ));
+        }elseif(!empty($_REQUEST['btnsubmit'])) {
+            $model = new Samplelisting();
+
+            $total = Samplelisting::model()->count($criteria);
+
+            if (isset($_REQUEST['rows'])) {
+                $count = $_REQUEST['rows'];
+            } else {
+                $count = 5;
+            }
+
+            $pages = new CPagination($total);
+            $pages->setPageSize($count);
+            $pages->applyLimit($criteria);  // the trick is here!
+
+            $posts = Samplelisting::model()->findAll($criteria);
+            $this->render('samples', array('model' => $model,
+                'list' => $posts,
+                'pages' => $pages,
+                'item_count' => $total,
+                'page_size' => Yii::app()->params['listPerPage']
+            ));
+        }else {
+
+            $posts = Samplelisting::model()->findAll();
+            $this->render('samples', array('model'=>$model,'list'=>$posts));
+        }
+
+
+
+
+        //$this->render('samples');
+    }
+
+    public function actionSamplescsv()
+    {
+        $model = Samplelisting::model()->findAll();
+        $filename = "samples.csv";
+        header('Content-type: text/csv');
+        header("Content-Disposition: attachment; filename=$filename");
+        header("Pragma: no-cache");
+        header("Expires: 0");
+
+        $i=1;
+        echo "Sr no.,User,Date,Listing Title,Details,Email,Amount\n";
+        foreach($model as $row)
+        {
+            $listing_id = $row->user_default_listing_id;
+            $listing = Listings::model()->findByPk($listing_id);
+            $userid = $listing->user_default_profiles_id;
+            $userdata = User::model()->findByPk($userid);
+
+            if($row->user_default_sample_listing_currency == "1")
+            {
+                $currency = "$";
+            }
+            if($row->user_default_sample_listing_currency == "2")
+            {
+                $currency = "&pound;";
+            }
+            if($row->user_default_sample_listing_currency == "3")
+            {
+                $currency = "&euro;";
+            }
+
+            $title= html_entity_decode(str_replace(array("\r\n","\r","\n","\\r","\\n","\\r\\n","<br>","<br/>","</br>",",")," ",$listing->user_default_listing_title));
+            $details= html_entity_decode(str_replace(array("\r\n","\r","\n","\\r","\\n","\\r\\n","<br>","<br/>","</br>",",")," ",$row->user_default_sample_listing_details));
+            $cc = $currency.$row->user_default_sample_listing_cost;
+            $cost =  html_entity_decode(str_replace(array("\r\n","\r","\n","\\r","\\n","\\r\\n","<br>","<br/>","</br>",",")," ",$cc));
+            $date = $row->user_default_sample_listing_date;
+            $newdate = date('d M Y', strtotime($date));
+
+
+            echo $i.','.$userdata->user_default_username.','.$newdate.','.$title.','.$details.','.$userdata->user_default_email.','.$cost."\n";
+
+
+        }
+    }
+
+
+    public function actionSampledelete($id)
+    {
+
+        $model = Samplelisting::model()->find("user_default_sample_listing_id = '" . $id . "'");
+
+        $listingid = $model->user_default_listing_id;
+
+        Samplelistingimages::model()->deleteAll("user_default_listing_id  ='" . $listingid . "'");
+
+        Samplefeedback::model()->deleteAll("user_default_sample_listing_id ='" . $id . "'");
+
+        Sampleorder::model()->deleteAll("user_default_sample_listing_id ='" . $id . "'");
+
+        $model->delete();
+        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+        if (!isset($_GET['ajax']))
+            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('samples'));
     }
 
     public function actionForum()

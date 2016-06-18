@@ -11,30 +11,30 @@
 </style>
 <?php $this->renderPartial("/layouts/sub_menu"); ?>
 <center><h2 class="Blue">User sample search</h2></center>
-
+<form id="searchsmaples" action="" method="post">
 <div class="samples-search-container">
 <ul>
 
     <li><label>Date</label>
-        <input type="text" id="date" name="date" value="12-02-2014" size="13" tabindex="1"></li>
+        <input type="date" id="date" name="date" value="<?php echo $_REQUEST['date']; ?>" size="13" tabindex="1"></li>
     <li><label>Username</label>
-        <input type="text" id="username" name="username" size="15" value="jsingh99" tabindex="2"></li>
+        <input type="text" id="username" name="username" value="<?php echo $_REQUEST['username']; ?>" size="15"  tabindex="2"></li>
     <li><label>Details</label>
-        <input type="text" id="details" name="details" value="Sample face cream" size="50" tabindex="3"></li>
+        <input type="text" id="details" name="details" value="<?php echo $_REQUEST['details']; ?>"   size="50" tabindex="3"></li>
     <li><label>User Email Address</label>
-        <input type="text" id="email" name="email" value="dsp7@blueyonder.co.uk" size="30" tabindex="4"></li>
+        <input type="text" id="email" name="email" value="<?php echo $_REQUEST['email']; ?>"  size="30" tabindex="4"></li>
     <li><label>Amount</label>
-        <input type="text" id="amount" name="amount" value="$250" size="15" tabindex="5"></li>
+        <input type="text" id="amount" name="amount" value="<?php echo $_REQUEST['amount']; ?>"   size="15" tabindex="5"></li>
 </ul>
 <div class="clear">&nbsp;</div>
 <div class="clear">&nbsp;</div>
 
 <div class="buttons" align="center">
     <input name="btnclear" value="Clear data" class="button blue" type="reset"/>
-    <input name="btnsubmit" class="button dark-green" value="Submit" type="button"/>
-    <input name="btnreturn" value="Return" class="button black black-btn" type="button"/>
+    <input name="btnsubmit" class="button dark-green" value="Submit" type="submit"/>
+   <a href="index" class="button black black-btn">Return</a>
 </div>
-
+</form>
 <div class="clear">&nbsp;</div>
 <div class="samples-list-container">
 <div class="grid-container">
@@ -57,21 +57,47 @@
             <th>Amount</th>
 
         </tr>
-        <tr onclick="window.location='<?php echo Yii::app()->createUrl("/admin/listings/listings/sampleview"); ?>'">
+		<?php  if(count($list) > 0){
+			 foreach($list as $row){
+				 $listing_id = $row->user_default_listing_id;
+				 $listing = Listings::model()->findByPk($listing_id);
+				 $userid = $listing->user_default_profiles_id;
+				 $userdata = User::model()->findByPk($userid);
+				 
+				 if($row->user_default_sample_listing_currency == "1")
+					{
+						$currency = "$";
+					}
+					if($row->user_default_sample_listing_currency == "2")
+					{
+						$currency = "&pound;";
+					}
+					if($row->user_default_sample_listing_currency == "3")
+					{
+						$currency = "&euro;";
+					}
+				 ?>
+        <tr onclick="window.location='<?php echo Yii::app()->createUrl("/admin/listings/listings/sampleview/id/".$row->user_default_sample_listing_id); ?>'">
 
-            <td>jsingh99</td>
+            <td><?php echo $userdata->user_default_username; ?></td>
 
-            <td>21/10/1961</td>
+            <td><?php echo $row->user_default_sample_listing_date; ?></td>
 
-            <td>Drivestop</td>
+            <td><?php echo $listing->user_default_listing_title; ?></td>
 
-            <td>Sample face cream</td>
+            <td><?php echo substr($row->user_default_sample_listing_details,0,85).'...';?></td>
 
-            <td>dsp7@blueyonder.co.uk</td>
+            <td><?php echo $userdata->user_default_email; ?></td>
 
-            <td>$250</td>
+            <td><?php echo $currency.$row->user_default_sample_listing_cost; ?></td>
 
         </tr>
+		<?php 
+		}
+		}
+		else 
+		{
+			?>
         <tr>
             <td>&nbsp;</td>
 
@@ -124,7 +150,9 @@
 
             <td>&nbsp;</td>
         </tr>
-
+<?php 
+}
+?>
         </tbody>
     </table>
 </div>
@@ -166,7 +194,7 @@
 <div class="clear">&nbsp;</div>
 <div class="clear">&nbsp;</div>
 <div align="center">
-    <a href="#" class="button black black-btn" title="Download CSV">Download CSV</a>
+    <a href="<?php echo Yii::app()->createUrl("/admin/listings/listings/samplescsv"); ?>" class="button black black-btn" title="Download CSV">Download CSV</a>
 </div>
 </div>
 </div>
