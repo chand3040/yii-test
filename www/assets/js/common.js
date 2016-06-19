@@ -106,7 +106,7 @@ forum.addComment = function(message, listingId, commentReference, event, attache
                          var viewLimitValue = $("#commentViewLimit").val();
                          var pageSelected = $('.forumPageNumbers').find('.active').eq(0).attr('page');
                          var viewOffsetValue = $('.forumPageNumbers').find('.active').eq(0).attr('offset');
-
+			$("#voice-your-opinion").html(resp);
                          forum.Navigate(listingId, viewLimitValue, pageSelected, viewOffsetValue);
 
                      },
