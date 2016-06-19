@@ -1,23 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "{{listing_images}}".
+ * This is the model class for table "{{sample_listing_sliders}}".
  *
- * The followings are the available columns in table '{{listing_images}}':
+ * The followings are the available columns in table '{{sample_listing_sliders}}':
  * @property integer $user_default_listing_image_id
  * @property string $user_default_listing_image
  * @property string $user_default_listing_image_text
  * @property string $user_default_listing_image_link1
  * @property string $user_default_listing_image_link2
  * @property integer $user_default_listing_lid
- * @property integer $order_id
  */
 class Sampleimages extends CActiveRecord
 {
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
-     * @return Samplelistingimages the static model class
+     * @return Listingcategory the static model class
      */
     public static function model($className=__CLASS__)
     {
@@ -40,15 +39,14 @@ class Sampleimages extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('user_default_listing_image, user_default_listing_image_text, user_default_listing_lid,', 'required'),
+            array('user_default_listing_image, user_default_listing_image_text, user_default_listing_lid', 'required'),
             array('user_default_listing_lid', 'numerical', 'integerOnly'=>true),
+            array('user_default_listing_image_link1,user_default_listing_image_link2', 'length', 'max'=>100),
+            array('user_default_listing_image_text', 'length', 'max'=>16777215),
             array('user_default_listing_image', 'length', 'max'=>500),
-            array('user_default_listing_image_text', 'length', 'max'=>500),
-            array('user_default_listing_image_link1', 'length', 'max'=>500),
-            array('user_default_listing_image_link2', 'length', 'max'=>500),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('user_default_listing_image_id, user_default_listing_image, user_default_listing_image_text, user_default_listing_image_link1, user_default_listing_image_link2, user_default_listing_lid, order_id', 'safe', 'on'=>'search'),
+            array('user_default_listing_image_id, user_default_listing_image, user_default_listing_image_text, user_default_listing_image_link1, user_default_listing_image_link2, user_default_listing_lid', 'safe', 'on'=>'search'),
         );
     }
 
@@ -69,12 +67,12 @@ class Sampleimages extends CActiveRecord
     public function attributeLabels()
     {
         return array(
-            'user_default_listing_image_id' => 'Image Id',
-            'user_default_listing_image' => 'Listing Image',
-            'user_default_listing_image_text' => 'Imgdesc',
-            'user_default_listing_image_link1' => 'Sitelink',
-            'user_default_listing_image_link2' => 'Videolink',
-            'user_default_listing_lid' => 'Lid',
+            'user_default_listing_image_id' => 'Image ID',
+            'user_default_listing_image' => 'Image',
+            'user_default_listing_image_text' => 'Description',
+            'user_default_listing_image_link1' => 'Site Link',
+            'user_default_listing_image_link2' => 'Video Link',
+            'user_default_listing_lid' => 'Listing ID',
         );
     }
 
