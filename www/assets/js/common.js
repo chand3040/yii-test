@@ -397,6 +397,7 @@ forum.Navigate = function(listingId, viewLimitValue, pageSelected, viewOffsetVal
                 
                             $(".forumPage").html("");
                             $(".forumPage").html(resp.listingView);
+                            $("#voice-your-opinion").html(resp.listingView);
                             
                         },
                     complete: function(){                        
@@ -658,7 +659,7 @@ forum.setViewByCriteria = function(listingId, viewLimitValue, commentOrderBy){
                 
                             $(".forumPage").html("");
                             $(".forumPage").html(resp.listingView);
-                            
+                            $("#voice-your-opinion").html(resp.listingView);
                         },
                     complete: function(){
                 
