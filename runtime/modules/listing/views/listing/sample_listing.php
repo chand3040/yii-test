@@ -107,7 +107,7 @@ $this->breadcrumbs=array(
 		
 								 <?php
 				 
-        $userimage = Sampleimages::model();
+        $userimage = Sampleimages::model()->findAllByAttributes(array("user_default_listing_id" => $model->user_default_listing_id));
         
         $f = 0;
         $old = 0;
@@ -226,78 +226,78 @@ $this->breadcrumbs=array(
         </div>  					 
         <div class="sl-image-description admin-description">      					
             <?php $userimage = Sampleimages::model()->findAllByAttributes(array("user_default_listing_id" => $model->user_default_listing_id));
-            ?>    					 
+            ?>
             <?php
             $h = 0;
             for ($i = 1; $i <= 5; $i++) {
                 $sitelink = $userimage[$h]->user_default_listing_image_link1;
                 $videolink = $userimage[$h]->user_default_listing_image_link2;
-                ?>               					 
-                <div class="img_desc img_desc_text ylinks">      					 
-                    <!--<input type="text" class="inp width" name="user_default_listing_image_link1[]" id="slider-sitelink-<?php echo $i; ?>" value="<?php echo $sitelink; ?>" 
-                           style="background: none repeat scroll 0 0 #F1E5E2;  border: 1px solid #F1E5E2;  margin: 6px 0 10px;width: 126px;  overflow: hidden;  padding: 5px 4.5px;  resize: none" />  		
+                ?>
+                <div class="img_desc img_desc_text ylinks">
+                    <!--<input type="text" class="inp width" name="user_default_listing_image_link1[]" id="slider-sitelink-<?php echo $i; ?>" value="<?php echo $sitelink; ?>"
+                           style="background: none repeat scroll 0 0 #F1E5E2;  border: 1px solid #F1E5E2;  margin: 6px 0 10px;width: 126px;  overflow: hidden;  padding: 5px 4.5px;  resize: none" />
 
-                                                       <br>              
+                                                       <br>
 
-                                                       Site link<?php echo $i; ?>    	
+                                                       Site link<?php echo $i; ?>
 
-                                                       <h3 style="  color: #1dbfd8;">OR</h3>-->	
+                                                       <h3 style="  color: #1dbfd8;">OR</h3>-->
 
-                    <input type="text" class="inp width ibox" name="user_default_listing_image_link2[]" id="slider-videolink-<?php echo $i; ?>" maxlength="80" value="<?php echo $videolink; ?>" style="" />      	
+                    <input type="text" class="inp width ibox" name="user_default_listing_image_link2[]" id="slider-videolink-<?php echo $i; ?>" maxlength="80" value="<?php echo $videolink; ?>" style="" />
 
-                    <br>                	
+                    <br>
 
-                    Video link<?php echo $i; ?>   
+                    Video link<?php echo $i; ?>
 
-                </div>             		
+                </div>
 
-                                                                                                                               <!-- <?php echo $i; ?>Image text -->     	
+                                                                                                                               <!-- <?php echo $i; ?>Image text -->
 
                 <?php
                 $h++;
             }
-            ?>        				
+            ?>
 
-            <br class="clear" />     		
+            <br class="clear" />
 
-        </div>   					
-
-        <br class="clear" />		     
+        </div>
 
         <br class="clear" />
-		
-									   <?php   
+
+        <br class="clear" />
+
+									   <?php
 								   $model_new = Samplelisting::model()->find("user_default_listing_id ='".$model->user_default_listing_id."' ");
-							    if($model_new){                      
+							    if($model_new){
                                     $address = Samplelisting::model()->find("user_default_listing_id ='".$model->user_default_listing_id."' ");
                                  }
                                 else {
 	                           	    $address = new Samplelisting;
-                                 }   
+                                 }
 
 								 echo $form->hiddenField($address,'user_default_sample_listing_company_image',array('size'=>60,'maxlength'=>100)) ?>
-								 
+
 								 <div class="clear">&nbsp;</div>
            <div class="sl-basic-info">
 					<label class="Blue"><?php echo $form->labelEx($address,'user_default_sample_listing_details'); ?></label>
-				    <?php  
-                        
-                         echo $form->textArea($address,'user_default_sample_listing_details',array('id'=>'user_default_sample_listing_details','tabindex'=>'1' ,'style'=>'height:60px;' ,'class'=>'threeareas','onfocus'=>"getNormal('#drg_list_businessidea');",)); 
-                         echo $form->error($address,'user_default_sample_listing_details'); 
-                     ?> 
-                
+				    <?php
+
+                         echo $form->textArea($address,'user_default_sample_listing_details',array('id'=>'user_default_sample_listing_details','tabindex'=>'1' ,'style'=>'height:60px;' ,'class'=>'threeareas','onfocus'=>"getNormal('#drg_list_businessidea');",));
+                         echo $form->error($address,'user_default_sample_listing_details');
+                     ?>
+
                 </div>
-				
+
 				           <div class="sl-basic-info">
 					<label class="Blue"><?php echo $form->labelEx($address,'user_default_sample_listing_feedback'); ?></label>
-				    <?php  
-                        
-                         echo $form->textArea($address,'user_default_sample_listing_feedback',array('id'=>'user_default_sample_listing_feedback','tabindex'=>'2' ,'style'=>'height:60px;' ,'class'=>'threeareas','onfocus'=>"getNormal('#drg_list_businessidea');",)); 
-                         echo $form->error($address,'user_default_sample_listing_feedback'); 
-                     ?> 
-                
+				    <?php
+
+                         echo $form->textArea($address,'user_default_sample_listing_feedback',array('id'=>'user_default_sample_listing_feedback','tabindex'=>'2' ,'style'=>'height:60px;' ,'class'=>'threeareas','onfocus'=>"getNormal('#drg_list_businessidea');",));
+                         echo $form->error($address,'user_default_sample_listing_feedback');
+                     ?>
+
                 </div>
-				
+
 				           <div class="sl-basic-info">
 					<label class="Blue"><?php echo $form->labelEx($address,'user_default_sample_listing_obtain'); ?></label>
 				    <?php  
