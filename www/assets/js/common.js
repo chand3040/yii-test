@@ -106,7 +106,7 @@ forum.addComment = function(message, listingId, commentReference, event, attache
                          var viewLimitValue = $("#commentViewLimit").val();
                          var pageSelected = $('.forumPageNumbers').find('.active').eq(0).attr('page');
                          var viewOffsetValue = $('.forumPageNumbers').find('.active').eq(0).attr('offset');
-
+			$("#voice-your-opinion").html(resp);
                          forum.Navigate(listingId, viewLimitValue, pageSelected, viewOffsetValue);
 
                      },
@@ -397,6 +397,7 @@ forum.Navigate = function(listingId, viewLimitValue, pageSelected, viewOffsetVal
                 
                             $(".forumPage").html("");
                             $(".forumPage").html(resp.listingView);
+                            $("#voice-your-opinion").html(resp.listingView);
                             
                         },
                     complete: function(){                        
@@ -658,7 +659,7 @@ forum.setViewByCriteria = function(listingId, viewLimitValue, commentOrderBy){
                 
                             $(".forumPage").html("");
                             $(".forumPage").html(resp.listingView);
-                            
+                            $("#voice-your-opinion").html(resp.listingView);
                         },
                     complete: function(){
                 
