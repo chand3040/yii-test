@@ -107,7 +107,7 @@ $this->breadcrumbs=array(
 		
 								 <?php
 				 
-        $userimage = Sampleimages::model()->findAllByAttributes(array("user_default_listing_id" => $model->user_default_listing_id));
+        $userimage = Sampleimages::model();
         
         $f = 0;
         $old = 0;
