@@ -2290,9 +2290,8 @@ $count_val33=count($command3);
     public function actionSampleslider()
     {
         $listid = $_REQUEST['listid'];
-        $samplemodel = Sampleimages::model()->find("user_default_listing_id ='" . $listid . "'");
-        echo $samplemodel->tableName();
-        //$this->renderPartial('sampleslider', array('samplesmodel' => $samplemodel, 'adminKey' => $adminKey));
+        $samplemodel = Sampleimages::model()->find("user_default_listing_lid ='" . $listid . "'");
+        $this->renderPartial('sampleslider', array('samplesmodel' => $samplemodel, 'adminKey' => $adminKey));
     }
     public function actionListingsslider()
     {
@@ -2303,6 +2302,7 @@ $count_val33=count($command3);
     public function actionSample_listing()
     {
         $listid = $_REQUEST['listid'];
+
         $model = $this->loadModel($listid);
         $this->pageTitle = $model->user_default_listing_title . ' - Business Supermarket';
         //$this->metaDesc=$model->drg_desc;
@@ -2326,7 +2326,7 @@ $count_val33=count($command3);
                         $Userlistingimages->user_default_listing_image = $_POST['img_name'][$i];
                         $Userlistingimages->user_default_listing_image_text = $_POST['user_default_listing_image_text'][$i];
                         $Userlistingimages->user_default_listing_image_link2 = $_POST['user_default_listing_image_link2'][$i];
-                        $Userlistingimages->user_default_listing_id = $listid;
+                        $Userlistingimages->user_default_listing_lid = $listid;
                         $Userlistingimages->save();
                     }
                     else
@@ -2335,7 +2335,7 @@ $count_val33=count($command3);
                         $Userlistingimages->user_default_listing_image = $_POST['img_name'][$i];
                         $Userlistingimages->user_default_listing_image_text = $_POST['user_default_listing_image_text'][$i];
                         $Userlistingimages->user_default_listing_image_link2 = $_POST['user_default_listing_image_link2'][$i];
-                        $Userlistingimages->user_default_listing_id = $listid;
+                        $Userlistingimages->user_default_listing_lid = $listid;
                         $Userlistingimages->save();
                     }
 
@@ -2447,4 +2447,6 @@ $count_val33=count($command3);
         $this->render('sample_listing', array('model' => $model, 'adminKey' => $adminKey));
 
     }
+
+
 }
