@@ -2291,7 +2291,8 @@ $count_val33=count($command3);
     {
         $listid = $_REQUEST['listid'];
         $samplemodel = Sampleimages::model()->find("user_default_listing_id ='" . $listid . "'");
-        $this->renderPartial('sampleslider', array('samplesmodel' => $samplemodel, 'adminKey' => $adminKey));
+        echo $samplemodel->tableName();
+        //$this->renderPartial('sampleslider', array('samplesmodel' => $samplemodel, 'adminKey' => $adminKey));
     }
     public function actionListingsslider()
     {
