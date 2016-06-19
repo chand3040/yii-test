@@ -7,7 +7,7 @@ $userdata = User::model()->findByPk($userid);
 $upath = $userdata['user_default_username'] . '_' . $userdata['user_default_id'];
 
 
-$samplesmodel = Samplelistingimages::model()->findAll("user_default_listing_id ='" . $lid . "'");
+$samplesmodel = Sampleimages::model()->findAll("user_default_listing_id ='" . $lid . "'");
 $count = count ( $samplesmodel );
 if($count > 0)
 {
@@ -126,4 +126,4 @@ else
     <?php
 }
 
-?> 
+?>

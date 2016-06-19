@@ -12,7 +12,7 @@
  * @property integer $user_default_listing_id
  * @property integer $order_id
  */
-class Samplelistingimages extends CActiveRecord
+class Sampleimages extends CActiveRecord
 {
     /**
      * Returns the static model of the specified AR class.

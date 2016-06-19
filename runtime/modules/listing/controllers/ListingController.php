@@ -2290,7 +2290,7 @@ $count_val33=count($command3);
     public function actionSampleslider()
     {
         $listid = $_REQUEST['listid'];
-        $samplemodel = Samplelistingimages::model()->find("user_default_listing_id ='" . $listid . "'");
+        $samplemodel = Sampleimages::model()->find("user_default_listing_id ='" . $listid . "'");
         $this->renderPartial('sampleslider', array('samplesmodel' => $samplemodel, 'adminKey' => $adminKey));
     }
     public function actionListingsslider()
@@ -2321,7 +2321,7 @@ $count_val33=count($command3);
                     if($_POST['current_ids'][$i] != "")
                     {
                         $imgid = $_POST['current_ids'][$i];
-                        $Userlistingimages = Samplelistingimages::model()->find("user_default_listing_image_id ='" . $imgid . "'");
+                        $Userlistingimages = Sampleimages::model()->find("user_default_listing_image_id ='" . $imgid . "'");
                         $Userlistingimages->user_default_listing_image = $_POST['img_name'][$i];
                         $Userlistingimages->user_default_listing_image_text = $_POST['user_default_listing_image_text'][$i];
                         $Userlistingimages->user_default_listing_image_link2 = $_POST['user_default_listing_image_link2'][$i];
@@ -2330,7 +2330,7 @@ $count_val33=count($command3);
                     }
                     else
                     {
-                        $Userlistingimages = new Samplelistingimages;
+                        $Userlistingimages = new Sampleimages;
                         $Userlistingimages->user_default_listing_image = $_POST['img_name'][$i];
                         $Userlistingimages->user_default_listing_image_text = $_POST['user_default_listing_image_text'][$i];
                         $Userlistingimages->user_default_listing_image_link2 = $_POST['user_default_listing_image_link2'][$i];
