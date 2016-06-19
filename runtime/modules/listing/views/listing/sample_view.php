@@ -6,7 +6,7 @@
 
 	                  $address = Samplelisting::model()->find("user_default_listing_id ='".$model->user_default_listing_id."' ");
           
-	                   if($address->user_default_sample_listing_status=='1')
+	                   if($address->user_default_sample_listing_status=='1' || $show == "true")
 					   
 					   {
 						   

@@ -589,10 +589,10 @@ Preview and test your listing before you submit
 </div></div>
 
 
-<div class="sample-preview sample_view" style="display:none;">
-    <div class="close_caform_sample"><a class="button white smallrounded" onclick="closesample();" title="Close" >X</a></div>
-<?php
-$this->renderPartial('sample_view', array('model' => $model));
+<div class="sample-preview sample_view" style="display:none;border-radius: 10px;background: white;border: #b1769c solid 1px;margin-top: 10px;">
+    <div class="close_caform_sample"><a class="button white smallrounded" onclick="closesample();" title="Close" style="float: right;margin-top: -9px;" >X</a></div>
+    <?php
+    $this->renderPartial('sample_view', array('model' => $model , 'show' => true));
  /*
 <div align="center">
     	<h1 style="color:#824682"><?php echo $model->user_default_listing_title;?></h1>
