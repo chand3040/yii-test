@@ -106,9 +106,8 @@ $this->breadcrumbs=array(
         </div>  
 		
 								 <?php
-                                 Yii::app()->cache->flush();
-        //$userimage = Sampleimages::model()->findAllByAttributes(array("user_default_listing_lid" => $model->user_default_listing_id));
-        
+        $userimage = Sampleimages::model()->findAllByAttributes(array("user_default_listing_lid" => $model->user_default_listing_id));
+
         $f = 0;
         $old = 0;
         for ($i = 1; $i <= 5; $i++) {
@@ -201,7 +200,7 @@ $this->breadcrumbs=array(
         <!-- Title -->
         <div class="sl-image-description">
             <?php
-            //$userimage = Sampleimages::model()->findAllByAttributes(array("user_default_listing_lid" => $model->user_default_listing_id));
+            $userimage = Sampleimages::model()->findAllByAttributes(array("user_default_listing_lid" => $model->user_default_listing_id));
             $g = 0;
             for ($i = 1; $i <= 5; $i++) {
                 $imagedesc = $userimage[$g]->user_default_listing_image_text;
@@ -225,7 +224,7 @@ $this->breadcrumbs=array(
             </p>					 
         </div>  					 
         <div class="sl-image-description admin-description">      					
-            <?php //$userimage = Sampleimages::model()->findAllByAttributes(array("user_default_listing_lid" => $model->user_default_listing_id));
+            <?php $userimage = Sampleimages::model()->findAllByAttributes(array("user_default_listing_lid" => $model->user_default_listing_id));
             ?>
             <?php
             $h = 0;

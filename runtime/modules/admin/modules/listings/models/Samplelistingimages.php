@@ -29,7 +29,7 @@ class Samplelistingimages extends CActiveRecord
      */
     public function tableName()
     {
-        return '{{sample_listing_images}}';
+        return '{{sample_listing_sliders}}';
     }
 
     /**
