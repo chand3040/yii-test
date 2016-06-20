@@ -987,7 +987,7 @@ class ListingsController extends Controller
 
         $listingid = $model->user_default_listing_id;
 
-        Samplelistingimages::model()->deleteAll("user_default_listing_id  ='" . $listingid . "'");
+        Samplelistingimages::model()->deleteAll("user_default_listing_lid  ='" . $listingid . "'");
 
         Samplefeedback::model()->deleteAll("user_default_sample_listing_id ='" . $id . "'");
 
@@ -1189,7 +1189,45 @@ class ListingsController extends Controller
 
     public function actionSampleview()
     {
-        $this->render('sampleview');
+        $listid = $_REQUEST['id'];
+        $model = Samplelisting::model()->findByPk($listid);
+        if(isset($_POST))
+        {
+
+            $i = 0;
+            for ($i = 0; $i < 6; $i++) {
+
+                if ($_POST['user_default_listing_image_text'][$i] != "") {
+
+                    if($_POST['current_ids'][$i] != "")
+                    {
+                        $imgid = $_POST['current_ids'][$i];
+                        $Userlistingimages = Samplelistingimages::model()->find("user_default_listing_image_id ='" . $imgid . "'");
+                        //$Userlistingimages->user_default_listing_image = $_POST['img_name'][$i];
+                        $Userlistingimages->user_default_listing_image_text = $_POST['user_default_listing_image_text'][$i];
+                        $Userlistingimages->user_default_listing_image_link2 = $_POST['user_default_listing_image_link2'][$i];
+                        // $Userlistingimages->user_default_listing_lid = $listid;
+                        $Userlistingimages->save();
+                    }
+
+
+
+                }
+            }
+
+            $model->attributes = $_POST['Samplelisting'];
+            if($_POST['ispublish'] == "1")
+            {
+                $model->user_default_sample_listing_status = "1";
+            }
+            if($_POST['issuspend'] == "1")
+            {
+                $model->user_default_sample_listing_status = "2";
+            }
+            $model->save();
+        }
+        //$this->render('sampleview');
+        $this->render('sampleview', array('model' => $model));
     }
 	
 	public function actionUploadYoutube(){

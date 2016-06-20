@@ -504,7 +504,7 @@ $this->breadcrumbs=array(
 			  <td valign="top" class="symboltext">I have taken every reasonable precaution to ensure that the sample is safe and designed to function as stated in the accompanying supporting literature on the right . I/we taken ful responsibility for any issues that may arise in the safe use and functionality of the product; and confirm I/we that the accompanying literature is true and accurate and we are able to prove its authencity.</td>
             </tr>
 			</table>
-			<div class="sample-buttons-box"><span class="stext">Submit</span><button class="sample_submit" name="login_sbmt" type="submit" title="Log into your account"><img style="border-radius:5px;" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/user.png" width="25"></button>
+			<div class="sample-buttons-box" style="cursor:pointer"><span class="stext">Submit</span><button class="sample_submit" name="login_sbmt" type="submit" title="Log into your account" style="cursor:pointer"><img style="border-radius:5px;" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/user.png" width="25"></button>
 					</div></div>
               
                 </div>
@@ -588,7 +588,7 @@ Preview and test your listing before you submit
 </div></div>
 
 
-<div class="sample-preview sample_view" style="display:none;border-radius: 10px;background: white;border: #b1769c solid 1px;margin-top: 10px;">
+<div class="sample-preview sample_view" style="display:none;border-radius: 10px;background: white;border: #b1769c solid 1px;margin-top: 20px;">
     <div class="close_caform_sample"><a class="button white smallrounded" onclick="closesample();" title="Close" style="float: right;margin-top: -9px;" >X</a></div>
     <?php
     $this->renderPartial('sample_view', array('model' => $model , 'show' => true));

@@ -26,11 +26,11 @@ class ListingController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('suspensed', 'publish', 'rejection', 'rdelete', 'fupdate', 'business_ideas', 'retail', 'listing_view', 'industrial', 'science_and_technology', 'business_services', 'view', 'cron_day', 'cron_week', 'cron_month','vote', 'registerforvote', 'registerforvotelink', 'externallogin', 'CheckEmailUnique'),
+                'actions' => array('suspensed', 'publish', 'rejection', 'rdelete', 'fupdate', 'business_ideas', 'retail', 'listing_view', 'industrial', 'science_and_technology', 'business_services', 'view', 'cron_day', 'cron_week', 'cron_month','vote', 'registerforvote', 'registerforvotelink', 'externallogin', 'CheckEmailUnique','sampleslider','listingsslider'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'purchaseaccess', 'update','selectlisting', 'index', 'delete', 'user_listing_step2', 'imageupload', 'user_listing_step3', 'user_listing_step4', 'listingimage', 'listingvideo', 'preview_user_listing', 'add_favourite', 'remove_favourite', 'my_messages', 'ldelete', 'convertingVideo', 'getProgress', 'listingvideo1', 'listingvideo2','marketingdata', 'marketingdatachart','sample_listing','sampleslider','listingsslider'),
+                'actions' => array('create', 'purchaseaccess', 'update','selectlisting', 'index', 'delete', 'user_listing_step2', 'imageupload', 'user_listing_step3', 'user_listing_step4', 'listingimage', 'listingvideo', 'preview_user_listing', 'add_favourite', 'remove_favourite', 'my_messages', 'ldelete', 'convertingVideo', 'getProgress', 'listingvideo1', 'listingvideo2','marketingdata', 'marketingdatachart','sample_listing'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions

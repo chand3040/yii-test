@@ -9,7 +9,7 @@
  * @property string $user_default_listing_image_text
  * @property string $user_default_listing_image_link1
  * @property string $user_default_listing_image_link2
- * @property integer $user_default_listing_id
+ * @property integer $user_default_listing_lid
  * @property integer $order_id
  */
 class Samplelistingimages extends CActiveRecord
@@ -40,15 +40,15 @@ class Samplelistingimages extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('user_default_listing_image, user_default_listing_image_text, user_default_listing_id,', 'required'),
-            array('user_default_listing_id', 'numerical', 'integerOnly'=>true),
+            array('user_default_listing_image, user_default_listing_image_text, user_default_listing_lid,', 'required'),
+            array('user_default_listing_lid', 'numerical', 'integerOnly'=>true),
             array('user_default_listing_image', 'length', 'max'=>500),
             array('user_default_listing_image_text', 'length', 'max'=>500),
             array('user_default_listing_image_link1', 'length', 'max'=>500),
             array('user_default_listing_image_link2', 'length', 'max'=>500),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('user_default_listing_image_id, user_default_listing_image, user_default_listing_image_text, user_default_listing_image_link1, user_default_listing_image_link2, user_default_listing_id, order_id', 'safe', 'on'=>'search'),
+            array('user_default_listing_image_id, user_default_listing_image, user_default_listing_image_text, user_default_listing_image_link1, user_default_listing_image_link2, user_default_listing_lid, order_id', 'safe', 'on'=>'search'),
         );
     }
 
@@ -74,7 +74,7 @@ class Samplelistingimages extends CActiveRecord
             'user_default_listing_image_text' => 'Imgdesc',
             'user_default_listing_image_link1' => 'Sitelink',
             'user_default_listing_image_link2' => 'Videolink',
-            'user_default_listing_id' => 'Lid',
+            'user_default_listing_lid' => 'Lid',
         );
     }
 
@@ -94,7 +94,7 @@ class Samplelistingimages extends CActiveRecord
         $criteria->compare('user_default_listing_image_text',$this->user_default_listing_image_text,true);
         $criteria->compare('user_default_listing_image_link1',$this->user_default_listing_image_link1,true);
         $criteria->compare('user_default_listing_image_link2',$this->user_default_listing_image_link2,true);
-        $criteria->compare('user_default_listing_id',$this->user_default_listing_id);
+        $criteria->compare('user_default_listing_lid',$this->user_default_listing_lid);
 
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,

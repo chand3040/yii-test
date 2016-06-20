@@ -17,8 +17,12 @@ if( Yii::app()->user->isGuest ){
     $notLogguedInText = "You must be logged in to leave a comment.";
 
 }
-						   
-								 ?>
+
+                           $userid = $model->user_default_profiles_id;
+                           $userdata = User::model()->findByPk($userid);
+                           $userfolder = $userdata['user_default_username'] . '_' . $userdata['user_default_id'];
+
+                           ?>
 								 <div class="sample-previews sample_view" >
 <div align="center">
     	<h1 class="headertitle"><?php echo $model->user_default_listing_title;?></h1>
@@ -160,7 +164,7 @@ if( Yii::app()->user->isGuest ){
 					 <?php  
                 if($address->user_default_sample_listing_company_image){
                     $img = $address->user_default_sample_listing_company_image;
-                     $img_src = Yii::app()->baseUrl.'/upload/users/'.Yii::app()->user->getState('ufolder').'/listing/big/'.$img;
+                     $img_src = Yii::app()->baseUrl.'/upload/users/'.$userfolder.'/listing/big/'.$img;
                     ?>
                     <img src="<?php echo $img_src;?>" width="50%" align="middle" style="    height: 101px;"/>
 
