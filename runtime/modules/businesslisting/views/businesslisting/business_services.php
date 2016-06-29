@@ -18,9 +18,9 @@ $this->breadcrumbs = array(
 <div class="sign-up-tabss"> <!-- start sign up tab -->
 <div id="tabs_container">
     <ul id="sign-up-tabs">
-        <li class="active"><a href="#taba" title="Full list of ALL businesses">Business
+        <li class="<?php  echo $tab=="" ? 'active':'' ?>"><a href="#taba" title="Full list of ALL businesses">Business
                 services<br/>( <?php echo $total_posts; ?> )</a></li>
-        <li><a href="#tab2" title="Businesses offering Prize Points">Promotions<br/>( <?php echo (isset($prizepointdata)?count($prizepointdata):'0');?> )</a></li>
+        <li class="<?php  echo $tab=="promotions" ? 'active':'' ?>"><a href="#tab2" title="Businesses offering Prize Points">Promotions<br/>( <?php echo (isset($prizepointdata)?count($prizepointdata):'0');?> )</a></li>
         <li><a href="#tab3" title="Product samples">Product samples<br/>( <?php echo count($fav_posts); ?> )</a></li>
         <li><a href="#tab4" title="My favourite businesses">My Favourites<br/>( <?php echo count($fav_posts); ?> )</a>
         </li>
@@ -32,7 +32,7 @@ $this->breadcrumbs = array(
 <!-- /tabs_container -->
 
 <div id="tabs_content_container">
-<div id="taba" class="sign-up-tab_content" style="display: block;">
+<div id="taba" class="sign-up-tab_content" style="display:<?php  echo $tab=="" ? 'block':'none' ?>;">
     <?php if($total_posts >0){?>
     <table border="0" bordercolor="#fff" style="background-color:#fff; cursor:pointer" width="100%" cellpadding="1"
            cellspacing="2">
@@ -216,7 +216,7 @@ $this->breadcrumbs = array(
 
 <!-- Start of Tab 2 contents -->
 
-<div id="tab2" class="sign-up-tab_content">
+<div id="tab2" class="sign-up-tab_content" style="display:<?php  echo $tab=="promotions" ? 'block':'none' ?>;">
     <?php if(count($prizepointdata) > 0){ ?>
     <table border="0" bordercolor="#fff" style="background-color:#fff; cursor:pointer" width="100%" cellpadding="1"
            cellspacing="2">
@@ -283,6 +283,7 @@ $this->breadcrumbs = array(
             </td>
         </tr>
         <?php  if($prizepointdata):
+
             foreach($prizepointdata as $index=>$prizeData):
 
                 $listingData = $prizeData->userDefaultListing; //Listings::model()->findByAttributes(array('user_default_listing_id'=>$prizeData->user_default_listing_id));

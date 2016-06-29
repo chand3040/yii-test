@@ -5,7 +5,7 @@ define("IMG_LOGO_PATH",'/upload/logo/');
 define("MAX_VIDEO_UPLOAD_LIMIT",'61'); //in mb
 
 if($_SERVER['HTTP_HOST'] == "localhost"){
-	$con_string = 'mysql:host=localhost;dbname=business';
+	$con_string = 'mysql:host=localhost;dbname=businessdb';
 	$user = 'root';
 	$pass = '';
 	$giiPass = '[c6"jjqF}:UaRn[';
@@ -21,7 +21,7 @@ ini_set('post_max_size', '9999M');
 ini_set('upload_max_filesize', '9999M');
 
 $siteBaseUrl = 'http://www.business-supermarket.co.uk';
-//$siteBaseUrl = 'http://localhost/bsupermarket/www';
+//$siteBaseUrl = 'http://localhost/bs/www';
 $baseUrl = trim($siteBaseUrl, '/');
 
 // If scheme not included, prepend it

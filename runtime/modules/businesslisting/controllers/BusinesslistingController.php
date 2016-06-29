@@ -85,6 +85,7 @@ class BusinesslistingController extends Controller
 	    $criteria1->compare('user_default_business_blistingstatus',1,true);
 	    $criteria1->compare('user_default_business_breject_list',0,true);
 	    $sort_string = '';
+	    $tab= isset($_GET['tab']) ? $_GET['tab']: "";
 	    if(isset($_REQUEST['date_sort']) && $_REQUEST['date_sort']=='oldest'){
 	        $sort_string = 'user_default_business_bapprovedate asc';
 	    }else {
@@ -148,8 +149,9 @@ class BusinesslistingController extends Controller
 			Code For get Promaotion Tab Data
 	    */
 		$prizepointdata = PrizePoints::model()->findAll();	
+		//print_r($prizepointdata);
 
-	    $this->render('business_services',array('model'=>$model,'posts'=>$posts1,'pages'=>$pages1,'total_posts'=>$total1,'fav_posts'=>$fav_posts,'prizepointdata'=>$prizepointdata));
+	    $this->render('business_services',array('model'=>$model,'posts'=>$posts1,'pages'=>$pages1,'total_posts'=>$total1,'fav_posts'=>$fav_posts,'prizepointdata'=>$prizepointdata,"tab"=>$tab));
 	    }
 	}
 
