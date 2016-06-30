@@ -52,9 +52,9 @@ class MymessagesController extends Controller
                 'actions'=>array('addmessage','index','downloadAttachement'),
                 'users'=>array('*'),
             ),
-            /*array('deny',  // deny all users
+            array('deny',  // deny all users
                 'users'=>array('*'),
-            ),*/
+            ),
         );
     }		
 
@@ -62,26 +62,28 @@ class MymessagesController extends Controller
 
 	{ 	 	    
 
-	/**       
+            	/**       
 
-	*  listing you wish to manage    
+            	*  listing you wish to manage    
 
-	**/	
-	
-	if(Yii::app()->user->isGuest) {
-		
-		throw new CHttpException(404,'The specified post cannot be found.');
-		
-	}
-	else{
+            	**/	
 
-	$this->pageTitle='My Messages - Business Supermarket';   
+            	
+            	if(Yii::app()->user->isGuest) {
+            		
+            		throw new CHttpException(404,'The specified post cannot be found.');
+            		
+            	}
+            	else{
 
-	$model= new UserMessages();   
+                        	$this->pageTitle='My Messages - Business Supermarket';   
 
-	$this->render('page',array('model'=>$model)) ; 
-	
-	}
+                        	$model= new UserMessages();   
+                           
+
+                        	$this->render('page',array('model'=>$model)) ; 
+            	
+            	}
 
 	}		
 
@@ -129,6 +131,9 @@ class MymessagesController extends Controller
             $userMessage->parent_message_id = $commentReference;
 
         }
+
+
+        
         
 
 

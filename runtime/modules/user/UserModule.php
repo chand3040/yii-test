@@ -31,6 +31,7 @@ class UserModule extends CWebModule
 		{
         $controller->layout = 'column2';
         $publicController = array('register');
+       
         if (!$this->isDefaultUser()){     
            Yii::app()->controller->redirect('/');
         }

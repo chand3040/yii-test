@@ -17,6 +17,7 @@ class BannerModule extends CWebModule
         $this->setImport(array(
 
             'banner.models.*',
+            'application.modules.mymessage.models.*'
 
             //'Banner.components.*',
 

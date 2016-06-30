@@ -658,7 +658,7 @@ if (isset($_GET['updateBanner'])) {
                 </tr>
             </table>
             <div style="border: 1px solid #A84793;margin-bottom:10px;padding: 10px;height:100px">
-                <div id="listingVoteLink"><a href="<?php echo Yii::app()->getBaseUrl(true) . '/listing/view?id=' . $listId; ?>"><img src="<?php echo Yii::app()->getBaseUrl(true) ?>/themes/business/images/buttons/UserListing_Btn.png"></a><br/><span id="listingVoteBtnText" style="font-size: 15px;font-size: 15px;color: #A84793;font-weight: bold;"></span> </div>
+                <div id="listingVoteLink"><a id="sharingLink" href="<?php echo Yii::app()->getBaseUrl(true) . '/listing/view?id=' . $listId; ?>"><img src="<?php echo Yii::app()->getBaseUrl(true) ?>/themes/business/images/buttons/UserListing_Btn.png"></a><br/><span id="listingVoteBtnText" style="font-size: 15px;font-size: 15px;color: #A84793;font-weight: bold;"></span> </div>
             </div>
         </div>
 
@@ -928,7 +928,11 @@ function copyToClipboard(elementId) {
         var aux = document.createElement("input");
 
         // Assign it the value of the specified element
-        aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+        //aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+        aux.setAttribute("value",$('#'+elementId).html());
+        console.log($('#'+elementId).html(),"dsgfdsfdsfdsf");
+
+        
 
         // Append it to the body
         document.body.appendChild(aux);

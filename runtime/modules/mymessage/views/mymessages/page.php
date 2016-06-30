@@ -17,48 +17,48 @@ $pageSelected = ( $pageSelected !== NULL ) ? $pageSelected : 1;
 
 
 if(Yii::app()->user->_user_Type == 'business'){
-$blistings = Businesslisting::model()->findAllByAttributes(array('drg_uid'=>Yii::app()->user->getState('uid')));
+            $blistings = Businesslisting::model()->findAllByAttributes(array('drg_uid'=>Yii::app()->user->getState('uid')));
 
-$user_default_listing_id = array();
-foreach($blistings as $index=>$listing)
-{
-    $user_default_listing_id[] = $listing->drg_blid;
-}
-$blistIds = implode(',',$user_default_listing_id);
+            $user_default_listing_id = array();
+            foreach($blistings as $index=>$listing)
+            {
+                $user_default_listing_id[] = $listing->drg_blid;
+            }
+            $blistIds = implode(',',$user_default_listing_id);
 
-// generate sql query for geting purchased details
-$sql = "SELECT us.* FROM drg_user_messages us WHERE us.user_default_listing_id IN($blistIds) AND  first_message = '1' ";
-$sql .= " ORDER BY us.id DESC "; // to set ordr by
-$sql .= " LIMIT ".$messageViewOffset.",".$messageViewLimit; //this query contains all the data
+            // generate sql query for geting purchased details
+            $sql = "SELECT us.* FROM drg_user_messages us WHERE us.user_default_listing_id IN($blistIds) AND  first_message = '1' ";
+            $sql .= " ORDER BY us.id DESC "; // to set ordr by
+            $sql .= " LIMIT ".$messageViewOffset.",".$messageViewLimit; //this query contains all the data
 
-    $userMessages  = UserMessages::model()->findAllBySql($sql);
+                $userMessages  = UserMessages::model()->findAllBySql($sql);
 }
 
 if(Yii::app()->user->_user_Type == 'user'){
 	
-$ulistings = Userlisting::model()->findAllByAttributes(array('user_default_profiles_id'=>Yii::app()->user->getState('uid')));
-	$ulisting_id = array();
-foreach($ulistings as $index=>$listing)
-{
-    $ulisting_id[] = $listing->user_default_listing_id;
-}
-$ulistIds = implode(',',$ulisting_id);
+            $ulistings = Userlisting::model()->findAllByAttributes(array('user_default_profiles_id'=>Yii::app()->user->getState('uid')));
+            	$ulisting_id = array();
+            foreach($ulistings as $index=>$listing)
+            {
+                $ulisting_id[] = $listing->user_default_listing_id;
+            }
+            $ulistIds = implode(',',$ulisting_id);
 
-	if($ulistIds!="")
-	{
-    $sql = "SELECT * FROM user_default_profiles_messages  WHERE user_default_listing_id IN($ulistIds) AND first_message = '1' ORDER BY id DESC "; // to set ordr by
-    $sql .= " LIMIT ".$messageViewOffset.",".$messageViewLimit; //this query contains all the data
+            	if($ulistIds!="")
+            	{
+                $sql = "SELECT * FROM user_default_profiles_messages  WHERE user_default_listing_id IN($ulistIds) AND first_message = '1' ORDER BY id DESC "; // to set ordr by
+                $sql .= " LIMIT ".$messageViewOffset.",".$messageViewLimit; //this query contains all the data
 
-    $userMessages  = UserMessages::model()->findAllBySql($sql);
-	
-	$sql1 = "update user_default_profiles_messages set `notice_flag` = :notice_flag WHERE user_default_listing_id IN($ulistIds)";
-$parameters = array(":notice_flag" =>'1');
-Yii::app()->db->createCommand($sql1)->execute($parameters);
-	}
-	else
-	{
-		$userMessages ="0";
-	}
+                $userMessages  = UserMessages::model()->findAllBySql($sql);
+            	
+            	$sql1 = "update user_default_profiles_messages set `notice_flag` = :notice_flag WHERE user_default_listing_id IN($ulistIds)";
+            $parameters = array(":notice_flag" =>'1');
+            Yii::app()->db->createCommand($sql1)->execute($parameters);
+            	}
+            	else
+            	{
+            		$userMessages ="0";
+            	}
 
 }
 
@@ -141,53 +141,54 @@ $comments = $userMessages;
             <?=$commentDetails->message;?></span>
 
         <div class="dd_coment" commentId="<?=$commentDetails->id;?>">
-        <?php if(Yii::app()->user->_user_Type == 'user'){?>
-            <a class="closeMsg" commentId="<?=$commentDetails->id;?>"  style="display:none;cursor: pointer;font-size:0.8em;margin-left: 400px;">Close</a>
-        <?php } ?>
-        <?php
-		
-        $post_comment = UserMessages::model()->getPostComments($commentDetails->id);
+            <div class="message-tools">
+                <?php if(Yii::app()->user->_user_Type == 'user'){?>
+                    <a class="closeMsg" commentId="<?=$commentDetails->id;?>"  style="display:none;cursor: pointer;font-size:0.8em;margin-left: 400px;">Close</a>
+                <?php } ?>
+                <?php
+        		
+                $post_comment = UserMessages::model()->getPostComments($commentDetails->id);
 
-        // There's a post comment
-        if( count($post_comment) > 0 ){ ?>
+                // There's a post comment
+                if( count($post_comment) > 0 ){ ?>
 
-            <a class="tooltip openCloseMessages" status="closed" style="margin-left: 1px;cursor: pointer; font-size:0.8em;">My Message <span class="classic openCloseCommentsTooltip">Open Thread</span></a><img class="arrowClass" src="<?php echo Yii::app()->theme->baseUrl;?>/images/icons/down-bluearrow.gif"/> <img style="display: none;" class="uparrowClass" src="<?php echo Yii::app()->theme->baseUrl;?>/images/icons/up-bluearrow.gif"/>
+                 <div class="open_reply_box">   <a class="tooltip openCloseMessages" status="closed" style="margin-left: 1px;cursor: pointer; font-size:0.8em;">My Message <span class="classic openCloseCommentsTooltip">Open Thread</span></a><img class="arrowClass" src="<?php echo Yii::app()->theme->baseUrl;?>/images/icons/down-bluearrow.gif"/> <img style="display: none;" class="uparrowClass" src="<?php echo Yii::app()->theme->baseUrl;?>/images/icons/up-bluearrow.gif"/>
+                 </div>
 
-        <?php }
+                <?php }
 
-        if( isset($commentDetails->attachement) && !empty($commentDetails->attachement)){
+                if( isset($commentDetails->attachement) && !empty($commentDetails->attachement)){
 
-            // Display original file name
-            $attachement = explode(".", $commentDetails->attachement);
-            $fileNameLength = (int) ( (strlen($attachement[0])) + 1);
-            $originaleFileName = substr($commentDetails->attachement, $fileNameLength);
+                    // Display original file name
+                    $attachement = explode(".", $commentDetails->attachement);
+                    $fileNameLength = (int) ( (strlen($attachement[0])) + 1);
+                    $originaleFileName = substr($commentDetails->attachement, $fileNameLength);
 
-            $classNotAllowed = "notAllowed";
-            $dowloadAttachementLink = "";
+                    $classNotAllowed = "notAllowed";
+                    $dowloadAttachementLink = "";
 
-            if( !(Yii::app()->user->isGuest) && (isset(Yii::app()->user->Id)) ){
+                    if( !(Yii::app()->user->isGuest) && (isset(Yii::app()->user->Id)) ){
 
-                $classNotAllowed = "";
-                $dowloadAttachementLink = "href='../mymessage/mymessages/downloadAttachement?messageId={$commentDetails->id}'";
+                        $classNotAllowed = "";
+                        $dowloadAttachementLink = "href='../mymessage/mymessages/downloadAttachement?messageId={$commentDetails->id}'";
 
-            }
+                    }
 
-            ?>
+                    ?>
 
-            <a class="user-attach-icon tooltip attachement <?=$classNotAllowed;?>" <?=$dowloadAttachementLink;?> style="float:right;margin-right: 18px;"><span class="classic"><?=$originaleFileName;?></span></a>
+                     <a class="user-attach-icon tooltip attachement <?=$classNotAllowed;?>" <?=$dowloadAttachementLink;?> style="float:right;margin-right: 18px;margin-top:4px"><span class="classic"><?=$originaleFileName;?></span></a>
 
-        <?php } ?>
-
-
-
-        <div class="clear"></div>
+                <?php } ?>
 
 
-        <a class="floatRight replpToPostMsgComment" commentId="<?=$commentDetails->id;?>" style="cursor: pointer; font-size:0.8em;margin-top: -16px;">Reply to post <span style="margin-top: 5px;"> <img src="<?php echo Yii::app()->theme->baseUrl;?>/images/icons/down-yellowarrow.gif"/></span></a>
-        <?php /*<div class="msg_like_buuton_box" commentId="<?=$commentDetails->id;?>">
-            <a><span class="msg_like_button" likeAction="like">Like</span></a>
-            <a><span class="msg_dislike_button" likeAction="dislike">Dislike</span></a>
-        </div>*/ ?>
+
+                <div class="clear"></div>
+
+
+                <div class="reply_box">  <a class="floatRight replpToPostMsgComment" commentId="<?=$commentDetails->id;?>" style="cursor: pointer; font-size:0.8em;">Reply to post <span> <img src="<?php echo Yii::app()->theme->baseUrl;?>/images/icons/down-yellowarrow.gif"/></span></a>
+                </div>
+            </div>
+        
         <div class="clear"></div>
         <ul class="dd_social_list" style="top:15px !important;">
             <li><a href="http://www.facebook.com" class="tooltip face_book"><span class="classic">Send to my facebook account</span> </a></li>
@@ -258,35 +259,7 @@ $comments = $userMessages;
             <div class="dd_coment_box <?=$postCommentBoxClassColor;?> hiddenPostComments" style="width:98%;">
 
 
-                <div class="user_image">
-                    <?php
-                    if($userDetail['user_default_profile_image']) {
-                        $img = $userDetail['user_default_profile_image'];
-                        $user_dirname = strtolower($userDetail['user_default_username']) . '_' . $userDetail['user_default_id'];
-                        if (file_exists(Yii::app()->basePath . '/../www/upload/users/' . $user_dirname . '/images/' . $img)) {
-                            ?>
-                            <img
-                                src="<?php echo Yii::app()->createUrl('/upload/users/' . $user_dirname . '/images/' . $img); ?>"
-                                alt="<?php echo $userDetail['user_default_first_name'] . ' ' . $userDetail['user_default_surname']; ?>"
-                                width="60px"/>
-                        <?php
-                        }else if(file_exists(Yii::app()->basePath . '/../www/upload/logo/'. $img)){ ?>
-                            <img
-                                src="<?php echo Yii::app()->createUrl('/upload/logo/' . $img); ?>"
-                                alt="<?php echo $userDetail['user_default_first_name'] . ' ' . $userDetail['user_default_surname']; ?>"
-                                width="60px"/>
-
-                        <?php }else {
-                            $img = 'avatar.jpg';
-                            ?>
-                            <img src="<?php echo Yii::app()->createUrl('/upload/logo/' . $img); ?>"
-                                 alt="Profile picture" width="60px"/>
-
-                        <?php
-                        }
-                    }
-                    ?>
-                </div>
+                
 
                 <div class="dd_coment" commentId="<?=$postsComments['id'];?>">
                     <?php
@@ -311,8 +284,7 @@ $comments = $userMessages;
 
                         ?>
 
-                        <a class="user-attach-icon tooltip attachement <?=$classNotAllowed;?>" <?=$dowloadAttachementLink;?> style="margin-left: 97px;
-top: 36px;"><span class="classic"><?=$originaleFileName;?></span></a>
+                        <a class="user-attach-icon tooltip attachement <?=$classNotAllowed;?>" <?=$dowloadAttachementLink;?> style="top: 36px;"><span class="classic"><?=$originaleFileName;?></span></a>
 
                     <?php }  ?>
                     <ul class="dd_coment_heading">
@@ -320,7 +292,7 @@ top: 36px;"><span class="classic"><?=$originaleFileName;?></span></a>
                             <?=$u['time'];?>&nbsp;GMT<span class="classic">Time of comment</span></a>
                     </ul>
                     <div class="clear"></div>
-                    <span class="comment moremsg" style="margin-left: 120px;color:#808080">
+                    <span class="comment moremsg" style="color:#808080">
                          <?php
                          $regards = 'Hi ';
                          if($usersStats[$commentDetails->user_default_profiles_id]['username']){
@@ -336,9 +308,9 @@ top: 36px;"><span class="classic"><?=$originaleFileName;?></span></a>
                         <a><span class="dislike_button" likeAction="dislike">Dislike</span></a>
                     </div> */ ?>
                     <div class="clear"></div>
-                    <a class="floatLeft replpToPostMsgComment" commentId="<?=$postsComments['id'];?>" style="cursor: pointer;font-size:0.8em;">Reply to post</a>
+                    <a class="floatRight  replpToPostMsgComment" commentId="<?=$postsComments['id'];?>" style="cursor: pointer;font-size:0.8em;">Reply to post</a>
 
-                    <div class="commentLink" style="margin-right: -70px;"><span> In reply to </span> <a href="#;"><?=$usersStats[$commentDetails->user_default_profiles_id]['username'];?></a></div>
+                    <div class="commentLink"><span> In reply to </span> <a href="#;"><?=$usersStats[$commentDetails->user_default_profiles_id]['username'];?></a></div>
                     <ul class="dd_social_list">
                         <li><a href="http://www.facebook.com" class="tooltip face_book"><span class="classic">Send to my facebook account</span> </a></li>
                         <li><a href="http://www.twtter.com" class="tooltip twitter"><span class="classic">Send to twitter account</span> </a></li>

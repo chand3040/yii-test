@@ -731,6 +731,8 @@ echo Yii::app()->createAbsoluteUrl("banner/index/listid/$listid", array('display
             );
 
             $body = SharedFunctions::app()->mailStringReplace($template->template_body, $string);
+
+         
             if (SharedFunctions::app()->sendmail($businessUserData['user_default_business_email'], $template->template_subject, $body, $attachment))
                 $blistingOwnerSendMailSuccess = 'true';
             else

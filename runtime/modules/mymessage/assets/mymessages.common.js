@@ -58,6 +58,7 @@ mymessages.addComment = function(message, listingId, commentReference ,subject ,
                 
                 
             }
+             
         
             // Get messages appropriate with the current language
             jQuery.ajax({

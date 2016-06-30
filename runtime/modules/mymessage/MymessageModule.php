@@ -13,17 +13,46 @@ class MymessageModule extends CWebModule
 			'mymessage.components.*',
 			'application.modules.admin.components.*'
 		));
+
+		 $this->setComponents(array(
+
+            'errorHandler' => array(
+
+                'errorAction' => 'site/error'),
+
+            'user' => array(
+
+                'class' => 'CWebUser',
+                "returnUrl"=>Yii::app()->createUrl('mymessage'),
+
+                'loginUrl' => Yii::app()->createUrl('site/guestLogin'),
+
+            )
+
+        ));
+
 	}
 
 	public function beforeControllerAction($controller, $action)
-	{
+	{ 
+
 		if(parent::beforeControllerAction($controller, $action))
 		{
-			// this method is called before any module controller action is performed
-			// you may place customized code here
-			return true;
-		}
-		else
-			return false;
+
+			      
+				  if(Yii::app()->user->isGuest)
+				    {  
+				    	 
+				          Yii::app()->controller->redirect('site/guestLogin?redirectto='.urlencode(Yii::app()->request->url));
+				     }
+				       else  
+				        {
+				          
+				            return true;  
+				        }
+	     }  
+        else  
+          return false;  
+		
 	}
 }

@@ -272,12 +272,15 @@ $this->render('permanent_delete_user');
 	public function actionLogin()
 	{	    
 	      $model = new LoginForm;
+	      $this->layout="login";
+
 	          // if it is ajax validation request
 	      if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 	      {
 	        echo CActiveForm::validate($model);
 	        Yii::app()->end();
 	      } 
+	     // echo Yii::app()->user->returnUrl."dfgdf";
 	 
 	      if(isset($_POST['LoginForm']))
 	      {     
@@ -308,10 +311,69 @@ $this->render('permanent_delete_user');
 	              echo CJSON::encode($msg);
 	              Yii::app()->end();
 	          }else {
-	              $this->redirect(Yii::app()->homeUrl);
+	          	  //  $this->render('login',array('model'=>$model)); 
+	                $this->redirect(Yii::app()->homeUrl);
 	          }
 	       
 	}
+
+
+	public function actionGuestLogin()
+	{	    
+	      $model = new LoginForm;
+	      $this->layout="login";
+
+	          // if it is ajax validation request
+	      if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+	      {
+	        echo CActiveForm::validate($model);
+	        Yii::app()->end();
+	      } 
+	     // echo Yii::app()->user->returnUrl."dfgdf";
+	 
+	      if(isset($_POST['LoginForm']))
+	      {     
+
+
+	            $model->attributes=$_POST['LoginForm'];
+	              $redirect= isset($_POST['redirectto']) ? $_POST['redirectto'] : Yii::app()->user->returnUrl;
+	              
+	              if($model->validate() && $model->login()){ 	
+
+				     if(Yii::app()->user->_user_Type =="business")
+					 {
+						 
+					 }
+					 else
+					 {
+	                 $log = new Logtransaction(); 
+	                 $log->user_default_id   = Yii::app()->user->Id;
+	                 $log->log_id = 2;
+	                 $log->transaction_description =  Yii::app()->user->name.' has been login successfully';
+	                 $log->transaction_date = date('Y-m-d h:i:s'); 
+	                 $log->save();   
+					 }
+
+
+	                 $msg = array('success'=>'true','redirect'=>$redirect); 
+	                 
+	              }else {
+	                  $msg = array('success'=>'false','redirect'=>$redirect);
+	              }
+	      }
+	          if(!empty($msg)){
+	              echo CJSON::encode($msg);
+	              Yii::app()->end();
+	          }else {
+	          	       $this->render('external-login',array('model'=>$model)); 
+	              
+	          }
+	       
+	}
+
+
+
+	
 	  
 	  public function actionForget(){	      
 	  if(isset($_POST['user_default_lost_email']))
