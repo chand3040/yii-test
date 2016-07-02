@@ -42,16 +42,16 @@ if ($type['slug'] == "business-ideas") {
 
 
 <?php
-if(isset($_POST['login_sbmt']))
+if(isset($_GET['mess']))
 {
-$msg=$_POST['message'];
+/*$msg=$_POST['message'];
 $userid=$_POST['userid'];
 $listid=$_POST['listid'];
 $status=$_POST['drg_mktqstatus'];
 $date_create = date('Y-m-d H:i:s');
 $sql = "insert into user_default_interactions (user_default_interaction_message, user_default_profile_id, user_default_listing_id, user_default_attachment, user_default_first_interations, user_default_date_create) values (:user_default_interaction_message, :user_default_profile_id, :user_default_listing_id, :user_default_attachment, :user_default_first_interations, :user_default_date_create)";
 $parameters = array(":user_default_interaction_message"=>$msg, ":user_default_profile_id" =>$userid,  ":user_default_listing_id" =>$listid, ":user_default_attachment" =>$status, ":user_default_first_interations" =>'1', ":user_default_date_create" =>$date_create);
-Yii::app()->db->createCommand($sql)->execute($parameters);
+Yii::app()->db->createCommand($sql)->execute($parameters);*/
 ?>
 <script>
 $(function() {
@@ -64,11 +64,14 @@ $(function() {
 
 	 jQuery("#tab2").fadeIn('fast');		
 
-	 jQuery("#taba").fadeOut('fast');			
+	 jQuery("#taba").show();			
 	 
 	 jQuery("#tabhide1").removeClass('active');	
 
-	 jQuery("#tabshow2").addClass('active');   
+	 jQuery("#tabshow2").addClass('active');
+     console.log( jQuery('.thank-vote-box'),"dfgdgd");
+
+   jQuery('.thank-vote-box').show();   
 	 
 });
 </script>
@@ -158,7 +161,7 @@ $(function() {
 <div id="tabs_content_container">
 <div id="taba" class="preview-listing-box sign-up-tab_content" style="display:block;">
     <!-- vote-sign-in-box-->
-    <div class="vote-sign-in-box">
+    <div class="vote-sign-in-box" >
         <div id="terms-conditions" class="vote-sign-in"><img
                 src="<?php echo Yii::app()->theme->baseUrl; ?>/images/robot/Robot-pointing-down.png"
                 style="width:34%;    margin-left: -38px;"/>
@@ -260,13 +263,13 @@ $(function() {
                             </td>
                         </tr>
 
-                        </tbody>
-                    </table>
 
-
-                </fieldset>
+                        <tr> <td> </td>
+                              <td>  </td>
+                          <td>
+                
                             <span>
-                             <div class="vote-popup-box-reg-captcha">
+                             <div class="vote-popup-box-reg-captcha" style="margin:0px;">
                                  <img id="siimage"
                                       style=" width:165px; height:45px; border:1px solid #ccc; margin-right: 18px"
                                       src="<?php echo Yii::app()->baseUrl; ?>/captcha/securimage_show.php?sid=<?php echo md5(uniqid()) ?>"
@@ -301,10 +304,20 @@ $(function() {
 
                                  <div id="registerVoteSecuriteCodeError"></div>
                              </div>
-                        <input name="register_your_vote" id="register_your_vote" value="Register your vote"
-                               type="button" class="button reg-btn" tabindex="7"/>
-                        </span>
-
+                            </span>
+                          </td>
+                          </tr>
+                          <tr><td>  </td>
+                              <td> </td>
+                              <td>   
+                                    <input style="margin-left:0px;" name="register_your_vote" id="register_your_vote" value="Register your vote"
+                                           type="button" class="button reg-btn" tabindex="7"/>
+                                 </td>
+                           </tr>      
+                    
+                        </tbody>
+                    </table>
+               </fieldset>
 
             </div>
 
@@ -593,7 +606,7 @@ if ($user_id != "") {
     <div class="pl-mrquestion" style="height: 214px;">
         <p class="pl-question">
 
-        <form action="" method="post">
+        <form action="<?php echo $this->createUrl("listing/submitvote") ?>" method="post">
             <?php
             $listMarketing = Userlistingmarketing::model()->findAllByAttributes(array('user_default_listing_id' => $model->user_default_listing_id));
             echo(isset($listMarketing[0]) ? $listMarketing[0]->user_default_listing_marketing_question : '');

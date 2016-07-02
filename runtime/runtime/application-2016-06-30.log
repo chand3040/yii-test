@@ -3412,3 +3412,1677 @@ Stack trace:
 REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
 HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
 ---
+2016/06/30 04:14:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing
+---
+2016/06/30 04:14:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 04:14:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 04:14:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing
+---
+2016/06/30 04:14:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 04:14:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:32:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/
+---
+2016/06/30 20:32:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:32:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:32:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/
+---
+2016/06/30 20:32:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:32:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:46:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/user/myaccount/update
+---
+2016/06/30 20:46:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:46:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:46:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing
+---
+2016/06/30 20:46:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:46:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:46:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/selectlisting/listid/63
+---
+2016/06/30 20:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:46:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/style.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('css/style.css')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/css/style.css
+HTTP_REFERER=http://localhost/bs/www/banner/index/listid/63
+---
+2016/06/30 20:46:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/banner/index/listid/63
+---
+2016/06/30 20:46:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/banner-images/banners_users/jats_86/imageedit_1_6688546441-2015-11-23-10-55-42.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/banner-i...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/banner-images/banners_users/jats_86/imageedit_1_6688546441-2015-11-23-10-55-42.png
+HTTP_REFERER=http://localhost/bs/www/banner/index/listid/63
+---
+2016/06/30 20:46:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:46:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:50:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63
+---
+2016/06/30 20:50:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63
+---
+2016/06/30 20:50:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63
+---
+2016/06/30 20:50:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63
+---
+2016/06/30 20:50:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63
+---
+2016/06/30 20:50:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63
+---
+2016/06/30 20:50:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63
+---
+2016/06/30 20:50:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63
+---
+2016/06/30 20:50:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:50:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:51:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:51:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:56:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:56:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:58:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:58:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 20:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 20:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:00:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:00:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:00:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:00:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:01:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:01:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:02:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:02:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:07:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:07:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:09:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:09:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:33:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/js/jquery.validate.min.js".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444504991.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444504991.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505001.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505001.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505014.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505014.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505042.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505042.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1444505033.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1444505033.png
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/upload/users/jag_88/listing/big/Business_supermarket_1442318643.jpg
+HTTP_REFERER=http://localhost/bs/www/listing/view?id=63&action=vote
+---
+2016/06/30 21:33:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-top.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-top.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---
+2016/06/30 21:33:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/images/pink-bubble-background.png".' in C:\laragon\www\bs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bs\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bs\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bs/www/themes/business/css/images/pink-bubble-background.png
+HTTP_REFERER=http://localhost/bs/www/themes/business/css/style.css
+---

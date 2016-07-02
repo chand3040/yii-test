@@ -26,7 +26,7 @@ class ListingController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('suspensed', 'publish', 'rejection', 'rdelete', 'fupdate', 'business_ideas', 'retail', 'listing_view', 'industrial', 'science_and_technology', 'business_services', 'view', 'cron_day', 'cron_week', 'cron_month','vote', 'registerforvote', 'registerforvotelink', 'externallogin', 'CheckEmailUnique','sampleslider','listingsslider'),
+                'actions' => array('suspensed', 'publish', 'rejection', 'rdelete', 'fupdate', 'business_ideas', 'retail', 'listing_view', 'industrial', 'science_and_technology', 'business_services', 'view', 'cron_day', 'cron_week', 'cron_month','vote','submitvote', 'registerforvote', 'registerforvotelink', 'externallogin', 'CheckEmailUnique','sampleslider','listingsslider'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -1930,6 +1930,8 @@ $count_val33=count($command3);
         $model = new ListingMarketingConnection();
         $forumModel = new Interactions();
 
+        
+
         if ($_GET) {
             $voteReason = (isset($_GET['reason']) ? $_GET['reason'] : '');
             $vote = (isset($_GET['vote']) ? $_GET['vote'] : '');
@@ -1958,6 +1960,48 @@ $count_val33=count($command3);
             }
             echo 'Your vote is not processed please login in with your acount/Register as a member!';
         }
+        
+
+    }
+
+    public function actionSubmitVote()
+    {
+        $model = new ListingMarketingConnection();
+        $forumModel = new Interactions();
+
+        
+
+        if ($_POST) {
+            $voteReason = (isset($_POST['reason']) ? $_POST['reason'] : '');
+            $vote = (isset($_POST['vote']) ? $_POST['vote'] : '');
+            $listingId = (isset($_POST['listingId']) ? $_POST['listingId'] : '');
+            $questionId = (isset($_POST['questionId']) ? $_POST['questionId'] : '');
+
+            if (Yii::app()->user->getId()) {
+                $model->user_default_listing_marketing_question_id = $questionId;
+                $model->user_default_listing_marketing_vote_status = 0;
+                $model->user_default_listing_marketing_question_vote_value = $vote;
+                $model->user_default_listing_marketing_question_access_date = date('Y-m-d H:i:s');
+                $model->user_default_listing_marketing_user_id = Yii::app()->user->getId();
+
+                $forumModel->user_default_interactions_message = $voteReason;
+                $forumModel->user_default_profile_id = Yii::app()->user->getId();
+                $forumModel->user_default_listing_id = $listingId;
+                $forumModel->user_default_first_interations = '1';
+                $forumModel->user_default_date_create = date('Y-m-d H:i:s');
+
+                if ($model->save()) {
+                    $forumModel->save();
+                    echo 'You have voted successfully!';
+                } else {
+                    echo 'Could not be do the process. Please try again';
+                }
+            }
+           // echo 'Your vote is not processed please login in with your acount/Register as a member!';
+        }
+
+           $this->redirect(Yii::app()->getBaseUrl() . '/listing/view?id=' . $_POST['listid']."&mess=succ");
+         // die("fghfdgdfgdfgg");
 
     }
 
