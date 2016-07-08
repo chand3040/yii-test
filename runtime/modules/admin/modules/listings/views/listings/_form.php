@@ -830,7 +830,8 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
                 </tr>
 
             </table>
-            <div class="confirmbtn">
+             <br/><br/>
+            <div class="confirmbtn text-center">
                 <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Submit', array('class' => 'button black', 'name' => 'update')); ?>
             </div>
 
@@ -1006,8 +1007,8 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
             <span>Are you sure you want to move this listing to the recycle bin?</span><br/>
             <span>This listing will be totally removed off the server in 7 days</span><br/>
             <span>After 7 days you will NOT be able to recover this listing.</span>
-
-            <div class="confirmbtn">
+                <br/><br/>
+            <div class="confirmbtn text-center">
                 <button onClick="deleteDilog()">OK</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <button onClick="jQuery('.delete_confirm').hide();
@@ -1025,8 +1026,8 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
         <div class="my-account-popup-box">
             <span>Are you sure you want to delete this listing from the website?</span><br/>
             <span>Warning this action cannot be undone</span><br/>
-
-            <div class="confirmbtn">
+                <br/><br/>
+            <div class="confirmbtn text-center">
                 <button onClick="jQuery('.delete_confirm1').hide();
         jQuery('.show_delete_form').fadeIn();
         return false;">OK
@@ -1050,8 +1051,8 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
             <div class="my-account-popup-box">
                 <span>Are you sure you want to delete this listing from the website?</span><br/>
                 <span>Warning this action cannot be undone</span><br/>
-
-                <div class="confirmbtn">
+                    <br/><br/>
+                <div class="confirmbtn text-center">
                     <button type="submit">OK</button>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <button onClick="jQuery('.delete_listing').hide();
