@@ -532,7 +532,7 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
                     class="classic">YouTube link place.<br><br/></span></a></p>
         <input size="60" maxlength="200" class="youtubepath file_input_textbox" name="drg_video[]"
                id="Listings_drg_video<?php echo $j; ?>"
-               type="text" <?php if ($videolink == "1") { ?> value="<?php echo $uservideoname; ?>" <?php } ?> >
+               type="text" <?php if ($videolink == "1") { ?> value="<?php echo $uservideoname; ?>" <?php } ?> style="width:335px" >
     </div>
         <?php
         $k++;

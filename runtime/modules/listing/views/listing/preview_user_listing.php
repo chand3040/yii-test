@@ -18,7 +18,7 @@
         <div class="clear"></div>
       </div>
       <div class="registration-content" style="min-height:571px; padding: 1%;">		  
-        <div class="preview-listing-box"><!--submit-listing box starts--->
+        <div class="preview-listing-box"><!--submit-listing box starts -->
             <div>
                 <a href="<?php echo Yii::app()->createUrl('listing/user_listing_step4/listid/'.$model->user_default_listing_id)?>" class="button black exitpreview"> Exit preview mode</a>
                 <!--<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/social-network-icons.png" alt="business supermarket social network links" style="position: absolute; margin-left: 640px; margin-top: 32px;"/>-->                
@@ -97,11 +97,11 @@
                                         </div>
                                         <div class="full" style="display:none;">
                                             <?php
-$test1=$model->user_default_listing_details;
-echo $test2=str_replace("\n","</p><p>",$test1);
+                                                  $test1=$model->user_default_listing_details;
+                                                  echo $test2=str_replace("\n","</p><p>",$test1);
 
 
- ?> &nbsp;&nbsp; <a  onclick="jQuery('.less1').show();jQuery('.full').hide();" class="more readmore">Read less &lt;&lt;</a>                                          
+                                                   ?> &nbsp;&nbsp; <a  onclick="jQuery('.less1').show();jQuery('.full').hide();" class="more readmore">Read less &lt;&lt;</a>                                          
                                         </div>
                                     
                                     </div>
@@ -186,15 +186,15 @@ echo $test2=str_replace("\n","</p><p>",$test1);
                                 <label class="heading">Market Research</label><br class="clear" />
                                 <div class="pl-mrquestion"  style="height: 214px;">
                                                 <p class="pl-question">
-												<?php
-					
-					$address = Userlistingmarketing::model()->find("user_default_listing_id = '".$model->user_default_listing_id."' "); 
-			
-					if( $address == NULL )
-					{
-						$address = new Userlistingmarketing;
-					}
-					?>
+                  												<?php
+                                                          					
+                                                          					$address = Userlistingmarketing::model()->find("user_default_listing_id = '".$model->user_default_listing_id."' "); 
+                                                          			
+                                                          					if( $address == NULL )
+                                                          					{
+                                                          						$address = new Userlistingmarketing;
+                                                          					}
+                                                          					?>
                                                 <?php echo $address->user_default_listing_marketing_question;?>
                                                     <br />
                                                     <div class="amountselect">
@@ -231,6 +231,7 @@ echo $test2=str_replace("\n","</p><p>",$test1);
       </div>
       <div class="clear"></div>
     </div>
+  </div>  
     <script type="text/javascript">
         jQuery(function($){
           $("#close1").on("click",function(e){

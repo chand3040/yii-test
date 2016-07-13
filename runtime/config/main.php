@@ -21,7 +21,7 @@ ini_set('post_max_size', '9999M');
 ini_set('upload_max_filesize', '9999M');
 
 $siteBaseUrl = 'https://www.business-supermarket.com';
-// $siteBaseUrl = 'http://localhost/bs/www';
+//$siteBaseUrl = 'http://localhost/bs/www';
 $baseUrl = trim($siteBaseUrl, '/');
 
 // If scheme not included, prepend it
