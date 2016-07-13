@@ -54,7 +54,8 @@ $js->registerCssFile($baseUrl . '/css/chosen.css');
                             class="classic">Give your slider title</span></a></td>
                 <td width="75%">
                     <div class="sl-basic-info pro-field">
-                        <?php echo $form->textField($model, 'slider_title', array('class' => 'inp width-500', 'id' => 'slider_title', 'style' => 'height:26px; width:92%;', 'onfocus' => "getNormal('#slider_title');")); ?>
+					<input class="inp width-500" id="pname" tabindex="1" style="height:26px; width:92%;" name="pname" type="text" maxlength="250">
+                        <?php //echo $form->textField($model, 'slider_title', array('class' => 'inp width-500', 'id' => 'slider_title', 'style' => 'height:26px; width:92%;', 'onfocus' => "getNormal('#slider_title');")); ?>
                     </div>
 
                 </td>
@@ -67,7 +68,8 @@ $js->registerCssFile($baseUrl . '/css/chosen.css');
                             class="classic">Give the controller name where this slider to be displayed</span></a></td>
                 <td width="75%">
                     <div class="sl-basic-info pro-field">
-                        <?php echo $form->textField($model, 'slider_title', array('class' => 'inp width-500', 'id' => 'slider_title', 'style' => 'height:26px; width:92%;', 'onfocus' => "getNormal('#slider_title');")); ?>
+					<input class="inp width-500" id="pslug1"  tabindex="2" style="height:26px; width:92%;" name="pslug1" type="text" maxlength="250">
+                        <?php //echo $form->textField($model, 'slider_title', array('class' => 'inp width-500', 'id' => 'slider_title', 'style' => 'height:26px; width:92%;', 'onfocus' => "getNormal('#slider_title');")); ?>
 
                     </div>
                 </td>
@@ -80,7 +82,8 @@ $js->registerCssFile($baseUrl . '/css/chosen.css');
                             class="classic">Give the action name of the above controller</span></a></td>
                 <td width="75%">
                     <div class="sl-basic-info pro-field">
-                        <?php echo $form->textField($model, 'slider_title', array('class' => 'inp width-500', 'id' => 'slider_title', 'style' => 'height:26px; width:92%;', 'onfocus' => "getNormal('#slider_title');")); ?>
+					<input class="inp width-500" id="pslug2" tabindex="3" style="height:26px; width:92%;" name="pslug2" type="text" maxlength="250">
+                        <?php //echo $form->textField($model, 'slider_title', array('class' => 'inp width-500', 'id' => 'slider_title', 'style' => 'height:26px; width:92%;', 'onfocus' => "getNormal('#slider_title');")); ?>
                     </div>
                 </td>
             </tr>
@@ -89,7 +92,7 @@ $js->registerCssFile($baseUrl . '/css/chosen.css');
                 <td colspan="2">
                     <div class="sl-bottom-buttons admin-button">
 
-                        <button type="submit" class="button blue" style="margin: 0 40px;height: 34px;font-size: 16px;">
+                        <button type="submit" class="button blue" tabindex="4" name="submitpage" style="margin: 0 40px;height: 34px;font-size: 16px;">
                             Create
                         </button>
                         <a style="margin: 0 40px;height: 34px;width: 100px;font-size: 16px;"
@@ -123,8 +126,8 @@ $js->registerCssFile($baseUrl . '/css/chosen.css');
                 <tr class="tableHeading">
                     <!--<td class="date_column" style="cursor:default; text-align: center; width:50px;" title="Date published">Submitted</td>-->
                     <td class="title_column" style="cursor:default" title="Listing title">Slider Title</td>
-                    <td class="title_column" style="cursor:default" title="Listing title">Controller Name</td>
-                    <td class="title_column" style="cursor:default" title="Listing title">Action Name</td>
+                    <td class="title_column" style="cursor:default" title="Listing title">Page Name</td>
+                    <td class="title_column" style="cursor:default" title="Listing title">Slider File name</td>
                 </tr>
                 <?php
                 if ($list > 0) {
@@ -175,7 +178,7 @@ $js->registerCssFile($baseUrl . '/css/chosen.css');
                                 $count = 10;
                             } ?><select name="drg_category" data-placeholder="12"
                                         class="chzn-select" style="width:60px;"
-                                        tabindex="2"
+                                        tabindex="5"
                                         onchange="window.location.href = '?rows='+jQuery(this).val();">
                                 <option <?php echo ($count == 10) ? 'selected=selected' : ''; ?> value="10">10
                                 </option>

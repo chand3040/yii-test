@@ -646,6 +646,18 @@ class SliderController extends Controller
         /**
          * Listing waiting for publication
          **/
+		 if(isset($_POST['submitpage']) && $_POST['pname']!="")
+		 {
+			 $newmodel = new Allpages;
+			 
+			 //$newmodel->attributes = $_POST['Slider'];
+			 
+			 $newmodel->pname = $_POST['pname'];
+			 
+			 $newmodel->pslug = $_POST['pslug1']."/".$_POST['pslug2'];			 
+			 
+			 $newmodel->save();
+		 }
 
         $model = new Slider('search');
 

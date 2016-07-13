@@ -22,6 +22,12 @@
             
             <p><span class="blue-font">Telephone</span> +44 (0)1234 567 890<br />
             <span class="blue-font">Email <a href="<?php echo Yii::app()->createUrl('contact'); ?>" title="contact us">support@<?php echo Yii::app()->params['domain']; ?></a></span></p>
+			<?php 
+            if(SHOWCONTROLLER == "TRUE")
+            {
+	           echo "<p style='color:black'>Controller : ".Yii::app()->controller->id . "<br> Action : " . Yii::app()->controller->action->id."</p>";
+			}
+			?>
         </div>
         <div id="social">
             <div id="facebook">
