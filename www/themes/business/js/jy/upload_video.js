@@ -247,9 +247,9 @@ UploadVideo.prototype.handleUploadClicked = function(e) {
            
                    selector.text("uploading...");
            var _self =this;
-           var id=$(e.target).data("id");
+           var id=$(e.target).data("nid");
            var uid=$(e.target).data("uid");  
-          var filename=$("#"+id).val();
+          var filename=$("#Listings_drg_video"+id).val();
           var adr=filename.split("/");
           var nadr=filename;
          var reader  = new FileReader();
