@@ -61,6 +61,8 @@ var UploadVideo = function() {
   this.uploadStartTime = 0;
 };
 
+ console.log(this,"this")
+
 
 var Base64 = {
 
@@ -180,7 +182,7 @@ UploadVideo.prototype.uploadFile = function(file,filename,selector) {
   };
 
 
-
+  
 
   var uploader = new MediaUploader({
     baseUrl: 'https://www.googleapis.com/upload/youtube/v3/videos',

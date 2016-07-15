@@ -22,7 +22,7 @@ ini_set('upload_max_filesize', '9999M');
 
 DEFINE("SHOWCONTROLLER","TRUE");
 
-$siteBaseUrl = 'https://www.business-supermarket.com';
+$siteBaseUrl = 'https://business-supermarket.com';
 //$siteBaseUrl = 'http://localhost/bs/www';
 $baseUrl = trim($siteBaseUrl, '/');
 
