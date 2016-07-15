@@ -481,7 +481,7 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
             class="g-signin"
             data-callback="signinCallback"
             data-clientid="544706165083-f9r444i3k6t8j2s014q8k22a6p5en4ck.apps.googleusercontent.com"
-         
+            data-cookiepolicy="single_host_origin"
             data-scope="https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube">
           </span>
         </span>
