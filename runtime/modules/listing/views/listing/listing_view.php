@@ -108,7 +108,7 @@ $(function() {
 
             <li><a href="#tab3" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/sampleslider/listid/' . $model->user_default_listing_id) ?>')">Request a Sample<br/>
 
-                    (0)</a></li>
+                    (1)</a></li>
 
             <li><a href="#tab4" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/listingsslider/listid/' . $model->user_default_listing_id) ?>')">Open for Bidding<br/>
 
