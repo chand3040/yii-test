@@ -21,6 +21,7 @@ ini_set('post_max_size', '9999M');
 ini_set('upload_max_filesize', '9999M');
 
 DEFINE("SHOWCONTROLLER","TRUE");
+DEFINE("ADMIN_USERNAME","admin");
 
 $siteBaseUrl = 'https://business-supermarket.com';
 //$siteBaseUrl = 'http://localhost/bs/www';
