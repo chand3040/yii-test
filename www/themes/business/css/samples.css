@@ -348,3 +348,40 @@ p.voicetext
 .amountselectnew .flow_left {
     padding-right: 5px;
 }
+
+#addsamplelisting #photo-upload-box-tab {
+    height: 97% !important;
+    margin-top: -105px !important;
+    width: 625px !important;
+}
+#addsamplelisting .photo-upload-box{
+    height: 98% !important;
+}
+#addsamplelisting .side-robot-upload1 {
+    position: absolute;
+    top: 150px;
+    left: 6px;
+}
+#addsamplelisting #upload-frame {
+     width: 380px;
+     margin-left: 140px;
+ }
+
+#addsamplelisting #wrap {
+
+    height: auto !important;
+}
+
+.checkboxvalidation {
+border: 1px solid red;
+padding: 4px 2px 1px 3px;
+}
+
+#addsamplelisting .bottombtns {
+    margin: 6px !important;
+    margin-top: 2px !important;
+}
+
+#addsamplelisting .bottombtns button {
+    margin: 0 20px !important;
+}

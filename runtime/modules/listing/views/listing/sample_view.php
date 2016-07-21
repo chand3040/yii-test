@@ -42,9 +42,9 @@ if( Yii::app()->user->isGuest ){
             	<h4 class="Blue">How to obtain a sample</h4>
                 <div class="gray_box" id="sample_box_3"><?php echo $address->user_default_sample_listing_obtain; ?></div>
                 
-                <h4 class="Blue">Special instructions</h4>
+                <?php /* ?><h4 class="Blue">Special instructions</h4>
 				<div class="gray_box" id="sample_box_4"><?php echo $address->user_default_sample_listing_instructions; ?></div>
-                
+                <?php */ ?>
                 <h4 class="Blue">Delivery address details</h4>
                 <div class="gray_box">
                 	
@@ -79,7 +79,7 @@ if( Yii::app()->user->isGuest ){
                     	<td width="30%" class="right titles">Username </td>
                         <td width="30%"><input type="text" name="in1" value="<?php echo Yii::app()->user->getState('username'); ?>"/></td>
                         <td width="40%" rowspan="5" valign="top" class="titles">Instruction to supplier<br><br>
-                        <textarea  rows="5" name="instructions"></textarea>
+                        <textarea  rows="5" name="instructions"><?php echo $address->user_default_sample_listing_instructions; ?></textarea>
 						</td>
                   </tr>
                 	<tr><?php 

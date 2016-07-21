@@ -117,7 +117,7 @@ $this->breadcrumbs=array(
                     <img class="side-robot-upload1" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/robot/robot-upload.png" alt="Upload your Business Supermarket user profile picture"/>
                     <div class="my-account-popup-box" id="upload-frame">
                         <a class="pu-close" onclick='jQuery(".photo-upload-box<?php echo $i; ?>").hide();' href="javaScript:void(0)" title="Close">X</a>
-                        <h2>Upload user listing picture</h2>
+                        <h2>Upload Sample Image</h2>
                         Click <b>Upload Picture...</b> to choose an image from your computer<br />
                         Select an image that is 120px by 120px for best fit <br />
                         Your image will be automatically uploaded.<br />
@@ -473,6 +473,8 @@ $this->breadcrumbs=array(
                                 <td colspan="2" width="100%" valign="top">
                                     <div class="amountselectnew">
                                         <?php
+                                        $samplemodelss = Samplelisting::model()->find("user_default_listing_id ='" . $model->user_default_listing_id . "'");
+                                        $countsamples = count ( $samplemodelss );
                                         $amount_data = Data::model()->findByPk('1');
                                         $amount_data1 = CJSON::decode($amount_data->data);
                                         $t=1;
@@ -486,7 +488,7 @@ $this->breadcrumbs=array(
                                             ?>
                                             <div class="amounts<?=$t;?>">
                                                 <div class="flow_left mrgn_right">
-                                                    <input <?php echo $sel;?> type="radio" name="user_default_sample_listing_currency" class="currency" value="<?php echo $key;?>"/>
+                                                    <input <?php echo $sel;?> <?php if($countsamples == "0" && $t=="1") { echo "checked"; } ?> type="radio" name="user_default_sample_listing_currency" class="currency" value="<?php echo $key;?>"/>
                                                 </div>
                                                 <div class="flow_left"><?php echo $value;?></div>
                                             </div>
@@ -501,12 +503,21 @@ $this->breadcrumbs=array(
                         </table>
                         <table>
                             <tr>
-                                <td class="darkGrey-text" valign="top"><input type="checkbox" name="rule" id="rule" value="Yes" <?php if($address->user_default_sample_listing_terms =="Yes") { echo "checked"; } ?> ></td>
+                                <td class="darkGrey-text" valign="top"><span id="rulevalid"><input type="checkbox" name="rule" id="rule" value="Yes" <?php if($address->user_default_sample_listing_terms =="Yes") { echo "checked"; } ?> ></span></td>
                                 <td valign="top" class="symboltext">I have taken every reasonable precaution to ensure that the sample is safe and designed to function as stated in the accompanying supporting literature on the right . I/we taken ful responsibility for any issues that may arise in the safe use and functionality of the product; and confirm I/we that the accompanying literature is true and accurate and we are able to prove its authencity.</td>
                             </tr>
                         </table>
-                        <div class="sample-buttons-box"><span class="stext">Submit</span><button class="sample_submit" name="login_sbmt" type="submit" title="Log into your account"><img style="border-radius:5px;" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/user.png" width="25"></button>
-                        </div></div>
+                        <?php /* ?>
+ <div class="sample-buttons-box"><span class="stext">Submit</span><button class="sample_submit" name="login_sbmt" type="submit" title="Log into your account"><img style="border-radius:5px;" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/user.png" width="25"></button>
+                        </div>
+                        <?php */ ?>
+                        <div class="sample-buttons-box sl-bottom-buttons bottombtns">
+                            <button type="button" class="button black">Cancel</button>
+                            <button type="button" class="button blue">Save for later</button>
+                            <button type="submit" name="login_sbmt" class="button update-green">Save</button>
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -526,6 +537,7 @@ $this->breadcrumbs=array(
                     Please note your product information files must be in pdf format as depicted by the adobe icon.
                     <div class="clear">&nbsp;</div>
                     Click the icon next to the input field to upload your file.
+                    <div class="clear">&nbsp;</div>
                     <div class="clear">&nbsp;</div>
 
                     <p class="sample_inner_title">Upload information & specifications</p>
@@ -610,9 +622,10 @@ $this->breadcrumbs=array(
 
                 <h4 class="Blue">How to obtain a sample</h4>
                 <div class="gray_box" id="sample_box_3"></div>
-
+                <?php /* ?>
                 <h4 class="Blue">Special instructions</h4>
                 <div class="gray_box" id="sample_box_4"></div>
+                <?php */ ?>
 
                 <h4 class="Blue">Delivery address details</h4>
                 <div class="gray_box">
@@ -653,7 +666,7 @@ $this->breadcrumbs=array(
                             <td width="21%" class="right titles">Username</td>
                             <td width="34%"><input type="text" name="in1" value="<?php echo Yii::app()->user->getState('username'); ?>"/></td>
                             <td width="45%" rowspan="5" valign="top" class="titles">Instruction to supplier<br>
-                                <textarea name="txt1" rows="5"></textarea>
+                                <textarea name="txt1" id="sample_box_4" rows="5"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -743,6 +756,10 @@ $this->breadcrumbs=array(
 
                     <?php }
                     ?>
+                </div>
+                <p class="clear"></p>
+                <div style="text-align:center">
+                    <button type="button" class="button black" onclick="closesample();" >Return</button>
                 </div>
 
             </td>
@@ -1134,6 +1151,23 @@ $this->breadcrumbs=array(
             jQuery("#user_default_sample_listing_packaging").addClass('mandatoryerror');
 
             jQuery("#user_default_sample_listing_packaging").attr('placeholder','Enter details');
+
+            failedvalidation = true;
+
+        }
+
+        var rule= document.getElementById("rule").value;
+
+        if ($("#rule").is(':checked')) {
+
+        }
+        else
+        {
+
+
+            jQuery("#rulevalid").addClass('checkboxvalidation');
+
+            //jQuery("#user_default_sample_listing_packaging").attr('placeholder','Enter details');
 
             failedvalidation = true;
 
