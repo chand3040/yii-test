@@ -2488,7 +2488,14 @@ $count_val33=count($command3);
         }
         //print_r($samplemodel);
 
-        $this->render('sample_listing', array('model' => $model, 'adminKey' => $adminKey));
+        if($_POST['btnsaveforlater'] == "1")
+        {
+            $this->redirect($this->createUrl('/listing/selectlisting/listid/' . $listid));
+        }
+        else
+        {
+            $this->render('sample_listing', array('model' => $model, 'adminKey' => $adminKey));
+        }
 
     }
 

@@ -21,7 +21,32 @@ $this->breadcrumbs=array(
             ?>
         </div>
         <div  class="userlistings pl-logo-box " id="addsamplelisting">
-
+            <!--Confirm close pop up-->
+            <div class="confirm listingpage" style="width: 98%; height: 94%;  padding-top:30px; margin-top:-40px;">
+                <div class="u-email-box">
+                    <img src="<?php echo Yii::app()->theme->baseUrl ?>/images/robot/Robot-pointing-down.png" style="z-index:999999; position:relative; top:2px;" />
+                    <div class="my-account-popup-box" style="margin-top:-38px !important">
+                        <a title="Close" href="javaScript:void(0)" onclick="close_form_confirm()" class="pu-close">X</a>
+                        <br />
+                        <h2 class="Blue">Are you sure you want to leave this page?</h2>
+                        <p>Your form data has not been saved  leaving the listing submission process now will result in any data you have submitted being lost.<br /> Please save your listing first.</p>
+                        <table align="center" width="100%">
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <button class="button black" title="Close and return to form" name="canle" type="button"  onclick="jQuery('.confirm').hide('slow');">Cancel</button>
+                                    <button class="button black" title="Save and close form" onclick="saveforlater();" name="register" type="button"  >Save &#38; Close</button>
+                                    <button class="button black" title="Discard ALL data and close form" name="register" type="button" onclick="window.location.href = '<?php echo Yii::app()->createUrl('listing/selectlisting/listid/' . $model->user_default_listing_id); ?>'" >Discard</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- end close-->
             <!--- update profile picture pop up---->
             <div class="photo-upload-box" style="height:955px;">
                 <img class="side-robot-upload" style="margin-left:-70px;" src="<?php echo Yii::app()->theme->baseUrl;?>/images/robot/robot-upload.png" alt="Upload your Business Supermarket user profile picture"/>
@@ -512,9 +537,10 @@ $this->breadcrumbs=array(
                         </div>
                         <?php */ ?>
                         <div class="sample-buttons-box sl-bottom-buttons bottombtns">
-                            <button type="button" class="button black">Cancel</button>
-                            <button type="button" class="button blue">Save for later</button>
-                            <button type="submit" name="login_sbmt" class="button update-green">Save</button>
+                            <input type="hidden" name="btnsaveforlater" id="btnsaveforlater" value="0">
+                            <button type="button" class="button black"  onclick="window.location.href = '<?php echo Yii::app()->createUrl('listing/selectlisting/listid/' . $model->user_default_listing_id); ?>'">Cancel</button>
+                            <button type="button" class="button blue" id="savelater">Save for later</button>
+                            <button type="submit" name="login_sbmt" id="login_sbmt" class="button update-green">Save</button>
                         </div>
 
                     </div>
@@ -785,6 +811,22 @@ $this->breadcrumbs=array(
      }
 </style>
 <script type="text/javascript">
+
+    jQuery("#savelater").live("click", function () {
+        jQuery(".confirm").show();
+        jQuery('html, body').animate({scrollTop: '300px'}, 1000);
+    });
+
+    function close_form_confirm()
+    {
+        jQuery(".confirm").hide();
+    }
+    function saveforlater()
+    {
+        document.getElementById("btnsaveforlater").value = 1;
+        document.getElementById("sample_listing").submit();
+    }
+
 
     function givealert(result){
         if(result.success){

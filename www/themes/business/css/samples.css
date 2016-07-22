@@ -378,10 +378,21 @@ padding: 4px 2px 1px 3px;
 }
 
 #addsamplelisting .bottombtns {
-    margin: 6px !important;
-    margin-top: 2px !important;
+    margin: 5px !important;
+    margin-top: 7px !important;
 }
 
 #addsamplelisting .bottombtns button {
     margin: 0 20px !important;
+}
+
+#addsamplelisting .confirm {
+    width: 83% !important;
+    height: 97% !important;
+    padding-top: 30px !important;
+    margin-top: -15px !important;
+}
+
+#addsamplelisting .u-email-box {
+    margin-left: 45px !important;
 }
