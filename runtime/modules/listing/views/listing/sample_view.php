@@ -33,6 +33,49 @@ if( Yii::app()->user->isGuest ){
     <table>
     	<tr>
    	  <td width="60%" valign="top">
+          <h4 class="Blue">Details of Sample available</h4>
+          <div style="height:auto;" class="gray_box" id="sample_box_1"><!--<span class="width_20">&nbsp;</span>--><?php
+              $count = str_word_count($address->user_default_sample_listing_details);
+              $expaln = implode(' ', array_slice(explode(' ', $address->user_default_sample_listing_details), 0, 50));
+              ?>
+              <div class="explain" style="overflow: hidden;">
+                  <?php echo $expaln; if($count > 50) { ?>&nbsp;&nbsp;<a onclick="jQuery('.explainfull').show();jQuery('.explain').hide();" class="more readmore">Read more &gt;&gt;</a><?php } ?>
+              </div>
+              <div class="explainfull" style="display:none;">
+                  <?php echo $address->user_default_sample_listing_details; ?> &nbsp;&nbsp; <a
+                      onclick="jQuery('.explain').show();jQuery('.explainfull').hide();" class="more readmore">Read
+                      less &gt;&gt;</a>
+              </div>
+          </div>
+          <h4 class="Blue">What feedback the business is looking for</h4>
+          <div style="height:auto;" class="gray_box" id="sample_box_2"><!--<span class="width_20">&nbsp;</span>--><?php
+              $count1 = str_word_count($address->user_default_sample_listing_feedback);
+              $expaln = implode(' ', array_slice(explode(' ', $address->user_default_sample_listing_feedback), 0, 50));
+              ?>
+              <div class="explain1" style="overflow: hidden;">
+                  <?php echo $expaln; if($count1 > 50) {  ?>&nbsp;&nbsp;<a onclick="jQuery('.explainfull1').show();jQuery('.explain1').hide();" class="more readmore">Read more &gt;&gt;</a><?php } ?>
+              </div>
+              <div class="explainfull1" style="display:none;">
+                  <?php echo $address->user_default_sample_listing_feedback; ?> &nbsp;&nbsp; <a
+                      onclick="jQuery('.explain1').show();jQuery('.explainfull1').hide();" class="more readmore">Read
+                      less &gt;&gt;</a>
+              </div>
+          </div>
+          <h4 class="Blue">How to obtain a sample</h4>
+          <div style="height:auto;" class="gray_box" id="sample_box_3"><!--<span class="width_20">&nbsp;</span>--><?php
+              $count2 = str_word_count($address->user_default_sample_listing_obtain);
+              $expaln = implode(' ', array_slice(explode(' ', $address->user_default_sample_listing_obtain), 0, 50));
+              ?>
+              <div class="explain2" style="overflow: hidden;">
+                  <?php echo $expaln; if($count2 > 50) {  ?>&nbsp;&nbsp;<a onclick="jQuery('.explainfull2').show();jQuery('.explain2').hide();" class="more readmore">Read more &gt;&gt;</a><?php } ?>
+              </div>
+              <div class="explainfull2" style="display:none;">
+                  <?php echo $address->user_default_sample_listing_obtain; ?> &nbsp;&nbsp; <a
+                      onclick="jQuery('.explain2').show();jQuery('.explainfull2').hide();" class="more readmore">Read
+                      less &gt;&gt;</a>
+              </div>
+          </div>
+          <?php /* ?>
             	<h4 class="Blue">Details of Sample available</h4>
                 <div class="gray_box" id="sample_box_1"><?php echo $address->user_default_sample_listing_details; ?></div>
                 
@@ -42,26 +85,26 @@ if( Yii::app()->user->isGuest ){
             	<h4 class="Blue">How to obtain a sample</h4>
                 <div class="gray_box" id="sample_box_3"><?php echo $address->user_default_sample_listing_obtain; ?></div>
                 
-                <?php /* ?><h4 class="Blue">Special instructions</h4>
+                <h4 class="Blue">Special instructions</h4>
 				<div class="gray_box" id="sample_box_4"><?php echo $address->user_default_sample_listing_instructions; ?></div>
                 <?php */ ?>
                 <h4 class="Blue">Delivery address details</h4>
                 <div class="gray_box">
                 	
                     <table width="100%">
-                    	<tr>
+                    	<tr class="addresstr">
                        	  <td class="gray-text" width="20%">Address 1</td>
                           <td id="address1" class="addressdata" width="30%"><?php echo $address->user_default_sample_listing_company_address1; ?></td>
                           <td class="gray-text" width="20%">Town</td>
                           <td id="address2" class="addressdata" width="30%"><?php echo $address->user_default_sample_listing_company_town; ?></td>
                         </tr>
-                        <tr>
+                        <tr class="addresstr">
                        	  <td class="gray-text">Address 2</td>
                           <td id="address3" class="addressdata"><?php echo $address->user_default_sample_listing_company_address2; ?></td>
                           <td class="gray-text">County</td>
                           <td id="address4" class="addressdata"><?php echo $address->user_default_sample_listing_company_county; ?></td>
                         </tr>
-                        <tr>
+                        <tr class="addresstr">
                        	  <td class="gray-text">Address 3</td>
                           <td id="address5" class="addressdata"><?php echo $address->user_default_sample_listing_company_address3; ?></td>
                           <td class="gray-text">Zip Code</td>

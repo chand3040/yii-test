@@ -106,7 +106,7 @@ $(function() {
 
                     <span id="totalComment">(No of comments)</span></a></li>
 
-            <li><a href="#tab3" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/sampleslider/listid/' . $model->user_default_listing_id) ?>')">Request a Sample<br/>
+            <li id="tabshow3"><a href="#tab3" id="tabs3" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/sampleslider/listid/' . $model->user_default_listing_id) ?>')">Request a Sample<br/>
 
                     (1)</a></li>
 
@@ -1204,5 +1204,23 @@ $("#register_your_vote").click(function () {
         }
     });
 });
+
+<?php
+if(isset($_GET['sample']) && $_GET['sample']=="true")
+{
+?>
+jQuery(function()
+{
+
+    jQuery('#tabhide1').removeClass("active");
+    jQuery('#tabshow3').addClass("active");
+    jQuery('#taba').hide();
+    jQuery('#tab3').show();
+
+    setTimeout(function () { jQuery('#tabs3').click(); }, 100);
+});
+<?php
+}
+?>
 
 </script>

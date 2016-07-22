@@ -73,7 +73,7 @@
 
 }
 
-.sample_view .rightbox .link {
+.sample_view .link {
 
     font: 14px AuraBoldRegular, Helvetica, Arial;
     color: #824682;
@@ -94,6 +94,14 @@
     font-size: 10px;
 }
 
+.addresstr {
+    height:24px;
+}
+
+.sample_view #sample_box_1 , .sample_view #sample_box_2 , .sample_view #sample_box_3 {
+
+    min-height: 70px;
+}
 .sample_view .gray_box.white_box{
 
     margin-top: 10px;

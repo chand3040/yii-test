@@ -641,6 +641,40 @@ $this->breadcrumbs=array(
         <tr>
             <td width="60%" valign="top">
                 <h4 class="Blue">Details of Sample available</h4>
+                <div style="height:auto;" class="gray_box" id="sample_box_1">
+                    <div class="explain" style="overflow: hidden;">
+                        <span id="f"></span>&nbsp;&nbsp;<a onclick="jQuery('.explainfull').show();jQuery('.explain').hide();" id="link" class="more readmore" style="display:none">Read more &gt;&gt;</a>
+                    </div>
+                    <div class="explainfull" style="display:none;">
+                        <span id="s"></span> &nbsp;&nbsp; <a
+                            onclick="jQuery('.explain').show();jQuery('.explainfull').hide();" class="more readmore">Read
+                            less &gt;&gt;</a>
+                    </div>
+                </div>
+                <h4 class="Blue">What feedback the business is looking for</h4>
+                <div style="height:auto;" class="gray_box" id="sample_box_2">
+                    <div class="explain1" style="overflow: hidden;">
+                        <span id="f1"></span>&nbsp;&nbsp;<a onclick="jQuery('.explainfull1').show();jQuery('.explain1').hide();" id="link1" class="more readmore" style="display:none">Read more &gt;&gt;</a>
+                    </div>
+                    <div class="explainfull1" style="display:none;">
+                        <span id="s1"></span> &nbsp;&nbsp; <a
+                            onclick="jQuery('.explain1').show();jQuery('.explainfull1').hide();" class="more readmore">Read
+                            less &gt;&gt;</a>
+                    </div>
+                </div>
+                <h4 class="Blue">How to obtain a sample</h4>
+                <div style="height:auto;" class="gray_box" id="sample_box_3">
+                    <div class="explain2" style="overflow: hidden;">
+                        <span id="f2"></span>&nbsp;&nbsp;<a onclick="jQuery('.explainfull2').show();jQuery('.explain2').hide();" id="link2" class="more readmore" style="display:none">Read more &gt;&gt;</a>
+                    </div>
+                    <div class="explainfull2" style="display:none;">
+                        <span id="s2"></span> &nbsp;&nbsp; <a
+                            onclick="jQuery('.explain2').show();jQuery('.explainfull2').hide();" class="more readmore">Read
+                            less &gt;&gt;</a>
+                    </div>
+                </div>
+                <?php /* ?>
+                <h4 class="Blue">Details of Sample available</h4>
                 <div class="gray_box" id="sample_box_1"></div>
 
                 <h4 class="Blue">What feedback the business is looking for</h4>
@@ -648,7 +682,7 @@ $this->breadcrumbs=array(
 
                 <h4 class="Blue">How to obtain a sample</h4>
                 <div class="gray_box" id="sample_box_3"></div>
-                <?php /* ?>
+
                 <h4 class="Blue">Special instructions</h4>
                 <div class="gray_box" id="sample_box_4"></div>
                 <?php */ ?>
@@ -657,25 +691,25 @@ $this->breadcrumbs=array(
                 <div class="gray_box">
 
                     <table width="100%">
-                        <tr>
+                        <tr class="addresstr">
                             <td class="gray-text" width="20%">Address 1</td>
                             <td id="address1"  class="addressdata" width="30%"></td>
                             <td class="gray-text" width="20%">Town</td>
                             <td id="address2" class="addressdata" width="30%"></td>
                         </tr>
-                        <tr>
+                        <tr class="addresstr">
                             <td class="gray-text">Address 2</td>
                             <td id="address3" class="addressdata"></td>
                             <td class="gray-text">County</td>
                             <td id="address4" class="addressdata"></td>
                         </tr>
-                        <tr>
+                        <tr class="addresstr">
                             <td class="gray-text">Address 3</td>
                             <td id="address5" class="addressdata"></td>
                             <td class="gray-text">Zip Code</td>
                             <td id="address6" class="addressdata"></td>
                         </tr>
-                        <tr>
+                        <tr class="addresstr">
                             <td class="gray-text">Tel no</td>
                             <td id="address7"  class="addressdata"></td>
                             <td class="gray-text">&nbsp;</td>
@@ -720,21 +754,13 @@ $this->breadcrumbs=array(
             </td>
 
             <td width="30%" valign="top">
-                <h3 class="Blue" align="center">Health &amp; Safety Compliance</h3>
-                <div class="gray_box">
-                    <p>
-                        Please note any products that are consumed, applied or otherwise
-                        used must carry a certificate of conformity or safe use by an
-                        independent testing and approving body.</p>
+                <h4 class="Blue" align="center">Request a sample</h4>
+                <div class="gray_box" style="padding: 10px;">
+                    <p>Lorem ipsum dolor sit amet, eos at tritani ullamcorper, vim ei vitae oporteat volutpat, vel et atqui tibique.</p>
 
-                    <p>Any member wishing to order samples for testing must read and
-                        or download any literature as well as satisfy themselves that they
-                        are confident in testing the product for the lister.</p>
+                    <p>Lorem ipsum dolor sit amet, eos at tritani ullamcorper, vim ei vitae oporteat volutpat, vel et atqui tibique.</p>
 
-                    <p>If you are unsure then you may request further proof of safety
-                        from the lister by requesting as such via the voice your opinion
-                        forum or by direct contact with the lister via the Contact the
-                        entrepreneur.</p>
+                    <p>Lorem ipsum dolor sit amet, eos at tritani ullamcorper, vim ei vitae oporteat volutpat, vel et atqui tibique. Lobortis inciderint ad has, has an illum alterum consulatu. Inani option ex cum, est in illum dissentias, labore impetus legimus sed ne.</p>
                     <a href="#" class="link">Sample information / specifications</a>
                     <table width="100%">
                         <tr>
@@ -993,11 +1019,47 @@ $this->breadcrumbs=array(
 
     function preview(){
 
-        jQuery("#sample_box_1").html(jQuery("#user_default_sample_listing_details").val());
+        var count1 = $('#user_default_sample_listing_details').val().split(' ').length;
 
-        jQuery("#sample_box_2").html(jQuery("#user_default_sample_listing_feedback").val());
+        var count2 = $('#user_default_sample_listing_feedback').val().split(' ').length;
 
-        jQuery("#sample_box_3").html(jQuery("#user_default_sample_listing_obtain").val());
+        var count3 = $('#user_default_sample_listing_obtain').val().split(' ').length;
+
+        if(count1 > 50)
+        {
+            jQuery("#f").html(jQuery("#user_default_sample_listing_details").val().substring(0,320));
+            jQuery("#link").show();
+        }
+        else
+        {
+            jQuery("#f").html(jQuery("#user_default_sample_listing_details").val());
+        }
+
+        if(count2 > 50)
+        {
+            jQuery("#f1").html(jQuery("#user_default_sample_listing_feedback").val().substring(0,320));
+            jQuery("#link1").show();
+        }
+        else
+        {
+            jQuery("#f1").html(jQuery("#user_default_sample_listing_feedback").val());
+        }
+
+        if(count3 > 50)
+        {
+            jQuery("#f2").html(jQuery("#user_default_sample_listing_obtain").val().substring(0,320));
+            jQuery("#link2").show();
+        }
+        else
+        {
+            jQuery("#f2").html(jQuery("#user_default_sample_listing_obtain").val());
+        }
+
+        jQuery("#s").html(jQuery("#user_default_sample_listing_details").val());
+
+        jQuery("#s1").html(jQuery("#user_default_sample_listing_feedback").val());
+
+        jQuery("#s2").html(jQuery("#user_default_sample_listing_obtain").val());
 
         jQuery("#sample_box_4").html(jQuery("#user_default_sample_listing_instructions").val());
 
