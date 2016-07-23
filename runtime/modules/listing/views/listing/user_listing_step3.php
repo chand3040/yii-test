@@ -230,8 +230,7 @@ margin-bottom: 8px;
                     Video link<?php echo $i; ?>   
 
                 </div>             		
-
-                                                                                                                               <!-- <?php echo $i; ?>Image text -->     	
+ <!-- <?php echo $i; ?>Image text -->     	
 
                 <?php
                 $h++;
@@ -358,7 +357,10 @@ margin-bottom: 8px;
 
                 <div id="progressstatus_<?php echo $j; ?>" class="progressstatus" style="display:none;"></div>
 
-                <p class="slisting-head">Video <?php echo $j; ?> (Get to know the entrepreneur) <a class="sl-tip tooltip" href="#;">?<span class="classic">Potential investors want to know the person behind the business; your skills, how you present yourself, your experience and credibility, all play a vital role if you wish to see your business idea succeed.<br><br /></span></a></p>
+                <p class="slisting-head">Video <?php echo $j; ?>
+                  <?php    echo $j == 1 ? "(Person behind the business)" : "(The business idea)"; ?>
+
+                   <a class="sl-tip tooltip" href="#;">?<span class="classic">Potential investors want to know the person behind the business; your skills, how you present yourself, your experience and credibility, all play a vital role if you wish to see your business idea succeed.<br><br /></span></a></p>
 
                 <?php
                 if (file_exists($apath)) {

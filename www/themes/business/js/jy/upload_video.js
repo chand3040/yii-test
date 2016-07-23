@@ -61,7 +61,7 @@ var UploadVideo = function() {
   this.uploadStartTime = 0;
 };
 
- console.log(this,"this")
+
 
 
 var Base64 = {
@@ -251,8 +251,9 @@ UploadVideo.prototype.handleUploadClicked = function(e) {
            var _self =this;
            var id=$(e.target).data("nid");
            var uid=$(e.target).data("uid");  
-          var filename=$("#Listings_drg_video"+id).val();
+          var filename=$("#fileName"+id).val();
           var adr=filename.split("/");
+            console.log(filename,"fgddf",adr,"adr");
           var nadr=filename;
          var reader  = new FileReader();
 
@@ -288,10 +289,10 @@ UploadVideo.prototype.handleUploadClicked = function(e) {
                   } 
                            
              //http://webriderz.com/jag/www/admin/listings/listings/VideoPath
-
+                    console.log(baseurl,"baseurl");
                   
               $.ajax({
-                url:"/admin/listings/listings/Videopath/?id="+Base64.encode(nadr)+'&uid='+uid,
+                url:baseurl+"/admin/listings/listings/Videopath/?id="+Base64.encode(nadr)+'&uid='+uid,
                 //   url:FileUploadPath+"/?id="+Base64.encode(nadr),
                 async :true,
                 success:function(response){

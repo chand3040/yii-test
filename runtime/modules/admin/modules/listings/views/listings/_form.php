@@ -463,7 +463,11 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
 
         if ($videolink == "0") {
             ?>
-            <p class="slisting-head">Video <?php echo $j+1; ?> (Person behind the business) <a class="sl-tip tooltip"
+            <p class="slisting-head">Video <?php echo $j+1; ?> 
+
+               <?php    echo $j== 0 ? "(Person behind the business)" : "(The business idea)"; ?>
+
+            <a class="sl-tip tooltip"
                                                                                              href="#;">?<span
                         class="classic">Potential investors want to know the person behind the business; your skills, how you present yourself, your experience and credibility, all play a vital role if you wish to see your business idea succeed.<br><br/></span></a>
             </p>
@@ -1465,6 +1469,10 @@ JQ1(document).ready(function () {
 
 
 </script> 
+<script type="text/javascript">
+   var baseurl = "<?php echo Yii::app()->getBaseUrl(true) ; ?>"; 
+
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://apis.google.com/js/client:plusone.js"></script>
