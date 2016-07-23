@@ -231,7 +231,7 @@ class ListingsController extends Controller
                     $username = $user_details[0]['user_default_username'];
                      $upath = $username."_".$userid;
                    // echo $file = $_SERVER['DOCUMENT_ROOT'].'/upload/users/'.$upath."/videos/".$id;
-                     $file =  Yii::app()->getBaseUrl().'/upload/users/'.$upath.'/videos/'.$id;
+                     $file =   $_SERVER['DOCUMENT_ROOT'].'/upload/users/'.$upath.'/videos/'.$id;
 
                     //print_r($file);
                         // Read the file
