@@ -26,7 +26,7 @@ class ListingController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('suspensed', 'publish', 'rejection', 'rdelete', 'fupdate', 'business_ideas', 'retail', 'listing_view', 'industrial', 'science_and_technology', 'business_services', 'view', 'cron_day', 'cron_week', 'cron_month','vote','submitvote', 'registerforvote', 'registerforvotelink', 'externallogin', 'CheckEmailUnique','sampleslider','listingsslider'),
+                'actions' => array('suspensed', 'publish', 'rejection', 'rdelete', 'fupdate', 'business_ideas', 'retail', 'listing_view', 'industrial', 'science_and_technology', 'business_services', 'view', 'cron_day', 'cron_week', 'cron_month','vote','submitvote', 'registerforvote', 'registerforvotelink', 'externallogin', 'CheckEmailUnique','sampleslider','listingsslider', 'viewpdf'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -2673,6 +2673,30 @@ $count_val33=count($command3);
             $this->render('sample_listing', array('model' => $model, 'adminKey' => $adminKey));
         }
 
+    }
+
+    public function actionViewPdf()
+    {
+        $path = YiiBase::getPathOfAlias('webroot');
+        //$filename = $_GET['filename'] . '.pdf';
+        $filename = $_GET['filename'];
+        $filepath = $path.'/upload/attachments/' . $filename;
+        if(file_exists($filepath))
+        {
+            // Set up PDF headers
+            header('Content-type: application/pdf');
+            header('Content-Disposition: inline; filename="' . $filename . '"');
+            header('Content-Transfer-Encoding: binary');
+            header('Content-Length: ' . filesize($filepath));
+            header('Accept-Ranges: bytes');
+
+            // Render the file
+            readfile($filepath);
+        }
+        else
+        {
+            // PDF doesn't exist so throw an error or something
+        }
     }
 
 
