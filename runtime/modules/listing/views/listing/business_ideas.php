@@ -519,7 +519,6 @@ $connection = Yii::app()->db;
                         <td width="50px;"></td>
                         <td width="400px;"></td>
                         <td width="160px;"></td>
-                        <td width="20px;"></td>
                     </tr> <!-- /Blank Rows -->
                     <?php $count++;
                 }
