@@ -28,7 +28,7 @@ $connection = Yii::app()->db;
         <li>
             <a href="#tab2" title="Listings under promotion">Promotions <br/>( <?php echo (isset($prizepointtotal)?$prizepointtotal:'0');?> )</a>
         </li>
-        <li>
+        <li class="tabdata3">
             <a href="#tab3" title="Businesses offering samples for market testing">Product samples<br/>( <?php echo $total_postss; ?> )</a>
         </li>
         <li>
@@ -752,5 +752,14 @@ $connection = Yii::app()->db;
 
             }
         });
+
+        <?php
+        if(isset($_REQUEST['title_sort']) || isset($_REQUEST['date_sorts']) || isset($_REQUEST['cost']))
+        {
+        ?>
+        $(".tabdata3").click();
+        <?php
+        }
+        ?>
     });
 </script>

@@ -1638,7 +1638,13 @@ $count_val33=count($command3);
             }
 
             if (isset($_REQUEST['cost'])) {
-                $criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+                //$criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+                if($_REQUEST['cost'] == 'lowest') {
+                    $sort_stringss = 'user_default_sample_listing_cost asc';
+                } else {
+                    $sort_stringss = 'user_default_sample_listing_cost desc';
+                }
+                $criteria->order = $sort_stringss;
             }
 
             $total12 = Samplelisting::model()->count($criteria);
@@ -1739,7 +1745,13 @@ $count_val33=count($command3);
             }
 
             if (isset($_REQUEST['cost'])) {
-                $criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+                //$criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+                if($_REQUEST['cost'] == 'lowest') {
+                    $sort_stringss = 'user_default_sample_listing_cost asc';
+                } else {
+                    $sort_stringss = 'user_default_sample_listing_cost desc';
+                }
+                $criteria->order = $sort_stringss;
             }
 
             $total12 = Samplelisting::model()->count($criteria);
@@ -1841,7 +1853,13 @@ $count_val33=count($command3);
             }
 
             if (isset($_REQUEST['cost'])) {
-                $criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+                //$criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+                if($_REQUEST['cost'] == 'lowest') {
+                    $sort_stringss = 'user_default_sample_listing_cost asc';
+                } else {
+                    $sort_stringss = 'user_default_sample_listing_cost desc';
+                }
+                $criteria->order = $sort_stringss;
             }
 
             $total12 = Samplelisting::model()->count($criteria);
@@ -1945,7 +1963,13 @@ $count_val33=count($command3);
             }
 
             if (isset($_REQUEST['cost'])) {
-                $criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+                //$criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+                if($_REQUEST['cost'] == 'lowest') {
+                    $sort_stringss = 'user_default_sample_listing_cost asc';
+                } else {
+                    $sort_stringss = 'user_default_sample_listing_cost desc';
+                }
+                $criteria->order = $sort_stringss;
             }
 
             $total12 = Samplelisting::model()->count($criteria);
