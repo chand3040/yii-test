@@ -27,7 +27,7 @@ $this->breadcrumbs = array(
             <a href="#tab2" title="Listings under promotion">Promotions <br/>( <?php echo (isset($prizepointtotal)?$prizepointtotal:'0');?> )</a>
         </li>
         <li>
-            <a href="#tab3" title="Businesses offering samples for market testing">Product samples<br/>( 0 )</a>
+            <a href="#tab3" title="Businesses offering samples for market testing">Product samples<br/>( <?php echo $total_postss; ?> )</a>
         </li>
         <li>
             <a href="#tab4" title="My favourite industrial listings">My
@@ -390,10 +390,157 @@ $this->breadcrumbs = array(
         </tr>
         <!-- /9th Row -->
     </table> */ ?>
-    <table border="0" bordercolor="#fff" style="background-color:#fff; cursor:pointer" width="100%" cellpadding="1"
-           cellspacing="2">
-        <p class="noteTemp">There are no product samples on offer</p>
-    </table>
+    <?php if($total_postss >0){?>
+        <table border="0" style="background-color:#fff; cursor:pointer" width="100%" cellpadding="1" cellspacing="2">
+            <tr class="tableHeading">
+                <td title="Sort in date order">
+                    <select data-placeholder="Date" class="chzn-select" style="width:68px;"
+                            onchange="window.location = '?date_sorts='+$(this).val();">
+                        <option value="">Date</option>
+                        <option value="latest" title="Sort list in descending order">Latest</option>
+                        <option value="oldest" title="Sort list in ascending order">Longest</option>
+                    </select>
+                </td>
+                <!-- Arrange date order -->
+                <td title="Sort in title order">
+                    <select data-placeholder="Title" class="chzn-select" style="width:140px;"
+                            onchange="window.location = '?title_sort='+$(this).val();">
+                        <option value="">Title</option>
+                        <option value="a_z" title="Sort list in ascending order">Title (a &#062; z)</option>
+                        <option value="z_a" title="Sort list in descending order">Title (z &#062; a)</option>
+                    </select>
+                </td>
+                <!-- Sort in title order -->
+
+                <td title="Sort in alphabetical order" class="catalogue_description">Details
+                </td>
+
+
+                <td title="Sort in alphabetical order" class="catalogue_cost" >
+                    <select data-placeholder="Cost" class="chzn-select" style="width:68px;"
+                            onchange="window.location = '?cost='+$(this).val();">
+                        <option value="">Cost</option>
+
+                    </select>
+                </td>
+                <!-- Select Country -->
+            </tr>
+            <!-- /Table Headings -->
+            <?php $posts_per_page = isset($_REQUEST['rowss']) ? $_REQUEST['rowss'] : 12;
+            $count = 0;
+            if ($posts1) {
+                foreach ($posts1 as $post) {
+                    if ($count % 2 == 0) {
+                        $color = 'Grey';
+                    } else {
+                        $color = 'Mauve';
+                    }
+                    $listing_id = $post->user_default_listing_id;
+                    $listing = Listings::model()->findByPk($listing_id);
+                    $userid = $listing->user_default_profiles_id;
+                    $userdata = User::model()->findByPk($userid);
+
+                    if($post->user_default_sample_listing_currency == "1")
+                    {
+                        $currency = "$";
+                    }
+                    if($post->user_default_sample_listing_currency == "2")
+                    {
+                        $currency = "&pound;";
+                    }
+                    if($post->user_default_sample_listing_currency == "3")
+                    {
+                        $currency = "&euro;";
+                    }
+                    ?>
+                    <tr onmouseover="ChangeColor<?php echo $color; ?>(this, true);"
+                        onmouseout="ChangeColor<?php echo $color; ?>(this, false);"
+                        onclick="DoNav('<?php echo Yii::app()->createUrl('listing/view?id=' . $post->user_default_listing_id); ?>&sample=true');"
+                        class="<?php echo $color; ?>Row">
+                        <td width="10%"><?php echo date('d/m/y', strtotime($post->user_default_sample_listing_date)); ?></td>
+                        <td width="20%"><?php echo $listing->user_default_listing_title; ?></td>
+                        <td width="60%">
+                            <?php
+                            $dd = $post->user_default_sample_listing_details;
+                            if($dd=="" || $dd == " ")
+                            {
+                            }
+                            else
+                            {
+                                $count = strlen($post->user_default_sample_listing_details);
+                                if($count!="")
+                                {
+                                    if($count>145){
+                                        echo substr($post->user_default_sample_listing_details, 0, 145).'...';
+                                    }else {
+                                        echo $post->user_default_sample_listing_details;
+                                    }
+                                }
+                            }
+
+                            ?>
+                        </td>
+                        <td width="10%"><?php if($post->user_default_sample_listing_cost !="") { echo $currency.$post->user_default_sample_listing_cost; } else { echo "-"; } ?></td>
+                    </tr>
+                    <?php $count++;
+                }
+            }
+            if ($count < 12) {
+                $j = 12 - $count;
+                for ($i = 0; $i < $j; $i++) {
+                    if ($count % 2 == 0) {
+                        $color = 'Grey';
+                    } else {
+                        $color = 'Mauve';
+                    } ?>
+                    <tr onmouseover="ChangeColor<?php echo $color; ?>(this, true);"
+                        onmouseout="ChangeColor<?php echo $color; ?>(this, false);"
+                        onclick="DoNav('#;');"
+                        class="<?php echo $color; ?>Row">
+                        <td width="40px;"></td>
+                        <td width="50px;"></td>
+                        <td width="400px;"></td>
+                        <td width="160px;"></td>
+                        <td width="20px;"></td>
+                    </tr> <!-- /Blank Rows -->
+                    <?php $count++;
+                }
+            } ?>
+        </table>
+        <!-- /User Listing -->
+        <br/>
+        <table class="sl-select">
+            <tr>
+                <td style="text-align: right; cursor: default;"
+                    title="Select number of records to view from the dropdown menu">View
+                </td>
+                <td><select name="user_default_listing_category" data-placeholder="12" class="chzn-select"
+                            style="width:60px;" tabindex="2" onchange="window.location = '?rowss='+$(this).val();">
+                        <!-- <option value=""></option> -->
+                        <option <?php echo ($posts_per_page == 12) ? 'selected=selected' : ''; ?> value="12">12</option>
+                        <option <?php echo ($posts_per_page == 20) ? 'selected=selected' : ''; ?> value="20">20</option>
+                        <option <?php echo ($posts_per_page == 50) ? 'selected=selected' : ''; ?> value="50">50</option>
+                        <option <?php echo ($posts_per_page == 100) ? 'selected=selected' : ''; ?> value="100">100</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <?php
+        $this->widget('CLinkPager', array('pages' => $pages12, 'header' => '',
+                'firstPageLabel' => '<',
+                'prevPageLabel' => 'previous',
+                'nextPageLabel' => 'next',
+                'lastPageLabel' => '>',
+                'htmlOptions' => array('name' => 'test1', 'id' => 'navlist', 'class' => 'pager2'))
+        );
+        ?>
+        <!-- /Bottom navigation menu -->
+    <?php }else{?>
+        <table border="0" bordercolor="#fff" style="background-color:#fff; cursor:pointer" width="100%" cellpadding="1"
+               cellspacing="2">
+            <td class="noteTemp">There are no product samples on offer</td>
+        </table>
+    <?php } ?>
 </div>
 <!-- /End of tab3 Product samples tab -->
 

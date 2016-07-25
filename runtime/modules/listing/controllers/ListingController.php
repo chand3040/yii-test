@@ -1610,13 +1610,57 @@ $count_val33=count($command3);
             $pages1->applyLimit($criteria1);
             $posts1 = Userlisting::model()->findAll($criteria1);
 
+            $criteria = new CDbCriteria;
+            $criteria->select = 't.*, tu.* ';
+            $criteria->join = ' LEFT JOIN `user_default_listing` AS `tu` ON t.user_default_listing_id = tu.user_default_listing_id';
+            //$criteria->addCondition("display_name LIKE '%a%' and blocked_by='76'");
+            $criteria->compare('`user_default_sample_listing_status`', 1, true);
+            $criteria->compare('user_default_listing_category_id', 3, true);
+            if (isset($_REQUEST['title_sort']) && $_REQUEST['title_sort'] != "") {
+
+                if ($_REQUEST['title_sort'] == 'z_a') {
+                    $sort_string = 'user_default_listing_title desc';
+                } else {
+                    $sort_string = 'user_default_listing_title asc';
+                }
+
+                $criteria->order = $sort_string;
+            }
+
+            if (isset($_REQUEST['date_sorts']))
+            {
+                if($_REQUEST['date_sorts'] == 'oldest') {
+                    $sort_strings = 'user_default_sample_listing_date asc';
+                } else {
+                    $sort_strings = 'user_default_sample_listing_date desc';
+                }
+                $criteria->order = $sort_strings;
+            }
+
+            if (isset($_REQUEST['cost'])) {
+                $criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+            }
+
+            $total12 = Samplelisting::model()->count($criteria);
+
+            if (isset($_REQUEST['rowss'])) {
+                $count12 = $_REQUEST['rowss'];
+            } else {
+                $count12 = 12;
+            }
+
+            $pages12 = new CPagination($total12);
+            $pages12->setPageSize($count12);
+            $pages12->applyLimit($criteria);
+            $posts12 = Samplelisting::model()->findAll($criteria);
+
             /* if(!Yii::app()->user->isGuest){
               $user_id = Yii::app()->user->id;
               $criteria1->join = 'LEFT OUTER JOIN `drg_favourite_listing` fl ON fl.listing_id=t.user_default_listing_id';
               $criteria1->compare('fl.user_id',$user_id);
               $fav_posts = Userlisting::model()->findAll($criteria1);
               } */
-            $this->render('retail', array('model' => $model, 'posts' => $posts1, 'pages' => $pages1, 'total_posts' => $total1, 'fav_posts' => $fav_posts));
+            $this->render('retail', array('model' => $model, 'posts' => $posts1, 'pages' => $pages1, 'total_posts' => $total1, 'fav_posts' => $fav_posts, 'posts1' => $posts12 , 'pagess' => $pages12 , 'total_postss' => $total12 ));
         }
     }
 
@@ -1667,6 +1711,50 @@ $count_val33=count($command3);
             $pages1->applyLimit($criteria1);
             $posts1 = Userlisting::model()->findAll($criteria1);
 
+            $criteria = new CDbCriteria;
+            $criteria->select = 't.*, tu.* ';
+            $criteria->join = ' LEFT JOIN `user_default_listing` AS `tu` ON t.user_default_listing_id = tu.user_default_listing_id';
+            //$criteria->addCondition("display_name LIKE '%a%' and blocked_by='76'");
+            $criteria->compare('`user_default_sample_listing_status`', 1, true);
+            $criteria->compare('user_default_listing_category_id', 4, true);
+            if (isset($_REQUEST['title_sort']) && $_REQUEST['title_sort'] != "") {
+
+                if ($_REQUEST['title_sort'] == 'z_a') {
+                    $sort_string = 'user_default_listing_title desc';
+                } else {
+                    $sort_string = 'user_default_listing_title asc';
+                }
+
+                $criteria->order = $sort_string;
+            }
+
+            if (isset($_REQUEST['date_sorts']))
+            {
+                if($_REQUEST['date_sorts'] == 'oldest') {
+                    $sort_strings = 'user_default_sample_listing_date asc';
+                } else {
+                    $sort_strings = 'user_default_sample_listing_date desc';
+                }
+                $criteria->order = $sort_strings;
+            }
+
+            if (isset($_REQUEST['cost'])) {
+                $criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+            }
+
+            $total12 = Samplelisting::model()->count($criteria);
+
+            if (isset($_REQUEST['rowss'])) {
+                $count12 = $_REQUEST['rowss'];
+            } else {
+                $count12 = 12;
+            }
+
+            $pages12 = new CPagination($total12);
+            $pages12->setPageSize($count12);
+            $pages12->applyLimit($criteria);
+            $posts12 = Samplelisting::model()->findAll($criteria);
+
 
             /* if(!Yii::app()->user->isGuest){
               $user_id = Yii::app()->user->id;
@@ -1674,7 +1762,7 @@ $count_val33=count($command3);
               $criteria1->compare('fl.user_id',$user_id);
               $fav_posts = Userlisting::model()->findAll($criteria1);
               } */
-            $this->render('industrial', array('model' => $model, 'posts' => $posts1, 'pages' => $pages1, 'total_posts' => $total1, 'fav_posts' => $fav_posts));
+            $this->render('industrial', array('model' => $model, 'posts' => $posts1, 'pages' => $pages1, 'total_posts' => $total1, 'fav_posts' => $fav_posts, 'posts1' => $posts12 , 'pagess' => $pages12 , 'total_postss' => $total12 ));
         }
     }
 
@@ -1725,6 +1813,50 @@ $count_val33=count($command3);
             $pages1->applyLimit($criteria1);
             $posts1 = Userlisting::model()->findAll($criteria1);
 
+            $criteria = new CDbCriteria;
+            $criteria->select = 't.*, tu.* ';
+            $criteria->join = ' LEFT JOIN `user_default_listing` AS `tu` ON t.user_default_listing_id = tu.user_default_listing_id';
+            //$criteria->addCondition("display_name LIKE '%a%' and blocked_by='76'");
+            $criteria->compare('`user_default_sample_listing_status`', 1, true);
+            $criteria->compare('user_default_listing_category_id', 5, true);
+            if (isset($_REQUEST['title_sort']) && $_REQUEST['title_sort'] != "") {
+
+                if ($_REQUEST['title_sort'] == 'z_a') {
+                    $sort_string = 'user_default_listing_title desc';
+                } else {
+                    $sort_string = 'user_default_listing_title asc';
+                }
+
+                $criteria->order = $sort_string;
+            }
+
+            if (isset($_REQUEST['date_sorts']))
+            {
+                if($_REQUEST['date_sorts'] == 'oldest') {
+                    $sort_strings = 'user_default_sample_listing_date asc';
+                } else {
+                    $sort_strings = 'user_default_sample_listing_date desc';
+                }
+                $criteria->order = $sort_strings;
+            }
+
+            if (isset($_REQUEST['cost'])) {
+                $criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+            }
+
+            $total12 = Samplelisting::model()->count($criteria);
+
+            if (isset($_REQUEST['rowss'])) {
+                $count12 = $_REQUEST['rowss'];
+            } else {
+                $count12 = 12;
+            }
+
+            $pages12 = new CPagination($total12);
+            $pages12->setPageSize($count12);
+            $pages12->applyLimit($criteria);
+            $posts12 = Samplelisting::model()->findAll($criteria);
+
 
             /* if(!Yii::app()->user->isGuest){
               $user_id = Yii::app()->user->id;
@@ -1732,7 +1864,7 @@ $count_val33=count($command3);
               $criteria1->compare('fl.user_id',$user_id);
               $fav_posts = Userlisting::model()->findAll($criteria1);
               } */
-            $this->render('science_and_technology', array('model' => $model, 'posts' => $posts1, 'pages' => $pages1, 'total_posts' => $total1, 'fav_posts' => $fav_posts));
+            $this->render('science_and_technology', array('model' => $model, 'posts' => $posts1, 'pages' => $pages1, 'total_posts' => $total1, 'fav_posts' => $fav_posts, 'posts1' => $posts12 , 'pagess' => $pages12 , 'total_postss' => $total12 ));
         }
     }
 
@@ -1785,6 +1917,50 @@ $count_val33=count($command3);
             $pages1->applyLimit($criteria1);
             $posts1 = Userlisting::model()->findAll($criteria1);
 
+            $criteria = new CDbCriteria;
+            $criteria->select = 't.*, tu.* ';
+            $criteria->join = ' LEFT JOIN `user_default_listing` AS `tu` ON t.user_default_listing_id = tu.user_default_listing_id';
+            //$criteria->addCondition("display_name LIKE '%a%' and blocked_by='76'");
+            $criteria->compare('`user_default_sample_listing_status`', 1, true);
+            $criteria->compare('user_default_listing_category_id', 2, true);
+            if (isset($_REQUEST['title_sort']) && $_REQUEST['title_sort'] != "") {
+
+                if ($_REQUEST['title_sort'] == 'z_a') {
+                    $sort_string = 'user_default_listing_title desc';
+                } else {
+                    $sort_string = 'user_default_listing_title asc';
+                }
+
+                $criteria->order = $sort_string;
+            }
+
+            if (isset($_REQUEST['date_sorts']))
+            {
+                if($_REQUEST['date_sorts'] == 'oldest') {
+                    $sort_strings = 'user_default_sample_listing_date asc';
+                } else {
+                    $sort_strings = 'user_default_sample_listing_date desc';
+                }
+                $criteria->order = $sort_strings;
+            }
+
+            if (isset($_REQUEST['cost'])) {
+                $criteria->compare('user_default_sample_listing_cost', $_REQUEST['cost'], true);
+            }
+
+            $total12 = Samplelisting::model()->count($criteria);
+
+            if (isset($_REQUEST['rowss'])) {
+                $count12 = $_REQUEST['rowss'];
+            } else {
+                $count12 = 12;
+            }
+
+            $pages12 = new CPagination($total12);
+            $pages12->setPageSize($count12);
+            $pages12->applyLimit($criteria);
+            $posts12 = Samplelisting::model()->findAll($criteria);
+
 
             /* if(!Yii::app()->user->isGuest){
               $user_id = Yii::app()->user->id;
@@ -1792,7 +1968,7 @@ $count_val33=count($command3);
               $criteria1->compare('fl.user_id',$user_id);
               $fav_posts = Userlisting::model()->findAll($criteria1);
               } */
-            $this->render('business_ideas', array('model' => $model, 'posts' => $posts1, 'pages' => $pages1, 'total_posts' => $total1, 'fav_posts' => $fav_posts));
+            $this->render('business_ideas', array('model' => $model, 'posts' => $posts1, 'pages' => $pages1, 'total_posts' => $total1, 'fav_posts' => $fav_posts, 'posts1' => $posts12 , 'pagess' => $pages12 , 'total_postss' => $total12 ));
         }
     }
 
