@@ -420,6 +420,8 @@ $this->breadcrumbs = array(
                     <select data-placeholder="Cost" class="chzn-select" style="width:68px;"
                             onchange="window.location = '?cost='+$(this).val();">
                         <option value="">Cost</option>
+                        <option value="lowest">0 > 100</option>
+                        <option value="highest">100 < 0</option>
 
                     </select>
                 </td>
