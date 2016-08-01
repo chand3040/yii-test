@@ -4,6 +4,7 @@ define('OAUTH2_CLIENT_ID', '544706165083-f9r444i3k6t8j2s014q8k22a6p5en4ck.apps.g
 define('OAUTH2_CLIENT_SECRET', '_nZCvHVN9TQpqar-RwXU8cK1');
 define('OAUTH2_CLIENT_REDIRECT', Yii::app()->getBaseUrl(true) . '/admin/listings/listings/updateToken');
 
+
 class UploadYoutube {
 
     protected $client;
