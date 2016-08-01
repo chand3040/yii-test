@@ -494,6 +494,7 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
             -->
         </span>
         <div class="post-sign-in">
+                <br/> <br/><br/> <br/>
         <button class="g_upload_btn button gray" data-uid="<?php echo $model->user_default_profiles_id; ?>" data-id="fileName<?php echo $j; ?>" data-nid="<?php echo $j; ?>" click="javascript:void(0);">Upload Video</button>
 
          <div class="during-upload">
@@ -1503,12 +1504,12 @@ JQ1(document).ready(function () {
             auth2.attachClickHandler(element, {},
                 function(googleUser) {
                           var authResponse = googleUser.getAuthResponse();
-                           console.log(authResponse,"uploading")
+
                        if(authResponse.access_token) {
                             var uploadVideo = new UploadVideo();
                              
                             uploadVideo.ready(authResponse.access_token);
-                              console.log("uploading")
+                             
                           }
                    //  window.signinCallback(googleUser);
 
