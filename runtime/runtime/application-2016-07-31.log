@@ -1396,3 +1396,21 @@ Stack trace:
 REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
 HTTP_REFERER=http://localhost/bsupermarket/www/
 ---
+2016/07/31 23:45:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/videos//home/webridug/public_html/jag/www/upload/users/jag_88/videos/drivestop_system71_jag.mp4".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/videos//home/webridug/public_html/jag/www/upload/users/jag_88/videos/drivestop_system71_jag.mp4
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/07/31 23:47:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/videos//home/webridug/public_html/jag/www/upload/users/jag_88/videos/drivestop_system71_jag.mp4".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/videos//home/webridug/public_html/jag/www/upload/users/jag_88/videos/drivestop_system71_jag.mp4
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---

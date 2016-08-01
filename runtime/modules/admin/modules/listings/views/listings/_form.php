@@ -1502,7 +1502,7 @@ JQ1(document).ready(function () {
             console.log(element.id);
             auth2.attachClickHandler(element, {},
                 function(googleUser) {
-                     signinCallback();
+                     signinCallback(googleUser);
 
                 }, function(error) {
                   alert(JSON.stringify(error, undefined, 2));
