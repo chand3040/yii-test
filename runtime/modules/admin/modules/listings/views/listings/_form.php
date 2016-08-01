@@ -481,21 +481,16 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
         <span id="signinButton" class="pre-sign-in">
           <!-- IMPORTANT: Replace the value of the <code>data-clientid</code>
                attribute in the following tag with your project's client ID. -->
-               <br/> <br/><br/>  <br/>
-             <button type="button" class="button gray" style="width:144.762px;height: 32.3px" title="Upload logo" id="youtube_btn_<?php echo $j ;?>" href="javascript:void(0)" > &nbsp; Upload Youtube &nbsp;</button>  
-
-         <!--  <span
+          <span
             class="g-signin"
             data-callback="signinCallback"
             data-clientid="544706165083-f9r444i3k6t8j2s014q8k22a6p5en4ck.apps.googleusercontent.com"
             data-cookiepolicy="single_host_origin"
             data-scope="https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube">
           </span>
-            -->
         </span>
         <div class="post-sign-in">
-                <br/> <br/><br/> <br/>
-        <button class="g_upload_btn button gray" data-uid="<?php echo $model->user_default_profiles_id; ?>" data-id="fileName<?php echo $j; ?>" data-nid="<?php echo $j; ?>" click="javascript:void(0);">Upload Video</button>
+        <button class="g_upload_btn" data-uid="<?php echo $model->user_default_profiles_id; ?>" data-id="fileName<?php echo $j; ?>" data-nid="<?php echo $j; ?>" click="javascript:void(0);">Upload Video</button>
 
          <div class="during-upload">
         <p><span id="percent-transferred"></span>% done (<span id="bytes-transferred"></span>/<span id="total-bytes"></span> bytes)</p>
@@ -523,7 +518,13 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
                <!-- <a class="button gray" title="Upload logo"
                    href="<?php echo $this->createUrl('downloadvideo', array('file' => $uservideoname)); ?>">
                     &nbsp; Download Video<?php echo $j; ?> &nbsp;</a> -->
-				
+				<button type="button" class="button gray" style="width:144.762px;height: 32.3px" title="Upload logo" onclick="UploadYoutube('<?php echo $apath; ?>', '<?php echo $j ?>', this)" href="javascript:void(0)" > &nbsp; Upload Youtube &nbsp;</button> 
+                <br>
+                <a target="_blank" href="<?php echo $urlGetToken; ?>">Change access token?</a>
+                <div class="upload_video_res_<?php echo $j; ?>"></div>
+                <div id="loading_<?php echo $j; ?>" style="display: none;">
+                    <img src="loading.gif" alt='Loading image'>
+                </div>
             </div>
 
         <?php
@@ -1075,11 +1076,7 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
 
 <script type="text/javascript">
 var checkUpload = false;
-
-
-
-
-
+    var files = '';
        var FileUploadPath= "<?php echo Yii::app()->createUrl('admin/listings/listings/Videopath'); ?>";
     var indexClick = 0;
     function UploadYoutube(filename, i, elementA) {
@@ -1481,44 +1478,3 @@ JQ1(document).ready(function () {
 <script src="https://apis.google.com/js/client:plusone.js"></script>
 <script src="<?php echo $this->createUrl("/themes/business/js/jy/cors_upload.js"); ?>"></script>
 <script src="<?php echo $this->createUrl("/themes/business/js/jy/upload_video.js"); ?>"></script>
-<script type="text/javascript">
-    var files = '';
-    var googleUser = {};
-      var startApp = function() {
-        gapi.load('auth2', function(){
-          // Retrieve the singleton for the GoogleAuth library and set up the client.
-          auth2 = gapi.auth2.init({
-            client_id: '544706165083-f9r444i3k6t8j2s014q8k22a6p5en4ck.apps.googleusercontent.com',
-            cookiepolicy: 'single_host_origin',
-            // Request scopes in addition to 'profile' and 'email'
-            scope: 'https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube'
-          });
-          attachSignin(document.getElementById('youtube_btn_0'));
-          attachSignin(document.getElementById('youtube_btn_1'));
-          
-        });
-      };
-
-          function attachSignin(element) {
-          
-            auth2.attachClickHandler(element, {},
-                function(googleUser) {
-                          var authResponse = googleUser.getAuthResponse();
-
-                       if(authResponse.access_token) {
-                            var uploadVideo = new UploadVideo();
-                             
-                            uploadVideo.ready(authResponse.access_token);
-                             
-                          }
-                   //  window.signinCallback(googleUser);
-
-                }, function(error) {
-                  alert(JSON.stringify(error, undefined, 2));
-                });
-          }
-
-          startApp();
-
-
-</script>

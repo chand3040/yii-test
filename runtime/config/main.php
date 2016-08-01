@@ -24,7 +24,7 @@ DEFINE("SHOWCONTROLLER","TRUE");
 DEFINE("ADMIN_USERNAME","admin");
 
 $siteBaseUrl = 'https://business-supermarket.com';
-//$siteBaseUrl = 'http://localhost/bs/www';
+//$siteBaseUrl = 'http://localhost/bsupermarket/www';
 $baseUrl = trim($siteBaseUrl, '/');
 
 // If scheme not included, prepend it
