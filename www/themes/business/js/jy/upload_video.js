@@ -15,8 +15,10 @@ limitations under the License.
 */
 
  window.signinCallback = function (result){
+    console.log(result);
   if(result.access_token) {
     var uploadVideo = new UploadVideo();
+    
     uploadVideo.ready(result.access_token);
   }
 };
@@ -129,6 +131,7 @@ var Base64 = {
 
 
 UploadVideo.prototype.ready = function(accessToken) {
+     console.log("ready to upload");
   this.accessToken = accessToken;
   this.gapi = gapi;
   this.authenticated = true;

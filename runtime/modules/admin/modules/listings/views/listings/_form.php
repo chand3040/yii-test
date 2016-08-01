@@ -1499,10 +1499,17 @@ JQ1(document).ready(function () {
       };
 
           function attachSignin(element) {
-            console.log(element.id);
+          
             auth2.attachClickHandler(element, {},
                 function(googleUser) {
-                     signinCallback(googleUser);
+                          console.log(googleUser);
+                       if(googleUser.access_token) {
+                            var uploadVideo = new UploadVideo();
+                             
+                            uploadVideo.ready(result.access_token);
+                              console.log("uploading")
+                          }
+                   //  window.signinCallback(googleUser);
 
                 }, function(error) {
                   alert(JSON.stringify(error, undefined, 2));
