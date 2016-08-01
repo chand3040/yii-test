@@ -478,31 +478,8 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
         }
 
         ?>
-        <span id="signinButton" class="pre-sign-in">
-          <!-- IMPORTANT: Replace the value of the <code>data-clientid</code>
-               attribute in the following tag with your project's client ID. -->
-          <span
-            class="g-signin"
-            data-callback="signinCallback"
-            data-clientid="544706165083-f9r444i3k6t8j2s014q8k22a6p5en4ck.apps.googleusercontent.com"
-            data-cookiepolicy="single_host_origin"
-            data-scope="https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube">
-          </span>
-        </span>
-        <div class="post-sign-in">
-        <button class="g_upload_btn" data-uid="<?php echo $model->user_default_profiles_id; ?>" data-id="fileName<?php echo $j; ?>" data-nid="<?php echo $j; ?>" click="javascript:void(0);">Upload Video</button>
-
-         <div class="during-upload">
-        <p><span id="percent-transferred"></span>% done (<span id="bytes-transferred"></span>/<span id="total-bytes"></span> bytes)</p>
-        <progress id="upload-progress" max="1" value="0"></progress>
-      </div>
-
-        <div class="post-upload">
-            <p>Uploaded video with id <span id="video-id"></span>. Polling for status...</p>
-            <ul id="post-upload-status"></ul>
-            <div id="player"></div>
-          </div>
-      </div>
+       
+       
         
 
         <!-- File Upload for Company Logo -->
