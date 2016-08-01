@@ -99,7 +99,7 @@
                       </tr>
                     </table>
                       <br />
-                    <span class="middle">
+                    <span>
                     <input name="email_edit" value="Update email" type="button" onclick="return email_form_validation()" class="button black"  />
                     </span>
                   </form>
@@ -136,7 +136,7 @@
               </tr>
             </table>
             <br />
-            <span class="middle">
+            <span>
             <input name="password_edit" value="Update password" type="button" onclick="password_form_validation()" class="button black"  />
             </span>
           </form>
@@ -176,7 +176,7 @@
                       </tr>
                      </table>
                   <br />
-                    <span class="middle"> 
+                    <span>
                     <input name="email_edit" value="Update Currency" type="button" onclick="return currency_form_validation()" class="button black"  />
                     </span> 
                 </div>
