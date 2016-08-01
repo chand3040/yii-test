@@ -15,8 +15,10 @@ limitations under the License.
 */
 
  window.signinCallback = function (result){
+    console.log(result);
   if(result.access_token) {
     var uploadVideo = new UploadVideo();
+    
     uploadVideo.ready(result.access_token);
   }
 };
@@ -129,6 +131,7 @@ var Base64 = {
 
 
 UploadVideo.prototype.ready = function(accessToken) {
+     console.log("ready to upload");
   this.accessToken = accessToken;
   this.gapi = gapi;
   this.authenticated = true;
@@ -265,7 +268,7 @@ UploadVideo.prototype.handleUploadClicked = function(e) {
 
                       
 
-                      var base64Data = base64Data.substring(base64Data.indexOf(',')+1);;
+                      var base64Data = base64Data.substring(base64Data.indexOf(',')+1);
                       
                       var byteCharacters = atob(base64Data);
                       var bytesLength = byteCharacters.length;
@@ -289,13 +292,18 @@ UploadVideo.prototype.handleUploadClicked = function(e) {
                   } 
                            
              //http://webriderz.com/jag/www/admin/listings/listings/VideoPath
-                    console.log(baseurl,"baseurl");
+                   
                   
               $.ajax({
                 url:baseurl+"/admin/listings/listings/Videopath/?id="+Base64.encode(nadr)+'&uid='+uid,
                 //   url:FileUploadPath+"/?id="+Base64.encode(nadr),
                 async :true,
                 success:function(response){
+                    if(response =="")
+                    {     
+                        alert("no playback video content found");
+                        return false;
+                    }
                   base64ToFile(response,"kiran.mp4");
                   return false;
                   //_self.uploadFile(blob);
