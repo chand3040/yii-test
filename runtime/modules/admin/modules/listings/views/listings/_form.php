@@ -1502,11 +1502,12 @@ JQ1(document).ready(function () {
           
             auth2.attachClickHandler(element, {},
                 function(googleUser) {
-                          console.log(googleUser);
-                       if(googleUser.access_token) {
+                          var authResponse = googleUser.getAuthResponse();
+                           console.log(authResponse,"uploading")
+                       if(authResponse.access_token) {
                             var uploadVideo = new UploadVideo();
                              
-                            uploadVideo.ready(result.access_token);
+                            uploadVideo.ready(authResponse.access_token);
                               console.log("uploading")
                           }
                    //  window.signinCallback(googleUser);
