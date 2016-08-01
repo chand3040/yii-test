@@ -72,7 +72,7 @@ forum.addComment = function(message, listingId, commentReference, event, attache
             jQuery.ajax({
                  // The url must be appropriate for your configuration;
                  // this works with the default config of 1.1.11
-                 url: "../forum/forum/addComment",
+                 url: "/forum/forum/addComment",
                  type: "POST",
                  dataType: 'json',
                  async: true,
@@ -100,12 +100,13 @@ forum.addComment = function(message, listingId, commentReference, event, attache
                                  }
                              }
                      },
-                 success: function(resp){
-
+                 success: function(response){
+						console.log(response);
                          var listingId = $('#voice-your-opinion').attr('data-listingid');
                          var viewLimitValue = $("#commentViewLimit").val();
-                         var pageSelected = $('.forumPageNumbers').find('.active').eq(0).attr('page');
-                         var viewOffsetValue = $('.forumPageNumbers').find('.active').eq(0).attr('offset');
+						 var forumpagenumber = $('.forumPageNumbers').find('.active').eq(0);
+                         var pageSelected = forumpagenumber.attr('page');
+                         var viewOffsetValue = forumpagenumber.attr('offset');
 
                          forum.Navigate(listingId, viewLimitValue, pageSelected, viewOffsetValue);
 
@@ -123,7 +124,7 @@ forum.addComment = function(message, listingId, commentReference, event, attache
 
              });
 
-}
+};
 
 forum.sendMailListOwmer = function(message, listingId, commentReference, event, attachement){
 
@@ -146,7 +147,7 @@ forum.sendMailListOwmer = function(message, listingId, commentReference, event, 
     jQuery.ajax({
         // The url must be appropriate for your configuration;
         // this works with the default config of 1.1.11
-        url: "../forum/forum/sendMailListOwmer",
+        url: "/forum/forum/sendMailListOwmer",
         type: "POST",
         dataType: 'json',
         async: true,
@@ -165,12 +166,13 @@ forum.sendMailListOwmer = function(message, listingId, commentReference, event, 
                     console.log("else: "+e.message); // the great unknown
                 }
         },
-        success: function(resp){
-
+        success: function(response){
+			console.log(response);
             var listingId = $('#voice-your-opinion').attr('listingid');
             var viewLimitValue = $("#commentViewLimit").val();
-            var pageSelected = $('.forumPageNumbers').find('.active').eq(0).attr('page');
-            var viewOffsetValue = $('.forumPageNumbers').find('.active').eq(0).attr('offset');
+			var forumpagenumber = $('.forumPageNumbers').find('.active').eq(0);
+            var pageSelected = forumpagenumber.attr('page');
+            var viewOffsetValue = forumpagenumber.attr('offset');
 
             forum.Navigate(listingId, viewLimitValue, pageSelected, viewOffsetValue);
 
@@ -185,7 +187,7 @@ forum.sendMailListOwmer = function(message, listingId, commentReference, event, 
 
     });
 
-}
+};
 
 
 
@@ -199,7 +201,7 @@ forum.likeComment = function(commentId, likeAction){
                 jQuery.ajax({
                     // The url must be appropriate for your configuration;
                     // this works with the default config of 1.1.11
-                    url: "<?php echo Yii::app()->createUrl('forum/forum/likeComment'); ?>",
+                    url: '/forum/forum/likeComment',
                     type: "POST",
                     dataType: 'json',
                     async: true,
@@ -224,12 +226,13 @@ forum.likeComment = function(commentId, likeAction){
                                     }
                                 }
                         },
-                    success: function(resp){
-                
+                    success: function(response){
+							console.log(response);
                             var listingId = $('#voice-your-opinion').attr('data-listingid');
                             var viewLimitValue = $("#commentViewLimit").val();
-                            var pageSelected = $('.forumPageNumbers').find('.active').eq(0).attr('page');
-                            var viewOffsetValue = $('.forumPageNumbers').find('.active').eq(0).attr('offset');
+							var forumpagenumber = $('.forumPageNumbers').find('.active').eq(0);
+                            var pageSelected = forumpagenumber.attr('page');
+                            var viewOffsetValue = forumpagenumber.attr('offset');
 
                             forum.Navigate(listingId, viewLimitValue, pageSelected, viewOffsetValue);
                             
@@ -241,7 +244,7 @@ forum.likeComment = function(commentId, likeAction){
                         }
                 });
 
-}
+};
 
 // Ban user action by show a bloc contain
 // params : message to dispplay
@@ -254,7 +257,7 @@ forum.blockWriteInForum = function(message){
     
     $("#light").find(".text-message").html(message);
     
-}
+};
 
 // Close notification
 // params : no params
@@ -263,7 +266,7 @@ forum.closeNotification = function(){
     $('#light').hide();
     $('#fade').hide();
     
-}
+};
 
 
 
@@ -308,7 +311,7 @@ forum.UpdateViewLimit = function(listingId, viewLimitValue){
                 jQuery.ajax({
                     // The url must be appropriate for your configuration;
                     // this works with the default config of 1.1.11
-                    url: "../forum/forum/UpdateViewLimit",
+                    url: "/forum/forum/UpdateViewLimit",
                     type: "POST",
                     dataType: 'json',
                     data: {
@@ -328,9 +331,9 @@ forum.UpdateViewLimit = function(listingId, viewLimitValue){
                                 }
                         },
                     success: function(resp){
-                
-                            $(".forumPage").html("");
-                            $(".forumPage").html(resp.listingView);
+							var forumPage =  $(".forumPage");
+							forumPage.html("");
+                            forumPage.html(resp.listingView);
                             
                         },
                     complete: function(){                        
@@ -340,7 +343,7 @@ forum.UpdateViewLimit = function(listingId, viewLimitValue){
                         }
                 });
     
-}
+};
 
 // Navigate the comment list, useful to render the pagination
 // params : listingId
@@ -372,7 +375,7 @@ forum.Navigate = function(listingId, viewLimitValue, pageSelected, viewOffsetVal
                 jQuery.ajax({
                     // The url must be appropriate for your configuration;
                     // this works with the default config of 1.1.11
-                    url: "../forum/forum/Navigate",
+                    url: "/forum/forum/navigate",
                     type: "POST",
                     dataType: 'json',
                     data: {
@@ -394,9 +397,11 @@ forum.Navigate = function(listingId, viewLimitValue, pageSelected, viewOffsetVal
                                 }
                         },
                     success: function(resp){
-                
-                            $(".forumPage").html("");
-                            $(".forumPage").html(resp.listingView);
+							var forumpage = $(".forumPage");
+                            forumpage.html("");
+                            forumpage.html(resp.listingView);
+                            //$("#voice-your-opinion").html("");
+                            $("#voice-your-opinion").html(resp.listingView);
                             
                         },
                     complete: function(){                        
@@ -406,7 +411,7 @@ forum.Navigate = function(listingId, viewLimitValue, pageSelected, viewOffsetVal
                         }
                 });
     
-}
+};
 
 
 // Report a comment as a spam
@@ -419,7 +424,7 @@ forum.reportAsSpam = function(reportAsSpam, listingId, commentId){
                 jQuery.ajax({
                     // The url must be appropriate for your configuration;
                     // this works with the default config of 1.1.11
-                    url: "../forum/forum/reportAsSpam",
+                    url: "/forum/forum/reportAsSpam",
                     type: "POST",
                     dataType: 'json',
                     data: {
@@ -444,12 +449,13 @@ forum.reportAsSpam = function(reportAsSpam, listingId, commentId){
                                 }
                     },
                     success: function(resp){
+						console.log(resp);
                             reportAsSpam.html("Comment under review");
                             reportAsSpam.addClass("redText");                            
-                            
-                            $("body").find("[commentId='"+commentId+"']").find('.replpToPostComment').eq(0).addClass("grayedOut");
-                            $("body").find("[commentId='"+commentId+"']").find('.like_button').eq(0).addClass("grayedOut");
-                            $("body").find("[commentId='"+commentId+"']").find('.dislike_button').eq(0).addClass("grayedOut");
+                            var body = $("body");
+                            body.find("[commentId='"+commentId+"']").find('.replpToPostComment').eq(0).addClass("grayedOut");
+                            body.find("[commentId='"+commentId+"']").find('.like_button').eq(0).addClass("grayedOut");
+                            body.find("[commentId='"+commentId+"']").find('.dislike_button').eq(0).addClass("grayedOut");
                             
                         },
                     complete: function(){  
@@ -459,7 +465,7 @@ forum.reportAsSpam = function(reportAsSpam, listingId, commentId){
                         }
                 });
     
-}
+};
 
 // Upload a new file attached to a comment
 // params : event
@@ -478,15 +484,14 @@ forum.uploadAttachement = function(event, attachement){
         for (var i = 0; i < fileSelect.files.length; i++) {
 
           var file = fileSelect.files[i];
-
+console.log(file);
           // Add the file to the request.
-          formData.append('attachement', file, file.name);
+          formData.append('attachement', file);
 
         }
-
         $.ajax({
             
-            url: "../forum/forum/uploadAttachement",
+            url: "/forum/forum/uploadAttachement",
             type: 'POST',
             data: formData,
             async: false,
@@ -532,7 +537,7 @@ forum.uploadAttachement = function(event, attachement){
             
         });
     
-}
+};
 
 
 // Upload a new file attached to a comment
@@ -560,7 +565,7 @@ forum.uploadThumbAttachement  = function(event, thumb_attchement){
 
     $.ajax({
 
-        url: "../forum/forum/uploadthumbattachement",
+        url: "/forum/forum/uploadthumbattachement",
         type: 'POST',
         data: formData,
         async: false,
@@ -605,13 +610,13 @@ forum.uploadThumbAttachement  = function(event, thumb_attchement){
 
     });
 
-}
+};
 
 // Update the comment list throught a criteria selected by the user
 // params : listingId
 // params : viewLimitValue number of comment to display
 // params : commentOrderBy the criteria
-forum.setViewByCriteria = function(listingId, viewLimitValue, commentOrderBy){ 
+forum.setViewByCriteria = function(listingId, viewLimitValue, commentOrderBy){
     
                 
                 var userProfession;
@@ -635,7 +640,7 @@ forum.setViewByCriteria = function(listingId, viewLimitValue, commentOrderBy){
                 jQuery.ajax({
                     // The url must be appropriate for your configuration;
                     // this works with the default config of 1.1.11
-                    url: "../forum/forum/setViewByCriteria",
+                    url: "/forum/forum/setViewByCriteria",
                     type: "POST",
                     dataType: 'json',
                     data: {
@@ -655,10 +660,10 @@ forum.setViewByCriteria = function(listingId, viewLimitValue, commentOrderBy){
                                 }
                         },
                     success: function(resp){
-                
-                            $(".forumPage").html("");
-                            $(".forumPage").html(resp.listingView);
-                            
+							var forumpage =  $(".forumPage");
+							forumpage.html("");
+                            forumpage.html(resp.listingView);
+                            $("#voice-your-opinion").html(resp.listingView);
                         },
                     complete: function(){
                 
@@ -668,7 +673,7 @@ forum.setViewByCriteria = function(listingId, viewLimitValue, commentOrderBy){
                         
                 });
     
-}
+};
 
 
 // Delete a comment
@@ -680,7 +685,7 @@ forum.deleteComment = function(listingId, commentId){
                 jQuery.ajax({
                     // The url must be appropriate for your configuration;
                     // this works with the default config of 1.1.11
-                    url: "../forum/forum/deleteComment",
+                    url: "/forum/forum/deleteComment",
                     type: "POST",
                     dataType: 'json',
                     data: {
@@ -708,8 +713,9 @@ forum.deleteComment = function(listingId, commentId){
                 
                             var listingId = $('#voice-your-opinion').attr('data-listingid');
                             var viewLimitValue = $("#commentViewLimit").val();
-                            var pageSelected = $('.forumPageNumbers').find('.active').eq(0).attr('page');
-                            var viewOffsetValue = $('.forumPageNumbers').find('.active').eq(0).attr('offset');
+							var forumpagenumber = $('.forumPageNumbers').find('.active').eq(0);
+                            var pageSelected = forumpagenumber.attr('page');
+                            var viewOffsetValue = forumpagenumber.attr('offset');
 
                             forum.Navigate(listingId, viewLimitValue, pageSelected, viewOffsetValue);
                             
@@ -719,7 +725,7 @@ forum.deleteComment = function(listingId, commentId){
                         
                 });
     
-}
+};
 
 
 // Show more comment
@@ -743,4 +749,4 @@ forum.showMoreComment = function(){
 
 	});
 
-}
+};
