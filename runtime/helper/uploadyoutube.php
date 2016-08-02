@@ -95,7 +95,18 @@ class UploadYoutube {
     }
 
     public function upload($videoPath, $title, $description = '', $tags = array()) {
-        $this->setTokenClient();
+             
+
+             try{  
+                    $this->setTokenClient();
+                }
+                 catch (Google_Service_Exception $e) {
+                // var_dump($e);
+                  echo json_encode(array('message'=>$e->getMessage()));
+                    exit();
+            }
+
+
         try {
 			
 // Create a snippet with title, description, tags and category ID
