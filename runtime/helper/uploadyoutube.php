@@ -56,14 +56,14 @@ class UploadYoutube {
         $this->youtube = new Google_Service_YouTube($this->client);
         $txtToken = @file_get_contents(dirname(__FILE__) . '/../extensions/youtube/token.txt');
         if (!$txtToken) {
-            echo 1;
+            echo json_encode(array('message'=>"Unauthorized client,Please Click on Change access token link "));
             exit();
         }
         //get token from file
         $tokens = json_decode($txtToken, true);
         if (!$tokens || !isset($tokens['accessToken']) || !isset($tokens['refreshToken'])) {
             //wrong json format
-            echo 2;
+             echo json_encode(array('message'=>"Unauthorized client,Please Click on Change access token link "));
             exit();
         }
 
@@ -72,8 +72,9 @@ class UploadYoutube {
         $this->client->refreshToken($tokens['refreshToken']);
         //wrong access token or changed refresh token
         if (!$this->client->getAccessToken()) {
-            echo 3;
-            exit();
+              echo json_encode(array('message'=>"Unauthorized client"));
+         
+             exit();
         }
         //renew access token
         $this->client->setAccessToken($tokens['accessToken']);
