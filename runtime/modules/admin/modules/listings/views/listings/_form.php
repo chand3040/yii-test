@@ -1090,7 +1090,7 @@ var checkUpload = false;
 
                 }
                 else{
-                       alert("error in upload a file");
+                       alert(result.message);
                 }
 
             }
