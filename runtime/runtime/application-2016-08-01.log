@@ -761,3 +761,328 @@ Stack trace:
 REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
 HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
 ---
+2016/08/01 22:48:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading.gif".' in C:\laragon\www\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CController.php(270): CController->missingAction('loading.gif')
+#1 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(282): CController->run('loading.gif')
+#2 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/loading.gif
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "photo-upload".' in C:\laragon\www\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CController.php(270): CController->missingAction('photo-upload')
+#1 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(282): CController->run('photo-upload')
+#2 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+---
+2016/08/01 22:48:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+---
+2016/08/01 22:48:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+---
+2016/08/01 22:51:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading.gif".' in C:\laragon\www\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CController.php(270): CController->missingAction('loading.gif')
+#1 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(282): CController->run('loading.gif')
+#2 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/loading.gif
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "photo-upload".' in C:\laragon\www\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CController.php(270): CController->missingAction('photo-upload')
+#1 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(282): CController->run('photo-upload')
+#2 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 22:51:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+---
+2016/08/01 23:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/sample.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/sample.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 23:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading.gif".' in C:\laragon\www\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CController.php(270): CController->missingAction('loading.gif')
+#1 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(282): CController->run('loading.gif')
+#2 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/loading.gif
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 23:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526677.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 23:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526668.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 23:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526654.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 23:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526661.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 23:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526685.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 23:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "photo-upload".' in C:\laragon\www\bsupermarket\framework\web\CController.php:483
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CController.php(270): CController->missingAction('photo-upload')
+#1 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(282): CController->run('photo-upload')
+#2 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#3 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 23:02:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/listings/images/robot/robot-upload.png".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/listings/...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/admin/listings/images/robot/robot-upload.png
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 23:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/users/ja...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/upload/users/jag_88/listing/thumb/Business_supermarket_1448526950.jpg
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/update?id=71
+---
+2016/08/01 23:02:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business/css/investor_area.css".' in C:\laragon\www\bsupermarket\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\laragon\www\bsupermarket\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/business...')
+#1 C:\laragon\www\bsupermarket\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\laragon\www\bsupermarket\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/bsupermarket/www/themes/business/css/investor_area.css
+HTTP_REFERER=http://localhost/bsupermarket/www/admin/listings/listings/photo-upload/logo_listing.php
+---

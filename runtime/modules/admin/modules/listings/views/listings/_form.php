@@ -1059,12 +1059,14 @@ var checkUpload = false;
     function UploadYoutube(filename, i, elementA) {
         indexClick = indexClick + 1;
 
-        jQuery(elementA).text('');
+        /*jQuery(elementA).text('');
         jQuery(elementA).css({
             'background-image': 'url("<?php echo Yii::app()->theme->baseUrl . '/images/ajax-loader.gif' ?>")',
             'background-size': '144.762px 32.3px',
             'background-repeat': 'no-repeat'
-        });
+        });*/
+
+        jQuery(elementA).text("Loading....");
 
         jQuery.ajax({
             url: '<?php echo Yii::app()->createUrl('admin/listings/listings/uploadYoutube'); ?>',
@@ -1074,10 +1076,11 @@ var checkUpload = false;
             success: function (result) {
                 if (result.status) {
                     checkUpload = true;
+
                     jQuery("#Listings_drg_video" + i).val('https://www.youtube.com/watch?v=' + result.id);
-                    jQuery(elementA).css({
-                        'display': 'none'
-                    });
+
+
+                    jQuery(elementA).text("Uploaded").attr('disabled','disabled');
                     if (indexClick == 1) {
                         files = 'file1=' + filename;
                     } else {
@@ -1085,6 +1088,9 @@ var checkUpload = false;
                     }
 
 
+                }
+                else{
+                       alert("error in upload a file");
                 }
 
             }
