@@ -68,8 +68,17 @@ class UploadYoutube {
         }
 
         //update client
-        $this->client->setAccessToken($tokens['accessToken']);
-        $this->client->refreshToken($tokens['refreshToken']);
+
+        try{
+                $this->client->setAccessToken($tokens['accessToken']);
+                $this->client->refreshToken($tokens['refreshToken']);
+         } catch (Google_Service_Exception $e) {
+            // var_dump($e);
+              echo json_encode(array('message'=>$e->getMessage()));
+                exit();
+        }
+       /* $this->client->setAccessToken($tokens['accessToken']);
+        $this->client->refreshToken($tokens['refreshToken']);*/
         //wrong access token or changed refresh token
         if (!$this->client->getAccessToken()) {
               echo json_encode(array('message'=>"Unauthorized client"));
