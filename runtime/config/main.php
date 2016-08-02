@@ -23,7 +23,7 @@ ini_set('upload_max_filesize', '9999M');
 DEFINE("SHOWCONTROLLER","TRUE");
 DEFINE("ADMIN_USERNAME","admin");
 
-$siteBaseUrl = 'https://business-supermarket.com';
+$siteBaseUrl = 'https://businessinvention.com';
 //$siteBaseUrl = 'http://localhost/bsupermarket/www';
 $baseUrl = trim($siteBaseUrl, '/');
 
