@@ -414,19 +414,23 @@ else
     
     function checkInternationalPhone(strPhone1){
 	   var bracket=4
+
        var minDigitsInIPhoneNumber = 10;
        var digits = "0123456789";
         var phoneNumberDelimiters = "()-+ ";        
         var validWorldPhoneChars = phoneNumberDelimiters + "+";
        
-    	var strPhone=JQ1.trim(strPhone1)
+    	var strPhone=JQ1.trim(strPhone1);
+        var brchr=strPhone.indexOf("(");
+        console.log(strPhone.indexOf("(")!=-1 && strPhone.charAt(brchr+2)!=")",strPhone.indexOf("(")==-1 && strPhone.indexOf(")")!=-1,"dfgdfgd");
     	if(strPhone.indexOf("+")>1) return false
     	if(strPhone.indexOf("-")!=-1)bracket=bracket+1
     	if(strPhone.indexOf("(")!=-1 && strPhone.indexOf("(")>bracket)return false
     	var brchr=strPhone.indexOf("(")
-    	if(strPhone.indexOf("(")!=-1 && strPhone.charAt(brchr+2)!=")")return false
+    	//if(strPhone.indexOf("(")!=-1 && strPhone.charAt(brchr+2)!=")")return false
     	if(strPhone.indexOf("(")==-1 && strPhone.indexOf(")")!=-1)return false
     	s=stripCharsInBag(strPhone,validWorldPhoneChars);
+     
     	return (isInteger(s) && s.length >= minDigitsInIPhoneNumber);
     }  
     function isInteger(s)
