@@ -5,7 +5,7 @@ define("IMG_LOGO_PATH",'/upload/logo/');
 define("MAX_VIDEO_UPLOAD_LIMIT",'61'); //in mb
 
 if($_SERVER['HTTP_HOST'] == "localhost"){
-	$con_string = 'mysql:host=localhost;dbname=businessdb';
+	$con_string = 'mysql:host=localhost;dbname=business';
 	$user = 'root';
 	$pass = '';
 	$giiPass = '[c6"jjqF}:UaRn[';
@@ -43,7 +43,7 @@ $domain = preg_replace('/^www\./', '', $urlParts['host']);
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Business Supermarket',
+	'name'=>'Business Invention',
 	'theme'=>'business',
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -236,8 +236,8 @@ return array(
 				'company_account_email' => 'accounts@'.$domain,
 				'company_cc_mail' => 'dsp7@blueyonder.co.uk',
                 // this is used in contact page
-        		'signature' => 'Sincerely,{{BR}}Business Supermarket Accounts Team',
-        		'company_name' => 'Business Supermarket',
+        		'signature' => 'Sincerely,{{BR}}Business Invention Accounts Team',
+        		'company_name' => 'Business Invention',
         		'valid_image' => array("jpg,png,jpeg,gif"),
         		'valid_doc' => array("doc,docx,pdf"),
         		'valid_video' => array("mp4,flv,wmv"),
