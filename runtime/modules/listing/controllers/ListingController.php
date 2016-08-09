@@ -2335,6 +2335,7 @@ $count_val33=count($command3);
     {
         // REQUEST VARS
         $listid = Yii::app()->request->getQuery('id');
+        $listid = $_REQUEST['listid'];
         $offset = Yii::app()->request->getQuery('offset', 0);
         $period = Yii::app()->request->getQuery('period', 'weekly');
         $params = SharedFunctions::decodeStringAsArray(Yii::app()->request->getQuery('params', null));
@@ -2358,7 +2359,7 @@ $count_val33=count($command3);
         $params['period'] = $period;
 
         // find total records
-        $totalRecords = Userlistingmarketing::Model()->count("user_default_listing_id=:user_default_listing_id", array("user_default_listing_id" => $listid));
+        $totalRecords = Marketing::Model()->count("user_default_listing_id=:user_default_listing_id", array("user_default_listing_id" => $listid));
         if ($totalRecords) {
 
             // get listing marketing data
@@ -2366,22 +2367,29 @@ $count_val33=count($command3);
             $criteria->condition = 'user_default_listing_id = ' . $listid;
             $criteria->offset = $offset;
             $criteria->limit = 1;
-            $userListingMarketing = Userlistingmarketing::Model()->find($criteria);
-            $params['questionId'] = $userListingMarketing->user_default_listing_marketing_id;
+            $Marketing = Marketing::Model()->find($criteria);
+            $params['questionId'] = $Marketing->user_default_listing_marketing_id;
+
+            $end_date = $Marketing->user_default_listing_marketing_question_end_date;
+
+            if($end_date == "0000-00-00")
+            {
+                $end_date = date('Y-m-d');
+            }
 
             // set chart params
-            SharedFunctions::setChartParams($period, $userListingMarketing->user_default_listing_marketing_question_submission_date, $userListingMarketing->user_default_listing_marketing_question_end_date, $params);
+            SharedFunctions::setChartParams($period, $Marketing->user_default_listing_marketing_question_submission_date, $end_date, $params);
 
-            $this->render('marketing_data', array(
+            $this->render('marketingdata', array(
                 'totalRecords' => $totalRecords,
-                'listingMarketing' => $userListingMarketing,
+                'listingMarketing' => $Marketing,
                 'params' => SharedFunctions::encodeArrayAsString($params),
                 'listid' => $listid,
                 'offset' => $offset,
             ));
 
         } else {
-            $this->render('marketing_data', array(
+            $this->render('marketingdata', array(
                 'listingMarketing' => '',
             ));
         }
@@ -2464,13 +2472,13 @@ $count_val33=count($command3);
                     // ACTUAL date
                     $actual_date = date('Y-m-d', $start_datetime);
 
-                    $yesVotes = ListingMarketingConnection::getYesVotes($questionId, '', '', $actual_date, $userType);
+                    $yesVotes = MarketingData::getYesVotes($questionId, '', '', $actual_date, $userType);
                     Yii::app()->fusioncharts->addSetToDataSet('Yes', array('value' => $yesVotes, 'color' => 'C9DB2F'));
 
-                    $maybeVotes = ListingMarketingConnection::getMaybeVotes($questionId, '', '', $actual_date, $userType);
+                    $maybeVotes = MarketingData::getMaybeVotes($questionId, '', '', $actual_date, $userType);
                     Yii::app()->fusioncharts->addSetToDataSet('Maybe', array('value' => $maybeVotes, 'color' => 'D9EEF1'));
 
-                    $noVotes = ListingMarketingConnection::getNoVotes($questionId, '', '', $actual_date, $userType);
+                    $noVotes = MarketingData::getNoVotes($questionId, '', '', $actual_date, $userType);
                     Yii::app()->fusioncharts->addSetToDataSet('No', array('value' => $noVotes, 'color' => 'E967A7'));
 
                     // increment by 1 day
@@ -2481,13 +2489,13 @@ $count_val33=count($command3);
             } else if ($graphType == 'pie') {
 
                 // Pie Chart Data
-                $yesVotes = ListingMarketingConnection::getYesVotes($questionId, $start_date, $end_date, '', $userType);
+                $yesVotes = MarketingData::getYesVotes($questionId, $start_date, $end_date, '', $userType);
                 Yii::app()->fusioncharts->addSet(array('label' => 'Yes', 'value' => $yesVotes, 'color' => 'C9DB2F'));
 
-                $maybeVotes = ListingMarketingConnection::getMaybeVotes($questionId, $start_date, $end_date, '', $userType);
+                $maybeVotes = MarketingData::getMaybeVotes($questionId, $start_date, $end_date, '', $userType);
                 Yii::app()->fusioncharts->addSet(array('label' => 'Maybe', 'value' => $maybeVotes, 'color' => 'D9EEF1'));
 
-                $noVotes = ListingMarketingConnection::getNoVotes($questionId, $start_date, $end_date, '', $userType);
+                $noVotes = MarketingData::getNoVotes($questionId, $start_date, $end_date, '', $userType);
                 Yii::app()->fusioncharts->addSet(array('label' => 'No', 'value' => $noVotes, 'color' => 'E967A7'));
             }
 
@@ -2504,13 +2512,13 @@ $count_val33=count($command3);
                     $start_date = date('Y-m-01', $start_datetime);
                     $end_date = date('Y-m-t', $start_datetime);
 
-                    $yesVotes = ListingMarketingConnection::getYesVotes($questionId, $start_date, $end_date, '', $userType);
+                    $yesVotes = MarketingData::getYesVotes($questionId, $start_date, $end_date, '', $userType);
                     Yii::app()->fusioncharts->addSetToDataSet('Yes', array('value' => $yesVotes, 'color' => 'C9DB2F'));
 
-                    $maybeVotes = ListingMarketingConnection::getMaybeVotes($questionId, $start_date, $end_date, '', $userType);
+                    $maybeVotes = MarketingData::getMaybeVotes($questionId, $start_date, $end_date, '', $userType);
                     Yii::app()->fusioncharts->addSetToDataSet('Maybe', array('value' => $maybeVotes, 'color' => 'D9EEF1'));
 
-                    $noVotes = ListingMarketingConnection::getNoVotes($questionId, $start_date, $end_date, '', $userType);
+                    $noVotes = MarketingData::getNoVotes($questionId, $start_date, $end_date, '', $userType);
                     Yii::app()->fusioncharts->addSetToDataSet('No', array('value' => $noVotes, 'color' => 'E967A7'));
 
                     // increment by 1 month
@@ -2521,13 +2529,13 @@ $count_val33=count($command3);
             } else if ($graphType == 'pie') {
 
                 // Pie Chart Data
-                $yesVotes = ListingMarketingConnection::getYesVotes($questionId, $start_date, $end_date, '', $userType);
+                $yesVotes = MarketingData::getYesVotes($questionId, $start_date, $end_date, '', $userType);
                 Yii::app()->fusioncharts->addSet(array('label' => 'Yes', 'value' => $yesVotes, 'color' => 'C9DB2F'));
 
-                $maybeVotes = ListingMarketingConnection::getMaybeVotes($questionId, $start_date, $end_date, '', $userType);
+                $maybeVotes = MarketingData::getMaybeVotes($questionId, $start_date, $end_date, '', $userType);
                 Yii::app()->fusioncharts->addSet(array('label' => 'Maybe', 'value' => $maybeVotes, 'color' => 'D9EEF1'));
 
-                $noVotes = ListingMarketingConnection::getNoVotes($questionId, $start_date, $end_date, '', $userType);
+                $noVotes = MarketingData::getNoVotes($questionId, $start_date, $end_date, '', $userType);
                 Yii::app()->fusioncharts->addSet(array('label' => 'No', 'value' => $noVotes, 'color' => 'E967A7'));
             }
 

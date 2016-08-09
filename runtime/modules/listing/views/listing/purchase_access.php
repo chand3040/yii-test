@@ -30,7 +30,7 @@ $model_new = Listingaddress::model()->find("user_default_listing_id ='".$model->
                 Please press continue to proceed.<br />
             </p>
             <div style="float:right; width:624px;" align="center">
-                <form action="#" method="post">
+                <form action="<?php echo Yii::app()->createUrl('listing/marketingdata/listid/'.$_REQUEST['listid']);?>" method="post">
                     <ul id="sl-front-page" class="period-select" style="height:383px; margin:-18px 0 0 12px;">
                         <li style="width:323px;">
                             <span>Access :</span>
