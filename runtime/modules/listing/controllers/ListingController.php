@@ -2336,6 +2336,8 @@ $count_val33=count($command3);
         // REQUEST VARS
         $listid = Yii::app()->request->getQuery('id');
         $listid = $_REQUEST['listid'];
+        $userListing = Userlisting::model()->findByPk($listid);
+        $this->pageTitle = 'Marketing Data for ' .$userListing->user_default_listing_title . ' - Business Supermarket';
         $offset = Yii::app()->request->getQuery('offset', 0);
         $period = Yii::app()->request->getQuery('period', 'weekly');
         $params = SharedFunctions::decodeStringAsArray(Yii::app()->request->getQuery('params', null));
