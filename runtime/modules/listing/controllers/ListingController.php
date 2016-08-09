@@ -461,22 +461,35 @@ class ListingController extends Controller {
         $model = Userlisting::model()->find("user_default_profiles_id = '".Yii::app()->user->getState('uid')."' and  user_default_listing_id ='".$id."'");   
         
         if(isset($_POST['Userlistingmarketing']['user_default_listing_marketing_question'])){
-			
-			$address = Userlistingmarketing::model()->find("user_default_listing_id = '".$id."' ");  
-			
-			if( $address == NULL )
-			{
-				$address = new Userlistingmarketing;
-				
-				$address->user_default_listing_marketing_question_submission_date = date('Y-m-d');
-				
-				$address->user_default_listing_id = $id;
-			}
-			
-            $address->user_default_listing_marketing_question = $_POST['Userlistingmarketing']['user_default_listing_marketing_question'];
-			
-		    $address->save();
-             
+
+            $address = Userlistingmarketing::model()->find("user_default_listing_id = '".$id."' ");
+            $address1 = Userlistingmarketing::model()->find("user_default_listing_id = '".$id."' and user_default_listing_marketing_question = '".$_POST['Userlistingmarketing']['user_default_listing_marketing_question']."'");
+
+            if( $address == NULL || $address1 == NULL)
+            {
+                $newaddress = new Userlistingmarketing;
+
+                $newaddress->user_default_listing_marketing_question_submission_date = date('Y-m-d');
+
+                $newaddress->user_default_listing_id = $id;
+
+                $newaddress->user_default_listing_marketing_question = $_POST['Userlistingmarketing']['user_default_listing_marketing_question'];
+
+                $newaddress->save();
+            }
+
+
+            if($address != NULL && $address1 == NULL )
+            {
+                $qid = $_POST['qid'];
+
+                $oldaddress = Userlistingmarketing::model()->findByPk($qid);
+
+                $oldaddress->user_default_listing_marketing_question_end_date = date('Y-m-d');
+
+                $oldaddress->save();
+            }
+
             //$model->user_default_listing_question = $_POST['Userlisting']['user_default_listing_question'];
 			
             $model->user_default_listing_notification_frequency = $_POST['user_default_listing_notification_frequency'];			
@@ -2173,9 +2186,9 @@ $count_val33=count($command3);
 
         if ($_POST) {
             $voteReason = (isset($_POST['reason']) ? $_POST['reason'] : '');
-            $vote = (isset($_POST['vote']) ? $_POST['vote'] : '');
+            $vote = (isset($_POST['drg_mktqstatus']) ? $_POST['drg_mktqstatus'] : '');
             $listingId = (isset($_POST['listingId']) ? $_POST['listingId'] : '');
-            $questionId = (isset($_POST['questionId']) ? $_POST['questionId'] : '');
+            $questionId = (isset($_POST['listingQuestionId']) ? $_POST['listingQuestionId'] : '');
 
             if (Yii::app()->user->getId()) {
                 $model->user_default_listing_marketing_question_id = $questionId;

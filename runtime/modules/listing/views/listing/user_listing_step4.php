@@ -145,7 +145,7 @@ copy portfolio delivered to the registered address in your profile.
                  
                     <?php 
 					
-					$address = Userlistingmarketing::model()->find("user_default_listing_id = '".$model->user_default_listing_id."' "); 
+					$address = Userlistingmarketing::model()->find("user_default_listing_id = '".$model->user_default_listing_id."'  order by user_default_listing_marketing_id desc ");
 			
 					if( $address == NULL )
 					{
@@ -163,7 +163,8 @@ copy portfolio delivered to the registered address in your profile.
                         
                          echo $form->textArea($address,'user_default_listing_marketing_question',array('id'=>'drg_list_maketing_question','style'=>'height:40px; text-align:center; font-size:1.8em' ,'class'=>'textarea-full', 'onfocus'=>"getNormal('#drg_list_maketing_question');",)); 
                          echo $form->error($address,'user_default_listing_marketing_question'); 
-                     ?> 
+                     ?>
+                    <input type="hidden" name="qid" value="<?php echo $address->user_default_listing_marketing_id; ?>">
 		            <br class="clear" />
                     <br class="clear" />
 					<div style="margin-bottom: 3px; margin-top:25px;">
