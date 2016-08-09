@@ -523,6 +523,23 @@ else
 
 <?php
 }
+if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/marketingdata")
+{
+    $lid = Yii::app()->request->getParam('listid');
+    $offset = Yii::app()->request->getParam('offset');
+    $userListing = Userlisting::model()->findByPk($lid);
+    $criteria = new CDbCriteria();
+    $criteria->condition = 'user_default_listing_id = ' . $lid;
+    $criteria->offset = $offset;
+    $criteria->limit = 1;
+    $Marketing = Marketing::Model()->find($criteria);
+    $caption = 'Marketing data for ' . $userListing->user_default_listing_title.' as of '.SharedFunctions::convertDateAsDisplayFormat($Marketing->user_default_listing_marketing_question_submission_date, 'd/m/Y');;
+    ?>
+    <div style="text-align: center;margin-top: -65px;margin-bottom: 10px;">
+        <h1 style="    font-size: 23px;"><?php echo $caption; ?></h1>
+    </div>
+    <?php
+}
 ?>
 <script type="text/javascript">
     function show_video(video)
