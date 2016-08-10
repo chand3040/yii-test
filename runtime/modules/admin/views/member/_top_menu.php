@@ -24,4 +24,8 @@ $currControllerAction = Yii::app()->controller->action->id; //echo $currControll
         <a class="<?php echo ($currController == 'member' && $currControllerAction == 'businessusers') ? ' active' : '' ?>"
            href="<?php echo $this->createUrl('businessUsers') ?>" title="Business Users">Business Users</a>
     </li>
+    <li>
+        <a class="<?php echo ($currController == 'member' && $currControllerAction == 'contact') ? ' active' : '' ?>"
+           href="<?php echo $this->createUrl('contact') ?>" title="Business Users">Contact Members</a>
+    </li>
 </ul>

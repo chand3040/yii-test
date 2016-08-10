@@ -38,7 +38,7 @@ class MemberController extends Controller
     {
         return array(
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('delete', 'index', 'view', 'create', 'update', 'sendmail', 'suspend', 'activate', 'del', 'Updatenotifyemail', 'updateNotifyEmailBusiness', 'suspendbusiness', 'activateBusiness', 'sendmailBusiness', 'deleteBusiness', 'exportUserFinancialInfo', 'showNotification'),
+                'actions' => array('delete', 'index', 'view', 'create', 'update', 'sendmail', 'suspend', 'activate', 'del', 'Updatenotifyemail', 'updateNotifyEmailBusiness', 'suspendbusiness', 'activateBusiness', 'sendmailBusiness', 'deleteBusiness', 'exportUserFinancialInfo', 'showNotification', 'contact'),
                 'users' => array('@'),
             ),
             array('allow',  // deny all users
@@ -1573,4 +1573,111 @@ class MemberController extends Controller
             'model' => $model_marketing_form,
         ));
     }
+
+    public function actionContact()
+    {
+
+        if(isset($_POST['sendmail']))
+        {
+            $status = $_POST['Listings']['user_default_listing_category_id'];
+            $category = $_POST['Userlisting']['user_default_listing_category_id'];
+            $sector = $_POST['Listings']['user_default_listing_lookingfor_id'];
+            $country = $_POST['Listings']['user_default_profiles_id'];
+            $message = $_POST['Listings']['user_default_listing_title'];
+            $criteria = new CDbCriteria;
+            $criteria1 = new CDbCriteria;
+
+            if(isset($sector) && $sector!="")
+            {
+                if($sector == "all")
+                {
+
+                }
+                else
+                {
+                    $criteria1->condition .= 'user_default_business_sector =' . $sector ;
+                }
+
+                $userdatas = Business::model()->findAll($criteria1);
+            }
+
+            else if($category == "1")
+            {
+                $userdatas = Business::model()->findAll($criteria1);
+            }
+
+            if(isset($status) && $status!="" && $status!="all")
+            {
+                $criteria->condition .= 'user_default_profession =' . $status ;
+            }
+            if(isset($country) && $country!="" && $country!="all")
+            {
+                $criteria->condition .= '	user_default_country =' . $country ;
+            }
+
+            if(isset($category) && $category!="" && $category!="all" && $category!="1")
+            {
+                $Data = Listings::model()->findAll("user_default_listing_category_id = '" . $category . "'");
+
+                if ($Data) {
+
+                    foreach ($Data as $rsData) {
+
+                        $ids[] = $rsData->user_default_profiles_id;
+
+                    }
+                    //$ids1 = array(rtrim($ids,','));
+
+                    $criteria->addInCondition('user_default_id', $ids);
+                }
+
+            }
+            $message = '';
+            $userdata = User::model()->findAll($criteria);
+
+            foreach($userdata as $dd)
+            {
+                $email = $dd->user_default_email;
+
+                $subject = "Admin notification";
+
+                $result = SharedFunctions::app()->sendmail($email, $subject, $message);
+
+                $message = "Mail Sent.";
+
+
+            }
+
+            foreach($userdatas as $dds)
+            {
+                $email = $dds->user_default_business_email;
+
+                $subject = "Admin notification";
+
+                $result = SharedFunctions::app()->sendmail($email, $subject, $message);
+
+                $message = "Mail Sent.";
+
+            }
+
+
+
+
+
+
+
+        }
+
+        // Set default value to numbe of member record
+        Yii::app()->user->setState('pageSize', 10);
+
+        if (isset($_POST['more_record'])) {
+            Yii::app()->user->setState('pageSize', $_POST['more_record']);
+            unset($_POST['more_record']);
+        }
+
+        $this->render('contact',array("message"=>$message));
+
+    }
+    
 }
