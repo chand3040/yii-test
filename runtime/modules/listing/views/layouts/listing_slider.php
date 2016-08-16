@@ -76,461 +76,461 @@ $result =  SharedFunctions::app()->sendmail($femail,$subject,$body);
     }
 </style>
 <script type="text/javascript">
-	function show_video(video)
-	{
-	 $('.home-slider-wrap').css('display','none');
+    function show_video(video)
+    {
+        $('.home-slider-wrap').css('display','none');
 
         $('.home-video-wrap').fadeIn('fast');
-		 jwplayer('my-video').setup({
-                file: video,
-                image: '/themes/business/images/robot/defult-video.png',
-                width: '640',
-                height: '360',
-                autostart:'true',
-                events: { 
-                    onComplete: function() { 
-					
-					show_slider();
-					
-					} 
-                }                 
-            });
-		
-	}		
-	
-	function play_video(video)	
-	
-	{	
+        jwplayer('my-video').setup({
+            file: video,
+            image: '/themes/business/images/robot/defult-video.png',
+            width: '640',
+            height: '360',
+            autostart:'true',
+            events: {
+                onComplete: function() {
 
-	 $('.home-slider-wrap').css('display','none');
+                    show_slider();
+
+                }
+            }
+        });
+
+    }
+
+    function play_video(video)
+
+    {
+
+        $('.home-slider-wrap').css('display','none');
 
         $('.home-video-wrap').fadeIn('fast');
 
-	jwplayer('my-video').setup({      
+        jwplayer('my-video').setup({
 
-	file: video,             
+            file: video,
 
-	image: '/themes/business/images/robot/defult-video.png',  
+            image: '/themes/business/images/robot/defult-video.png',
 
-	width: '640',        
+            width: '640',
 
-	height: '360',            
+            height: '360',
 
-    autostart:'true',    
+            autostart:'true',
 
-	events: {           
+            events: {
 
-	onComplete: function()
+                onComplete: function()
 
-	{ 
-	
-	show_slider();
-	
-	}       
+                {
 
-	}      
+                    show_slider();
 
-	});		
+                }
 
-	}
-	
-	function show_slider()
-	{
-		
-		jwplayer( 'my-video' ).stop();
-		
-		$('.home-slider-wrap').css('display','inline');
+            }
+
+        });
+
+    }
+
+    function show_slider()
+    {
+
+        jwplayer( 'my-video' ).stop();
+
+        $('.home-slider-wrap').css('display','inline');
 
         $('.home-video-wrap').css('display','none');
-	}
+    }
 </script>
 
 
 <script type="text/javascript">
-  jQuery(".contact_cont").hide(1000);
-		//<![CDATA[
-		jQuery(function(){
-			jQuery('#contactpopup').poshytip();
-            jQuery('#play1').poshytip();
-            jQuery('#play2').poshytip();
-            jQuery('#demo1-basic1').poshytip();
-			jQuery('#demo1-basic2').poshytip();
-			jQuery('#feedback1').poshytip();
-			jQuery('#demo1-tip-yellow').poshytip();
-			
-			
-			 jQuery("#loginerrpopup").click(function(){	
+    jQuery(".contact_cont").hide(1000);
+    //<![CDATA[
+    jQuery(function(){
+        jQuery('#contactpopup').poshytip();
+        jQuery('#play1').poshytip();
+        jQuery('#play2').poshytip();
+        jQuery('#demo1-basic1').poshytip();
+        jQuery('#demo1-basic2').poshytip();
+        jQuery('#feedback1').poshytip();
+        jQuery('#demo1-tip-yellow').poshytip();
 
-			 jQuery(".sign-up-tabss").fadeOut();
 
-			 jQuery("#usererror").fadeIn('slow');	
+        jQuery("#loginerrpopup").click(function(){
 
-			 jQuery(".home-slider-wrap").fadeIn('slow');	
+            jQuery(".sign-up-tabss").fadeOut();
 
-			 jQuery(".home-video-wrap").fadeOut('fast');
+            jQuery("#usererror").fadeIn('slow');
 
-			 jQuery("#ncol").fadeOut('fast');	    
+            jQuery(".home-slider-wrap").fadeIn('slow');
 
-			 })
-			 
-        jQuery("#contactpopup").click(function(ev){
-			
-			    ev.preventDefault();
-            /* jQuery(".sign-up-tabss").fadeOut();
+            jQuery(".home-video-wrap").fadeOut('fast');
 
-			 jQuery(".contact_cont").fadeIn('slow');	
+            jQuery("#ncol").fadeOut('fast');
 
-			 jQuery(".contact_inner").fadeIn('slow');	
-
-			 jQuery(".home-slider-wrap").fadeIn('slow');	
-
-			 jQuery(".home-video-wrap").fadeOut('fast');	
-
-			 jQuery("#ncol").fadeOut('fast');*/
-             return false;
-			 
         })
-        
-		jQuery("#close,.close,#close1").click(function(){
-			
-			
-          show_slider(); 
-			
-            })
-			
-			jQuery("#close2,#close3").click(function(){
-			
-			 jQuery(".contact_cont").fadeOut(); 
-			 
-			jQuery(".contact_inner").fadeOut();   
-			
-			jQuery("#ncol").fadeIn('slow');	     
-			
-			jQuery(".sign-up-tabss").fadeIn('slow');
-			
-	       	jQuery(".home-slider-wrap").fadeIn('slow');	
-			
-			jQuery(".home-video-wrap").fadeOut('fast');	
-			
-			jQuery("#usererror").fadeOut('fast');
-        
-			
-            })
-			
-         jQuery("#voiceopen").click(function(){   
 
-         jQuery(".contact_cont").fadeOut();		
+        jQuery("#contactpopup").click(function(ev){
 
-		 jQuery(".contact_inner").fadeOut();	
+            ev.preventDefault();
+            jQuery(".sign-up-tabss").fadeOut();
 
-		 jQuery(".sign-up-tabss").fadeIn('slow');	
+            jQuery(".contact_cont").fadeIn('slow');
 
-		 jQuery("#tab2").fadeIn('slow');		
+            jQuery(".contact_inner").fadeIn('slow');
 
-		 jQuery("#taba").fadeOut();			
-		 
-		 jQuery("#tabhide1").removeClass('active');	
+            jQuery(".home-slider-wrap").fadeIn('slow');
 
-		 jQuery("#tabshow2").addClass('active');   
+            jQuery(".home-video-wrap").fadeOut('fast');
 
-		 })		
-		 
-		 
-		});		 
-		//]]>	
-		function remove_thankspopup()
-		{
-			jQuery("#popcnt").fadeOut("slow");
-			jQuery(".feedbacthanks").fadeOut("slow",function (){
-			     var href = window.location.href.split('/?'); 
-			    window.history.pushState(null, "hi", href[0]);			 
-                jQuery(".feedbacthanks , .thanks_popup").css("display","none !important");
-                jQuery(".feedbacthanks , .thanks_popup").css("background","none");
-                jQuery(".feedbacthanks , .thanks_popup").css("z-index","-9999");
-			});
-             
-		}
-		jQuery( window ).load(function() {
-			jQuery(".tip-yellow").css("left","50%");
-		});
-		
-	</script>
+            jQuery("#ncol").fadeOut('fast');
+            return false;
+
+        })
+
+        jQuery("#close,.close,#close1").click(function(){
+
+
+            show_slider();
+
+        })
+
+        jQuery("#close2,#close3").click(function(){
+
+            jQuery(".contact_cont").fadeOut();
+
+            jQuery(".contact_inner").fadeOut();
+
+            jQuery("#ncol").fadeIn('slow');
+
+            jQuery(".sign-up-tabss").fadeIn('slow');
+
+            jQuery(".home-slider-wrap").fadeIn('slow');
+
+            jQuery(".home-video-wrap").fadeOut('fast');
+
+            jQuery("#usererror").fadeOut('fast');
+
+
+        })
+
+        jQuery("#voiceopen").click(function(){
+
+            jQuery(".contact_cont").fadeOut();
+
+            jQuery(".contact_inner").fadeOut();
+
+            jQuery(".sign-up-tabss").fadeIn('slow');
+
+            jQuery("#tab2").fadeIn('slow');
+
+            jQuery("#taba").fadeOut();
+
+            jQuery("#tabhide1").removeClass('active');
+
+            jQuery("#tabshow2").addClass('active');
+
+        })
+
+
+    });
+    //]]>
+    function remove_thankspopup()
+    {
+        jQuery("#popcnt").fadeOut("slow");
+        jQuery(".feedbacthanks").fadeOut("slow",function (){
+            var href = window.location.href.split('/?');
+            window.history.pushState(null, "hi", href[0]);
+            jQuery(".feedbacthanks , .thanks_popup").css("display","none !important");
+            jQuery(".feedbacthanks , .thanks_popup").css("background","none");
+            jQuery(".feedbacthanks , .thanks_popup").css("z-index","-9999");
+        });
+
+    }
+    jQuery( window ).load(function() {
+        jQuery(".tip-yellow").css("left","50%");
+    });
+
+</script>
 
 <script language="javascript" type="text/javascript">
-function updateHit(bannerId){
-	jQuery.ajax({				
-    	type:"POST",
-    	url:"updateHit.php",
-    	data:"banner_id="+bannerId,
-    	cache: false,
-    	success:function(response){
-    	},
-    	fail:function(error){
-    		alert(error);
-   		}
-	});
-}
-// Advert Carousel
-function mycarousel_initCallback(carousel)
-{
-    carousel.clip.hover(function() {
-        carousel.stopAuto();
-    }, function() {
-        carousel.startAuto();
-    });
-};
-jQuery(document).ready(function() {
-    jQuery('#add-carousel-wrap').jcarousel({
-        wrap: 'circular',
-        scroll: 1,
-		 hoverPause: true,
-     initCallback: mycarousel_initCallback
-    });
+    function updateHit(bannerId){
+        jQuery.ajax({
+            type:"POST",
+            url:"updateHit.php",
+            data:"banner_id="+bannerId,
+            cache: false,
+            success:function(response){
+            },
+            fail:function(error){
+                alert(error);
+            }
+        });
+    }
+    // Advert Carousel
+    function mycarousel_initCallback(carousel)
+    {
+        carousel.clip.hover(function() {
+            carousel.stopAuto();
+        }, function() {
+            carousel.startAuto();
+        });
+    };
+    jQuery(document).ready(function() {
+        jQuery('#add-carousel-wrap').jcarousel({
+            wrap: 'circular',
+            scroll: 1,
+            hoverPause: true,
+            initCallback: mycarousel_initCallback
+        });
     });
 </script>
 
 <div class="add-carousel">
-<?php
+    <?php
 
-$connection = Yii::app()->db;
-
-if($listid!="")
-{
-
-    $sql = "SELECT * FROM `user_default_banner_ads` WHERE `user_default_listing_id` = " . $listid . " ";
-
-    $sql .= " ORDER BY `user_default_listing_banner_id` DESC "; // to set ordr by
-
-    $bannerAds = Bannerads::model()->findAllBySql($sql);
-		
-	$bannercount = count($bannerAds);
-	
-	if($bannercount > 0)
-	{
-	
-	?>
-<ul id="add-carousel-wrap" class="jcarousel-skin-ie7 banner-item">
-
-        <?php if ($bannerAds) : ?>
-            <?php foreach ($bannerAds as $bannerAd) :
-
-                $bannerLink = "javascript:void(0)";
-                $bannerLinkOnclick = "return true;";
-                $target = "_self";
-                if ($bannerAd['user_default_listing_banner_link'] != '') {
-
-                    if (SharedFunctions::isYoutubeUrl($bannerAd['user_default_listing_banner_link'])) {
-                        $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_listing_banner_id'] . "); show_video('" . $bannerAd['user_default_listing_banner_link'] . "');";
-                    } else {
-                        $bannerLink = $bannerAd['user_default_listing_banner_link'];
-                        $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_listing_banner_id'] . ");";
-                        $target = "_blank";
-                    }
-                }
-                ?>
-                <li>
-                    <a href="<?php echo $bannerLink; ?>" target="<?php echo $target; ?>"
-                       onclick="<?php echo $bannerLinkOnclick; ?>"><img
-                            src="<?php echo Yii::app()->baseUrl . '/upload/' . $bannerAd['user_default_listing_banner_path']; ?>"
-                            height="77" width="420"
-                            title="Image Name: <?php echo $bannerAd['user_default_listing_banner_path']; ?>"/>
-
-                    </a>
-                </li>
-
-            <?php endforeach; ?>
-        <?php endif; ?>
-
-    </ul>
-	
-	
-  <?php
-  }
-  else
-  {
-	  $command = $connection->createCommand();
-	   $command->text = "SELECT user_default_banner_id, user_default_banner_link, user_default_banner_path
-            FROM `user_default_site_bannerads`
-            WHERE `user_default_banner_status` = '1'
-            ORDER BY `user_default_banner_id`";
-			
-    $bannerAds = $command->queryAll();
-	
-    ?>
-
-    <ul id="add-carousel-wrap" class="jcarousel-skin-ie7 banner-item">
-
-        <?php if ($bannerAds) : ?>
-            <?php foreach ($bannerAds as $bannerAd) :
-
-                $bannerLink = "javascript:void(0)";
-                $bannerLinkOnclick = "return true;";
-                $target = "_self";
-                if ($bannerAd['user_default_banner_link'] != '') {
-
-                    if (SharedFunctions::isYoutubeUrl($bannerAd['user_default_banner_link'])) {
-                        $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . "); show_video('" . $bannerAd['user_default_banner_link'] . "');";
-                    } else {
-                        $bannerLink = $bannerAd['user_default_banner_link'];
-                        $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . ");";
-                        $target = "_blank";
-                    }
-                }
-                ?>
-                <li>
-                    <a href="<?php echo $bannerLink; ?>" target="<?php echo $target; ?>"
-                       onclick="<?php echo $bannerLinkOnclick; ?>"><img
-                            src="<?php echo Yii::app()->baseUrl . '/upload/' . $bannerAd['user_default_banner_path']; ?>"
-                            height="77" width="420"
-                            title="Image Name: <?php echo $bannerAd['user_default_banner_path']; ?>"/>
-
-                    </a>
-                </li>
-
-            <?php endforeach; ?>
-        <?php endif; ?>
-
-    </ul>
-	  <?php
-  }
-}
-  else
-  {
-	  $command = $connection->createCommand();
-	   $command->text = "SELECT user_default_banner_id, user_default_banner_link, user_default_banner_path
-            FROM `user_default_site_bannerads`
-            WHERE `user_default_banner_status` = '1'
-            ORDER BY `user_default_banner_id`";
-			
-    $bannerAds = $command->queryAll();
-	
-    ?>
-
-    <ul id="add-carousel-wrap" class="jcarousel-skin-ie7 banner-item">
-
-        <?php if ($bannerAds) : ?>
-            <?php foreach ($bannerAds as $bannerAd) :
-
-                $bannerLink = "javascript:void(0)";
-                $bannerLinkOnclick = "return true;";
-                $target = "_self";
-                if ($bannerAd['user_default_banner_link'] != '') {
-
-                    if (SharedFunctions::isYoutubeUrl($bannerAd['user_default_banner_link'])) {
-                        $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . "); show_video('" . $bannerAd['user_default_banner_link'] . "');";
-                    } else {
-                        $bannerLink = $bannerAd['user_default_banner_link'];
-                        $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . ");";
-                        $target = "_blank";
-                    }
-                }
-                ?>
-                <li>
-                    <a href="<?php echo $bannerLink; ?>" target="<?php echo $target; ?>"
-                       onclick="<?php echo $bannerLinkOnclick; ?>"><img
-                            src="<?php echo Yii::app()->baseUrl . '/upload/' . $bannerAd['user_default_banner_path']; ?>"
-                            height="77" width="420"
-                            title="Image Name: <?php echo $bannerAd['user_default_banner_path']; ?>"/>
-
-                    </a>
-                </li>
-
-            <?php endforeach; ?>
-        <?php endif; ?>
-
-    </ul>
-	  <?php
-  }
-
-
-/*
-    // get database instance
     $connection = Yii::app()->db;
 
-    // Listing Banner Query
-    $command = $connection->createCommand();
-	if($listid!="")
-	{
-    $command->text = "SELECT * FROM (
-        SELECT * FROM (
-            SELECT user_default_banner_id, user_default_banner_link, user_default_banner_path
+    if($listid!="")
+    {
+
+        $sql = "SELECT * FROM `user_default_banner_ads` WHERE `user_default_listing_id` = " . $listid . " ";
+
+        $sql .= " ORDER BY `user_default_listing_banner_id` DESC "; // to set ordr by
+
+        $bannerAds = Bannerads::model()->findAllBySql($sql);
+
+        $bannercount = count($bannerAds);
+
+        if($bannercount > 0)
+        {
+
+            ?>
+            <ul id="add-carousel-wrap" class="jcarousel-skin-ie7 banner-item">
+
+                <?php if ($bannerAds) : ?>
+                    <?php foreach ($bannerAds as $bannerAd) :
+
+                        $bannerLink = "javascript:void(0)";
+                        $bannerLinkOnclick = "return true;";
+                        $target = "_self";
+                        if ($bannerAd['user_default_listing_banner_link'] != '') {
+
+                            if (SharedFunctions::isYoutubeUrl($bannerAd['user_default_listing_banner_link'])) {
+                                $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_listing_banner_id'] . "); show_video('" . $bannerAd['user_default_listing_banner_link'] . "');";
+                            } else {
+                                $bannerLink = $bannerAd['user_default_listing_banner_link'];
+                                $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_listing_banner_id'] . ");";
+                                $target = "_blank";
+                            }
+                        }
+                        ?>
+                        <li>
+                            <a href="<?php echo $bannerLink; ?>" target="<?php echo $target; ?>"
+                               onclick="<?php echo $bannerLinkOnclick; ?>"><img
+                                    src="<?php echo Yii::app()->baseUrl . '/upload/' . $bannerAd['user_default_listing_banner_path']; ?>"
+                                    height="77" width="420"
+                                    title="Image Name: <?php echo $bannerAd['user_default_listing_banner_path']; ?>"/>
+
+                            </a>
+                        </li>
+
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+            </ul>
+
+
+            <?php
+        }
+        else
+        {
+            $command = $connection->createCommand();
+            $command->text = "SELECT user_default_banner_id, user_default_banner_link, user_default_banner_path
             FROM `user_default_site_bannerads`
             WHERE `user_default_banner_status` = '1'
-            ORDER BY `user_default_banner_id`
-        ) AS siteBannerAds
-        UNION
-        SELECT * FROM (
-            SELECT user_default_listing_banner_id AS user_default_banner_id, user_default_listing_banner_link AS user_default_banner_link, user_default_listing_banner_path AS user_default_banner_path
-            FROM `user_default_banner_ads` AS ads
-            INNER JOIN `user_default_listing` AS listing ON (listing.user_default_listing_id = ads.user_default_listing_id)
-            WHERE `user_default_listing_banner_status`= 1
-                AND listing.user_default_listing_id= " . $listid . "
-            ORDER BY `user_default_listing_banner_id`
-        ) AS userBannerAds
-    ) AS bannerAds";
-    $bannerAds = $command->queryAll();
-	
-    ?>
+            ORDER BY `user_default_banner_id`";
 
-    <ul id="add-carousel-wrap" class="jcarousel-skin-ie7 banner-item">
+            $bannerAds = $command->queryAll();
 
-        <?php if ($bannerAds) : ?>
-            <?php foreach ($bannerAds as $bannerAd) :
+            ?>
 
-                $bannerLink = "javascript:void(0)";
-                $bannerLinkOnclick = "return true;";
-                $target = "_self";
-                if ($bannerAd['user_default_banner_link'] != '') {
+            <ul id="add-carousel-wrap" class="jcarousel-skin-ie7 banner-item">
 
-                    if (SharedFunctions::isYoutubeUrl($bannerAd['user_default_banner_link'])) {
-                        $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . "); show_video('" . $bannerAd['user_default_banner_link'] . "');";
-                    } else {
-                        $bannerLink = $bannerAd['user_default_banner_link'];
-                        $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . ");";
-                        $target = "_blank";
+                <?php if ($bannerAds) : ?>
+                    <?php foreach ($bannerAds as $bannerAd) :
+
+                        $bannerLink = "javascript:void(0)";
+                        $bannerLinkOnclick = "return true;";
+                        $target = "_self";
+                        if ($bannerAd['user_default_banner_link'] != '') {
+
+                            if (SharedFunctions::isYoutubeUrl($bannerAd['user_default_banner_link'])) {
+                                $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . "); show_video('" . $bannerAd['user_default_banner_link'] . "');";
+                            } else {
+                                $bannerLink = $bannerAd['user_default_banner_link'];
+                                $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . ");";
+                                $target = "_blank";
+                            }
+                        }
+                        ?>
+                        <li>
+                            <a href="<?php echo $bannerLink; ?>" target="<?php echo $target; ?>"
+                               onclick="<?php echo $bannerLinkOnclick; ?>"><img
+                                    src="<?php echo Yii::app()->baseUrl . '/upload/' . $bannerAd['user_default_banner_path']; ?>"
+                                    height="77" width="420"
+                                    title="Image Name: <?php echo $bannerAd['user_default_banner_path']; ?>"/>
+
+                            </a>
+                        </li>
+
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+            </ul>
+            <?php
+        }
+    }
+    else
+    {
+        $command = $connection->createCommand();
+        $command->text = "SELECT user_default_banner_id, user_default_banner_link, user_default_banner_path
+            FROM `user_default_site_bannerads`
+            WHERE `user_default_banner_status` = '1'
+            ORDER BY `user_default_banner_id`";
+
+        $bannerAds = $command->queryAll();
+
+        ?>
+
+        <ul id="add-carousel-wrap" class="jcarousel-skin-ie7 banner-item">
+
+            <?php if ($bannerAds) : ?>
+                <?php foreach ($bannerAds as $bannerAd) :
+
+                    $bannerLink = "javascript:void(0)";
+                    $bannerLinkOnclick = "return true;";
+                    $target = "_self";
+                    if ($bannerAd['user_default_banner_link'] != '') {
+
+                        if (SharedFunctions::isYoutubeUrl($bannerAd['user_default_banner_link'])) {
+                            $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . "); show_video('" . $bannerAd['user_default_banner_link'] . "');";
+                        } else {
+                            $bannerLink = $bannerAd['user_default_banner_link'];
+                            $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . ");";
+                            $target = "_blank";
+                        }
                     }
-                }
-                ?>
-                <li>
-                    <a href="<?php echo $bannerLink; ?>" target="<?php echo $target; ?>"
-                       onclick="<?php echo $bannerLinkOnclick; ?>"><img
-                            src="<?php echo Yii::app()->baseUrl . '/upload/' . $bannerAd['user_default_banner_path']; ?>"
-                            height="77" width="420"
-                            title="Image Name: <?php echo $bannerAd['user_default_banner_path']; ?>"/>
+                    ?>
+                    <li>
+                        <a href="<?php echo $bannerLink; ?>" target="<?php echo $target; ?>"
+                           onclick="<?php echo $bannerLinkOnclick; ?>"><img
+                                src="<?php echo Yii::app()->baseUrl . '/upload/' . $bannerAd['user_default_banner_path']; ?>"
+                                height="77" width="420"
+                                title="Image Name: <?php echo $bannerAd['user_default_banner_path']; ?>"/>
 
-                    </a>
-                </li>
+                        </a>
+                    </li>
 
-            <?php endforeach; ?>
-        <?php endif; ?>
-
-    </ul>
-		<?php 
-	}
-	else
-	{
-		?>
-		
-		
-        <ul id="add-carousel-wrap" class="jcarousel-skin-ie7">
-
-           
-
-            <li><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/upload/banner-images/business-help-ad.png" height="77" /></li>
-
-            <li><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/upload/banner-images/dragonsnet.png" height="77" /></li>
-
-            <li><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/upload/banner-images/member-listing-ad.png" height="77" /></li>
-
-            <li><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/upload/banner-images/business-support-ad.png" height="77" /></li>
-
-            <li><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/upload/banner-images/skill-mentor-ad.png" height="77" /></li>
+                <?php endforeach; ?>
+            <?php endif; ?>
 
         </ul>
-		<?php
-	} */
-	?>
- </div> <!-- /end advertiser carousel -->
+        <?php
+    }
+
+
+    /*
+        // get database instance
+        $connection = Yii::app()->db;
+
+        // Listing Banner Query
+        $command = $connection->createCommand();
+        if($listid!="")
+        {
+        $command->text = "SELECT * FROM (
+            SELECT * FROM (
+                SELECT user_default_banner_id, user_default_banner_link, user_default_banner_path
+                FROM `user_default_site_bannerads`
+                WHERE `user_default_banner_status` = '1'
+                ORDER BY `user_default_banner_id`
+            ) AS siteBannerAds
+            UNION
+            SELECT * FROM (
+                SELECT user_default_listing_banner_id AS user_default_banner_id, user_default_listing_banner_link AS user_default_banner_link, user_default_listing_banner_path AS user_default_banner_path
+                FROM `user_default_banner_ads` AS ads
+                INNER JOIN `user_default_listing` AS listing ON (listing.user_default_listing_id = ads.user_default_listing_id)
+                WHERE `user_default_listing_banner_status`= 1
+                    AND listing.user_default_listing_id= " . $listid . "
+                ORDER BY `user_default_listing_banner_id`
+            ) AS userBannerAds
+        ) AS bannerAds";
+        $bannerAds = $command->queryAll();
+
+        ?>
+
+        <ul id="add-carousel-wrap" class="jcarousel-skin-ie7 banner-item">
+
+            <?php if ($bannerAds) : ?>
+                <?php foreach ($bannerAds as $bannerAd) :
+
+                    $bannerLink = "javascript:void(0)";
+                    $bannerLinkOnclick = "return true;";
+                    $target = "_self";
+                    if ($bannerAd['user_default_banner_link'] != '') {
+
+                        if (SharedFunctions::isYoutubeUrl($bannerAd['user_default_banner_link'])) {
+                            $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . "); show_video('" . $bannerAd['user_default_banner_link'] . "');";
+                        } else {
+                            $bannerLink = $bannerAd['user_default_banner_link'];
+                            $bannerLinkOnclick = "updateHit(" . $bannerAd['user_default_banner_id'] . ");";
+                            $target = "_blank";
+                        }
+                    }
+                    ?>
+                    <li>
+                        <a href="<?php echo $bannerLink; ?>" target="<?php echo $target; ?>"
+                           onclick="<?php echo $bannerLinkOnclick; ?>"><img
+                                src="<?php echo Yii::app()->baseUrl . '/upload/' . $bannerAd['user_default_banner_path']; ?>"
+                                height="77" width="420"
+                                title="Image Name: <?php echo $bannerAd['user_default_banner_path']; ?>"/>
+
+                        </a>
+                    </li>
+
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+        </ul>
+            <?php
+        }
+        else
+        {
+            ?>
+
+
+            <ul id="add-carousel-wrap" class="jcarousel-skin-ie7">
+
+
+
+                <li><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/upload/banner-images/business-help-ad.png" height="77" /></li>
+
+                <li><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/upload/banner-images/dragonsnet.png" height="77" /></li>
+
+                <li><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/upload/banner-images/member-listing-ad.png" height="77" /></li>
+
+                <li><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/upload/banner-images/business-support-ad.png" height="77" /></li>
+
+                <li><img src="<?php echo Yii::app()->getBaseUrl(true); ?>/upload/banner-images/skill-mentor-ad.png" height="77" /></li>
+
+            </ul>
+            <?php
+        } */
+    ?>
+</div> <!-- /end advertiser carousel -->
 <?php
 $connection = Yii::app()->db;
 $contract=Yii::app()->controller->id."/".Yii::app()->controller->action->id;
@@ -543,259 +543,254 @@ $sliderresults = $getsliderbtns->queryRow();
 $sliderids = $sliderresults['slider_id'];
 if($sliderids!="")
 {
-?>
- <div id="how-to-div" class="clearfix"> 
- <?php
- $getsliderbtnss = $connection->createCommand("select * from `user_default_slider_btns` where `slider_id`='$sliderid' order by `btn_id` ASC");
-$getbtns = $getsliderbtnss->queryAll();
-foreach($getbtns as $data )
-{
-if($data['btn_videolink']!="")
-{
-?>
-<a href="javascript:void(0)" onclick="play_video('<?php echo $data['btn_videolink']; ?>');" class="clearfix"> 
-<?php 
-}
-else
-{
-?>
-<a href="<?php echo $this->createUrl("/page/faq");//$data['btn_sitelink']; ?>" class="clearfix"> 
-<?php
-}
-?>
-<img src="<?php echo Yii::app()->baseUrl; ?>/themes/business/images/buttons/<?php echo $data['btn_image']; ?>" width="30" /><?php echo $data['btn_text']; ?></a> 
-         
-<?php 
-}
-?>
-</div>
-<?php
+    ?>
+    <div id="how-to-div" class="clearfix">
+        <?php
+        $getsliderbtnss = $connection->createCommand("select * from `user_default_slider_btns` where `slider_id`='$sliderid' order by `btn_id` ASC");
+        $getbtns = $getsliderbtnss->queryAll();
+        foreach($getbtns as $data )
+        {
+        if($data['btn_videolink']!="")
+        {
+        ?>
+        <a href="javascript:void(0)" onclick="play_video('<?php echo $data['btn_videolink']; ?>');" class="clearfix">
+            <?php
+            }
+            else
+            {
+            ?>
+            <a href="<?php echo $this->createUrl("/page/faq");//$data['btn_sitelink']; ?>" class="clearfix">
+                <?php
+                }
+                ?>
+                <img src="<?php echo Yii::app()->baseUrl; ?>/themes/business/images/buttons/<?php echo $data['btn_image']; ?>" width="30" /><?php echo $data['btn_text']; ?></a>
+
+            <?php
+            }
+            ?>
+    </div>
+    <?php
 }
 else if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/view" || Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/preview_user_listing"  || Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/rdelete" || Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/fupdate")
 
 {
-	
-	$lid=$_GET['id'];
+
+    $lid=$_GET['id'];
     if($lid=="")
 
-{
-	
-	$lid = Yii::app()->request->getParam('listid');
-	
-	}
-	$connection = Yii::app()->db;
-	
-	$command1 = $connection->createCommand("select * from `user_default_listing` where `user_default_listing_id`='$lid'");
-	
-	$myresult1 = $command1->queryRow();
-	
-	//$uid1=$myresult1['user_default_video1'];
-	
-	//$uid2=$myresult1['user_default_video2'];
-	
-	$user_default_uid=$myresult1['user_default_profiles_id'];
-	
-	$ncommand1 = $connection->createCommand("select * from `user_default_profiles` where `user_default_id`='$user_default_uid'");
-	
-	$nmyresult1 = $ncommand1->queryRow();
-	
-	$userfolder=$nmyresult1['user_default_username']."_".$nmyresult1['user_default_id'];
-	
-	$command11 = $connection->createCommand("select * from `user_default_listing_videos` where `user_default_listing_id`='$lid' order by iuser_default_listing_video_id asc limit 1");
-	
-	$myresult11 = $command11->queryRow();
-	
-	$file1 = $myresult11['user_default_listing_video_link'];	 
-	
-	$path11 = $_SERVER['DOCUMENT_ROOT'].'/'; $apath1= $path11."upload/users/".$userfolder."/videos/".$file1;
-	
-	if (file_exists($apath1))
+    {
 
-		{
-			
-			$videofile1= Yii::app()->getBaseUrl(true)."/upload/users/".$userfolder."/videos/".$file1;
-			
-			}
-			
-			else
-			
-			{
-				
-				$videofile1=$file1;
-				
-				}
-				
-				$command22 = $connection->createCommand("select * from `user_default_listing_videos` where `user_default_listing_id`='$lid' order by iuser_default_listing_video_id desc limit 1");
-				
-				$myresult22 = $command22->queryRow();$file2=$myresult22['user_default_listing_video'];
-				
-				$file2 = $myresult22['user_default_listing_video_link'];
-				
-				$path11 = $_SERVER['DOCUMENT_ROOT'].'/'; 
-				
-				$apath2= $path11."upload/users/".$userfolder."/videos/".$file2;
-				
-				if (file_exists($apath2))
+        $lid = Yii::app()->request->getParam('listid');
 
-					{
-						
-						$videofile2= Yii::app()->getBaseUrl(true)."/upload/users/".$userfolder."/videos/".$file2;
-						
-						}
-						
-						else
-						
-						{
-							
-							$videofile2=$file2;
-							
-							}
-							
-							$ufold=Yii::app()->user->getState('ufolder');
-?>
- <div id="how-to-div" class="clearfix"> 
-         <a href="javascript:void(0)" onclick="play_video('<?php echo $videofile1; ?>');" class="clearfix"> 
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png" width="30" />Get to know the entrepreneur</a> 
-         <a href="javascript:void(0)" onclick="play_video('<?php echo $videofile2; ?>');" class="clearfix"> 
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png" width="30" />Get to know the business idea</a> 
-         <a href="#" class="clearfix" id="<?php if($ufold!="") { echo "contactpopup"; } else { echo "loginerrpopup"; } ?>">
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/FAQ-button.png" width="30" />Contact the entrepreneur</a> 
-</div>
-<?php
+    }
+    $connection = Yii::app()->db;
+
+    $command1 = $connection->createCommand("select * from `user_default_listing` where `user_default_listing_id`='$lid'");
+
+    $myresult1 = $command1->queryRow();
+
+    //$uid1=$myresult1['user_default_video1'];
+
+    //$uid2=$myresult1['user_default_video2'];
+
+    $user_default_uid=$myresult1['user_default_profiles_id'];
+
+    $ncommand1 = $connection->createCommand("select * from `user_default_profiles` where `user_default_id`='$user_default_uid'");
+
+    $nmyresult1 = $ncommand1->queryRow();
+
+    $userfolder=$nmyresult1['user_default_username']."_".$nmyresult1['user_default_id'];
+
+    $command11 = $connection->createCommand("select * from `user_default_listing_videos` where `user_default_listing_id`='$lid' order by iuser_default_listing_video_id asc limit 1");
+
+    $myresult11 = $command11->queryRow();
+
+    $file1 = $myresult11['user_default_listing_video_link'];
+
+    $path11 = $_SERVER['DOCUMENT_ROOT'].'/'; $apath1= $path11."upload/users/".$userfolder."/videos/".$file1;
+
+    if (file_exists($apath1))
+
+    {
+
+        $videofile1= Yii::app()->getBaseUrl(true)."/upload/users/".$userfolder."/videos/".$file1;
+
+    }
+
+    else
+
+    {
+
+        $videofile1=$file1;
+
+    }
+
+    $command22 = $connection->createCommand("select * from `user_default_listing_videos` where `user_default_listing_id`='$lid' order by iuser_default_listing_video_id desc limit 1");
+
+    $myresult22 = $command22->queryRow();$file2=$myresult22['user_default_listing_video'];
+
+    $file2 = $myresult22['user_default_listing_video_link'];
+
+    $path11 = $_SERVER['DOCUMENT_ROOT'].'/';
+
+    $apath2= $path11."upload/users/".$userfolder."/videos/".$file2;
+
+    if (file_exists($apath2))
+
+    {
+
+        $videofile2= Yii::app()->getBaseUrl(true)."/upload/users/".$userfolder."/videos/".$file2;
+
+    }
+
+    else
+
+    {
+
+        $videofile2=$file2;
+
+    }
+
+    $ufold=Yii::app()->user->getState('ufolder');
+    ?>
+    <div id="how-to-div" class="clearfix">
+        <a href="javascript:void(0)" onclick="play_video('<?php echo $videofile1; ?>');" class="clearfix">
+            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png" width="30" />Get to know the entrepreneur</a>
+        <a href="javascript:void(0)" onclick="play_video('<?php echo $videofile2; ?>');" class="clearfix">
+            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png" width="30" />Get to know the business idea</a>
+        <a href="#" class="clearfix" id="<?php if($ufold!="") { echo "contactpopup"; } else { echo "loginerrpopup"; } ?>">
+            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/FAQ-button.png" width="30" />Contact the entrepreneur</a>
+    </div>
+    <?php
 
 }
 else
 {
-?>
- <div id="how-to-div" class="clearfix"> 
+    ?>
+    <div id="how-to-div" class="clearfix">
         <a href="javascript:void(0)" onclick="play_video('');"  class="clearfix">
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png" width="30" />How to list your business idea</a> 
-      <a href="javascript:void(0)" onclick="play_video('');"  class="clearfix">
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png" width="30" />How to market your listing</a> 
+            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png" width="30" />How to list your business idea</a>
+        <a href="javascript:void(0)" onclick="play_video('');"  class="clearfix">
+            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/View-videos.png" width="30" />How to market your listing</a>
         <a href="#" class="clearfix" >
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/FAQ-button.png" width="30" />Frequently asked questions</a> 
-</div>
-<?php
+            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/buttons/FAQ-button.png" width="30" />Frequently asked questions</a>
+    </div>
+    <?php
 }
 ?>
 
 <!-- popup for contact-->
-<div class="registration-box contact_cont" style="display:none; margin-left: 10px; min-height:330px; background:#D1E3F7; border:1px solid #7D5682; border-radius:5px;">
-    <h2 style="text-align:center; margin-top:20px;">Submit Listing Download Request</h2>
-    <form action="<?php echo Yii::app()->createUrl('/listing/listing/mailtoowner');?>" method="post">
-      <input type="hidden" name="url" id="urll" value="<?php echo Yii::app()->getBaseUrl(true); echo Yii::app()->request->getUrl();?>" />            	
-      <div class="contact_inner" style="height:410px;">
-         <div class="closebutton_pop" style="position: relative; top: -13px; z-index: 100;left: 379px; text-align: center;">    
-		 <a title="Close" href="#" id="close3" ><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/close.png" alt="business supermarket close button" width="24"></a>      
-		 </div>
-         <div style="text-align: center;">
-            <h2 style="color:#00acce; margin-top: -15px;">You are about to send a private message to the owner of this listing</h2>
-            <p>Your message will be private and only viewable by you and the listing owner.</p>
-            <p style="width: 500px; margin: auto;"><em>If your question may be of interest to other users, then consider posting the message in the <b style="color: #A84793;">	
+<div class="registration-box contact_cont" >
+    <form action="<?php echo Yii::app()->createUrl('/forum/forum/sendmaillistowmer');?>" method="post">
+        <input type="hidden" name="url" id="urll" value="<?php echo Yii::app()->getBaseUrl(true); echo Yii::app()->request->getUrl();?>" />
+        <div class="contact_inner" style="height:410px;">
+            <div class="closebutton_pop" style="position: relative; top: -13px; z-index: 100;left: 379px; text-align: center;">
+                <a title="Close" href="#" id="close3" ><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/close.png" alt="business supermarket close button" width="24"></a>
+            </div>
+            <div style="text-align: center;">
+                <h2 style="color:#00acce; margin-top: -15px;">You are about to send a private message to the owner of this listing</h2>
+                <p>Your message will be private and only viewable by you and the listing owner.</p>
+                <p style="width: 500px; margin: auto;"><em>If your question may be of interest to other users, then consider posting the message in the <b style="color: #A84793;">
 
-			<?php if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/view") { ?>	
+                            <?php if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/view") { ?>
 
-				<a href="#" id="voiceopen"  style="color: #A84793;">Voice your Opinion</a>	
-				<?php 
-				}	
-				else
-					{	
-				?>		 <a href="#" id="voiceopens"  style="color: #A84793;">Voice your Opinion</a>
-				<?php		
-				}		
-				?>		 		 </b> tab where other users could benefit from your query.</em></p>
-         </div>
-		 
-		 <?php
- if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/view" || Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/preview_user_listing" || Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/rdelete" || Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/fupdate")
-{
-$lid=$_GET['id'];
-if($lid=="")
-{
-$lid = Yii::app()->request->getParam('listid');
-}
-}
-$connection = Yii::app()->db;
-$command1 = $connection->createCommand("select * from `user_default_listing` where `user_default_listing_id`='$lid'");
-$myresult1 = $command1->queryRow();
-$uid=$myresult1['user_default_profiles_id'];
-$title=$myresult1['user_default_listing_title'];
-$command12 = $connection->createCommand("select * from `user_default_profiles` where `user_default_id`='$uid'");
-$myresult12 = $command12->queryRow();
-$uname=$myresult12['user_default_first_name'];
-$usname=$myresult12['user_default_surname'];
-$uemail=$myresult12['user_default_email'];
-$ufname=$uname." ".$usname;
-$id = Yii::app()->user->getId();
-$command = $connection->createCommand("select * from `user_default_profiles` where `user_default_id`='$id'");
-$myresult = $command->queryRow();
-$cname=$myresult['user_default_first_name'].' '.$myresult['user_default_surname'];
-$cuname=$myresult['user_default_username'];
-$cemail=$myresult['user_default_email'];
-?>
+                                <a href="#" id="voiceopen"  style="color: #A84793;">Voice your Opinion</a>
+                                <?php
+                            }
+                            else
+                            {
+                                ?>		 <a href="#" id="voiceopens"  style="color: #A84793;">Voice your Opinion</a>
+                                <?php
+                            }
+                            ?>		 		 </b> tab where other users could benefit from your query.</em></p>
+            </div>
 
-        <div class="feed_heading" style="padding-left: 30px !important;">
-            <span class="span">Send to: &nbsp; &nbsp;&nbsp;<?php echo $uname; ?> </span>
-        </div>
-        <div class="feed_heading" style="padding-left: 30px !important;">
-            <span class="span">Listing title: <?php echo $title ?></span>
-        </div>
-        <?php if(!isset($preview_)){echo "</div>";} //layout fix ?>
+            <?php
+            if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/view" || Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/preview_user_listing" || Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/rdelete" || Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/fupdate")
+            {
+                $lid=$_GET['id'];
+                if($lid=="")
+                {
+                    $lid = Yii::app()->request->getParam('listid');
+                }
+            }
+            $connection = Yii::app()->db;
+            $command1 = $connection->createCommand("select * from `user_default_listing` where `user_default_listing_id`='$lid'");
+            $myresult1 = $command1->queryRow();
+            $uid=$myresult1['user_default_profiles_id'];
+            $title=$myresult1['user_default_listing_title'];
+            $command12 = $connection->createCommand("select * from `user_default_profiles` where `user_default_id`='$uid'");
+            $myresult12 = $command12->queryRow();
+            $uname=$myresult12['user_default_first_name'];
+            $usname=$myresult12['user_default_surname'];
+            $uemail=$myresult12['user_default_email'];
+            $ufname=$uname." ".$usname;
+            $id = Yii::app()->user->getId();
+            $command = $connection->createCommand("select * from `user_default_profiles` where `user_default_id`='$id'");
+            $myresult = $command->queryRow();
+            $cname=$myresult['user_default_first_name'].' '.$myresult['user_default_surname'];
+            $cuname=$myresult['user_default_username'];
+            $cemail=$myresult['user_default_email'];
+            ?>
 
             <div class="feed_heading" style="padding-left: 30px !important;">
-               
-         <div class="feed_heading" style="padding-left: 30px !important;">
-            <span class="span">Subject:&nbsp;&nbsp;</span>
-            <input type="text" name="subject" id="subject" class="feedbackinput" placeholder="Please Enter subject" value="Listing Download Request" style="margin-top: -9px;margin-left: 5px;width: 80%;height: 25px;" required="" />                
-         </div>
-         <input type="hidden" name="listid" value="<?php echo Yii::app()->request->getParam('listid'); ?>" />
-         <input type="hidden" name="subj" value="Listing Download Request" />
-         <?php $surll= $_SERVER["REQUEST_URI"];
+                <span class="span">Send to: &nbsp; &nbsp;&nbsp;<?php echo $uname; ?> </span>
+            </div>
+            <div class="feed_heading" style="padding-left: 30px !important;">
+                <span class="span">Listing title: <?php echo $title ?></span>
+            </div>
+
+
+            <div class="feed_heading" style="padding-left: 30px !important;">
+                <span class="span">Subject:&nbsp;&nbsp;</span>
+                <input type="text" name="subject" id="subject" class="feedbackinput" placeholder="Please Enter subject" value="Listing Download Request" style="margin-top: -9px;margin-left: 5px;width: 80%;height: 25px;" required="" />
+            </div>
+            <input type="hidden" name="listid" value="<?php echo Yii::app()->request->getParam('id'); ?>" />
+            <input type="hidden" name="subj" value="Listing Download Request" />
+            <?php $surll= $_SERVER["REQUEST_URI"];
             $url=explode("/listing", $surll);
-            //$surll1 = ltrim($surll, '/'); ?>         
-         <input type="hidden" name="furl" value="<?php echo "listing".$url[1]; ?>" />            
-         <div class="feed_heading"  style="padding-left: 30px !important;">
-            <span class="span">Message:</span>
-            <textarea  required="" class="feedbacktextarea" placeholder="Describe your message" name="msg" id="msgd" style="margin-left:9px; width: 80%; height: 115px; padding: 4px;"> </textarea>
-         </div>
-         <br /> 
-         <div class="button_feed" style='width: 100%;
+            //$surll1 = ltrim($surll, '/'); ?>
+            <input type="hidden" name="furl" value="<?php echo "listing".$url[1]; ?>" />
+            <div class="feed_heading"  style="padding-left: 30px !important;">
+                <span class="span">Message:</span>
+                <textarea  required="" class="feedbacktextarea" placeholder="Describe your message" name="msg" id="msgd" style="margin-left:9px; width: 80%; height: 115px; padding: 4px;"> </textarea>
+            </div>
+            <br />
+            <div class="button_feed" style='width: 100%;
             height: auto;
             margin-top: 96px;
             text-align: center;margin-left:0px'>
-            Send a copy to my email address for my records <input type="checkbox" name="memail" value="yes" />		 		 <br/>		 <br/>	
-			<?php if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/view") { ?>
+                Send a copy to my email address for my records <input type="checkbox" name="memail" value="yes" />		 		 <br/>		 <br/>
+                <?php if(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/view") { ?>
 
-			<input type="submit" name="sendmaillist" tabindex="12" id="sendmaillist" class="button black" value="Send" />
-			
-         </div>
-      </div>
-      <?php if(isset($preview_)){echo "</div>";} //layout fix ?>
-   </form>
-   <?php }
-   elseif(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/preview_user_listing"){
-        ?><input type="button"  id="close1" class="button black close" value="Close" />
-       <input type="submit" name="sendmaillist" tabindex="12" id="sendmaillist" class="button green send" value="Send" />
-        </div>
-        </div></form>
-        <?php
-   }else
-   {
-	   ?><input type="button"  id="close1" class="button black close" value="Close" />
-       <input type="submit" name="sendmaillist" tabindex="12" id="sendmaillist" class="button black send" value="Send" />
+                <input type="submit" name="sendmaillist" tabindex="12" id="sendmaillist" class="button black" value="Send" />
+
+            </div></div>
+    </form>
+    <?php }
+    elseif(Yii::app()->urlManager->parseUrl(Yii::app()->request)=="listing/listing/preview_user_listing"){
+    ?><input type="button"  id="close1" class="button black close" value="Close" />
+    <input type="submit" name="sendmaillist" tabindex="12" id="sendmaillist" class="button green send" value="Send" />
 </div>
-</div></form>
+    </div></form>
 <?php
- } 
- ?>
+}else
+{
+    ?><input type="button"  id="close1" class="button black close" value="Close" />
+    <input type="submit" name="sendmaillist" tabindex="12" id="sendmaillist" class="button black send" value="Send" />
+    </div>
+    </div></form>
+    <?php
+}
+?>
 </div>
 <div id="usererror" style="display: none; background: none;" >
-   <div class="u-email-box success-popup" style="">
-      <img src="<?php echo Yii::app()->theme->baseUrl ?>/images/robot/Robot-pointing-down.png" style="z-index:999999; position:relative; top:37px;" />            
-      <div class="my-account-popup-box" style="">
-         <h2 style="color: black;  font-size: 15px;"> <span style="color: #e5a04d;  font-size: 32px;">Oops </span><br /><br />You need to be logged in to contact the entrepreneur              </h2>
-         <p><em>Please login to your account or create a new user account</em></p>
-         <div class="center-button"><a  href="#" id="close2"  class="black button">Close</a></div>
-      </div>
-   </div>
+    <div class="u-email-box success-popup" style="">
+        <img src="<?php echo Yii::app()->theme->baseUrl ?>/images/robot/Robot-pointing-down.png" style="z-index:999999; position:relative; top:37px;" />
+        <div class="my-account-popup-box" style="">
+            <h2 style="color: black;  font-size: 15px;"> <span style="color: #e5a04d;  font-size: 32px;">Oops </span><br /><br />You need to be logged in to contact the entrepreneur              </h2>
+            <p><em>Please login to your account or create a new user account</em></p>
+            <div class="center-button"><a  href="#" id="close2"  class="black button">Close</a></div>
+        </div>
+    </div>
 </div>

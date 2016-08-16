@@ -49,43 +49,43 @@ class MymessagesController extends Controller
     {
         return array(
             array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('addmessage','index','downloadAttachement'),
+                'actions'=>array('addmessage','index','downloadAttachement','uploadAttachement','navigate'),
                 'users'=>array('*'),
             ),
             array('deny',  // deny all users
                 'users'=>array('*'),
             ),
         );
-    }		
+    }
 
-	public function actionIndex()
+    public function actionIndex()
 
-	{ 	 	    
+    {
 
-            	/**       
+        /**
 
-            	*  listing you wish to manage    
+         *  listing you wish to manage
 
-            	**/	
+         **/
 
-            	
-            	if(Yii::app()->user->isGuest) {
-            		
-            		throw new CHttpException(404,'The specified post cannot be found.');
-            		
-            	}
-            	else{
 
-                        	$this->pageTitle='My Messages - Business Supermarket';   
+        if(Yii::app()->user->isGuest) {
 
-                        	$model= new UserMessages();   
-                           
+            throw new CHttpException(404,'The specified post cannot be found.');
 
-                        	$this->render('page',array('model'=>$model)) ; 
-            	
-            	}
+        }
+        else{
 
-	}		
+            $this->pageTitle='My Messages - Business Supermarket';
+
+            $model= new UserMessages();
+
+
+            $this->render('page',array('model'=>$model)) ;
+
+        }
+
+    }
 
     public function actionaddMessage(){
 
@@ -119,22 +119,22 @@ class MymessagesController extends Controller
         $userMessage->user_default_listing_id = $listingId;
         $userMessage->created_date = date('Y-m-d H:i:s');
         $userMessage->first_message = $firstMessage;
-		//$userMessage->attachement = $attachementUploadFile;
-		
-		if( ($attachementUploadFile != "null") && (is_file(MessageClass::$uploadDirectoryPath.$attachementUploadFile)) ){
+        //$userMessage->attachement = $attachementUploadFile;
+
+        if( ($attachementUploadFile != "null") && (is_file(MessageClass::$uploadDirectoryPath.$attachementUploadFile)) ){
 
             $userMessage->attachement = $attachementUploadFile;
         }
-		
-		 if ( $commentReference > 0 ){
+
+        if ( $commentReference > 0 ){
 
             $userMessage->parent_message_id = $commentReference;
 
         }
 
 
-        
-        
+
+
 
 
         // Add the attachement if exist
@@ -353,7 +353,7 @@ class MymessagesController extends Controller
 
         $originaleFileName = substr($attachment, $fileNameLength);
 
-        $mime = MessageClass::_mime_content_type($originaleFileName);
+        //$mime = MessageClass::_mime_content_type($originaleFileName);
         // Fix for IE https issue
         header('Pragma: public');
         header('Content-Description: File Transfer');

@@ -117,6 +117,10 @@ Yii::app()->clientScript->registerScriptFile($themepath . '/js/common.js');
 
 Yii::app()->clientScript->registerScriptFile($themepath . '/js/jquery.poshytip.js');
 
+Yii::app()->clientScript->registerScriptFile($themepath . '/js/forum_common.js');
+
+Yii::app()->clientScript->registerScriptFile($themepath . '/js/forum_engine.js');
+
 
 /* Search js */
 
@@ -127,6 +131,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getAssetManager()->publ
 
 Yii::app()->clientScript->registerCssFile(Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.modules.forum.assets')) . '/css/forum.css');
 
+/*
 Yii::app()->clientScript->registerScriptFile(Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.modules.forum.assets')) . '/js/common.js');
 
 Yii::app()->clientScript->registerScriptFile(Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.modules.forum.assets')) . '/js/engine.js');
@@ -137,7 +142,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getAssetManager()->publ
 
 Yii::app()->clientScript->registerScriptFile(Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.modules.mymessage.assets')) . '/mymessages.engine.js');
 
-
+*/
 
 ?>
 
