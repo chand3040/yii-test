@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 12, 2016 at 05:49 AM
+-- Generation Time: Aug 17, 2016 at 02:39 AM
 -- Server version: 5.5.47-0+deb8u1
 -- PHP Version: 5.6.17-0+deb8u1
 
@@ -37,37 +37,37 @@ CREATE TABLE `drg_currency_forex` (
 
 INSERT INTO `drg_currency_forex` (`currency`, `rate`) VALUES
 ('EUR', 1),
-('USD', 1.1087),
-('JPY', 113.59),
+('USD', 1.1158),
+('JPY', 113.77),
 ('BGN', 1.9558),
-('CZK', 27.027),
-('DKK', 7.4368),
-('GBP', 0.84955),
-('HUF', 311.02),
-('PLN', 4.2786),
-('RON', 4.4584),
-('SEK', 9.525),
-('CHF', 1.0883),
-('NOK', 9.4065),
-('HRK', 7.4799),
-('RUB', 71.809),
-('TRY', 3.3082),
-('AUD', 1.452),
-('BRL', 3.5239),
-('CAD', 1.4573),
-('CNY', 7.3848),
-('HKD', 8.5999),
-('IDR', 14552.8),
-('ILS', 4.2435),
-('INR', 74.1),
-('KRW', 1229.38),
-('MXN', 20.6443),
-('MYR', 4.4694),
-('NZD', 1.5548),
-('PHP', 52.004),
-('SGD', 1.4944),
-('THB', 38.793),
-('ZAR', 15.1284);
+('CZK', 27.018),
+('DKK', 7.4398),
+('GBP', 0.8605),
+('HUF', 310.02),
+('PLN', 4.2658),
+('RON', 4.459),
+('SEK', 9.4299),
+('CHF', 1.0888),
+('NOK', 9.1635),
+('HRK', 7.4916),
+('RUB', 72.2194),
+('TRY', 3.2998),
+('AUD', 1.4535),
+('BRL', 3.5287),
+('CAD', 1.4478),
+('CNY', 7.4173),
+('HKD', 8.6551),
+('IDR', 14623.7),
+('ILS', 4.2553),
+('INR', 74.6069),
+('KRW', 1234.19),
+('MXN', 20.3881),
+('MYR', 4.4915),
+('NZD', 1.5497),
+('PHP', 51.963),
+('SGD', 1.5023),
+('THB', 38.815),
+('ZAR', 15.07);
 
 -- --------------------------------------------------------
 
@@ -241,7 +241,15 @@ INSERT INTO `user_default_activity_date` (`id`, `user_default_id`, `total_minute
 (278, 86, 13, 36, '2016-08-08'),
 (279, 100, 4, 29, '2016-08-08'),
 (280, 86, 33, 65, '2016-08-09'),
-(281, 88, 8, 11, '2016-08-09');
+(281, 88, 8, 11, '2016-08-09'),
+(282, 104, 3, 5, '2016-08-12'),
+(283, 88, 2, 13, '2016-08-12'),
+(284, 105, 9, 27, '2016-08-13'),
+(285, 88, 33, 51, '2016-08-14'),
+(286, 86, 23, 43, '2016-08-15'),
+(287, 88, 10, 4, '2016-08-15'),
+(288, 88, 26, 20, '2016-08-16'),
+(289, 86, 11, 33, '2016-08-16');
 
 -- --------------------------------------------------------
 
@@ -29926,7 +29934,262 @@ INSERT INTO `user_default_activity_log` (`id`, `user_default_id`, `log_id`, `des
 (29606, 88, 13, 'Link visited: /listing/marketingdata/listid/63', 0, 0, '2016-08-09 10:52:48', 0),
 (29607, 88, 12, 'User is Idle!', 5, 5, '2016-08-09 10:58:04', 0),
 (29608, 88, 11, 'User is Active!', 0, 5, '2016-08-09 11:15:17', 0),
-(29609, 88, 12, 'User is Idle!', 0, 5, '2016-08-09 11:18:18', 0);
+(29609, 88, 12, 'User is Idle!', 0, 5, '2016-08-09 11:18:18', 0),
+(29610, 104, 13, 'Link visited: /login', 0, 0, '2016-08-12 07:23:19', 0),
+(29611, 104, 13, 'Link visited: /', 0, 0, '2016-08-12 07:23:19', 0),
+(29612, 104, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-12 07:23:25', 0),
+(29613, 104, 13, 'Link visited: /businesslisting/business-services', 0, 0, '2016-08-12 07:23:29', 0),
+(29614, 104, 13, 'Link visited: /listing/science-and-technology', 0, 0, '2016-08-12 07:23:36', 0),
+(29615, 104, 12, 'User is Idle!', 3, 3, '2016-08-12 07:26:44', 0),
+(29616, 88, 13, 'Link visited: /login', 0, 5, '2016-08-12 13:58:53', 0),
+(29617, 88, 13, 'Link visited: /', 0, 0, '2016-08-12 13:58:53', 0),
+(29618, 88, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-12 13:58:57', 0),
+(29619, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-12 13:59:02', 0),
+(29620, 88, 13, 'Link visited: /listing/selectlisting/listid/63', 2, 0, '2016-08-12 14:01:00', 0),
+(29621, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-12 14:01:02', 0),
+(29622, 88, 13, 'Link visited: /listing/create/listid/71', 0, 0, '2016-08-12 14:01:05', 0),
+(29623, 88, 13, 'Link visited: /listing/user_listing_step3/listid/71', 0, 0, '2016-08-12 14:01:11', 0),
+(29624, 88, 13, 'Link visited: /listing/user_listing_step3/listid/71', 0, 0, '2016-08-12 14:01:27', 0),
+(29625, 88, 13, 'Link visited: /listing/user_listing_step4/listid/71', 0, 0, '2016-08-12 14:01:27', 0),
+(29626, 88, 13, 'Link visited: /listing/user_listing_step2/listid/71', 0, 0, '2016-08-12 14:01:36', 0),
+(29627, 88, 13, 'Link visited: /listing/user_listing_step2/listid/71', 0, 0, '2016-08-12 14:01:51', 0),
+(29628, 88, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-12 14:01:51', 0),
+(29629, 0, 13, 'Link visited: /admin/website', 5, 0, '2016-08-12 14:02:17', 4),
+(29630, 0, 13, 'Link visited: /admin/listings/listings/index', 5, 0, '2016-08-12 14:07:24', 4),
+(29631, 0, 13, 'Link visited: /admin/listings/listings/newlistings', 0, 0, '2016-08-12 14:07:36', 4),
+(29632, 0, 13, 'Link visited: /admin/listings/listings/update?id=71', 0, 0, '2016-08-12 14:07:44', 4),
+(29633, 0, 13, 'Link visited: /admin/listings/listings/update?id=71', 0, 0, '2016-08-12 14:07:44', 4),
+(29634, 0, 13, 'Link visited: /admin/listings/listings/uploadYoutube', 0, 0, '2016-08-12 14:08:11', 4),
+(29635, 0, 13, 'Link visited: /admin/listings/listings/index', 5, 0, '2016-08-13 01:51:31', 2),
+(29636, 0, 13, 'Link visited: /admin/listings/listings/index', 0, 0, '2016-08-13 01:51:43', 2),
+(29637, 0, 13, 'Link visited: /admin/listings/listings/update?id=71', 0, 0, '2016-08-13 01:51:52', 2);
+INSERT INTO `user_default_activity_log` (`id`, `user_default_id`, `log_id`, `description`, `counted_minutes`, `idle_minutes`, `datetime`, `user_default_business_id`) VALUES
+(29638, 0, 13, 'Link visited: /admin/listings/listings/update?id=71', 1, 0, '2016-08-13 01:52:24', 2),
+(29639, 0, 13, 'Link visited: /admin/listings/listings/update?id=71', 4, 0, '2016-08-13 01:56:16', 2),
+(29640, 0, 13, 'Link visited: /admin/listings/listings/update?id=71', 0, 0, '2016-08-13 01:56:25', 2),
+(29641, 105, 13, 'Link visited: /login', 0, 0, '2016-08-13 02:19:20', 0),
+(29642, 105, 13, 'Link visited: /', 0, 0, '2016-08-13 02:19:21', 0),
+(29643, 105, 13, 'Link visited: /video_tutorials', 1, 0, '2016-08-13 02:20:26', 0),
+(29644, 105, 13, 'Link visited: /listing/business-ideas', 1, 0, '2016-08-13 02:21:33', 0),
+(29645, 105, 13, 'Link visited: /listing/business-ideas', 0, 0, '2016-08-13 02:21:36', 0),
+(29646, 105, 13, 'Link visited: /listing/business-ideas?country=3', 1, 0, '2016-08-13 02:22:09', 0),
+(29647, 105, 13, 'Link visited: /listing/business-ideas?country=3', 0, 0, '2016-08-13 02:22:15', 0),
+(29648, 105, 13, 'Link visited: /listing/business-ideas?name_sort=a_z', 0, 0, '2016-08-13 02:22:34', 0),
+(29649, 105, 13, 'Link visited: /listing/business-ideas?name_sort=a_z', 0, 0, '2016-08-13 02:22:38', 0),
+(29650, 105, 13, 'Link visited: /listing/business-ideas?date_sort=latest', 0, 0, '2016-08-13 02:22:44', 0),
+(29651, 105, 13, 'Link visited: /listing/business-ideas?date_sort=oldest', 0, 0, '2016-08-13 02:22:51', 0),
+(29652, 105, 13, 'Link visited: /listing/business-ideas?looking_for=4', 0, 0, '2016-08-13 02:22:56', 0),
+(29653, 105, 13, 'Link visited: /listing/business-ideas?looking_for=4', 0, 0, '2016-08-13 02:23:02', 0),
+(29654, 105, 13, 'Link visited: /listing/business-ideas?date_sort=oldest', 0, 0, '2016-08-13 02:23:05', 0),
+(29655, 105, 13, 'Link visited: /listing/business-ideas?date_sort=latest', 0, 0, '2016-08-13 02:23:07', 0),
+(29656, 105, 13, 'Link visited: /listing/business-ideas?rows=20', 0, 0, '2016-08-13 02:23:22', 0),
+(29657, 105, 13, 'Link visited: /listing/business-ideas?country=3', 0, 0, '2016-08-13 02:23:37', 0),
+(29658, 105, 13, 'Link visited: /listing/business-ideas?country=100', 0, 0, '2016-08-13 02:23:57', 0),
+(29659, 105, 13, 'Link visited: /listing/business-ideas?cost=lowest', 1, 0, '2016-08-13 02:24:31', 0),
+(29660, 105, 13, 'Link visited: /listing/retail', 0, 0, '2016-08-13 02:24:52', 0),
+(29661, 105, 13, 'Link visited: /listing/industrial', 0, 0, '2016-08-13 02:25:12', 0),
+(29662, 105, 13, 'Link visited: /listing/science-and-technology', 0, 0, '2016-08-13 02:25:34', 0),
+(29663, 105, 13, 'Link visited: /businesslisting/business-services', 0, 0, '2016-08-13 02:25:47', 0),
+(29664, 105, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-13 02:26:03', 0),
+(29665, 105, 13, 'Link visited: /mymessage', 0, 0, '2016-08-13 02:26:30', 0),
+(29666, 105, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-13 02:26:40', 0),
+(29667, 105, 13, 'Link visited: /listing/create', 0, 0, '2016-08-13 02:27:04', 0),
+(29668, 105, 12, 'User is Idle!', 5, 5, '2016-08-13 02:39:15', 0),
+(29669, 105, 11, 'User is Active!', 0, 5, '2016-08-13 02:42:11', 0),
+(29670, 88, 13, 'Link visited: /login', 5, 0, '2016-08-14 06:11:49', 0),
+(29671, 88, 13, 'Link visited: /', 0, 0, '2016-08-14 06:11:49', 0),
+(29672, 88, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-14 06:11:56', 0),
+(29673, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-14 06:12:01', 0),
+(29674, 88, 12, 'User is Idle!', 3, 3, '2016-08-14 06:15:27', 0),
+(29675, 88, 11, 'User is Active!', 0, 3, '2016-08-14 06:16:50', 0),
+(29676, 88, 13, 'Link visited: /listing', 1, 0, '2016-08-14 06:17:47', 0),
+(29677, 88, 13, 'Link visited: /listing/create/listid/71', 0, 0, '2016-08-14 06:17:50', 0),
+(29678, 88, 13, 'Link visited: /listing/user_listing_step3/listid/71', 0, 0, '2016-08-14 06:17:56', 0),
+(29679, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-14 06:18:07', 0),
+(29680, 88, 13, 'Link visited: /listing/delete', 0, 0, '2016-08-14 06:18:14', 0),
+(29681, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-14 06:18:14', 0),
+(29682, 88, 13, 'Link visited: /listing/delete', 0, 0, '2016-08-14 06:18:19', 0),
+(29683, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-14 06:18:19', 0),
+(29684, 88, 13, 'Link visited: /listing/create', 0, 0, '2016-08-14 06:18:33', 0),
+(29685, 88, 13, 'Link visited: /user/myaccount/update', 1, 0, '2016-08-14 06:19:03', 0),
+(29686, 88, 13, 'Link visited: /listing/create', 0, 0, '2016-08-14 06:19:24', 0),
+(29687, 88, 13, 'Link visited: /listing/create', 1, 0, '2016-08-14 06:19:54', 0),
+(29688, 88, 13, 'Link visited: /listing/user_listing_step2/listid/84', 0, 0, '2016-08-14 06:19:54', 0),
+(29689, 88, 13, 'Link visited: /listing/imageupload?PHPSESSID=1onca4gek6u6vgjbpfhsrh7qs3&YII_CSRF_TOKEN=c04d5642743614cd74cbf577102d8d91f7e33aa2&qqfile=logo.jpg', 1, 0, '2016-08-14 06:20:28', 0),
+(29690, 88, 13, 'Link visited: /listing/create', 3, 0, '2016-08-14 06:23:51', 0),
+(29691, 88, 13, 'Link visited: /listing/create', 1, 0, '2016-08-14 06:24:26', 0),
+(29692, 88, 13, 'Link visited: /listing/user_listing_step2/listid/85', 0, 0, '2016-08-14 06:24:26', 0),
+(29693, 88, 13, 'Link visited: /listing/imageupload?PHPSESSID=1onca4gek6u6vgjbpfhsrh7qs3&YII_CSRF_TOKEN=c04d5642743614cd74cbf577102d8d91f7e33aa2&qqfile=logo.jpg', 0, 0, '2016-08-14 06:24:49', 0),
+(29694, 88, 13, 'Link visited: /listing/user_listing_step2/listid/85', 5, 0, '2016-08-14 06:30:47', 0),
+(29695, 88, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-14 06:30:47', 0),
+(29696, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-14 06:30:51', 0),
+(29697, 88, 13, 'Link visited: /listing/delete', 0, 0, '2016-08-14 06:31:05', 0),
+(29698, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-14 06:31:05', 0),
+(29699, 88, 13, 'Link visited: /listing/create/listid/85', 0, 0, '2016-08-14 06:31:10', 0),
+(29700, 88, 13, 'Link visited: /listing/user_listing_step2/listid/85', 0, 0, '2016-08-14 06:31:16', 0),
+(29701, 88, 13, 'Link visited: /listing/user_listing_step2/listid/85', 5, 0, '2016-08-14 06:36:15', 0),
+(29702, 88, 13, 'Link visited: /listing/user_listing_step3/listid/85', 0, 0, '2016-08-14 06:36:16', 0),
+(29703, 88, 13, 'Link visited: /listing/listingimage?PHPSESSID=1onca4gek6u6vgjbpfhsrh7qs3&YII_CSRF_TOKEN=c04d5642743614cd74cbf577102d8d91f7e33aa2&qqfile=pic_1.png', 0, 0, '2016-08-14 06:36:27', 0),
+(29704, 88, 13, 'Link visited: /listing/listingimage?PHPSESSID=1onca4gek6u6vgjbpfhsrh7qs3&YII_CSRF_TOKEN=c04d5642743614cd74cbf577102d8d91f7e33aa2&qqfile=pic_2+(2).png', 0, 0, '2016-08-14 06:36:36', 0),
+(29705, 88, 13, 'Link visited: /listing/listingimage?PHPSESSID=1onca4gek6u6vgjbpfhsrh7qs3&YII_CSRF_TOKEN=c04d5642743614cd74cbf577102d8d91f7e33aa2&qqfile=pic_3.png', 0, 0, '2016-08-14 06:36:45', 0),
+(29706, 88, 13, 'Link visited: /listing/listingimage?PHPSESSID=1onca4gek6u6vgjbpfhsrh7qs3&YII_CSRF_TOKEN=c04d5642743614cd74cbf577102d8d91f7e33aa2&qqfile=pic_5+(2).png', 0, 0, '2016-08-14 06:36:57', 0),
+(29707, 88, 13, 'Link visited: /listing/listingimage?PHPSESSID=1onca4gek6u6vgjbpfhsrh7qs3&YII_CSRF_TOKEN=c04d5642743614cd74cbf577102d8d91f7e33aa2&qqfile=pic_4+(2).png', 0, 0, '2016-08-14 06:37:10', 0),
+(29708, 88, 13, 'Link visited: /listing/listingvideo1/listid/85', 2, 0, '2016-08-14 06:39:22', 0),
+(29709, 88, 13, 'Link visited: /listing/listingvideo2/listid/85', 0, 0, '2016-08-14 06:39:25', 0),
+(29710, 88, 13, 'Link visited: /listing/user_listing_step3/listid/85', 0, 0, '2016-08-14 06:39:31', 0),
+(29711, 88, 13, 'Link visited: /listing/user_listing_step4/listid/85', 0, 0, '2016-08-14 06:39:32', 0),
+(29712, 88, 13, 'Link visited: /listing/user_listing_step4/listid/85', 0, 0, '2016-08-14 06:39:57', 0),
+(29713, 88, 13, 'Link visited: /listing/preview_user_listing/listid/85', 0, 0, '2016-08-14 06:39:57', 0),
+(29714, 88, 13, 'Link visited: /listing/user_listing_step4/listid/85', 0, 0, '2016-08-14 06:40:21', 0),
+(29715, 88, 13, 'Link visited: /listing/user_listing_step4/listid/85', 0, 0, '2016-08-14 06:40:26', 0),
+(29716, 88, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-14 06:40:35', 0),
+(29717, 0, 13, 'Link visited: /admin/listings/listings/index', 5, 0, '2016-08-14 06:41:12', 4),
+(29718, 0, 13, 'Link visited: /admin/listings/listings/newlistings', 0, 0, '2016-08-14 06:41:16', 4),
+(29719, 0, 13, 'Link visited: /admin/listings/listings/update?id=85', 0, 0, '2016-08-14 06:41:24', 4),
+(29720, 0, 13, 'Link visited: /admin/listings/listings/uploadYoutube', 0, 0, '2016-08-14 06:41:42', 4),
+(29721, 0, 13, 'Link visited: /admin/listings/listings/index', 5, 0, '2016-08-14 07:37:03', 4),
+(29722, 0, 13, 'Link visited: /admin/listings/listings/newlistings', 0, 0, '2016-08-14 07:37:06', 4),
+(29723, 0, 13, 'Link visited: /admin/listings/listings/update?id=85', 0, 0, '2016-08-14 07:37:10', 4),
+(29724, 0, 13, 'Link visited: /admin/listings/listings/update?id=85', 0, 0, '2016-08-14 07:37:10', 4),
+(29725, 0, 13, 'Link visited: /admin/listings/listings/delete?id=85', 0, 0, '2016-08-14 07:37:23', 4),
+(29726, 0, 13, 'Link visited: /admin/listings/listings/update?id=85', 0, 0, '2016-08-14 07:37:31', 4),
+(29727, 0, 13, 'Link visited: /admin/listings/listings/delete?id=85', 0, 0, '2016-08-14 07:37:52', 4),
+(29728, 0, 13, 'Link visited: /admin/listings/listings/update?id=85', 4, 0, '2016-08-14 07:42:19', 4),
+(29729, 0, 13, 'Link visited: /admin/listings/listings/newlistings', 0, 0, '2016-08-14 07:42:19', 4),
+(29730, 88, 13, 'Link visited: /login', 5, 0, '2016-08-14 07:42:43', 0),
+(29731, 88, 13, 'Link visited: /', 0, 0, '2016-08-14 07:42:43', 0),
+(29732, 88, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-14 07:42:50', 0),
+(29733, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-14 07:42:55', 0),
+(29734, 88, 13, 'Link visited: /listing/delete', 0, 0, '2016-08-14 07:43:01', 0),
+(29735, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-14 07:43:01', 0),
+(29736, 86, 13, 'Link visited: /login', 0, 3, '2016-08-15 02:17:48', 0),
+(29737, 86, 13, 'Link visited: /', 0, 0, '2016-08-15 02:17:48', 0),
+(29738, 86, 12, 'User is Idle!', 3, 3, '2016-08-15 02:20:51', 0),
+(29739, 86, 11, 'User is Active!', 0, 3, '2016-08-15 02:25:13', 0),
+(29740, 86, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-15 02:25:15', 0),
+(29741, 86, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-15 02:25:18', 0),
+(29742, 86, 13, 'Link visited: /listing', 0, 0, '2016-08-15 02:25:28', 0),
+(29743, 86, 13, 'Link visited: /listing/selectlisting/listid/64', 0, 0, '2016-08-15 02:25:32', 0),
+(29744, 88, 13, 'Link visited: /login', 5, 0, '2016-08-15 02:26:02', 0),
+(29745, 88, 13, 'Link visited: /', 0, 0, '2016-08-15 02:26:02', 0),
+(29746, 88, 13, 'Link visited: /', 0, 0, '2016-08-15 02:26:13', 0),
+(29747, 88, 13, 'Link visited: /listing/selectlisting/listid/64', 0, 0, '2016-08-15 02:26:18', 0),
+(29748, 88, 12, 'User is Idle!', 3, 3, '2016-08-15 02:29:14', 0),
+(29749, 88, 12, 'User is Idle!', 0, 3, '2016-08-15 02:29:27', 0),
+(29750, 86, 13, 'Link visited: /listing', 5, 0, '2016-08-15 02:30:34', 0),
+(29751, 86, 12, 'User is Idle!', 3, 3, '2016-08-15 02:33:36', 0),
+(29752, 86, 11, 'User is Active!', 0, 3, '2016-08-15 02:33:52', 0),
+(29753, 88, 11, 'User is Active!', 0, 3, '2016-08-15 02:36:48', 0),
+(29754, 86, 12, 'User is Idle!', 2, 5, '2016-08-15 02:36:54', 0),
+(29755, 88, 12, 'User is Idle!', 2, 5, '2016-08-15 02:39:50', 0),
+(29756, 88, 11, 'User is Active!', 0, 5, '2016-08-15 02:45:29', 0),
+(29757, 86, 13, 'Link visited: /login', 0, 5, '2016-08-15 03:18:20', 0),
+(29758, 86, 13, 'Link visited: /', 0, 0, '2016-08-15 03:18:21', 0),
+(29759, 86, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-15 03:18:25', 0),
+(29760, 86, 13, 'Link visited: /listing/view?id=67', 0, 0, '2016-08-15 03:18:26', 0),
+(29761, 86, 13, 'Link visited: /mymessage', 0, 0, '2016-08-15 03:18:31', 0),
+(29762, 86, 13, 'Link visited: /mymessage/mymessages/downloadAttachement?messageId=1', 0, 0, '2016-08-15 03:18:54', 0),
+(29763, 86, 13, 'Link visited: /mymessage/mymessages/downloadAttachement?messageId=1', 0, 0, '2016-08-15 03:18:54', 0),
+(29764, 86, 13, 'Link visited: /', 0, 0, '2016-08-15 03:18:56', 0),
+(29765, 86, 13, 'Link visited: /mymessage', 0, 0, '2016-08-15 03:18:58', 0),
+(29766, 86, 13, 'Link visited: /forum/forum/addComment', 4, 0, '2016-08-15 03:23:18', 0),
+(29767, 86, 13, 'Link visited: /forum/forum/Navigate', 0, 0, '2016-08-15 03:23:18', 0),
+(29768, 86, 13, 'Link visited: /forum/forum/uploadAttachement', 0, 0, '2016-08-15 03:23:37', 0),
+(29769, 86, 13, 'Link visited: /forum/forum/addComment', 0, 0, '2016-08-15 03:23:37', 0),
+(29770, 86, 13, 'Link visited: /forum/forum/Navigate', 0, 0, '2016-08-15 03:23:38', 0),
+(29771, 86, 13, 'Link visited: /listing/view?id=67', 1, 0, '2016-08-15 03:24:09', 0),
+(29772, 86, 13, 'Link visited: /forum/downloadAttachement/29', 0, 0, '2016-08-15 03:24:19', 0),
+(29773, 86, 13, 'Link visited: /listing/%3C?php%20echo%20Yii::app()-%3EcreateUrl(%27forum/forum/likeComment%27);%20?%3E', 0, 0, '2016-08-15 03:24:48', 0),
+(29774, 86, 13, 'Link visited: /listing/view?id=67', 0, 0, '2016-08-15 03:24:52', 0),
+(29775, 86, 13, 'Link visited: /listing/%3C?php%20echo%20Yii::app()-%3EcreateUrl(%27forum/forum/likeComment%27);%20?%3E', 0, 0, '2016-08-15 03:25:00', 0),
+(29776, 86, 12, 'User is Idle!', 0, 0, '2016-08-15 03:25:12', 0),
+(29777, 86, 11, 'User is Active!', 0, 0, '2016-08-15 03:25:21', 0),
+(29778, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-15 03:25:25', 0),
+(29779, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-15 03:25:27', 0),
+(29780, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-15 03:25:28', 0),
+(29781, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-15 03:25:29', 0),
+(29782, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-15 03:25:31', 0),
+(29783, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-15 03:25:32', 0),
+(29784, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-15 03:25:33', 0),
+(29785, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-15 03:25:35', 0),
+(29786, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-15 03:25:36', 0),
+(29787, 86, 13, 'Link visited: /forum/forum/Navigate', 0, 0, '2016-08-15 03:25:39', 0),
+(29788, 86, 13, 'Link visited: /forum/forum/Navigate', 0, 0, '2016-08-15 03:25:40', 0),
+(29789, 86, 13, 'Link visited: /forum/forum/Navigate', 0, 0, '2016-08-15 03:25:40', 0),
+(29790, 86, 13, 'Link visited: /forum/forum/Navigate', 0, 0, '2016-08-15 03:25:40', 0),
+(29791, 86, 13, 'Link visited: /forum/forum/Navigate', 0, 0, '2016-08-15 03:25:41', 0),
+(29792, 86, 13, 'Link visited: /forum/forum/Navigate', 0, 0, '2016-08-15 03:25:41', 0),
+(29793, 86, 13, 'Link visited: /forum/forum/Navigate', 0, 0, '2016-08-15 03:25:41', 0),
+(29794, 86, 13, 'Link visited: /forum/forum/Navigate', 0, 0, '2016-08-15 03:25:41', 0),
+(29795, 86, 12, 'User is Idle!', 5, 5, '2016-08-15 03:30:12', 0),
+(29796, 86, 12, 'User is Idle!', 0, 5, '2016-08-15 03:30:22', 0),
+(29797, 88, 13, 'Link visited: /login', 5, 0, '2016-08-16 01:29:37', 0),
+(29798, 88, 13, 'Link visited: /', 0, 0, '2016-08-16 01:29:37', 0),
+(29799, 88, 12, 'User is Idle!', 3, 3, '2016-08-16 01:32:44', 0),
+(29800, 86, 13, 'Link visited: /login', 0, 5, '2016-08-16 01:45:17', 0),
+(29801, 86, 13, 'Link visited: /', 0, 0, '2016-08-16 01:45:17', 0),
+(29802, 86, 13, 'Link visited: /listing/view?id=63', 0, 0, '2016-08-16 01:45:19', 0),
+(29803, 86, 12, 'User is Idle!', 5, 5, '2016-08-16 01:50:36', 0),
+(29804, 88, 11, 'User is Active!', 0, 3, '2016-08-16 02:01:15', 0),
+(29805, 88, 12, 'User is Idle!', 2, 5, '2016-08-16 02:04:16', 0),
+(29806, 88, 11, 'User is Active!', 0, 5, '2016-08-16 02:20:50', 0),
+(29807, 86, 13, 'Link visited: /login', 0, 5, '2016-08-16 06:09:46', 0),
+(29808, 86, 13, 'Link visited: /', 0, 0, '2016-08-16 06:09:46', 0),
+(29809, 86, 13, 'Link visited: /listing/view?id=63', 0, 0, '2016-08-16 06:09:53', 0),
+(29810, 86, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-16 06:09:58', 0),
+(29811, 86, 13, 'Link visited: /listing/view?id=63', 0, 0, '2016-08-16 06:09:59', 0),
+(29812, 86, 13, 'Link visited: /forum/forum/addComment', 1, 0, '2016-08-16 06:10:32', 0),
+(29813, 86, 13, 'Link visited: /forum/forum/navigate', 0, 0, '2016-08-16 06:10:33', 0),
+(29814, 86, 13, 'Link visited: /forum/forum/likeComment', 0, 0, '2016-08-16 06:10:37', 0),
+(29815, 86, 13, 'Link visited: /forum/forum/navigate', 0, 0, '2016-08-16 06:10:38', 0),
+(29816, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-16 06:10:41', 0),
+(29817, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-16 06:10:42', 0),
+(29818, 86, 13, 'Link visited: /forum/forum/UpdateViewLimit', 0, 0, '2016-08-16 06:10:47', 0),
+(29819, 86, 13, 'Link visited: /listing/view?id=&rows=12', 0, 0, '2016-08-16 06:10:48', 0),
+(29820, 86, 13, 'Link visited: /listing/view?id=&rows=12', 0, 0, '2016-08-16 06:10:48', 0),
+(29821, 86, 13, 'Link visited: /', 0, 0, '2016-08-16 06:10:50', 0),
+(29822, 86, 13, 'Link visited: /listing/view?id=63', 0, 0, '2016-08-16 06:10:54', 0),
+(29823, 86, 13, 'Link visited: /listing/view?id=63', 0, 0, '2016-08-16 06:10:56', 0),
+(29824, 86, 13, 'Link visited: /forum/forum/setViewByCriteria', 0, 0, '2016-08-16 06:11:02', 0),
+(29825, 86, 13, 'Link visited: /forum/forum/UpdateViewLimit', 0, 0, '2016-08-16 06:11:05', 0),
+(29826, 86, 13, 'Link visited: /listing/view?id=63&rows=12', 0, 0, '2016-08-16 06:11:05', 0),
+(29827, 86, 14, 'User logged out!', 0, 0, '2016-08-16 06:11:29', 0),
+(29828, 88, 13, 'Link visited: /login', 5, 0, '2016-08-16 06:11:40', 0),
+(29829, 88, 13, 'Link visited: /', 0, 0, '2016-08-16 06:11:40', 0),
+(29830, 88, 13, 'Link visited: /listing/business-ideas', 0, 0, '2016-08-16 06:11:43', 0),
+(29831, 88, 13, 'Link visited: /listing/view?id=64', 0, 0, '2016-08-16 06:11:54', 0),
+(29832, 88, 13, 'Link visited: /listing/listingsslider/listid/64', 0, 0, '2016-08-16 06:11:57', 0),
+(29833, 88, 13, 'Link visited: /forum/forum/sendmaillistowmer', 0, 0, '2016-08-16 06:12:07', 0),
+(29834, 88, 13, 'Link visited: /forum/forum/sendmaillistowmer', 0, 0, '2016-08-16 06:12:08', 0),
+(29835, 88, 13, 'Link visited: /listing/view?id=64', 0, 0, '2016-08-16 06:12:08', 0),
+(29836, 88, 13, 'Link visited: /listing/listingsslider/listid/64', 0, 0, '2016-08-16 06:12:13', 0),
+(29837, 88, 14, 'User logged out!', 0, 0, '2016-08-16 06:12:23', 0),
+(29838, 86, 13, 'Link visited: /login', 0, 0, '2016-08-16 06:12:50', 0),
+(29839, 86, 13, 'Link visited: /', 0, 0, '2016-08-16 06:12:51', 0),
+(29840, 86, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-16 06:12:54', 0),
+(29841, 86, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-16 06:12:54', 0),
+(29842, 86, 13, 'Link visited: /mymessage', 0, 0, '2016-08-16 06:12:57', 0),
+(29843, 86, 13, 'Link visited: /mymessage/mymessages/uploadAttachement', 1, 0, '2016-08-16 06:13:34', 0),
+(29844, 86, 13, 'Link visited: /mymessage/mymessages/addmessage', 0, 0, '2016-08-16 06:13:34', 0),
+(29845, 86, 13, 'Link visited: /mymessage/mymessages/Navigate', 0, 0, '2016-08-16 06:13:35', 0),
+(29846, 86, 13, 'Link visited: /mymessage', 0, 0, '2016-08-16 06:13:42', 0),
+(29847, 86, 13, 'Link visited: /mymessage/mymessages/downloadAttachement?messageId=7', 0, 0, '2016-08-16 06:13:48', 0),
+(29848, 86, 12, 'User is Idle!', 4, 4, '2016-08-16 06:18:17', 0),
+(29849, 0, 13, 'Link visited: /admin/listings/listings/index', 5, 0, '2016-08-16 06:43:29', 2),
+(29850, 88, 13, 'Link visited: /login', 0, 0, '2016-08-16 11:08:08', 0),
+(29851, 88, 13, 'Link visited: /', 0, 0, '2016-08-16 11:08:08', 0),
+(29852, 88, 13, 'Link visited: /', 1, 0, '2016-08-16 11:08:41', 0),
+(29853, 88, 14, 'User logged out!', 0, 0, '2016-08-16 11:08:53', 0),
+(29854, 88, 13, 'Link visited: /login', 0, 0, '2016-08-16 11:11:02', 0),
+(29855, 88, 13, 'Link visited: /', 0, 0, '2016-08-16 11:11:02', 0),
+(29856, 88, 12, 'User is Idle!', 5, 5, '2016-08-16 11:16:18', 0),
+(29857, 88, 13, 'Link visited: /login', 0, 5, '2016-08-16 13:17:37', 0),
+(29858, 88, 13, 'Link visited: /', 0, 0, '2016-08-16 13:17:37', 0),
+(29859, 88, 13, 'Link visited: /user/myaccount/update', 0, 0, '2016-08-16 13:17:41', 0),
+(29860, 88, 13, 'Link visited: /listing', 0, 0, '2016-08-16 13:17:48', 0),
+(29861, 88, 12, 'User is Idle!', 3, 3, '2016-08-16 13:20:58', 0),
+(29862, 88, 11, 'User is Active!', 0, 3, '2016-08-16 13:28:34', 0),
+(29863, 88, 12, 'User is Idle!', 2, 5, '2016-08-16 13:31:37', 0);
 
 -- --------------------------------------------------------
 
@@ -29964,7 +30227,10 @@ INSERT INTO `user_default_addresses` (`user_default_address_id`, `user_default_a
 (86, '', '', '', '', '', '100', '', 100),
 (87, '', '', '', '', '', '100', '', 101),
 (88, '', '', '', '', '', '100', '', 102),
-(89, '', '', '', '', '', '100', '', 103);
+(89, '', '', '', '', '', '100', '', 103),
+(90, '', '', '', '', '', '165', '', 104),
+(91, '', '', '', '', '', '100', '', 105),
+(92, '', '', '', '', '', '100', '', 106);
 
 -- --------------------------------------------------------
 
@@ -29985,8 +30251,8 @@ CREATE TABLE `user_default_adminuser` (
 --
 
 INSERT INTO `user_default_adminuser` (`user_id`, `username`, `password`, `email`, `status`) VALUES
-(1, 'super_admin', '0aae82b4405d086ce3fe710c553d77c7', 'admin@business-supermarket.com', 0),
-(2, 'jag', '202cb962ac59075b964b07152d234b70', 'jag@business-supermarket.com', 1),
+(1, 'super_admin', '0aae82b4405d086ce3fe710c553d77c7', 'admin@businessinvention.com', 0),
+(2, 'jag', '202cb962ac59075b964b07152d234b70', 'jag@businessinvntion.com', 1),
 (3, 'sunny', 'd1f63f874c317964c0c885f7eb36963c', 'sunielmudhar@gmail.com', 0),
 (4, 'guest', '0d107d09f5bbe40cade3de5c71e9e9b7', 'dsp7@blueyonder.co,uk', 0),
 (5, 'jats', '202cb962ac59075b964b07152d234b70', 'vjatin57b@gmail.com', 1);
@@ -30781,7 +31047,10 @@ INSERT INTO `user_default_interactions` (`user_default_interaction_id`, `user_de
 (24, 'hi ', 0, '0', 86, 62, 'y', NULL, '', 0, 0, '0', '2015-11-24 04:31:25', '1'),
 (25, 'test', 0, '0', 99, 64, NULL, NULL, '', 0, 0, '0', '2016-08-06 13:00:23', '1'),
 (26, 'gg', 0, '0', 86, 64, NULL, NULL, '', 0, 0, '0', '2016-08-08 04:42:33', '1'),
-(27, 'hello', 0, '0', 100, 63, NULL, NULL, '', 0, 0, '0', '2016-08-08 12:54:25', '1');
+(27, 'hello', 0, '0', 100, 63, NULL, NULL, '', 1, 0, '0', '2016-08-08 12:54:25', '1'),
+(28, 'hi', 0, '0', 86, 67, NULL, NULL, '', 0, 0, '0', '2016-08-15 03:23:18', '1'),
+(29, 'hey', 0, '0', 86, 67, '1471245817.1.2.png', NULL, '', 0, 0, '0', '2016-08-15 03:23:37', '1'),
+(30, 'hi guys', 0, '0', 86, 63, NULL, NULL, '', 0, 0, '0', '2016-08-16 06:10:32', '1');
 
 -- --------------------------------------------------------
 
@@ -30947,7 +31216,8 @@ INSERT INTO `user_default_like_interaction` (`id`, `user_default_interaction_id`
 (7, 16, 88, '1', '2015-10-12 10:14:53', NULL),
 (8, 18, 86, '1', '2015-10-12 10:36:39', NULL),
 (9, 0, 87, '1', '2015-10-22 18:27:17', NULL),
-(10, 10, 86, '1', '2015-11-24 04:07:20', NULL);
+(10, 10, 86, '1', '2015-11-24 04:07:20', NULL),
+(11, 27, 86, '1', '2016-08-16 06:10:37', NULL);
 
 -- --------------------------------------------------------
 
@@ -31018,11 +31288,9 @@ INSERT INTO `user_default_listing` (`user_default_listing_id`, `user_default_lis
 (64, 2, 1, 100, 'Business_supermarket_1442332199.jpg', 'New Testing', 'New Testing', 'New Testing', 'New Testing', '1', '', NULL, 'New Testing', 'New Testing', 2, '1', NULL, NULL, NULL, 86, NULL, NULL, NULL, NULL, '2015-11-19', '4', '2015-11-26'),
 (67, 4, 1, 0, 'Business_supermarket_1443424369.jpg', 'Geventech pvt lmt', 'It is started in 2010, with the purpose of providing friendly soft', 'Just describe your problem; we provide the solution!\r\n\r\nWe do not over-engineer a solution, unless it is a requirement!', 'Our developers have 5000+ man hours of experience in developing web and mobile apps using the apt technology! ', '2', ',,,,,', NULL, 'An Android application to assign Funkytones to phone contacts. ', 'geventech,company,technology', 2, '1', NULL, NULL, NULL, 89, NULL, NULL, NULL, NULL, '2015-11-19', '4', '0000-00-00'),
 (68, 3, 2, 2, 'Business_supermarket_1444449329.jpg', 'zx cx c', 'zc xzcz', 'x cxz xzc', 'a da sdas das das sad sad as', '2', '', NULL, 'asd asd sa das', ' dasd sad asd sad asd', NULL, '0', NULL, NULL, NULL, 90, NULL, NULL, NULL, NULL, '2015-11-19', '4', '2015-11-30'),
-(71, 2, 1, 1, 'Business_supermarket_1469963180.jpg', 'Drivestop System', 'A security system for the prevention of petrol theft from gas stations', 'A security system that uses patent protected stinger system to immobilize any vehicle by using a controlled deflation of the rear wheels. The offending vehicle will come to rest at a known distance from the point of theft.', 'The company Drivestop Limited first started trading as of 2008. During its first year it achieved 1 forecourt installations in the UK. This was operational on an independent forecourt for a period of 1 year to trial the system. \r\n	During the trial period it achieved 1 drive off that was successfully appended and then zero drive offs for the rest of the year. As a result the police requested demonstration of the system in their workshops and put forward sites with very large drive off issues. \r\n	TV, Radio and forecourt magazine exposure further generated interest in the system to the extent that by the end of 2010 we had 14 successful installations nationwide. Of the 14 three were independent forecourts and the remainder being company owned.\r\n	In 2010 we acquired the contract to install the system at Morrison’s Wednesbury. \r\n	After a year of successfully deterring drive-offs from the site we were requested to survey two other sites for installation. However health issues prevented me from doing any further installations and I am now looking for a company / organization to take over the operation and possible take the system worldwide once we have saturated the UK Market.', '', '20000000,22000000,34000000,45000000,65000000,80000000', '1', 'Health issues prevented me from doing any further installations and I am now looking for a company / organisation to take over the operation and possible take the system worldwide once we have saturated the UK Market.\r\n	I would consider licensing the patent or sell the whole operation outright', 'Petrol, theft, stinger, gas station, car, HGV, Tyres, Back axle, rear wheels, puncture, forecourt, fuel, petrol pump', 1, '0', NULL, NULL, NULL, 88, NULL, NULL, NULL, NULL, '', '4', '2015-11-30'),
 (80, 2, 2, 100, 'Business_supermarket_1449553447.jpg', 'new testing', 'new testing', 'new testing', 'new testing', '1', '', NULL, 'new testing', 'new testing', NULL, '0', NULL, NULL, NULL, 86, NULL, NULL, NULL, NULL, '', '2', '2015-12-11'),
 (81, 3, 2, 1, 'Business_supermarket_1457713793.jpg', 'demo testing', 'demo testing', ' demo testingdemo testingdemo testingdemo testingdemo testingdemo testing', 'dfgd gdfgdfg', '1', ',,,,,', NULL, 'dsfdsfsd fdsfdsfds', 'fdsfdsfdsfdsf', NULL, '1', NULL, NULL, NULL, 88, NULL, NULL, NULL, NULL, '2016-07-08', '4', '2016-03-11'),
-(82, 5, 6, 0, 'Business_supermarket_1470298604.png', 'Test listing', 'Test listing to test Default user listing submission', 'What is Lorem Ipsum?\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'Why do we use it?\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', '', '20000000,22000000,34000000,45000000,65000000,80000000', '1', 'Where does it come from?\r\n\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.', 'test listing, test, lorem ipsum', 1, '0', NULL, NULL, NULL, 98, NULL, NULL, NULL, NULL, '', '4', '2016-08-04'),
-(83, 2, 1, 2, 'Business_supermarket_1470306983.png', 'dsfdsfd', 'dsfdsfsf', 'dsfdsfs', 'dsfdsfdsfdsf', '1', '', NULL, 'dfdsfdsf', 'dsfs', NULL, '0', NULL, NULL, NULL, 88, NULL, NULL, NULL, NULL, '', '3', '2016-08-04');
+(82, 5, 6, 0, 'Business_supermarket_1470298604.png', 'Test listing', 'Test listing to test Default user listing submission', 'What is Lorem Ipsum?\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'Why do we use it?\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', '', '20000000,22000000,34000000,45000000,65000000,80000000', '1', 'Where does it come from?\r\n\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.', 'test listing, test, lorem ipsum', 1, '0', NULL, NULL, NULL, 98, NULL, NULL, NULL, NULL, '', '4', '2016-08-04');
 
 -- --------------------------------------------------------
 
@@ -31054,11 +31322,9 @@ INSERT INTO `user_default_listing_addresses` (`user_default_listing_address_id`,
 (52, 'Systematic Works', 'Ahmedabad', 'Ahmedabad', 'Ahmedabad', 'Ahmedabad', 'Ahmedabad', '100', '380015', '235454654654', 64),
 (55, 'Geventech', 'flat 1,sundaram main street,', 'vankateshwara nagar,', 'velacherry', 'Chennai', 'India', '100', '600089', '54242231235324231231', 67),
 (56, 'asd', 'sadsa', 'dsadas', 'dsada', 'asdas', 'asd', '14', '312321', '2132132131', 68),
-(59, 'Forecourt Security Systems', '31 Orchid Drive,', 'Off Wellcroft Street,', 'Churchill,', 'OLDBURY,', 'West Midlands,', '232', 'WE23 FT12', '077 11 66 11 69', 71),
 (68, 'fdsf', 'dsg', 'dsg', 'dsg', 'dsg', 'dsg', '100', '646547', '5475486585', 80),
 (69, 'webrider ', 'ludhiana', 'ludhiana', 'ludhiana', 'ludhiana', 'india', '232', '141003', '435435435435', 81),
-(70, 'Test Company', 'The Arches', '76 Sutton Road', 'Churchill', 'Tipton', 'West Midlands', '232', 'SS7 8UT', '+44 0121 345 6789', 82),
-(71, 'dffdsf', 'dsfdsfds', '34324', '24234234', '23423', '423423', '232', '4234234', '9999999999', 83);
+(70, 'Test Company', 'The Arches', '76 Sutton Road', 'Churchill', 'Tipton', 'West Midlands', '232', 'SS7 8UT', '+44 0121 345 6789', 82);
 
 -- --------------------------------------------------------
 
@@ -31189,17 +31455,11 @@ INSERT INTO `user_default_listing_images` (`user_default_listing_image_id`, `use
 (512, 0x427573696e6573735f73757065726d61726b65745f313434343530353031342e706e67, 'Image 3', '', 'https://www.youtube.com/watch?v=e4GxR9morn4', 63),
 (513, 0x427573696e6573735f73757065726d61726b65745f313434343530353033332e706e67, 'Image 4', '', 'https://www.youtube.com/watch?v=g3IwOgA3Ngw', 63),
 (514, 0x427573696e6573735f73757065726d61726b65745f313434343530353034322e706e67, 'Image 5', '', 'https://www.youtube.com/watch?v=WMo_9AqHh4o', 63),
-(530, 0x427573696e6573735f73757065726d61726b65745f313436393936323832362e706e67, 'Invisible to your customers and traffic flow on your site', '', 'https://youtu.be/hENA7Csgscw', 71),
-(531, 0x427573696e6573735f73757065726d61726b65745f313436393936323833372e706e67, 'Deflation system operates only under the offending vehicle', '', 'https://youtu.be/Dkiw5U0KsfU', 71),
-(532, 0x427573696e6573735f73757065726d61726b65745f313436393936323835312e706e67, 'Increases the safety of traffic flow & pedestrians on the site', '', 'https://youtu.be/2GuiYwzGjTg', 71),
-(533, 0x427573696e6573735f73757065726d61726b65745f313436393936323836322e6a7067, 'Vandal proof installation ensures years of trouble free service', '', 'http://youtu.be/AX42L-kghRI ', 71),
-(534, 0x427573696e6573735f73757065726d61726b65745f313436393936323838312e6a7067, 'Invisible to both your customers and the environment', '', 'http://youtu.be/HXXBG4D_6uk', 71),
 (555, 0x427573696e6573735f73757065726d61726b65745f313437303239383838352e6a7067, 'Sample text 1 to explain what the above image is all about. ', '', 'https://www.youtube.com/watch?v=404iS1avTvA', 82),
 (556, 0x427573696e6573735f73757065726d61726b65745f313437303239383839352e4a5047, 'Sample text 2 to explain what the above image is all about. ', '', 'http://youtu.be/NFLk-IVrFEc', 82),
 (557, 0x427573696e6573735f73757065726d61726b65745f313437303239383930302e706e67, 'Sample text 3 to explain what the above image is all about. ', '', 'http://youtu.be/2130k9kR70w ', 82),
 (558, 0x427573696e6573735f73757065726d61726b65745f313437303239383930352e706e67, 'Sample text 4 to explain what the above image is all about. ', '', 'http://youtu.be/ekjt80PTXzk', 82),
-(559, 0x427573696e6573735f73757065726d61726b65745f313437303239383931312e706e67, 'Sample text 5 to explain what the above image is all about. ', '', 'http://youtu.be/p8yHWpBZqTo', 82),
-(560, 0x427573696e6573735f73757065726d61726b65745f313437303331303636322e706e67, 'Pleadfgfdgdfgdfgdfgdfgdfgdfse enter image description', '', '', 83);
+(559, 0x427573696e6573735f73757065726d61726b65745f313437303239383931312e706e67, 'Sample text 5 to explain what the above image is all about. ', '', 'http://youtu.be/p8yHWpBZqTo', 82);
 
 -- --------------------------------------------------------
 
@@ -31267,7 +31527,8 @@ INSERT INTO `user_default_listing_marketing` (`user_default_listing_marketing_id
 (17, 79, 'hi', 0, 0, 0, 0, '2015-12-07', '0000-00-00', 0.00),
 (18, 81, 'testing', 0, 0, 0, 0, '2016-03-12', '0000-00-00', 0.00),
 (19, 82, 'The default user marketing question goes here', 0, 0, 0, 0, '2016-08-04', '0000-00-00', 0.00),
-(20, 62, 'i want to sell my bikes ..', 0, 0, 0, 0, '2016-08-09', '0000-00-00', 0.00);
+(20, 62, 'i want to sell my bikes ..', 0, 0, 0, 0, '2016-08-09', '0000-00-00', 0.00),
+(21, 85, 'Is this a good idea for a business?', 0, 0, 0, 0, '2016-08-14', '0000-00-00', 0.00);
 
 -- --------------------------------------------------------
 
@@ -31343,12 +31604,8 @@ INSERT INTO `user_default_listing_videos` (`iuser_default_listing_video_id`, `us
 (253, '', 'Aequalis software soluations Pvt Ltd63_demo.mp4', '1', 63),
 (254, '', 'Aequalis software soluations Pvt Ltd63_jag.mp4', '1', 63),
 (255, '', 'Aequalis software soluations Pvt Ltd63_demo.mp4', '1', 63),
-(262, '', 'drivestop_system71_guest_2016-07-31-12:04:36.flv', '0', 71),
-(263, '', 'drivestop_system71_demo_2016-07-31-12:04:47.flv', '0', 71),
 (272, '', 'test_listing82_admin_2016-08-04-04:26:24.flv', '0', 82),
-(273, '', 'test_listing82_demo_2016-08-04-04:26:54.flv', '0', 82),
-(274, '', 'dsfdsfd83_guest_2016-08-04-07:34:44.flv', '0', 83),
-(275, '', 'dsfdsfd83_demo_2016-08-04-07:36:07.flv', '0', 83);
+(273, '', 'test_listing82_demo_2016-08-04-04:26:54.flv', '0', 82);
 
 -- --------------------------------------------------------
 
@@ -31771,7 +32028,28 @@ INSERT INTO `user_default_log_transaction` (`transaction_id`, `user_default_id`,
 (976, 100, 2, 'DESH RAJ has been login successfully', '2016-08-08 12:53:36'),
 (977, 86, 2, 'Jatin Vaghela has been login successfully', '2016-08-09 04:49:53'),
 (978, 88, 2, 'Guest Login has been login successfully', '2016-08-09 10:48:58'),
-(979, 88, 2, 'Guest Login has been login successfully', '2016-08-09 10:49:32');
+(979, 88, 2, 'Guest Login has been login successfully', '2016-08-09 10:49:32'),
+(980, 104, 2, 'muhammad ali has been login successfully', '2016-08-12 07:23:19'),
+(981, 88, 2, 'Guest Login has been login successfully', '2016-08-12 01:58:43'),
+(982, 88, 2, 'Guest Login has been login successfully', '2016-08-12 01:58:53'),
+(983, 105, 2, 'nisha slahn has been login successfully', '2016-08-13 02:19:20'),
+(984, 88, 2, 'Guest Login has been login successfully', '2016-08-14 06:11:14'),
+(985, 88, 2, 'Guest Login has been login successfully', '2016-08-14 06:11:49'),
+(986, 88, 2, 'Guest Login has been login successfully', '2016-08-14 07:42:35'),
+(987, 88, 2, 'Guest Login has been login successfully', '2016-08-14 07:42:43'),
+(988, 86, 2, 'Jatin Vaghela has been login successfully', '2016-08-15 02:17:48'),
+(989, 88, 2, 'Guest Login has been login successfully', '2016-08-15 02:26:02'),
+(990, 86, 2, 'Jatin Vaghela has been login successfully', '2016-08-15 03:18:20'),
+(991, 88, 2, 'Guest Login has been login successfully', '2016-08-16 01:29:36'),
+(992, 86, 2, 'Jatin Vaghela has been login successfully', '2016-08-16 01:45:17'),
+(993, 86, 2, 'Jatin Vaghela has been login successfully', '2016-08-16 06:09:46'),
+(994, 88, 2, 'Guest Login has been login successfully', '2016-08-16 06:11:39'),
+(995, 86, 2, 'Jatin Vaghela has been login successfully', '2016-08-16 06:12:50'),
+(996, 88, 2, 'Guest Login has been login successfully', '2016-08-16 11:08:07'),
+(997, 88, 2, 'Guest Login has been login successfully', '2016-08-16 11:10:44'),
+(998, 88, 2, 'Guest Login has been login successfully', '2016-08-16 11:11:02'),
+(999, 88, 2, 'Guest Login has been login successfully', '2016-08-16 01:17:25'),
+(1000, 88, 2, 'Guest Login has been login successfully', '2016-08-16 01:17:37');
 
 -- --------------------------------------------------------
 
@@ -32109,7 +32387,13 @@ INSERT INTO `user_default_log_transaction_admin` (`transaction_id`, `admin_id`, 
 (964, 4, 2, 'guest has been login successfully', '2016-08-08 05:48:47', '82.47.62.112'),
 (965, 2, 2, 'jag has been login successfully', '2016-08-08 11:50:28', '49.32.32.110'),
 (966, 4, 2, 'guest has been login successfully', '2016-08-08 11:56:58', '82.47.62.112'),
-(967, 2, 2, 'jag has been login successfully', '2016-08-08 08:57:38', '103.240.32.220');
+(967, 2, 2, 'jag has been login successfully', '2016-08-08 08:57:38', '103.240.32.220'),
+(968, 4, 2, 'guest has been login successfully', '2016-08-12 02:02:11', '82.47.62.112'),
+(969, 2, 2, 'jag has been login successfully', '2016-08-13 01:51:16', '124.253.226.6'),
+(970, 4, 2, 'guest has been login successfully', '2016-08-14 06:40:50', '82.47.62.112'),
+(971, 4, 2, 'guest has been login successfully', '2016-08-14 07:36:58', '82.47.62.112'),
+(972, 2, 2, 'jag has been login successfully', '2016-08-16 06:43:05', '82.47.62.112'),
+(973, 2, 2, 'jag has been login successfully', '2016-08-16 06:43:24', '82.47.62.112');
 
 -- --------------------------------------------------------
 
@@ -32369,7 +32653,10 @@ INSERT INTO `user_default_profiles` (`user_default_id`, `user_default_ip`, `user
 (100, '45.118.230.193', 'DESH', 'RAJ', 'raj', 'deshraz@gmail.com', '9092b78857efccd79b551fd190928ec0', '1', '2', '100', 'm', '1985-09-16', 'user', NULL, NULL, '2016-08-03', '', '', '', '1'),
 (101, '117.229.131.12', 'raj', 'desh', 'raaz', 'desh143raj@gmail.com', '9092b78857efccd79b551fd190928ec0', '1', '6', '100', 'm', '1985-09-16', 'user', NULL, NULL, '2016-08-05', '', '', '201608053b07b11722913112394473aaca21886f5287312c64bdbd49', '0'),
 (102, '82.47.62.112', 'Jaginder Singh', 'Mudhar', 'Jag', 'business.invention@yahoo.com', '385d76421fd67b0c9a8a19d5eafc16f3', '2', '6', '100', 'm', '1961-10-21', 'user', NULL, 'Business_supermarket_1470572350.jpg', '2016-08-07', '', '', '', '1'),
-(103, '103.240.32.220', 'Chand Prakash Singh', 'Rawat', 'chand3040', 'chand3040@gmail.com', '31e3195a50853533144735d9893a8d9f', '1', '2', '100', 'm', '1988-07-15', 'user', NULL, NULL, '2016-08-08', '', '', '20160808c6c9110324032220a1a9310fb733cdd49c0808731b68c048', '0');
+(103, '103.240.32.220', 'Chand Prakash Singh', 'Rawat', 'chand3040', 'chand3040@gmail.com', '31e3195a50853533144735d9893a8d9f', '1', '2', '100', 'm', '1988-07-15', 'user', NULL, NULL, '2016-08-08', '', '', '20160808c6c9110324032220a1a9310fb733cdd49c0808731b68c048', '0'),
+(104, '175.107.205.160', 'muhammad', 'ali', 'ali', 'alii.engineerr@gmail.com', '05a671c66aefea124cc08b76ea6d30bb', '1', '2', '165', 'm', '1980-08-14', 'user', NULL, NULL, '2016-08-12', '', '', '', '1'),
+(105, '1.187.114.228', 'nisha', 'slahn', 'nishasalhan', 'rayat.nisha@gmail.com', '25d55ad283aa400af464c76d713c07ad', '1', '6', '100', 'f', '1991-10-06', 'user', NULL, NULL, '2016-08-13', '', '', '', '1'),
+(106, '223.223.151.253', 'Sandeep Kumar', 'Dan', 'sandeepkd', 'sandeepkd33@gmail.com', '98878ff8fa2794554e90f189d4ade793', '1', '6', '100', 'm', '1990-10-12', 'user', NULL, NULL, '2016-08-15', '', '', '20160815434662232231512538ce8ac3252f7a8981a64d5a473e48ea0', '0');
 
 -- --------------------------------------------------------
 
@@ -32403,7 +32690,10 @@ INSERT INTO `user_default_profiles_messages` (`id`, `user_default_listing_id`, `
 (1, 64, 'hi', 'testing', 86, 'user', 0, 0, 'NULL', '0', '1', '1', '0', '2015-11-19 17:08:45', 0),
 (2, 62, 'Testing', 'Testing ', 88, '', 0, 0, NULL, '0', '1', '1', '0', '2015-11-24 04:39:04', 0),
 (3, 2, 'Testing', 'hello sir', 86, '', 0, 0, NULL, '0', '0', '0', '0', '2015-11-24 04:39:46', 2),
-(4, 1, 'hi', 'hi', 88, '', 0, 0, NULL, '0', '0', '0', '0', '2015-11-24 04:40:36', 1);
+(4, 1, 'hi', 'hi', 88, '', 0, 0, NULL, '0', '0', '0', '0', '2015-11-24 04:40:36', 1),
+(5, 64, 'Listing Download Request', ' This is testing', 88, '', 0, 0, NULL, '0', '1', '1', '0', '2016-08-16 06:12:07', 0),
+(6, 64, 'Listing Download Request', ' This is testing', 88, '', 0, 0, NULL, '0', '1', '1', '0', '2016-08-16 06:12:08', 0),
+(7, 6, 'Listing Download Request', 'hi', 86, '', 0, 0, '1471342414.417300.jpg', '0', '0', '0', '0', '2016-08-16 06:13:34', 6);
 
 -- --------------------------------------------------------
 
@@ -33705,17 +33995,17 @@ ALTER TABLE `user_default_account_balance`
 -- AUTO_INCREMENT for table `user_default_activity_date`
 --
 ALTER TABLE `user_default_activity_date`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=282;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=290;
 --
 -- AUTO_INCREMENT for table `user_default_activity_log`
 --
 ALTER TABLE `user_default_activity_log`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29610;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29864;
 --
 -- AUTO_INCREMENT for table `user_default_addresses`
 --
 ALTER TABLE `user_default_addresses`
-  MODIFY `user_default_address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `user_default_address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 --
 -- AUTO_INCREMENT for table `user_default_adminuser`
 --
@@ -33805,7 +34095,7 @@ ALTER TABLE `user_default_financial`
 -- AUTO_INCREMENT for table `user_default_interactions`
 --
 ALTER TABLE `user_default_interactions`
-  MODIFY `user_default_interaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `user_default_interaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `user_default_interactions_messages`
 --
@@ -33850,7 +34140,7 @@ ALTER TABLE `user_default_investor_voting_interface`
 -- AUTO_INCREMENT for table `user_default_like_interaction`
 --
 ALTER TABLE `user_default_like_interaction`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `user_default_like_sample_feedback`
 --
@@ -33860,12 +34150,12 @@ ALTER TABLE `user_default_like_sample_feedback`
 -- AUTO_INCREMENT for table `user_default_listing`
 --
 ALTER TABLE `user_default_listing`
-  MODIFY `user_default_listing_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `user_default_listing_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 --
 -- AUTO_INCREMENT for table `user_default_listing_addresses`
 --
 ALTER TABLE `user_default_listing_addresses`
-  MODIFY `user_default_listing_address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `user_default_listing_address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 --
 -- AUTO_INCREMENT for table `user_default_listing_category`
 --
@@ -33890,7 +34180,7 @@ ALTER TABLE `user_default_listing_company_details`
 -- AUTO_INCREMENT for table `user_default_listing_images`
 --
 ALTER TABLE `user_default_listing_images`
-  MODIFY `user_default_listing_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=561;
+  MODIFY `user_default_listing_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=571;
 --
 -- AUTO_INCREMENT for table `user_default_listing_lookingfor`
 --
@@ -33900,7 +34190,7 @@ ALTER TABLE `user_default_listing_lookingfor`
 -- AUTO_INCREMENT for table `user_default_listing_marketing`
 --
 ALTER TABLE `user_default_listing_marketing`
-  MODIFY `user_default_listing_marketing_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `user_default_listing_marketing_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `user_default_listing_marketing_connection`
 --
@@ -33915,7 +34205,7 @@ ALTER TABLE `user_default_listing_table_values`
 -- AUTO_INCREMENT for table `user_default_listing_videos`
 --
 ALTER TABLE `user_default_listing_videos`
-  MODIFY `iuser_default_listing_video_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=276;
+  MODIFY `iuser_default_listing_video_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=280;
 --
 -- AUTO_INCREMENT for table `user_default_listing_voice_your_opinion`
 --
@@ -33925,12 +34215,12 @@ ALTER TABLE `user_default_listing_voice_your_opinion`
 -- AUTO_INCREMENT for table `user_default_log_transaction`
 --
 ALTER TABLE `user_default_log_transaction`
-  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=980;
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
 --
 -- AUTO_INCREMENT for table `user_default_log_transaction_admin`
 --
 ALTER TABLE `user_default_log_transaction_admin`
-  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=968;
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=974;
 --
 -- AUTO_INCREMENT for table `user_default_log_types`
 --
@@ -33965,12 +34255,12 @@ ALTER TABLE `user_default_profession`
 -- AUTO_INCREMENT for table `user_default_profiles`
 --
 ALTER TABLE `user_default_profiles`
-  MODIFY `user_default_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `user_default_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 --
 -- AUTO_INCREMENT for table `user_default_profiles_messages`
 --
 ALTER TABLE `user_default_profiles_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `user_default_profiles_messages_rating`
 --
