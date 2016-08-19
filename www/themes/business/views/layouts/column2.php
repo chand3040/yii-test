@@ -5,9 +5,7 @@
         $connection = Yii::app()->db;
         /* $mainslider =  Sliderlisting::model()->find("page_name = ".$sliderfunc);
         $sliderfile = $mainslider->page_slug; */
-        //$getslider = $connection->createCommand("select * from `user_default_slider_listing` where `page_name`='$sliderfunc'");
-        echo "sample flag added..";
-        $getslider = $connection->createCommand("ALTER TABLE `user_default_sample_listing` ADD `user_default_sample_listing_feedback_sent` ENUM('0','1','2','3') NOT NULL AFTER `user_default_sample_listing_status`");
+        $getslider = $connection->createCommand("select * from `user_default_slider_listing` where `page_name`='$sliderfunc'");
         $sliderresult = $getslider->queryRow();
         $sliderfile = $sliderresult['page_slug'];
         if ($sliderfile != "") {
