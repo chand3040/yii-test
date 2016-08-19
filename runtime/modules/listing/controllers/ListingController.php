@@ -30,7 +30,7 @@ class ListingController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'purchaseaccess', 'update','selectlisting', 'index', 'delete', 'user_listing_step2', 'imageupload', 'user_listing_step3', 'user_listing_step4', 'listingimage', 'listingvideo', 'preview_user_listing', 'add_favourite', 'remove_favourite', 'my_messages', 'ldelete', 'convertingVideo', 'getProgress', 'listingvideo1', 'listingvideo2','marketingdata', 'marketingdatachart','sample_listing'),
+                'actions' => array('create', 'purchaseaccess', 'update','selectlisting', 'index', 'delete', 'user_listing_step2', 'imageupload', 'user_listing_step3', 'user_listing_step4', 'listingimage', 'listingvideo', 'preview_user_listing', 'add_favourite', 'remove_favourite', 'my_messages', 'ldelete', 'convertingVideo', 'getProgress', 'listingvideo1', 'listingvideo2','marketingdata', 'marketingdatachart','sample_listing','sampledelete'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -1495,6 +1495,70 @@ $count_val33=count($command3);
             $command2 = Yii::app()->db->createCommand($query2);
 
             $command2->execute(array('date2' => $id));
+
+            $query3 = "delete from `user_default_banner_ads` where `user_default_listing_id` = :date3";
+
+            $command3 = Yii::app()->db->createCommand($query3);
+
+            $command3->execute(array('date3' => $id));
+
+            $model->delete();
+
+            $this->redirect($this->createUrl('/listing'));
+        }
+    }
+
+    public function actionSampledelete() {
+
+        if ($_POST['sample_delete_id'] != "") {
+
+            $id = $_POST['sample_delete_id'];
+
+            $model = Samplelisting::model()->findByPk($id);
+
+            $listingid = $model->user_default_listing_id;
+
+            $listingdata = Userlisting::model()->findByPk($listingid);
+
+            $user_details = User::model()->findAllByAttributes(array("user_default_id" => $listingdata->user_default_profiles_id));
+
+            $user_id = $user_details[0]['user_default_id'];
+
+            $user_name = $user_details[0]['user_default_username'];
+
+            $folder = $user_name . '_' . $user_id;
+
+            //$path = $_SERVER['DOCUMENT_ROOT'] . '/';
+            $path=dirname(Yii::app()->request->scriptFile)."/";
+
+            $temp_folder = $path . 'temp/';
+
+            $userfolder = $path . 'upload/users/' . $folder . '/';
+
+            $attribs1 = array('user_default_listing_lid' => $listingid);
+
+            $criteria1 = new CDbCriteria(array('order' => '	user_default_listing_image_id ASC'));
+
+            $imgs = Sampleimages::model()->findAllByAttributes($attribs1, $criteria1);
+
+            foreach ($imgs as $images) {
+
+                $img = $images->user_default_listing_image;
+
+                $bigimgpath1 = $userfolder . 'listing/big/' . $img;
+
+                $thumbimgpath1 = $userfolder . 'listing/thumb/' . $img;
+
+                unlink($bigimgpath1);
+
+                unlink($thumbimgpath1);
+            }
+
+            $query = "delete from `user_default_sample_listing_sliders` where `user_default_listing_lid` = :date";
+
+            $command = Yii::app()->db->createCommand($query);
+
+            $command->execute(array('date' => $listingid));
 
             $model->delete();
 
