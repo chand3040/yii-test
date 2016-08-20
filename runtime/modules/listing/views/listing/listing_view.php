@@ -106,7 +106,7 @@ $(function() {
 
                     <span id="totalComment">(No of comments)</span></a></li>
 
-            <li id="tabshow3"><a href="#tab3" id="tabs3" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('listing/sampleslider/listid/' . $model->user_default_listing_id) ?>')">Request a Sample<br/>
+            <li id="tabshow3"><a href="#tab3" id="tabs3" onclick="javascript:stepcarousel.loadcontent('dragongallery', '<?php echo Yii::app()->createUrl('sample/sampleslider/listid/' . $model->user_default_listing_id) ?>')">Request a Sample<br/>
 
                     (1)</a></li>
 
@@ -731,7 +731,8 @@ height: 50px;"></textarea>
 <div id="tab3" class="sign-up-tab_content">
 
     <?php
-    $this->renderPartial('sample_view', array('model' => $model));
+    //$this->renderPartial('sample_view', array('model' => $model));
+    $this->renderPartial('//../modules/sample/views/sample/sample_view', array('model' => $model));
 
     ?>
 

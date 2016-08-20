@@ -45,7 +45,7 @@ margin-bottom: 8px;
                     
                     <li>
                         <h2>3. Upload / Modify  sample for this listing</h2>
-                   <a href="<?php echo Yii::app()->createUrl('listing/sample_listing/listid/'.$model->user_default_listing_id); ?>""> Select this if you wish to modify / update the contents of this section.</a> 
+                   <a href="<?php echo Yii::app()->createUrl('sample/sample_listing/listid/'.$model->user_default_listing_id); ?>""> Select this if you wish to modify / update the contents of this section.</a>
                     </li>
                                        
                     <li>

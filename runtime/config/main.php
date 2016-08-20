@@ -62,6 +62,7 @@ return array(
         'application.extensions.easyPaypal.*',
         'application.extensions.youtube.Google.*',
         'application.extensions.currencyconverter.*',
+		'application.extensions.dzraty.*',
         'application.components.EGMap.*',      
     ),
     'modules' => array(
@@ -74,6 +75,7 @@ return array(
         'business',
         'page',
         'listing',
+		'sample',
         'feedback',
         'Users',
         'businesslisting',
@@ -149,6 +151,9 @@ return array(
 				//'listing/business-services'=>'listing/listing/business_services',
 				'listing/<action:\w+>'=>'listing/listing/<action>',
                 'listing/<action:\w+>/listid/<listid:\d+>'=>'listing/listing/<action>',
+
+				'sample/<action:\w+>'=>'sample/sample/<action>',
+				'sample/<action:\w+>/listid/<listid:\d+>'=>'sample/sample/<action>',
                 
                 'businesslisting/business-services'=>'businesslisting/businesslisting/business_services',
                  
