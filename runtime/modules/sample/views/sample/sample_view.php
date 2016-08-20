@@ -275,7 +275,7 @@ if($count == 1){
                     <div class="feedback_left" style="margin-top: 10px;float: left;width: 15%;">
                         <h4>click the stars to rate</h4>
                         <?php
-                        $pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.dzraty.assets') );
+                        $pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.DzRaty.assets') );
 
                         $this->widget('ext.DzRaty.DzRaty', array(
                             'name' => 'your_rating',

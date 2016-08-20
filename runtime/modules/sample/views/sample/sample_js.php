@@ -1,5 +1,5 @@
 <?php
-$pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.dzraty.assets') );
+$pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.DzRaty.assets') );
 ?>
 <script type="text/javascript">
 
