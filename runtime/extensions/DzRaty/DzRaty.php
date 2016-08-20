@@ -82,11 +82,11 @@ class DzRaty extends CInputWidget
 		if ( $this->assetsPath === NULL )
 		{
 			$this->assetsPath = dirname(__FILE__) . DIRECTORY_SEPARATOR .'assets';
-
 		}
+		
 		if ( $this->assetsUrl === NULL )
-        {
-            $this->assetsUrl = Yii::app()->getAssetManager()->publish($this->assetsPath);
+		{
+			$this->assetsUrl = Yii::app()->assetManager->publish($this->assetsPath);
 		}
 		
 		// HTML Options
@@ -103,7 +103,7 @@ class DzRaty extends CInputWidget
 		
 		// Default jQuery Raty Options
 		$this->_defaultOptions = array(
-            'path' => $this->assetsUrl . '/img',
+			'path' => $this->assetsUrl .'/img',
 			'targetKeep' => TRUE,
 			'targetType' => 'number',
 			
@@ -197,8 +197,8 @@ class DzRaty extends CInputWidget
 		}
 		
 		// Javascript needed for this raty widget
-		//$cs->registerCoreScript('jquery');
-		//$cs->registerScriptFile("{$this->assetsUrl}/js/jquery.raty" . (YII_DEBUG ? '' : '.min') . ".js");
+		$cs->registerCoreScript('jquery');
+		$cs->registerScriptFile("{$this->assetsUrl}/js/jquery.raty" . (YII_DEBUG ? '' : '.min') . ".js");		
 		$cs->registerScript(__CLASS__ .'#'. $this->id, "jQuery('#{$this->htmlOptions['id']}').raty(". CJavaScript::encode($this->options) ."); jQuery('{$this->options['target']}').hide();", CClientScript::POS_READY);
 	}
 }
