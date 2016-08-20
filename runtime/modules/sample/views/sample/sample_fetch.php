@@ -38,7 +38,7 @@ $reportAsSpamAllow = ( Yii::app()->user->getState('uid') == $listing->user_defau
 
 $totalComments = sizeof($comments);
 
-$pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.dzraty.assets') );
+$pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.DzRaty.assets') );
 
 $countrating = Samplefeedback::getTotalFeedbacks($address->user_default_sample_listing_id);
 $countrating1 = Samplefeedback::getTotalFeedbacksbyrating($address->user_default_sample_listing_id , "1");
@@ -194,7 +194,7 @@ if( $totalComments > 0 ){
         ),
         ));*/
                             $currentrating = $commentDetails['comment']->user_default_sample_listing_feedback_rating;
-                            $pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.dzraty.assets') );
+                            $pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.DzRaty.assets') );
                             $pathdata = explode("www/assets/",$pathBootstrap);
 
                             for($i=1;$i<=$currentrating;$i++)
