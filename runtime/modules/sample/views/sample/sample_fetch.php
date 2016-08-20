@@ -194,12 +194,12 @@ if( $totalComments > 0 ){
         ),
         ));*/
                             $currentrating = $commentDetails['comment']->user_default_sample_listing_feedback_rating;
-                            echo $pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.DzRaty.assets') );
-                            $pathdata = explode("www/assets/",$pathBootstrap);
+                            $pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.DzRaty.assets') );
+                            //$pathdata = explode("www/assets/",$pathBootstrap);
 
                             for($i=1;$i<=$currentrating;$i++)
                             {
-                                echo '<img src="' . Yii::app()->createUrl('/assets/'.$pathdata[1].'/img/star-on.png') . '" />';
+                                echo '<img src="' . Yii::app()->createUrl($pathBootstrap.'/img/star-on.png') . '" />';
                             }
                             ?></span>
             </div>
