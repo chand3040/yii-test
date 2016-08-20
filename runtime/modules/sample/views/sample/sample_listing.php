@@ -713,7 +713,7 @@ $this->breadcrumbs=array(
                 <div class="current_rating" style="text-align:center;    margin-top: 10px;">
                     <div id="current_rating" style="    margin-left: 32px;">
                         <?php
-                        $pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.dzraty.assets') );
+                        $pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.DzRaty.assets') );
 
                         $this->widget('ext.DzRaty.DzRaty', array(
                             'name' => 'total_rating','value' =>$listingrating,
