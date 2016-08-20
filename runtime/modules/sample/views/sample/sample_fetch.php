@@ -194,7 +194,7 @@ if( $totalComments > 0 ){
         ),
         ));*/
                             $currentrating = $commentDetails['comment']->user_default_sample_listing_feedback_rating;
-                            $pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.DzRaty.assets') );
+                            echo $pathBootstrap = Yii::app()->assetManager->publish( Yii::getPathOfAlias('ext.DzRaty.assets') );
                             $pathdata = explode("www/assets/",$pathBootstrap);
 
                             for($i=1;$i<=$currentrating;$i++)
