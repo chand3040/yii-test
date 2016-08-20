@@ -77,6 +77,8 @@ Yii::app()->clientScript->registerCssFile($themepath . '/css/business_listing.cs
 
 Yii::app()->clientScript->registerCssFile($themepath . '/css/user_listing.css');
 
+Yii::app()->clientScript->registerCssFile($themepath . '/css/forum.css');
+
 
 Yii::app()->clientScript->registerScriptFile($themepath . '/js/jquery-1.11.1.min.js?ver=3.3.1');
 
@@ -87,6 +89,8 @@ Yii::app()->clientScript->registerScriptFile($themepath . '/js/ui-1.9.2-jquery-u
 Yii::app()->clientScript->registerScriptFile($themepath . '/js/jquery.js?ver=3.3.1');
 
 Yii::app()->clientScript->registerScriptFile($themepath . '/js/jquery.form.min.js');
+
+Yii::app()->clientScript->registerScriptFile($themepath . '/js/jquery.raty.min.js');
 
 
 if (Yii::app()->controller->id != 'search' && Yii::app()->controller->action->id != 'accessmarketingdata') {
@@ -128,10 +132,10 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getAssetManager()->publ
 
 Yii::app()->clientScript->registerScriptFile(Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.modules.search.assets')) . '/js/search_common.js');
 
-
+/*
 Yii::app()->clientScript->registerCssFile(Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.modules.forum.assets')) . '/css/forum.css');
 
-/*
+
 Yii::app()->clientScript->registerScriptFile(Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.modules.forum.assets')) . '/js/common.js');
 
 Yii::app()->clientScript->registerScriptFile(Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.modules.forum.assets')) . '/js/engine.js');

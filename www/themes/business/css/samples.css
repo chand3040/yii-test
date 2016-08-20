@@ -371,9 +371,9 @@ p.voicetext
     left: 6px;
 }
 #addsamplelisting #upload-frame {
-     width: 380px;
-     margin-left: 140px;
- }
+    width: 380px;
+    margin-left: 140px;
+}
 
 #addsamplelisting #wrap {
 
@@ -381,8 +381,8 @@ p.voicetext
 }
 
 .checkboxvalidation {
-border: 1px solid red;
-padding: 4px 2px 1px 3px;
+    border: 1px solid red;
+    padding: 4px 2px 1px 3px;
 }
 
 #addsamplelisting .bottombtns {
@@ -403,4 +403,110 @@ padding: 4px 2px 1px 3px;
 
 #addsamplelisting .u-email-box {
     margin-left: 45px !important;
+}
+
+
+
+/* Sample Feedback Page */
+
+.feedback_left h4 {
+    font-size: 12px !important;
+    color: #A84793;
+
+}
+
+.dd_feedback_button {
+
+    padding: 5px 10px;
+    background: #dfdfdf;
+    border: 1px solid #acacac;
+    color: #bbbbbb;
+    font-size: 1.2em;
+    display: inline-block;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+.starbardiv .col-5 {
+    width: 19.5%;
+    text-align: center;
+    display: inline-block;
+}
+
+.starbardiv .col-md5 {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.starbardiv .starbar {
+    border: 1px solid grey;
+    text-align: center;
+    height: 20px;
+    margin: 5px 10px 5px 10px;
+}
+
+.starbardiv .starbar .bar {
+    background: #f4ac00;
+    display: block;
+    height: 20px;
+}
+
+.samplesh2 {
+    color: #A84793;
+    font-family: AuraBoldRegular, Helvetica, Arial;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px !important;
+}
+
+.sbar {
+    margin:0 !important;
+    height:15px !important;
+
+}
+
+.sbar .bar {
+    height:15px !important;
+}
+
+.flike_buuton_box {
+    float: right;
+    margin-right: 0px;
+    margin-top: -40px;
+}
+
+.flike_button {
+    float: left;
+    display: block;
+    background: url(../images/icons/like.png) no-repeat center right;
+    padding: 2px 20px 2px 2px;
+    margin-right: 6px;
+    cursor: pointer;
+    color: #000;
+}
+span.flike_button.grayedOut:hover {
+    color: #BDBDBD !important;
+}
+span.fdislike_button.grayedOut:hover {
+    color: #BDBDBD !important;
+}
+.flike_button:hover {
+    color: #00acce;
+}
+.fdislike_button {
+    float: right;
+    padding: 2px 20px 2px 2px;
+    display: block;
+    background: url(../images/icons/dislike.png) no-repeat center right;
+    cursor: pointer;
+    color: #000;
+}
+.fdislike_button:hover {
+    color: #00acce;
 }
