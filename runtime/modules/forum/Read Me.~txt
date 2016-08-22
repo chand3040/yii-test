@@ -62,7 +62,7 @@ and the body :
                 {{#LISTING_LINK#}}
 
                 Note: This email address cannot accept replies.
-                Should you wish to contact us, then you may do so via the support@business-supermarket.com
+                Should you wish to contact us, then you may do so via the support@businessinvention.com
 
 
 8. Add the following code $adminKey = isset($_REQUEST['h']) ? $_REQUEST['h'] : "";

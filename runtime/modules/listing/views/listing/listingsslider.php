@@ -52,9 +52,9 @@ else
         <div class="paneloverlay-wrapper">
             <div class="paneloverlay-top">&nbsp;</div>
             <div class="paneloverlay">
-                <p class="speech-bubble">What is Business-supermarket?<br />
+                <p class="speech-bubble">What is Business Invention?<br />
                     A website for you to help you change your financial future.<br />
-                    <a href="javascript:void(0)" onclick="show_video('http://youtu.be/GQvhj2-dh-c');" title='Business supermaket designed to help you start your own business' >Find out more ></a></p>
+                    <a href="javascript:void(0)" onclick="show_video('http://youtu.be/GQvhj2-dh-c');" title='Business Invention designed to help you start your own business' >Find out more ></a></p>
                 <p class="speech-bubble-sig"></p>
             </div>
 
@@ -62,7 +62,7 @@ else
             <div class="paneloverlay-bottom">&nbsp;</div>
         </div> <!-- /End of paneloverlay-wrapper -->
 
-        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/carousel/what-is-dragonsnet-business-supermarket.png" alt="Worlds first business supermarket" /> </div>
+        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/carousel/who_are_we.png" alt="Worlds first business supermarket" /> </div>
     <div class="panel">
         <div class="paneloverlay-wrapper">
             <div class="paneloverlay-top">&nbsp;</div>

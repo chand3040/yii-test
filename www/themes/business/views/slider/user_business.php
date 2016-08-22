@@ -62,7 +62,7 @@
 
             file: video,
 
-            image: 'http://business-supermarket.com/themes/business/images/robot/defult-video.png',
+            image: 'http://businessinvention.com/themes/business/images/robot/defult-video.png',
 
             width: '640',
 

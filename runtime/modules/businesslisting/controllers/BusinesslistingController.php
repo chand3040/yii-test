@@ -580,7 +580,7 @@ $stat ="Permenant Deleted";
 							<tr><p>Sincerely<br/>
 							Business Supermarket Business Listing Submission Team</p></tr>
 							<tr><p>Note: This email address cannot accept replies.<br/>
-							Should you wish to contact us, then you may do so via the support@business-supermarket.com</p></tr>
+							Should you wish to contact us, then you may do so via the support@businessinvention.com</p></tr>
 							
 						   </table>
 							
@@ -591,7 +591,7 @@ $stat ="Permenant Deleted";
 							$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 							// More headers
-							$headers .= 'From: Business Supermarket <no-reply@business-supermarket.com>' . "\r\n";
+							$headers .= 'From: Business Invention <no-reply@businessinvention.com>' . "\r\n";
 							//$headers .= 'Cc: testdemo356@gmail.com' . "\r\n";
 							mail($to,$subject,$message,$headers); */
 						$template=MailTemplate::getTemplate('Blisting_Save_for_later');
@@ -640,7 +640,7 @@ $stat ="Permenant Deleted";
 							<tr><p>Sincerely<br/>
 							Business Supermarket Business Listing Submission Team</p></tr>
 							<tr><p>Note: This email address cannot accept replies.<br/>
-							Should you wish to contact us, then you may do so via the support@business-supermarket.com</p></tr>
+							Should you wish to contact us, then you may do so via the support@businessinvention.com</p></tr>
 							
 						   </table>
 							
@@ -650,7 +650,7 @@ $stat ="Permenant Deleted";
 							$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 							// More headers
-							$headers .= 'From: Business Supermarket <no-reply@business-supermarket.com>' . "\r\n";
+							$headers .= 'From: Business Invention <no-reply@businessinvention.com>' . "\r\n";
 							//$headers .= 'Cc: testdemo356@gmail.com' . "\r\n";
 							mail($to,$subject,$message,$headers); */
                             $this->redirect(Yii::app()->createUrl('business/myaccount/update'));

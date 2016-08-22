@@ -264,7 +264,7 @@
 											  jwplayer("ova-player-instance_<?php echo $j; ?>").setup({    
 											  flashplayer: "<?php echo Yii::app()->theme->baseUrl; ?>/js/jwplayer1/jwplayer.flash.swf",   
 											  file: '<?php echo Yii::app()->getBaseUrl(true);?>/upload/users/<?php echo Yii::app()->user->getState('ufolder');?>/videos/<?php echo $businessvideoname; ?>',    
-											  image: "http://business-supermarket.com/themes/business/images/video_icon.jpg",   
+											  image: "http://businessinvention.com/themes/business/images/video_icon.jpg",   
 											  height: 260,                                     
 											  width: 338,                                  
 											  });                                      

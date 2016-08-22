@@ -4,7 +4,7 @@
 
 <form id="paypal" target="_top" method="post" action="https://www.paypal.com/webscr">
     <input type="hidden" name="cmd" value="_xclick"/>
-    <input type="hidden" name="business" value="admin@business-supermarket.com"/>
+    <input type="hidden" name="business" value="admin@businessinvention.com"/>
     <input type="hidden" name="item_name" value="Banner Advertisement  -  <?php echo $model->user_default_listing_banner_id; ?>"/>
     <input type="hidden" name="item_number" value="<?php echo $model->user_default_listing_banner_id; ?>"/>
     <input type="hidden" name="amount" value="<?php echo number_format($model->user_default_listing_banner_duration * 1, 2) ?>"/>

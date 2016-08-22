@@ -197,11 +197,11 @@ class DashboardController extends Controller
                 $subject = "Admin activity between " . $_REQUEST['admin_activity_from_date_hidden'] . " and " . $_REQUEST['admin_activity_to_date_hidden'];
 
                 $mail = new YiiMailer();
-                $mail->setFrom("Business Supermarket");
+                $mail->setFrom("Business Invention");
 
                 // Change this to deliver file to a different email address
-                $mail->setTo("medriadh.hamdi@gmail.com");
-                //$mail->setTo("website@business-supermarket.com");
+                $mail->setTo("dsp7@blueyonder.co.uk");
+                //$mail->setTo("website@businessinvention.com");
                 $mail->setSubject($subject);
                 $mail->setBody($body, "text/html");
                 $mail->setAttachment($attachment);
