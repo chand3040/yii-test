@@ -7,12 +7,13 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
+RewriteCond %{HTTP_HOST} ^www\.(.+)
+RewriteCond %{HTTPS}s/%1 ^(on(s)|offs)/(.+)
+RewriteRule ^ http%2://%3%{REQUEST_URI} [L,R=301]
+
 # otherwise forward it to index.php
 RewriteRule . index.php
 
 #RewriteCond $1 !^(index\.php|robots\.txt)
 #RewriteRule ^(.*)$ index.php/$1 [L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{HTTP_HOST} ^www\.businessinvention\.com$ [NC]
-RewriteRule ^(.*)$ https://businessinvention.com/$1 [L,R=301]
