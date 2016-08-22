@@ -14,8 +14,8 @@ RewriteRule . index.php
 #RewriteRule ^(.*)$ index.php/$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{HTTP_HOST} ^www\.yoursite\.com$ [NC]
-RewriteRule ^(.*)$ https://yoursite.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.businessinvention\.com$ [NC]
+RewriteRule ^(.*)$ https://businessinvention.com/$1 [L,R=301]
 
 
 
