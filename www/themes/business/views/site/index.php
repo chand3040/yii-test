@@ -13,7 +13,7 @@ $this->breadcrumbs = array('');
     <div id="copy-column-1">
       <p style="text-align: left;"> 
         <span class="text">
-          Welcome to <?php echo Yii::app()->params['domain']; ?>, the home of business invention. Whether you have a great business idea that can revolutionise the world or an individual simply looking for  extra income, we can help. To find out more 
+          Welcome to <?php echo Yii::app()->params['domain']; ?>, the home of new business ideas. Whether you have a great business idea that can revolutionise the world or an individual simply looking for  extra income, we can help. To find out more
           <a href="javascript:void(0)" onclick="show_video('https://youtu.be/p8yHWpBZqTo');"  title='How business supermarket can help you video'>
               <strong>click here &#62;&#62;</strong>
           </a> 
