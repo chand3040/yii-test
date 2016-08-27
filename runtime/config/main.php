@@ -4,10 +4,10 @@ define("APP_PATH",dirname(__FILE__));
 define("IMG_LOGO_PATH",'/upload/logo/');
 define("MAX_VIDEO_UPLOAD_LIMIT",'61'); //in mb
 
-if($_SERVER['HTTP_HOST'] == "localhost"){
+if($_SERVER['HTTP_HOST'] == "localhost" || 1){
 	$con_string = 'mysql:host=localhost;dbname=business';
 	$user = 'root';
-	$pass = '';
+	$pass = 'root';
 	$giiPass = '[c6"jjqF}:UaRn[';
 }else{
 	$con_string = 'mysql:host=localhost;dbname=business';
@@ -23,8 +23,8 @@ ini_set('upload_max_filesize', '9999M');
 DEFINE("SHOWCONTROLLER","TRUE");
 DEFINE("ADMIN_USERNAME","admin");
 
-$siteBaseUrl = 'https://businessinvention.com';
-//$siteBaseUrl = 'http://localhost/bsupermarket/www';
+$siteBaseUrl = 'http://businessinvention.com';
+$siteBaseUrl = 'http://localhost:8080';
 $baseUrl = trim($siteBaseUrl, '/');
 
 // If scheme not included, prepend it

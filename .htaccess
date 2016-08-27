@@ -13,9 +13,9 @@ RewriteRule . index.php
 #RewriteCond $1 !^(index\.php|robots\.txt)
 #RewriteRule ^(.*)$ index.php/$1 [L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{HTTP_HOST} ^www\.businessinvention\.com$ [NC]
-RewriteRule ^(.*)$ https://businessinvention.com/$1 [L,R=301]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{HTTP_HOST} ^www\.businessinvention\.com$ [NC]
+#RewriteRule ^(.*)$ https://businessinvention.com/$1 [L,R=301]
 
 
 

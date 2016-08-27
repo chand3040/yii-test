@@ -409,7 +409,7 @@ margin-bottom: 8px;
 
         for ($j = 1; $j <= 2; $j++) {
             ?>
-            <form id="upload_video_<?php echo $j; ?>" onsubmit="" enctype="multipart/form-data" method="post" action="<?php if($j=="1"){ echo Yii::app()->createUrl('listing/listingvideo1/listid/'.$model->user_default_listing_id); } else { echo Yii::app()->createUrl('listing/listingvideo2/listid/'.$model->user_default_listing_id); }?>" name="chooseF">
+            <form id="upload_video_<?php echo $j; ?>" onsubmit="" enctype="multipart/form-data" method="post" action="<?php echo Yii::app()->createUrl('listing/listingvideo/'); ?>" name="chooseF">
                 <input type="file" name="file_vid" class="upload_video_file_<?php echo $j; ?>" style="display:none;" onchange="check_extension(this,<?php echo $j; ?>);" />
                 <input type="hidden" class="is_upload_file_<?php echo $j; ?>" value="" />						
                 <input type="hidden" name="video_id" value="<?php echo $j; ?>" />						
@@ -451,7 +451,7 @@ margin-bottom: 8px;
         return confirmationMessage;
     });*/
 </script>
-<!--end bottom carousel----->
+<!--end bottom carousel-->
 
 <script type="text/javascript">
 jQuery(document).ready(function () {
@@ -570,7 +570,8 @@ function check_extension(self, s)
                         
 					  
 				},success:function(data){ 
-				     jwplayer("ova-player-instance_"+s).setup({ 
+				     returnfile = '<?php echo Yii::app()->getBaseUrl(true). "/upload/users/".Yii::app()->user->getState('ufolder')."/videos/" ;?>'+jQuery.trim(data);
+                     jwplayer("ova-player-instance_"+s).setup({ 
 						flashplayer: "<?php echo Yii::app()->theme->baseUrl;?>/js/jwplayer1/jwplayer.flash.swf",
 						file: '<?php echo Yii::app()->getBaseUrl(true). "/upload/users/".Yii::app()->user->getState('ufolder')."/videos/" ;?>'+jQuery.trim(data),
 						height: 260,

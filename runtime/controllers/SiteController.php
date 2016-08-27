@@ -286,7 +286,7 @@ $this->render('permanent_delete_user');
 	      {     
 	        $model->attributes=$_POST['LoginForm'];
 	              
-	              if($model->validate() && $model->login()){ 	
+	              if($model->validate() && $model->login()){
 
 				     if(Yii::app()->user->_user_Type =="business")
 					 {

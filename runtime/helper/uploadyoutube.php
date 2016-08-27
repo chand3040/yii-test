@@ -9,6 +9,7 @@ class UploadYoutube {
 
     protected $client;
     protected $youtube;
+    protected $tokenFilePath = '/tmp/token.txt';
 
     public function __construct() {
         $this->client = new Google_Client();
@@ -34,7 +35,7 @@ class UploadYoutube {
         if (isset($_GET['code'])) {
             $this->client->authenticate($_GET['code']);
             $_SESSION['token'] = $this->client->getAccessToken();
-            header('Location: ' . $redirect);
+            #header('Location: ' . $redirect); # This redirect will not allow token to be saved to file.
         }
         if (isset($_SESSION['token'])) {
             $this->client->setAccessToken($_SESSION['token']);
@@ -48,13 +49,13 @@ class UploadYoutube {
                 'refreshToken' => $this->client->getRefreshToken()
             ));
 
-            file_put_contents(dirname(__FILE__) . '/../extensions/youtube/token.txt', $tokens);
+            file_put_contents($this->tokenFilePath, $tokens);
         }
     }
 
     public function setTokenClient() {
         $this->youtube = new Google_Service_YouTube($this->client);
-        $txtToken = @file_get_contents(dirname(__FILE__) . '/../extensions/youtube/token.txt');
+        $txtToken = file_get_contents($this->tokenFilePath);
         if (!$txtToken) {
             echo json_encode(array('message'=>"Unauthorized client,Please Click on Change access token link "));
             exit();
@@ -88,7 +89,7 @@ class UploadYoutube {
         //renew access token
         $this->client->setAccessToken($tokens['accessToken']);
         //write to disk
-        file_put_contents(dirname(__FILE__) . '/../extensions/youtube/token.txt', json_encode(array(
+        file_put_contents($this->tokenFilePath, json_encode(array(
             'accessToken' => $this->client->getAccessToken(),
             'refreshToken' => $this->client->getRefreshToken()
         )));
@@ -96,79 +97,87 @@ class UploadYoutube {
 
     public function upload($videoPath, $title, $description = '', $tags = array()) {
              
+        $videoPath_array = explode('/', $videoPath);
+        $videoName       = array_pop($videoPath_array);
+        $videoPathFolder = implode('/',$videoPath_array);
+        $logFile         = $videoPathFolder.'/'.$videoName.'.txt';
 
-             try{  
-                    $this->setTokenClient();
-                }
-                 catch (Google_Service_Exception $e) {
-                // var_dump($e);
-                  echo json_encode(array('message'=>$e->getMessage()));
-                    exit();
+        
+        try{  
+              $this->setTokenClient();
             }
+             catch (Google_Service_Exception $e) {
+              return json_encode(array('message'=>$e->getMessage()));
+        }
 
 
         try {
-			
-// Create a snippet with title, description, tags and category ID
-// Create an asset resource and set its snippet metadata and type.
-// This example sets the video's title, description, keyword tags, and
-// video category.
+            
+            // Create a snippet with title, description, tags and category ID
+            // Create an asset resource and set its snippet metadata and type.
+            // This example sets the video's title, description, keyword tags, and
+            // video category.
             $snippet = new Google_Service_YouTube_VideoSnippet();
             $snippet->setTitle($title);
             $snippet->setDescription($description);
             $snippet->setTags($tags);
-// Numeric video category. See
-// https://developers.google.com/youtube/v3/docs/videoCategories/list 
+            // Numeric video category. See
+            // https://developers.google.com/youtube/v3/docs/videoCategories/list 
             $snippet->setCategoryId("22");
-			
-// Set the video's status to "public". Valid statuses are "public",
-// "private" and "unlisted".
+            
+            // Set the video's status to "public". Valid statuses are "public",
+            // "private" and "unlisted".
             $status = new Google_Service_YouTube_VideoStatus();
             $status->privacyStatus = "public";
-// Associate the snippet and status objects with a new video resource.
+            // Associate the snippet and status objects with a new video resource.
             $video = new Google_Service_YouTube_Video();
             $video->setSnippet($snippet);
             $video->setStatus($status);
-			
-// Specify the size of each chunk of data, in bytes. Set a higher value for
-// reliable connection as fewer chunks lead to faster uploads. Set a lower
-// value for better recovery on less reliable connections.
+            
+            // Specify the size of each chunk of data, in bytes. Set a higher value for
+            // reliable connection as fewer chunks lead to faster uploads. Set a lower
+            // value for better recovery on less reliable connections.
             $chunkSizeBytes = 1 * 1024 * 1024;
 
-// Setting the defer flag to true tells the client to return a request which can be called
-// with ->execute(); instead of making the API call immediately.
+            // Setting the defer flag to true tells the client to return a request which can be called
+            // with ->execute(); instead of making the API call immediately.
             $this->client->setDefer(true);
-// Create a request for the API's videos.insert method to create and upload the video.
+            // Create a request for the API's videos.insert method to create and upload the video.
             $insertRequest = $this->youtube->videos->insert("status,snippet", $video);
 
-// Create a MediaFileUpload object for resumable uploads.
+            // Create a MediaFileUpload object for resumable uploads.
             $media = new Google_Http_MediaFileUpload(
                     $this->client, $insertRequest, 'video/*', null, true, $chunkSizeBytes
             );
-            $media->setFileSize(filesize($videoPath));
+            
+            $filesize = filesize($videoPath);
+            $media->setFileSize($filesize);
 
-// Read the media file and upload it chunk by chunk.
+
+            // Read the media file and upload it chunk by chunk.
             $chunkStatus = false;
             $handle = fopen($videoPath, "rb");
-			
+            
+
             while (!$chunkStatus && !feof($handle)) {
                 $chunk = fread($handle, $chunkSizeBytes);
-				
-                $chunkStatus = $media->nextChunk($chunk);
-				
                 
+                $chunkStatus = $media->nextChunk($chunk);
+                file_put_contents($logFile, round($media->getProgress()/$filesize * 100).'\n', FILE_APPEND);
             }
-			
+            
+            if ($chunkStatus->status['uploadStatus']){
+                file_put_contents($logFile,100, FILE_APPEND);
+            }
+            
             fclose($handle);
-	
-// If you want to make other calls after the file upload, set setDefer back to false
+    
+            // If you want to make other calls after the file upload, set setDefer back to false
             $this->client->setDefer(false);
-            echo json_encode(array('id'=>$chunkStatus->id,'status'=>'success'));
-//save status to DB
+            return json_encode(array('id'=>$chunkStatus->id,'status'=>'success'));
+            //save status to DB
         } catch (Google_Service_Exception $e) {
-            // var_dump($e);
-              echo json_encode(array('message'=>$e->getMessage()));
-            exit();
+            return json_encode(array('message'=>$e->getMessage()));
         }
     }
 

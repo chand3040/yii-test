@@ -2,7 +2,7 @@
 
 class ListingsController extends Controller
 {
-	public $uploadytube;
+    public $uploadytube;
 
     public function filters()
     {
@@ -251,7 +251,7 @@ class ListingsController extends Controller
     {
 
 
-		$this->uploadytube = new uploadyoutube;
+        $this->uploadytube = new uploadyoutube;
         $url = $this->uploadytube->getRedirect();
         //print_r($this->uploadytube);
         $model = $this->loadModel($id);
@@ -382,11 +382,11 @@ class ListingsController extends Controller
                 $this->redirect(array('index'));
             }
         }
-		
+        
 
         $this->render('update', array(
             'model' => $model,
-			'urlGetToken'=>$url
+            'urlGetToken'=>$url
         ));
     }
 
@@ -1229,8 +1229,8 @@ class ListingsController extends Controller
         //$this->render('sampleview');
         $this->render('sampleview', array('model' => $model));
     }
-	
-	public function actionUploadYoutube(){
+    
+    public function actionUploadYoutube(){
         $del = Yii::app()->request->getParam('del');
         $filename = Yii::app()->request->getParam('filename');
         if($del){
@@ -1243,18 +1243,36 @@ class ListingsController extends Controller
         
         $temp = explode('/', $filename);
         $name = end($temp);        
-        
         $name = explode('.', $name)[0];
-        $t = new uploadyoutube;
-        
-        $temp  = $t->upload($filename, $name);
 
+        $upload_cls = new uploadyoutube;
+        $response  = $upload_cls->upload($filename, $name);
+        
+        $res = json_decode($response);
+        if($res->status=='success'){
+            unlink($filename);
+        }
+        @ob_clean();
+        echo $response;
+        exit();
     }
     
+    public function actionGetYoutubeUploadStatus(){
+       $filename = Yii::app()->request->getParam('filename');
+       if(!empty($filename)){
+         $progress =  file_get_contents($filename);
+         $progress_arr = explode('\n', $progress);
+         $lastest_progress = array_pop($progress_arr);
+         @ob_clean();
+         echo json_encode(array('success'=>true, 'filename'=>$filename,'progress'=>$lastest_progress));
+       }
+    }
+
     public function actionUpdateToken(){
         $this->uploadytube = new uploadyoutube;        
         $this->uploadytube->writeAccesstoken();
         $this->redirect(Yii::app()->createUrl('admin/listings/listings'));
     }
-	
+    
+    
 }

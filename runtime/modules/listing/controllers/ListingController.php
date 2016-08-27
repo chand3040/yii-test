@@ -49,7 +49,7 @@ class ListingController extends Controller {
      */
     public function actionView($id) {
         // $this->render('view',array(
-        // 	'model'=>$this->loadModel($id),
+        //  'model'=>$this->loadModel($id),
         // ));
         $listid = $_REQUEST['id'];
         $model = $this->loadModel($listid);
@@ -60,10 +60,10 @@ class ListingController extends Controller {
 
         $this->render('listing_view', array('model' => $model, 'adminKey' => $adminKey));
     }
-	
-	public function actionListing_view() {
+    
+    public function actionListing_view() {
         // $this->render('view',array(
-        // 	'model'=>$this->loadModel($id),
+        //  'model'=>$this->loadModel($id),
         // ));
         $listid = $_REQUEST['id'];
         $model = $this->loadModel($listid);
@@ -123,13 +123,13 @@ class ListingController extends Controller {
         if (isset($listid) && $listid != "") {
             $model = Createuserlisting::model()->find("user_default_profiles_id = '" . Yii::app()->user->getId() . "' and  user_default_listing_id ='" . $listid . "'");
             $model->attributes = $_POST['Createuserlisting'];
-			if( $model->user_default_listing_step =="0" )
-			{ 
-			$model->user_default_listing_step = "1";
-			}
+            if( $model->user_default_listing_step =="0" )
+            { 
+            $model->user_default_listing_step = "1";
+            }
         } else {
             $model = new Createuserlisting;
-			$model->user_default_listing_step = "1";
+            $model->user_default_listing_step = "1";
             //$model->attributes=$_POST['Createuserlisting'];
         }
 
@@ -138,7 +138,7 @@ class ListingController extends Controller {
             $model->user_default_profiles_id = Yii::app()->user->getId();
             $model->user_default_listing_date = date('Y-m-d');
             $model->user_default_listing_submission_status = "0";
-			
+            
             if ($model->save()) {
 
                 if (isset($listid) && $listid != "") {
@@ -208,14 +208,14 @@ class ListingController extends Controller {
                 $model->user_default_listing_financial_table_status = Yii::app()->request->getParam('user_default_listing_financial_table_status');
                 $model->user_default_listing_table_currency_code = Yii::app()->request->getParam('user_default_listing_table_currency_code');
                 $model->user_default_listing_fprojections = $user_default_listing_fprojections;
-				//$model->user_default_listing_step = "2";
-				if( $model->user_default_listing_step =="1" )
-				{ 
-			
-					$model->user_default_listing_step = "2";
-					
-				}
-				
+                //$model->user_default_listing_step = "2";
+                if( $model->user_default_listing_step =="1" )
+                { 
+            
+                    $model->user_default_listing_step = "2";
+                    
+                }
+                
                 if ($model->save()) {
 
                     //$this->redirect(Yii::app()->createUrl('listing/user_listing_step3/listid/'.$model->user_default_listing_id));
@@ -240,26 +240,26 @@ class ListingController extends Controller {
 
         Yii::import("ext.EAjaxUpload.qqFileUploader");
 
-
-        $thumb = 'upload/users/' . Yii::app()->user->getState('ufolder') . '/listing/thumb/'; // folder for uploaded files
+        $path = $_SERVER['DOCUMENT_ROOT'] . '/'; # Copied from admin/listings/listings. But should be taken from constants.
+        $thumb = $path.'upload/users/' . Yii::app()->user->getState('ufolder') . '/listing/thumb/'; // folder for uploaded files
 
         if (!file_exists($thumb)) {
             mkdir($thumb, 0777, true);
         }
 
-        $videos = 'upload/users/' . Yii::app()->user->getState('ufolder') . '/videos'; // folder for uploaded files
+        $videos = $path.'upload/users/' . Yii::app()->user->getState('ufolder') . '/videos'; // folder for uploaded files
 
         if (!file_exists($videos)) {
             mkdir($videos, 0777, true);
         }
 
-        $big = 'upload/users/' . Yii::app()->user->getState('ufolder') . '/listing/big/'; // folder for uploaded files
+        $big = $path.'upload/users/' . Yii::app()->user->getState('ufolder') . '/listing/big/'; // folder for uploaded files
 
         if (!file_exists($big)) {
             mkdir($big, 0777, true);
         }
 
-        $folder = 'upload/users/' . Yii::app()->user->getState('ufolder') . '/images/'; // folder for uploaded files
+        $folder = $path.'upload/users/' . Yii::app()->user->getState('ufolder') . '/images/'; // folder for uploaded files
 
         if (!file_exists($folder)) {
             mkdir($folder, 0777, true);
@@ -291,7 +291,7 @@ class ListingController extends Controller {
     }
 
     public function actionUser_listing_step3() {
-		
+        
         $id = Yii::app()->request->getParam('listid');
         $this->pageTitle = 'User listing step 3 - Business Supermarket';
         $model = Userlisting::model()->find("user_default_profiles_id = '" . Yii::app()->user->getId() . "' and  user_default_listing_id ='" . $id . "'");
@@ -381,9 +381,9 @@ class ListingController extends Controller {
 
 
             if($model->user_default_listing_step !="4") { $model->user_default_listing_step = "3";
-			$model->save(); }
-			
-			if ($_POST['btnsaveforlater'] == 1) {
+            $model->save(); }
+            
+            if ($_POST['btnsaveforlater'] == 1) {
                 $this->redirect(Yii::app()->createUrl('user/myaccount/update'));
             } else {
                 $this->redirect(Yii::app()->createUrl('listing/user_listing_step4/listid/' . $model->user_default_listing_id));
@@ -455,9 +455,9 @@ class ListingController extends Controller {
 
 
         $id = Yii::app()->request->getParam('listid');   
-		
+        
          $this->pageTitle='User listing step 4 - Business Supermarket';
-		 
+         
         $model = Userlisting::model()->find("user_default_profiles_id = '".Yii::app()->user->getState('uid')."' and  user_default_listing_id ='".$id."'");   
         
         if(isset($_POST['Userlistingmarketing']['user_default_listing_marketing_question'])){
@@ -491,88 +491,88 @@ class ListingController extends Controller {
             }
 
             //$model->user_default_listing_question = $_POST['Userlisting']['user_default_listing_question'];
-			
-            $model->user_default_listing_notification_frequency = $_POST['user_default_listing_notification_frequency'];			
-			
-			$model->user_default_listing_step = "4";
-			
-			//$model->user_default_listing_submission_status="0";
-			
-			            if($model->save()){   
+            
+            $model->user_default_listing_notification_frequency = $_POST['user_default_listing_notification_frequency'];            
+            
+            $model->user_default_listing_step = "4";
+            
+            //$model->user_default_listing_submission_status="0";
+            
+                        if($model->save()){   
                 
                      if($_POST['btnsaveforlater']==1)
-						 
-					 {
-					 	$this->redirect(Yii::app()->createUrl('user/myaccount/update'));
-						
-					 } 
+                         
+                     {
+                        $this->redirect(Yii::app()->createUrl('user/myaccount/update'));
+                        
+                     } 
                 
                 if($_POST['saveforlater']){ 
-					
-					$model_user = User::model()->find("user_default_id='".Yii::app()->user->getState('uid')."'");
-					
-			    	$sstatus="Saved for later";
-					
-					$curdate = date('d/m/Y',strtotime($model['user_default_listing_date']));
-					
+                    
+                    $model_user = User::model()->find("user_default_id='".Yii::app()->user->getState('uid')."'");
+                    
+                    $sstatus="Saved for later";
+                    
+                    $curdate = date('d/m/Y',strtotime($model['user_default_listing_date']));
+                    
                     $to = $model_user['user_default_email'];
-					
-					$yii_user_request_id = '<a href="'.Yii::app()->getBaseUrl(true)."/"."listing/fupdate/listid/".$model->user_default_listing_id.'" target="_blank" >here >> </a>';
-					
-					$template =  MailTemplate::getTemplate('Listing_save_for_later');
-					
-					$subjectcc=$model['user_default_listing_title']." has been successfully saved for later";
-					
+                    
+                    $yii_user_request_id = '<a href="'.Yii::app()->getBaseUrl(true)."/"."listing/fupdate/listid/".$model->user_default_listing_id.'" target="_blank" >here >> </a>';
+                    
+                    $template =  MailTemplate::getTemplate('Listing_save_for_later');
+                    
+                    $subjectcc=$model['user_default_listing_title']." has been successfully saved for later";
+                    
                     $ltitle="<i>".$model['user_default_listing_title']."</i>";
-					
-	   		        $ldate="<i>".$curdate."</i>";
-					
-			        $lstatus="<i>".$sstatus."</i>";
-					
-			        $string = array(
+                    
+                    $ldate="<i>".$curdate."</i>";
+                    
+                    $lstatus="<i>".$sstatus."</i>";
+                    
+                    $string = array(
                         '{{#LISTINGTITLE#}}'=>ucwords($ltitle),
-						'{{#USERNAME#}}'=>ucwords($model_user['user_default_first_name'] .' '. $model_user['user_default_surname']),
+                        '{{#USERNAME#}}'=>ucwords($model_user['user_default_first_name'] .' '. $model_user['user_default_surname']),
                         '{{#LISTINGDATE#}}'=>ucwords($ldate),
-						'{{#LISTINGSTATUS#}}'=>ucwords($lstatus),
-						'{{#LISTINGLINK#}}'=>ucwords($yii_user_request_id)                        
+                        '{{#LISTINGSTATUS#}}'=>ucwords($lstatus),
+                        '{{#LISTINGLINK#}}'=>ucwords($yii_user_request_id)                        
                     );
-					
-					$body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);
-					
+                    
+                    $body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);
+                    
                     $result =  SharedFunctions::app()->sendmail($to,$subjectcc,$body); 
                             
-						
+                        
                             $this->redirect(Yii::app()->createUrl('user/myaccount/update'));
-							
+                            
                             die;                            
                    
                 }
-				
-				else if($_POST['save']){
+                
+                else if($_POST['save']){
                   
-							$model_user = User::model()->find("user_default_id='".Yii::app()->user->getState('uid')."'");
-				                            
+                            $model_user = User::model()->find("user_default_id='".Yii::app()->user->getState('uid')."'");
+                                            
                             $to = $model_user['user_default_email'];
-							
-						    $lid=$model->user_default_listing_id;
-							
-							$status=$model->user_default_listing_submission_status;
+                            
+                            $lid=$model->user_default_listing_id;
+                            
+                            $status=$model->user_default_listing_submission_status;
 
-							$rp=$model->user_default_listing_notification_frequency;
+                            $rp=$model->user_default_listing_notification_frequency;
 
-							if($status=="1")
+                            if($status=="1")
 
-							{
+                            {
 
-							$stat="published";
+                            $stat="published";
 
-							$from1=date_create(date('Y-m-d'));
+                            $from1=date_create(date('Y-m-d'));
 
-							$to1=date_create($myresult1['user_default_listing_approvedate']);
+                            $to1=date_create($myresult1['user_default_listing_approvedate']);
 
-							$diff=date_diff($to1,$from1);
+                            $diff=date_diff($to1,$from1);
 
-							$da = $diff->format('%R%a days');
+                            $da = $diff->format('%R%a days');
 /*
 $command1 = $connection->createCommand("select * from `drg_comments` where `listing_id`='$lid'");
 $count_val2=count($command1);
@@ -586,113 +586,113 @@ $count_val33=count($command3);
 */
 
 
-							$yii_user_request_id = '<a href="'.Yii::app()->getBaseUrl(true)."/"."listing"."/"."view?id=".$model->user_default_listing_id.'" target="_blank" >here >> </a>';
+                            $yii_user_request_id = '<a href="'.Yii::app()->getBaseUrl(true)."/"."listing"."/"."view?id=".$model->user_default_listing_id.'" target="_blank" >here >> </a>';
 
-							$template =  MailTemplate::getTemplate('user_listing_report');
-							
-							$curdate = date('d/m/Y',strtotime($myresult1['user_default_listing_date']));
+                            $template =  MailTemplate::getTemplate('user_listing_report');
+                            
+                            $curdate = date('d/m/Y',strtotime($myresult1['user_default_listing_date']));
 
-							$subjectcc=" Listing ".$myresult1['user_default_listing_title']." ".$rp." update report ";
+                            $subjectcc=" Listing ".$myresult1['user_default_listing_title']." ".$rp." update report ";
 
 
-							$string = array('{{#LISTINGTITLE#}}'=>ucwords($myresult1['user_default_listing_title']),
+                            $string = array('{{#LISTINGTITLE#}}'=>ucwords($myresult1['user_default_listing_title']),
                         '{{#USERNAME#}}'=>ucwords($model_user['user_default_first_name'].' '.$model_user['user_default_surname']),
                         '{{#LISTINGDATE#}}'=>ucwords($curdate),
-						'{{#LISTINGSTATUS#}}'=>ucwords($stat),
-						'{{#LISTINGLINK#}}'=>ucwords($yii_user_request_id),
-						 '{{#DA#}}'=>ucwords($da),
+                        '{{#LISTINGSTATUS#}}'=>ucwords($stat),
+                        '{{#LISTINGLINK#}}'=>ucwords($yii_user_request_id),
+                         '{{#DA#}}'=>ucwords($da),
                         '{{#PV#}}'=>ucwords($count_val2),
-						'{{#VOTES#}}'=>ucwords($count_val33),
-						'{{#COMMENTS#}}'=>ucwords($count_val2),
-						'{{#MESSAGES#}}'=>ucwords($count_val22),
-						'{{#STATUS#}}'=>ucwords($rp)
-			 
-							);
+                        '{{#VOTES#}}'=>ucwords($count_val33),
+                        '{{#COMMENTS#}}'=>ucwords($count_val2),
+                        '{{#MESSAGES#}}'=>ucwords($count_val22),
+                        '{{#STATUS#}}'=>ucwords($rp)
+             
+                            );
 
-							$body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);
+                            $body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);
 
-							$result =  SharedFunctions::app()->sendmail($to,$subjectcc,$body);  
+                            $result =  SharedFunctions::app()->sendmail($to,$subjectcc,$body);  
 
-							}
+                            }
 
-							else
+                            else
 
-							{
+                            {
 
 
-							if($status=="0")
+                            if($status=="0")
 
-							{
+                            {
 
-							$stat ="Waiting admin approval and publication";
+                            $stat ="Waiting admin approval and publication";
 
-							}
+                            }
 
-							else if($status=="1")
+                            else if($status=="1")
 
-							{
+                            {
 
-							$stat ="Published";
+                            $stat ="Published";
 
-							}
+                            }
 
-							else if($status=="2")
+                            else if($status=="2")
 
-							{
+                            {
 
-							$stat ="Suspended";
+                            $stat ="Suspended";
 
-							}
+                            }
 
-							else if($status=="3")
+                            else if($status=="3")
 
-							{
+                            {
 
-							$stat ="Deleted";
+                            $stat ="Deleted";
 
-							}
+                            }
 
-							else if($status=="4")
+                            else if($status=="4")
 
-							{
+                            {
 
-							$stat ="Restored";
+                            $stat ="Restored";
 
-							}
+                            }
 
-							else if($status=="4")
+                            else if($status=="4")
 
-							{
+                            {
 
-							$stat ="Permenant Deleted";
+                            $stat ="Permenant Deleted";
 
-							}
-							
-							$curdate = date('d/m/Y',strtotime($model['user_default_listing_date']));
-					
-							$template =  MailTemplate::getTemplate('user_listing_submit'); 
+                            }
+                            
+                            $curdate = date('d/m/Y',strtotime($model['user_default_listing_date']));
+                    
+                            $template =  MailTemplate::getTemplate('user_listing_submit'); 
  
                             $yii_user_request_id = '<a href="'.Yii::app()->getBaseUrl(true)."/"."listing"."/"."fupdate"."/listid/".$model->user_default_listing_id.'" target="_blank" >by clicking this link >> </a>';
-			 
-							$ltitle="<i>".$model['user_default_listing_title']."</i>";
-	   		        
-							$ldate="<i>".$curdate."</i>";
-			       
-							$lstatus="<i>".$stat."</i>";
-   
-							$string = array(
-							'{{#LISTINGTITLE#}}'=>ucwords($ltitle),
-							'{{#USERNAME#}}'=>ucwords($model_user['user_default_first_name'].' '.$model_user['user_default_surname']),
-							'{{#LISTINGDATE#}}'=>ucwords($ldate),
-							'{{#LISTINGSTATUS#}}'=>ucwords($lstatus),
-							'{{#LLINK#}}'=>ucwords($yii_user_request_id),
-                  
-							);
-					
-					        $body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);
+             
+                            $ltitle="<i>".$model['user_default_listing_title']."</i>";
                     
-							$result =  SharedFunctions::app()->sendmail($to,$template->template_subject,$body);  
-							
+                            $ldate="<i>".$curdate."</i>";
+                   
+                            $lstatus="<i>".$stat."</i>";
+   
+                            $string = array(
+                            '{{#LISTINGTITLE#}}'=>ucwords($ltitle),
+                            '{{#USERNAME#}}'=>ucwords($model_user['user_default_first_name'].' '.$model_user['user_default_surname']),
+                            '{{#LISTINGDATE#}}'=>ucwords($ldate),
+                            '{{#LISTINGSTATUS#}}'=>ucwords($lstatus),
+                            '{{#LLINK#}}'=>ucwords($yii_user_request_id),
+                  
+                            );
+                    
+                            $body = SharedFunctions::app()->mailStringReplace($template->template_body,$string);
+                    
+                            $result =  SharedFunctions::app()->sendmail($to,$template->template_subject,$body);  
+                            
 }
 
 
@@ -721,8 +721,8 @@ $count_val33=count($command3);
 
         $this->render('preview_user_listing', array('model' => $model,));
     }
-	
-	public function actionListingvideo1(){  
+    
+    public function actionListingvideo1(){  
                   
                           $id = Yii::app()->request->getParam('listid');
         
@@ -745,7 +745,7 @@ $count_val33=count($command3);
         
         
         // define a folders to store converted temp and converted vids
-       $path = $_SERVER['DOCUMENT_ROOT'].'/';  
+        $path = $_SERVER['DOCUMENT_ROOT'].'/';  
         $temp_dir=$path."temp/";
         $log=$path."log/";
         //$converted_vids=$path."converted_vids/";
@@ -1046,27 +1046,18 @@ $count_val33=count($command3);
         }
      } 
 
-    public function actionListingvideo() {
-        $name_user = explode("_", Yii::app()->user->getState('ufolder'))[0];
+        public function actionListingvideo() {
+        
         // Getting a unique name of our new video file based on time stamp using microtime
         $time = microtime();
         $time = str_replace(".", "", $time);
         $time = str_replace(" ", "", $time);
 
         $quality = 6000;
-         // get file size and convert it to MB's
-
-            $filesize = $_FILES["file_vid"]["size"];
-            //$filesize = round(($filesize/1048576),2);
-            //get extension
-            $file_name = basename($_FILES['file_vid']['name']);
-            $filename = $temp_dir . $file_name;
-            $extension = substr($file_name, strrpos($file_name, "."));
-            $extension = strtolower($extension);
-            $new_file = explode(".", $file_name)[0];
-        
-        $name = $new_file . "_" . $name_user; 
+        $name = $time; // this will be a new unique name for our video to prevent overwritng  of existing videos -- 
+        //note: you can change the way of naming your videos
         $_SESSION['name'] = $name;
+
         // setting up max video size - by default php is set to 2 MB
         // $max_upload_size = 600*1024*1024; // size is in MB
         // define a folders to store converted temp and converted vids
@@ -1104,31 +1095,40 @@ $count_val33=count($command3);
                 }
             }
 
-           
+            // get file size and convert it to MB's
 
+            $filesize = $_FILES["file_vid"]["size"];
+            //$filesize = round(($filesize/1048576),2);
+            //get extension
+            $file_name = basename($_FILES['file_vid']['name']);
+            $filename = $temp_dir . $file_name;
+
+            $extension = substr($file_name, strrpos($file_name, "."));
+            $extension = strtolower($extension);
             // checking the size of uploading video
 
-            /*  if ($filesize > $max_upload_size) 
-              {
+         
+            #move_uploaded_file($_FILES["file_vid"]["tmp_name"], $temp_dir . $_FILES["file_vid"]["name"]);
+            $dir_writable = substr(sprintf('%o', fileperms($_SESSION['converted_vids'])), -4) == "0774" ? "true" : "false";
+            #var_dump($dir_writable);
 
-              echo "<div class='red'>Your video is to big(".$filesize." MB)! <br>Max video size is set to ".$max_upload_size." MB<br> Upload failed.<br></div>";
-              echo "<div><br><a class='button black' >Back to upload video</a></div>";
-              exit;
-              } */
+            if(!move_uploaded_file($_FILES["file_vid"]["tmp_name"], $_SESSION['converted_vids']. $_FILES["file_vid"]["name"])){ # This should have been handled properly
+                exit('File move failed '. $_FILES["file_vid"]["tmp_name"].'====='. $_SESSION['converted_vids']. $_FILES["file_vid"]["name"]);
+            }
+           
+           // rename our file to microtime name + extension of video - this will make easier for ffmpeg to read this uploaded file before converting(preventing video names with special characters)
 
-            //echo "Size of your video: ".$filesize." MB<br>";
-            //everething is OK  -> move uploaded file
+            #rename($filename, $temp_dir . $name . $extension); // this is new name for our video, something like 0342731001282903919.avi
+            if(!rename( $_SESSION['converted_vids']. $_FILES["file_vid"]["name"], $_SESSION['converted_vids'] . $name . $extension)){ # new one as we skipping conversion of file
+                exit('File name failed '.$_SESSION['converted_vids']. $_FILES["file_vid"]["name"].'======'.$_SESSION['converted_vids'] . $name . $extension);
+            }
+            chmod($_SESSION['converted_vids'] . $name . $extension, 0777);
             
-            move_uploaded_file($_FILES["file_vid"]["tmp_name"], $temp_dir . $_FILES["file_vid"]["name"]);
-            
-            // rename our file to microtime name + extension of video - this will make easier for ffmpeg to read this uploaded file before converting(preventing video names with special characters)
-
-            rename($temp_dir . $filename, $temp_dir . $name . $extension); // this is new name for our video, something like 0342731001282903919.avi
-
             $video_to_convert = $temp_dir . $name . $extension;
             $_SESSION['video_to_convert'] = $video_to_convert;
 
-            $type = $_POST['type'];
+            #$type = $_POST['type']; #Chand Prakash has overridden it.
+            $type = $extension;
 
             if (isset($_POST['size'])) {
                 $size = $_POST['size'];
@@ -1155,85 +1155,48 @@ $count_val33=count($command3);
             $_SESSION['type'] = $type;
 
             //define a settings for converting to specific video format
-//            if ($type != "mp4") {
-//
-//                //$call="ffmpeg/ffmpeg.exe -i ".$_SESSION['video_to_convert']." -vcodec flv -f flv -r 30 -b ".$quality." -ab 128000 -ar ".$audio." -s ".$size." ".$converted_vids.$name.".".$type." -y 2> log/".$name.".txt";
-////                $call = "ffmpeg -i " . $_SESSION['video_to_convert'] . " -vcodec flv -f flv -r 30 -b " . $quality . " -ab 128000 -ar " . $audio . " -s " . $size . " " . $converted_vids . $name . "." . $type . " -y 2> log/" . $name . ".txt";
-//                $call = "ffmpeg -i " . $_SESSION['video_to_convert'] . " -vcodec h264 -acodec aac -strict -2 "  . $converted_vids . $name . ".mp4 -y 2> log/output.txt";
-//                
-//            }
-//
+
             chmod($converted_vids . $name, 0777);
-//            chmod($log , 0777);
-//            /* START CONVERTING */
-//           $a = exec($call);
-//           var_dump($a);
-//            $convert = (popen("start /b " . $call, "r")); //for window
-//            $convert = (popen($call . " >/dev/null &", "r")); //for the linux
-//ffmpeg -i F:/wamp1/www//beta1/www/temp/0349765001441769491.flv -vcodec h264 -acodec aac -strict -2 F:/wamp1/www//beta1/www/temp/0982875001441769141.mp4
-//ffmpeg -i F:/wamp1/www//beta1/www/temp/0982875001441769141.flv -vcodec copy -acodec copy F:/wamp1/www//beta1/www/upload/users/minhnhut_72/videos/0118647001441768069.flv
-//            pclose($convert);
-            // define sessions
 
             $_SESSION['name'] = $name;
             $_SESSION['dest_file'] = $converted_vids . $name;
-
-
-            /*
-              // process to move the file from temp folder to user folder
-              $UPLOAD_PATH_ORG = getcwd().'/';
-              $user_video_path = $UPLOAD_PATH_ORG ."upload/users/".Yii::app()->user->getState('ufolder')."/videos/";
-              $user_video_path = str_replace( 'video-upload/','',$user_video_path);
-
-
-
-              $source_file_path=$UPLOAD_PATH_ORG."temp/".$name.$extension;
-              $destination_file_path=$user_video_path.$name.$extension;
-
-              echo "\nsource :".$source_file_path;
-              echo "\n ok :".$destination_file_path;
-
-
-              if(copy($UPLOAD_PATH_ORG."temp/".$name.$extension,$destination_file_path))
-              {
-              //unlink($UPLOAD_PATH_ORG."temp/".$name.$extension);
-              }
-              echo "upload/users/".Yii::app()->user->getState('ufolder')."/videos/".$name.$extension;
-             */
             echo $name . $extension;
             exit;
+        }else{
+            exit('Condtion not satisfied isset($_FILES[\'file_vid\']) && !empty($_FILES[\'file_vid\'][\'name\'])');
         }
     }
 
-    /**
+      /**
      * Converting video when upload success
      */
     public function actionConvertingVideo() {
         $filename = Yii::app()->request->getParam('filename');
-		$thread = Yii::app()->request->getParam('thread');;
         $pathfile = $_SESSION['temp_dir'] . $filename;
         $pathlog = $_SESSION['log_dir'] . $_SESSION['name'];
         if ($_SESSION['type'] != "mp4") {
 
-//            $call = "ffmpeg -i " . $pathfile . " -vcodec h264 -acodec aac -strict -2 " . $_SESSION['converted_vids'] . $_SESSION['name'] . ".mp4 1> {$pathlog}.txt 2>&1 >> /dev/null &";
-            $call = "ffmpeg -y -i " . $pathfile . "  -threads ".$thread." -vcodec h264 -acodec aac -strict -2 " . $_SESSION['converted_vids'] . $_SESSION['name'] . ".mp4  1> {$pathlog}.txt 2>&1 >> /dev/null &";
+        //$call = "ffmpeg -i " . $pathfile . " -vcodec h264 -acodec aac -strict -2 " . $_SESSION['converted_vids'] . $_SESSION['name'] . ".mp4 1> {$pathlog}.txt 2>&1 >> /dev/null &";
+            $call = "ffmpeg -i " . $pathfile . " -vcodec h264 -acodec aac -strict -2 " . $_SESSION['converted_vids'] . $_SESSION['name'] . ".mp4 1> {$pathlog}.txt 2>&1 >> /dev/null &";
+            
         }else {
             if (copy($pathfile, $_SESSION['converted_vids'] . $_SESSION['name'] . ".mp4")) {
-//                unlink($pathfile);
+        //unlink($pathfile);
             }
         }
-		chmod($pathlog.".txt",0777);
+
         chmod($_SESSION['converted_vids'] . $_SESSION['name'], 0777);
         /* START CONVERTING */
-        exec($call);
+        #exec($call); # removed conversion by chand prakash as youtube is enough smart to convert that.
 
-        echo $_SESSION['name'] . '.mp4';
+        #echo $_SESSION['name'] . '.mp4';
+        echo $_SESSION['name'] . $_SESSION['type'];
     }
 
     public function actionGetProgress() {
 //        $log = 'F:/wamp1/www/beta1/www/log/test.txt';
-		$filename = Yii::app()->request->getParam('filename');
-		$filename = explode(".",$filename)[0];
+        $filename = Yii::app()->request->getParam('filename');
+        $filename = explode(".",$filename)[0];
         $log = $_SESSION['log_dir'] . $filename . '.txt';
         if (file_exists($log)) {
             //chmod($log, 0777);
@@ -2062,8 +2025,8 @@ $count_val33=count($command3);
      *     
      */
     public function actionSelectlisting() {
-		
-		if (Yii::app()->user->isGuest) {
+        
+        if (Yii::app()->user->isGuest) {
             $id = Yii::app()->request->getParam('listid');
             $model = Userlisting::model()->find("user_default_profiles_id = '" . Yii::app()->user->getState('uid') . "' and  user_default_listing_id ='" . $id . "'");
             $this->render('login', array('model' => $model));
@@ -2072,7 +2035,7 @@ $count_val33=count($command3);
             $model = Userlisting::model()->find("user_default_profiles_id = '" . Yii::app()->user->getState('uid') . "' and  user_default_listing_id ='" . $id . "'");
             $this->render('select_listing_action', array('model' => $model,));
         }
-		
+        
     }
 
     public function actionPurchaseaccess() {

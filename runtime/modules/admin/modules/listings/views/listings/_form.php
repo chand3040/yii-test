@@ -9,7 +9,7 @@ $js->registerScriptFile($baseUrl . '/js/tinymce.min.js');
 
 ?>
 <script type="text/javascript">
-    jQuery(document).ready(function () {
+    jQuery(window).load(function () {
         jQuery(".chzn-select").chosen();
     });
 </script>
